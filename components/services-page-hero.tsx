@@ -1,164 +1,176 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Zap } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+
+function StrokeOval() {
+  return (
+    <svg
+      viewBox="0 0 457 166"
+      fill="none"
+      preserveAspectRatio="none"
+      className="absolute inset-x-0 bottom-0 w-full h-[0.45em] pointer-events-none opacity-70"
+      aria-hidden
+    >
+      <motion.path
+        d="M23.652 37.57c-49.713 32.158-36.71 138.536 237.723 125.923 173.239-7.961 203.906-74.972 191.822-96.122C441.112 46.22 407.649 3.28 254.105 1.05 92.241-1.303 31.338 80.263 64.788 92.366"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={{ duration: 1.1, ease: "easeInOut", delay: 0.8 }}
+        style={{ vectorEffect: "non-scaling-stroke" }}
+      />
+    </svg>
+  );
+}
 
 export default function ServicesPageHero() {
-  const t = useTranslations("servicesHero")
-  const sectionRef = useRef<HTMLElement>(null)
+  const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
-    target: sectionRef,
+    target: containerRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9])
-
-  const floatingTexts = ["Aa", "</>", "UI", "Br", "UX", "3D"]
+  const textY = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24">
-      {/* Background Elements with parallax */}
-      <div className="absolute inset-0">
-        <motion.div
-          style={{ y: useTransform(scrollYProgress, [0, 1], [0, 100]) }}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute top-1/3 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+    <section
+      ref={containerRef}
+      className="relative w-screen h-screen overflow-hidden"
+    >
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/services.mp4" type="video/mp4" />
+        <source
+          src="https://www.monks.com/data/s3fs-public/2025-06/Monks-RealTimeBrands-Culture.mp4?VersionId=xbvPZh9tJI8sTs6EUyUkvKfiruxldRM5"
+          type="video/mp4"
         />
-        <motion.div
-          style={{ y: useTransform(scrollYProgress, [0, 1], [0, 150]) }}
-          animate={{ scale: [1, 1.3, 1] }}
-          transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
-        />
-        <motion.div
-          style={{ y }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-chart-2/5 rounded-full blur-3xl"
-        />
-      </div>
+      </video>
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(209,113,226,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(209,113,226,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-[#2d2d2d]/40" />
 
-      {/* Floating service text with Framer Motion */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {floatingTexts.map((text, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{
-              opacity: 0.2,
-              y: [0, -30, 0],
-            }}
-            transition={{
-              opacity: { delay: i * 0.2, duration: 0.5 },
-              y: { duration: 4 + i, repeat: Number.POSITIVE_INFINITY, delay: i * 0.3 },
-            }}
-            className="absolute text-2xl font-bold text-accent/20"
-            style={{
-              top: `${15 + ((i * 15) % 70)}%`,
-              left: `${5 + ((i * 18) % 85)}%`,
-            }}
-          >
-            {text}
-          </motion.div>
-        ))}
-      </div>
-
-      <motion.div style={{ opacity, scale }} className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, type: "spring" }}
-            whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-8"
-          >
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+      {/* Content */}
+      <motion.div
+        style={{ y: textY, opacity }}
+        className="relative z-10 flex flex-col justify-center h-full px-8 md:px-16"
+      >
+        <div className="max-w-7xl mx-auto w-full">
+          {/* Label + Headline */}
+          <div className="relative mb-14">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="absolute top-0 left-0 text-sm font-medium text-white/50 tracking-wide leading-none pt-1"
             >
-              <Zap className="w-4 h-4 text-accent" />
-            </motion.div>
-            <span className="text-accent text-sm font-medium">{t("badge")}</span>
-          </motion.div>
+              Services
+            </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            <motion.h1
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight indent-24"
+            >
+              {"What we "}
+              <span className="relative inline-block text-white">
+                {"do"}
+                <StrokeOval />
+              </span>
+              {" best, built for your brand."}
+            </motion.h1>
+          </div>
+
+          {/* Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+            transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <span className="text-foreground">{t("titleLine1")} </span>
-            <motion.span
-              className="bg-gradient-to-r from-accent via-chart-2 to-accent bg-[length:200%_auto] bg-clip-text text-transparent"
-              animate={{ backgroundPosition: ["0%", "200%"] }}
-              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-            >
-              {t("titleLine2")}
-            </motion.span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl md:text-2xl text-foreground/60 max-w-3xl mx-auto mb-12 leading-relaxed"
-          >
-            {t("subtitle")}
-          </motion.p>
-
-          {/* Service Pills with staggered animation */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.1, delayChildren: 0.6 } },
-            }}
-            className="flex flex-wrap justify-center gap-3 mt-12"
-          >
-            {(t.raw("pills") as string[]).map((service, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20, scale: 0.8 },
-                  visible: { opacity: 1, y: 0, scale: 1 },
-                }}
-                whileHover={{ scale: 1.1, y: -4, backgroundColor: "hsl(var(--accent) / 0.2)" }}
-                whileTap={{ scale: 0.95 }}
-                className="px-5 py-2.5 bg-card border border-border rounded-full text-foreground/80 hover:border-accent hover:text-accent transition-all duration-300 cursor-pointer"
-              >
-                {service}
-              </motion.div>
-            ))}
+            <Link href="/contact" className="inline-flex items-center group">
+              <span className="bg-white text-black text-sm font-medium pl-6 pr-5 py-3.5 rounded-full transition-colors duration-200 group-hover:bg-white/90">
+                Start a project
+              </span>
+              <span className="bg-white text-black w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-200 group-hover:bg-white/90">
+                <motion.span
+                  animate={{ x: [0, 3, 0] }}
+                  transition={{
+                    duration: 1.4,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }}
+                >
+                  <ArrowRight size={16} />
+                </motion.span>
+              </span>
+            </Link>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          initial={{ y: 0 }}
+          whileInView={{ y: [0, 8, 0] }}
+          viewport={{ once: false, amount: 0.6 }}
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-          className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
+          className="w-24"
         >
-          <motion.div
-            animate={{ opacity: [1, 0.3, 1], y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-            className="w-1.5 h-3 bg-accent rounded-full"
-          />
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 101.72 146.05"
+            className="w-full h-auto"
+            fill="none"
+          >
+            <g
+              fill="none"
+              stroke="#ffffff"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <motion.path
+                d="M76.59 65.56c-14.28 4.8-28.49 2.92-38.4.44-7.19-1.81-14.45-4-20.93-7.74C8.09 53 .57 44.07.5 33a30.41 30.41 0 0 1 9.06-21.18A39.25 39.25 0 0 1 30.34 1.25c12.77-2.35 26.27.94 37.19 8s19.32 17.56 24.79 29.34c6.7 14.4 9.47 30.69 8.8 46.5-.82 19.77-3.7 45.27-18.09 60.25"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 1.8, ease: "easeInOut" }}
+              />
+              <motion.path
+                d="M84.94 136.12c.52 3.39-1.07 6.16-2.07 9.43a75 75 0 0 0 7.67-4.44"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: 1.8 }}
+              />
+            </g>
+
+            <path
+              d="M25.91 39a2.19 2.19 0 0 0-.5-.46 4.6 4.6 0 0 0-.6-.37l-.63-.34a3.27 3.27 0 0 1-.58-.39 6.46 6.46 0 0 1-1.24-.44c-.39-.19-.79-.36-1.2-.52 0 0 0 .06-.1.06h-.25a.82.82 0 0 0-.34-.23 2.63 2.63 0 0 0-.42-.17l-.44-.14a1.5 1.5 0 0 1-.38-.19 1.36 1.36 0 0 1-.29-.06.59.59 0 0 0-.3 0l-.92-.56a10.56 10.56 0 0 1-.87-.62 5.89 5.89 0 0 1-.79-.71 4.7 4.7 0 0 1-.65-.87 1.59 1.59 0 0 0-.06-.38 1.87 1.87 0 0 1 0-.4v-.32a.42.42 0 0 0 .16-.19 2.44 2.44 0 0 0 .1-.24c0-.09.05-.17.07-.25a.55.55 0 0 1 .11-.23.35.35 0 0 1 .19-.15.62.62 0 0 0 .2-.15.41.41 0 0 0 .11-.22.27.27 0 0 1 .19-.17 1.57 1.57 0 0 0 .43-.21 3.46 3.46 0 0 0 .35-.33 2.57 2.57 0 0 0 .47-.23l.42-.29.45-.28a1.79 1.79 0 0 1 .52-.19.48.48 0 0 1 .22-.15.37.37 0 0 0 .22-.15 1.84 1.84 0 0 0 .42-.07l.44-.12.42-.11a2.28 2.28 0 0 1 .44-.05h.25a.48.48 0 0 0 .23.24 1 1 0 0 0 .34.07 1 1 0 0 0 .33-.06.68.68 0 0 0 .27-.2 5.81 5.81 0 0 0 .59 0h.99a.92.92 0 0 1 .39.14.19.19 0 0 1 .22-.21h.07V28a1.21 1.21 0 0 0 0-.18.24.24 0 0 0-.09-.15 1.82 1.82 0 0 0 .31-.16.55.55 0 0 0 .19-.29.24.24 0 0 1-.06-.18V27l-.31-.14a.32.32 0 0 1-.13-.24q-.4-.06-.81-.15a4.36 4.36 0 0 0-.81-.08.63.63 0 0 0-.19 0 .63.63 0 0 1-.19 0 .07.07 0 0 1-.08-.06s0-.05-.1-.05a.17.17 0 0 1-.13.08h-.39a.5.5 0 0 0-.21 0 2.1 2.1 0 0 0-.52.15 1.25 1.25 0 0 1-.51.1h-.1l-.43.18a1.74 1.74 0 0 1-.45.06h-.1a.2.2 0 0 1-.11.13l-.18.07a.59.59 0 0 0-.17 0 .21.21 0 0 0-.14.11.25.25 0 0 0-.23 0 .41.41 0 0 1-.21.05h-.08a.47.47 0 0 1-.21.21l-1.2.58a5.19 5.19 0 0 0-1.11.73.29.29 0 0 0-.21.27.53.53 0 0 0-.14.12l-.12.11a.3.3 0 0 1-.2.05.3.3 0 0 1-.08.2.47.47 0 0 0-.07.19 2.25 2.25 0 0 0-1.13 1.06 3.16 3.16 0 0 0-.37 1.52 4 4 0 0 0 .19 1.2.65.65 0 0 1 .15.18.37.37 0 0 1 .07.23.45.45 0 0 1 0 .13 4 4 0 0 1 .51.5 2.48 2.48 0 0 1 .37.63l.38.19a.43.43 0 0 1 .21.35h.15a.33.33 0 0 1 .28.13l.26.24a1.28 1.28 0 0 1 .4.15 3.79 3.79 0 0 1 .34.2 2.53 2.53 0 0 0 .37.18 1.34 1.34 0 0 0 .45.1.18.18 0 0 0 .1.15.15.15 0 0 1 .11.11h.05a.11.11 0 0 0 .1-.05.16.16 0 0 1 .08 0 .54.54 0 0 0 .15.15l.22.08.22.1a.36.36 0 0 1 .15.15 1.23 1.23 0 0 1 .42.07 2.67 2.67 0 0 1 .4.13l.38.15a1.58 1.58 0 0 0 .42.09 1.57 1.57 0 0 0 .66.38c.27.06.52.12.77.16a.35.35 0 0 0 .17.22l.26.11.26.12a.32.32 0 0 1 .18.18 1.53 1.53 0 0 1 .75.34 4.83 4.83 0 0 1 .58.61v.06a.13.13 0 0 1 0 .06.37.37 0 0 1-.09.27.36.36 0 0 0-.11.23c-.43.25-.84.46-1.22.65a4.06 4.06 0 0 1-1.33.34 1.42 1.42 0 0 1-.37.18l-.43.11a3.32 3.32 0 0 1-.44.06h-.75a1.16 1.16 0 0 1-.32-.08v-.26a1.09 1.09 0 0 0-.07-.3.6.6 0 0 0-.14-.26.23.23 0 0 0-.21-.11.6.6 0 0 0-.26 0 .61.61 0 0 1-.25.06 1.37 1.37 0 0 0-.29.39 1.21 1.21 0 0 0-.11.49 1.34 1.34 0 0 0 .17.65 1.66 1.66 0 0 0 .42.52l.82.09a5.66 5.66 0 0 0 .82.06 3 3 0 0 0 .44 0l.44-.08h.09a1.14 1.14 0 0 1 .33 0 .36.36 0 0 1 .12-.08h.33a.23.23 0 0 0 .14-.07h.09a2 2 0 0 0 .86-.19l.82-.37.25-.1a.63.63 0 0 0 .23-.08 1 1 0 0 0 .34-.26 2.64 2.64 0 0 1 .42-.29.64.64 0 0 1 .13-.34l.22-.24a2.73 2.73 0 0 0 .23-.25.62.62 0 0 0 .14-.34.16.16 0 0 0 .14 0 .19.19 0 0 1 .11-.08v-.21a1.18 1.18 0 0 0-.1-.5 2.89 2.89 0 0 1-.15-.64Zm10.68-.88a1.33 1.33 0 0 1-.45.07.58.58 0 0 1-.35-.1 1.54 1.54 0 0 0-.35.22.66.66 0 0 1-.35.18h-.62l-.9.1a6.8 6.8 0 0 1-.9.06 6.13 6.13 0 0 1-.74-.05 4.53 4.53 0 0 1-.71-.16.77.77 0 0 1-.27 0 .78.78 0 0 1-.33-.07l-.33-.15-.36-.15a1.12 1.12 0 0 0-.38-.07.57.57 0 0 0-.19-.24 1.51 1.51 0 0 0-.26-.18l-.27-.18a.7.7 0 0 1-.21-.24.15.15 0 0 1 0-.07v-.07a.57.57 0 0 1-.31-.3 1.71 1.71 0 0 0-.22-.4.33.33 0 0 1 0-.15v-.18a4.15 4.15 0 0 1 0-.49 4.07 4.07 0 0 0 .05-.49 2.22 2.22 0 0 0 .15-.23.74.74 0 0 0 .1-.26.57.57 0 0 0 .21-.13l.16-.19.16-.2a1 1 0 0 1 .19-.17l.35-.2.53-.3.53-.26a1.1 1.1 0 0 1 .33-.12h.3a1.07 1.07 0 0 1 .64-.29 4.93 4.93 0 0 0 .73-.14.94.94 0 0 0 .28.1 1.71 1.71 0 0 1 .3.09 1.52 1.52 0 0 1-.19.59l.25.08.2.11a1.75 1.75 0 0 0 .24.11 1 1 0 0 0 .32 0 1.24 1.24 0 0 0 .84-.28 1.27 1.27 0 0 0 .41-.8.65.65 0 0 1-.11-.22l-.06-.07a1.63 1.63 0 0 0-.1-.23.75.75 0 0 0-.15-.2.74.74 0 0 0-.37-.12.54.54 0 0 1-.36-.16h-.19a1.2 1.2 0 0 1-.48-.11 1 1 0 0 0-.46-.12.43.43 0 0 0-.25.07h-.2a1.51 1.51 0 0 0-.48.07 2 2 0 0 1-.48.07h-.11a.6.6 0 0 1-.25.13l-.26.06h-.27l-.26.05a.41.41 0 0 0-.14.1.4.4 0 0 1-.19.16l-.3.12-.28.12a.8.8 0 0 1-.21.08.73.73 0 0 0-.19.07 1 1 0 0 0-.21.18.33.33 0 0 1-.21.12h-.17a.13.13 0 0 0 0 .1.12.12 0 0 1-.05.09.17.17 0 0 1-.14 0 .19.19 0 0 0-.11 0A.45.45 0 0 0 28 33l-.08.12-.29.22a1.05 1.05 0 0 0-.26.22l-.09.08-.1.07a2.57 2.57 0 0 0-.25.4 5.29 5.29 0 0 0-.22.53 4.9 4.9 0 0 0-.13.55 2.15 2.15 0 0 0-.06.46 2.33 2.33 0 0 0 .07.53 4.42 4.42 0 0 0 .14.52l.18.51a2.47 2.47 0 0 1 .13.52 1.13 1.13 0 0 1 .34.31 3.37 3.37 0 0 1 .29.37 1.38 1.38 0 0 1 .32.17l.26.19.28.15a1.43 1.43 0 0 0 .37.08.33.33 0 0 0 .17.16l.23.1.26.08.22.11a4.88 4.88 0 0 0 .78.12h2.46a6.67 6.67 0 0 0 1.27-.11c.42-.07.84-.13 1.27-.18a.36.36 0 0 1 .16-.12.73.73 0 0 1 .2-.05h.2a.38.38 0 0 0 .18-.09.11.11 0 0 0 .07-.09.32.32 0 0 1 .08-.14.86.86 0 0 1 .18-.14.82.82 0 0 0 .2-.12.65.65 0 0 0 .18-.15.36.36 0 0 0 .08-.23H37a1.42 1.42 0 0 0-.41-.03Zm23.68-6.25-.24-.3a1.31 1.31 0 0 1-.19-.35 1.46 1.46 0 0 1-.59-.44H59a1.32 1.32 0 0 1-.48-.09 1.28 1.28 0 0 0-.48-.09h-.3l-.44.11a1.49 1.49 0 0 0-.41.17 5.59 5.59 0 0 0-.75.43 2.49 2.49 0 0 1-.79.37.75.75 0 0 1-.15.2.41.41 0 0 0-.14.2 3.9 3.9 0 0 0-.93.68 4.5 4.5 0 0 1-.89.73.26.26 0 0 1 0 .15s-.06.05-.14.05a.17.17 0 0 1 0 .16.59.59 0 0 0 0 .14 8.77 8.77 0 0 0-.93 1.12 5.2 5.2 0 0 0-.65 1.29 1 1 0 0 1-.05.41 1.56 1.56 0 0 0-.1.37l.25.78h-.57c-.48 0-1 0-1.46.07h-.39a2.2 2.2 0 0 0-.37.06h-.28a.21.21 0 0 1-.14-.07.17.17 0 0 0-.13 0 .44.44 0 0 1-.22.1l-.25.07c-.32 0-.64 0-1 .07l-1 .12-1 .11a6.29 6.29 0 0 1-1 0h-.38a.15.15 0 0 0-.05-.17.33.33 0 0 0-.15-.11.25.25 0 0 1 0-.1.5.5 0 0 1 0-.21.88.88 0 0 0 .07-.23c.59-.46 1.15-.93 1.7-1.42l1.65-1.49.27-.51a5.12 5.12 0 0 0 .25-.53 4.33 4.33 0 0 0 .22-.56 2.13 2.13 0 0 0 .1-.57v-.22a4.66 4.66 0 0 0-.73-.8.79.79 0 0 1-.35 0l-.29-.14a5.61 5.61 0 0 1-.58 0 3.66 3.66 0 0 0-.57-.05 2.88 2.88 0 0 0-.83.06 3.8 3.8 0 0 1-.82.08 2.19 2.19 0 0 0-.51 0l-.5.09-.49.1a2.07 2.07 0 0 1-.5 0 2.53 2.53 0 0 1-.37.18 1 1 0 0 1-.38 0h-.21a.51.51 0 0 1-.28.19 1.4 1.4 0 0 1-.34.05 1.64 1.64 0 0 1-.32-.05l-.29-.11a1.31 1.31 0 0 0-.36.21l-.3.28a3.29 3.29 0 0 1-.33.23.66.66 0 0 1-.4.09h-.11a1.44 1.44 0 0 1-.31.19l-.33.15a1.53 1.53 0 0 0-.3.19.78.78 0 0 0-.24.27V34a.54.54 0 0 0 0 .18.29.29 0 0 0 0 .16.26.26 0 0 1 .19.06.75.75 0 0 1 .14.12l.15.14a.61.61 0 0 0 .23.09l.14-.06.17-.12.17-.11a.29.29 0 0 1 .1-.05h.34l.09-.09a.31.31 0 0 1 .11-.09.32.32 0 0 1 .16 0h.11a1.06 1.06 0 0 1 0 .19 1.15 1.15 0 0 1 0 .19 2.47 2.47 0 0 1 0 .38 2.55 2.55 0 0 0 0 .41.5.5 0 0 0 0 .29.52.52 0 0 0-.1.18.9.9 0 0 0 0 .19 1.12 1.12 0 0 0 0 .41 1.21 1.21 0 0 1 0 .42 2.33 2.33 0 0 1 0 .28 1.41 1.41 0 0 0 0 .28 1.46 1.46 0 0 0 0 .51 1.67 1.67 0 0 1 0 .5.68.68 0 0 1 0 .27 2.23 2.23 0 0 1 .26.74c.06.29.12.55.18.79a1.24 1.24 0 0 1 .28.28 3.65 3.65 0 0 0 .27.3 1.48 1.48 0 0 0 .3.26.81.81 0 0 0 .38.12 1 1 0 0 0 .28 0 1.34 1.34 0 0 1 .14-.47 1.06 1.06 0 0 0 .13-.46.2.2 0 0 0 0-.11.08.08 0 0 1 0-.05.25.25 0 0 0 0-.07s0 0-.05 0h-.1a3.58 3.58 0 0 1-.29-.59 7.627 7.627 0 0 1-.3-1.31c-.03-.22-.08-.44-.12-.64a3.64 3.64 0 0 0 .13-.77v-1.29a2.89 2.89 0 0 1 .15-.8.76.76 0 0 0 0-.11.56.56 0 0 0 0-.12.32.32 0 0 0 0-.14.4.4 0 0 1 0-.15.2.2 0 0 1 0-.08l.69-.33a1.53 1.53 0 0 1 .76-.16h.2a1.61 1.61 0 0 1 .54-.2 4 4 0 0 1 .59-.08h.58a2.21 2.21 0 0 0 .58-.11 3.39 3.39 0 0 0 .55 0 3.45 3.45 0 0 1 1.09.09 1 1 0 0 1 .5.23 2.09 2.09 0 0 1-.44.91 2.94 2.94 0 0 1-.77.68.56.56 0 0 1-.09.17.86.86 0 0 1-.14.13l-.15.11a.36.36 0 0 0-.1.14 3.64 3.64 0 0 0-.46.3l-.42.34-.42.33a2.2 2.2 0 0 1-.44.28c-.14.18-.28.34-.43.51s-.32.31-.49.45-.06.39-.1.57l-.09.58a.31.31 0 0 1 .18.22.8.8 0 0 0 .13.28 1 1 0 0 0 .37.33 3.35 3.35 0 0 0 1.08.37 2.33 2.33 0 0 0 .49.06 4.66 4.66 0 0 0 .65 0 2.12 2.12 0 0 0 .47-.46.22.22 0 0 0 .19.1.58.58 0 0 1 .25.05 1.16 1.16 0 0 1 .27-.14l.28-.05h.29a.86.86 0 0 0 .28-.11.46.46 0 0 0 .23 0 1 1 0 0 1 .24 0 .12.12 0 0 1 .09 0h.08a4 4 0 0 1 .8-.25c.3-.06.6-.11.9-.14s.61-.08.91-.11a7.44 7.44 0 0 0 .87-.1.76.76 0 0 1 .21 0 1 1 0 0 0 .24 0 3.42 3.42 0 0 0 .72-.16 4.64 4.64 0 0 0 .38.61l.44.21a.84.84 0 0 1 .38.28l.48.09h.87a1.66 1.66 0 0 0 .37-.14.3.3 0 0 0 .23.06h.16a3.33 3.33 0 0 1 .51-.16 4.34 4.34 0 0 1 .52-.08 2.62 2.62 0 0 1 .74-.48c.27-.12.55-.22.83-.32l.45-.39a2.29 2.29 0 0 1 .53-.29c.2-.27.41-.54.62-.79a3.67 3.67 0 0 0 .51-.88 1.18 1.18 0 0 1 0-.33 1.07 1.07 0 0 1 .08-.27l.11-.27c.05-.09.09-.19.14-.3a2.74 2.74 0 0 1 .19-1 .64.64 0 0 1 .08-.19.84.84 0 0 0 .08-.2v-.83a2.62 2.62 0 0 1 0-.27.59.59 0 0 1 .1-.28 1 1 0 0 0-.14-.39 1.21 1.21 0 0 0-.24-.41Zm-1.1 1.9v.15a2.49 2.49 0 0 1-.08.61c-.05.19-.11.37-.18.56s-.15.37-.22.56a4.75 4.75 0 0 0-.18.57 3 3 0 0 0-.28.33 3.31 3.31 0 0 0-.25.35l-.11.15a.57.57 0 0 1-.11.16 1 1 0 0 1-.18.16 1.33 1.33 0 0 0-.19.14 7.05 7.05 0 0 1-1.16.68 6 6 0 0 1-1.26.4 1.71 1.71 0 0 0-.6-.07 1.37 1.37 0 0 1-.57-.1.68.68 0 0 1-.4-.31 1.46 1.46 0 0 0-.29-.41.66.66 0 0 1 0-.14v-.14a2.45 2.45 0 0 1 .12-.82 4.65 4.65 0 0 1 .32-.63c.12-.19.26-.37.39-.56a3.3 3.3 0 0 0 .4-.67 2.72 2.72 0 0 0 .35-.32l.36-.35.36-.32a2 2 0 0 1 .41-.28.63.63 0 0 1 .26-.2.63.63 0 0 0 .23-.23h.24a1.18 1.18 0 0 1 .26-.24 2.49 2.49 0 0 1 .33-.16l.34-.14a1 1 0 0 0 .29-.2.29.29 0 0 1 .17.17l.09.22.12.09a.25.25 0 0 1 .15 0l.14.07a.17.17 0 0 1 .08.14.49.49 0 0 1 .19 0 .64.64 0 0 1 .28.07 1.19 1.19 0 0 0 .26.11.49.49 0 0 1 0 .12.57.57 0 0 1-.11.33.77.77 0 0 1 .03.15ZM76.38 37a.45.45 0 0 0 0-.13h-.09a1.27 1.27 0 0 0-.28 0h-.27a.46.46 0 0 1-.23-.06 14.07 14.07 0 0 1-1.54.7l-1.55.63a.21.21 0 0 1-.1-.11.12.12 0 0 0-.11-.08.39.39 0 0 1-.23.18 1.54 1.54 0 0 1-.3 0 1.29 1.29 0 0 1-.33-.06.42.42 0 0 1-.26-.16 1.82 1.82 0 0 1-.19-.69v-1.53a.87.87 0 0 0 .16-.35 2.34 2.34 0 0 0 .04-.34 3.64 3.64 0 0 0 0-.45v-.41a.58.58 0 0 0 .15-.29 1.86 1.86 0 0 0 0-.33v-.64a2 2 0 0 1 0-.24 1 1 0 0 1 .07-.23 1.72 1.72 0 0 1-.2-.8v-.18a.77.77 0 0 0-.29-.08.28.28 0 0 1-.21-.21.61.61 0 0 1-.24 0 .51.51 0 0 1-.17 0l-.17-.05v.14a2.28 2.28 0 0 0-.65.42 1 1 0 0 0-.23.71.55.55 0 0 1 .19.45.26.26 0 0 1 .21.29.77.77 0 0 1-.11.4 1.33 1.33 0 0 1 .07.43v.59a4 4 0 0 0-.23 1 9.42 9.42 0 0 1-.11 1v.33a3 3 0 0 0 0 .31v.52l.06.31a1.37 1.37 0 0 0 0 .2 1.1 1.1 0 0 0 .16.3 1 1 0 0 1 .19.28 1.55 1.55 0 0 0 .33.5 3.37 3.37 0 0 0 .49.34.69.69 0 0 1 .32 0 1 1 0 0 0 .3 0h.09v-.06h.58a1.62 1.62 0 0 0 .91-.27h.06a.21.21 0 0 1 .11 0 .16.16 0 0 0 .12 0 1 1 0 0 0 .36-.33 2.81 2.81 0 0 0 .47-.21l.46-.26a5.06 5.06 0 0 1 .46-.24 2.38 2.38 0 0 1 .51-.18l.08-.14.08-.08a.18.18 0 0 1 .11 0h.18c0-.1.09-.19.13-.27a.29.29 0 0 1 .26-.12.34.34 0 0 1 0-.14.21.21 0 0 1 .11-.19.28.28 0 0 0 .27-.12Zm-7.48-.14a1.24 1.24 0 0 0-.27 0 1.33 1.33 0 0 1-.28 0 .46.46 0 0 1-.23-.06 13.12 13.12 0 0 1-1.53.7q-.78.3-1.56.63a.19.19 0 0 1-.09-.11.13.13 0 0 0-.11-.08.45.45 0 0 1-.24.18 1.54 1.54 0 0 1-.3 0 1.29 1.29 0 0 1-.33-.06.45.45 0 0 1-.26-.06 1.82 1.82 0 0 1-.19-.69v-1.53a.88.88 0 0 0 .17-.35 3.5 3.5 0 0 0 .07-.45v-.86a.58.58 0 0 0 .15-.29 1.24 1.24 0 0 0 0-.33v-.64a2.12 2.12 0 0 1 0-.24.68.68 0 0 1 .07-.23 1.62 1.62 0 0 1-.21-.8v-.18a.72.72 0 0 0-.29-.08.27.27 0 0 1-.2-.21.66.66 0 0 1-.25 0 .45.45 0 0 1-.16 0l-.18-.05a.17.17 0 0 1 0 .14 2.22 2.22 0 0 0-.64.42 1 1 0 0 0-.23.71.59.59 0 0 1 .19.45.26.26 0 0 1 .2.29.69.69 0 0 1-.11.4 1.11 1.11 0 0 1 .07.43v.31a1.41 1.41 0 0 0 0 .28 3.28 3.28 0 0 0-.23 1c0 .34-.06.69-.11 1l-.06.33v.31a1.82 1.82 0 0 0 0 .2l.06.32a2.87 2.87 0 0 0 0 .31v.2a1.14 1.14 0 0 0 .17.3 1.26 1.26 0 0 1 .19.28 1.55 1.55 0 0 0 .33.5 2.89 2.89 0 0 0 .49.34.65.65 0 0 1 .31 0 1 1 0 0 0 .3 0h.1v-.06a.06.06 0 0 1 .05 0h.52a1.65 1.65 0 0 0 .92-.27.18.18 0 0 1 .11 0 .17.17 0 0 0 .12 0h.05a1 1 0 0 0 .35-.33 2.91 2.91 0 0 0 .48-.21l.45-.26a5.21 5.21 0 0 1 .47-.24 2.3 2.3 0 0 1 .5-.18.75.75 0 0 0 .08-.14l.09-.08a.15.15 0 0 1 .1 0h.18c.05-.1.09-.19.14-.27a.27.27 0 0 1 .26-.12.27.27 0 0 1-.06-.14.21.21 0 0 1 .11-.19.26.26 0 0 0 .37-.1 1.05 1.05 0 0 0 0-.13Z"
+              fill="#ffffff"
+            />
+          </motion.svg>
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

@@ -1,14 +1,14 @@
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ContactHero from "@/components/contact-hero"
-import ContactForm from "@/components/contact-form"
-import ContactInfo from "@/components/contact-info"
-import ContactMap from "@/components/contact-map"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ContactHero from "@/components/contact-hero";
+import ContactForm from "@/components/contact-form";
+import ContactInfo from "@/components/contact-info";
 
 export const metadata = {
   title: "Contact Us | VU Creative Agency",
-  description: "Get in touch with VU Creative Agency. Let's discuss your next project.",
-}
+  description:
+    "Get in touch with VU Creative Agency. Let's discuss your next project.",
+};
 
 export default function ContactPage() {
   return (
@@ -21,8 +21,7 @@ export default function ContactPage() {
           <ContactInfo />
         </div>
       </div>
-      <ContactMap />
       <Footer />
     </main>
-  )
+  );
 }

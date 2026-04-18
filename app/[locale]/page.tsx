@@ -21,7 +21,7 @@ export default function Home() {
       {/* <GalleryMarquee /> */}
       <About />
       <VideoBanner />
-      <CTA />
+      <CTA bg="bg-[#E4E7F7]" />
       <Footer />
     </main>
   );

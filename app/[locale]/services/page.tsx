@@ -3,9 +3,8 @@ import Footer from "@/components/footer";
 import ServicesPageHero from "@/components/services-page-hero";
 import ServicesGrid from "@/components/services-grid";
 import ServicesProcess from "@/components/services-process";
-// import ServicesPricing from "@/components/services-pricing";
 import ServicesFaq from "@/components/services-faq";
-import ServicesCta from "@/components/services-cta";
+import CTA from "@/components/cta";
 
 export const metadata = {
   title: "Services | VU Creative Agency",
@@ -20,9 +19,16 @@ export default function ServicesPage() {
       <ServicesPageHero />
       <ServicesGrid />
       <ServicesProcess />
-      {/* <ServicesPricing /> */}
       <ServicesFaq />
-      <ServicesCta />
+      <CTA
+        bg="bg-[#D8EAE2]"
+        label="Work with us"
+        title="Ready to start your next project? Let's talk."
+        highlightWord="project?"
+        strokeVariant="wide"
+        buttonText="Start a project"
+        href="/contact"
+      />
       <Footer />
     </main>
   );

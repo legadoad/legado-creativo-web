@@ -36,6 +36,7 @@ export default function Hero() {
       </video>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-[#2d2d2d]/40" />
       {/* Content */}
       <motion.div
         style={{ y: textY, opacity }}
@@ -79,7 +80,7 @@ export default function Hero() {
           whileInView={{ y: [0, 8, 0] }}
           viewport={{ once: false, amount: 0.6 }}
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-          className="w-18"
+          className="w-24"
         >
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"

@@ -22,7 +22,7 @@ export default function Works() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 px-6 bg-transparent text-[#1f1f1f]"
+      className="py-24 md:py-32 px-6 bg-background text-foreground"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title */}
@@ -35,7 +35,7 @@ export default function Works() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[0.95] max-w-4xl">
             {t("title")}
           </h2>
-          <p className="mt-4 text-lg md:text-xl text-[#4a4a4a] max-w-2xl">
+          <p className="mt-4 text-lg md:text-xl text-foreground/60 max-w-2xl">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export default function Works() {
                 }`}
               >
                 {/* Number behind card */}
-                <div className="absolute -top-16 right-2 z-0 text-[72px] md:text-[90px] leading-none font-bold text-white/75 pointer-events-none select-none">
+                <div className="absolute -top-16 right-2 z-0 text-[72px] md:text-[90px] leading-none font-bold text-foreground/10 pointer-events-none select-none">
                   {" "}
                   {t(`cards.${index}.number`)}
                 </div>
@@ -76,7 +76,7 @@ export default function Works() {
                   <h3 className="text-xl md:text-2xl font-bold leading-tight">
                     {t(`cards.${index}.title`)}
                   </h3>
-                  <p className="mt-3 text-[15px] md:text-base text-[#555] leading-relaxed max-w-sm">
+                  <p className="mt-3 text-[15px] md:text-base text-foreground/60 leading-relaxed max-w-sm">
                     {t(`cards.${index}.description`)}
                   </p>
                 </div>

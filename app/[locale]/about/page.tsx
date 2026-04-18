@@ -5,7 +5,7 @@ import AboutStory from "@/components/about-story"
 import AboutTimeline from "@/components/about-timeline"
 import AboutTeam from "@/components/about-team"
 import AboutValues from "@/components/about-values"
-import AboutCta from "@/components/about-cta"
+import CTA from "@/components/cta"
 
 export const metadata = {
   title: "About Us | VU Creative Agency",
@@ -21,7 +21,15 @@ export default function AboutPage() {
       <AboutTimeline />
       <AboutValues />
       <AboutTeam />
-      <AboutCta />
+      <CTA
+        bg="bg-[#F7EDD8]"
+        label="Connect"
+        title="How can we help you innovate? Drop us a line."
+        highlightWord="innovate?"
+        strokeVariant="oval"
+        buttonText="Connect with us"
+        href="/contact"
+      />
       <Footer />
     </main>
   )
