@@ -3,7 +3,6 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import LogoMarquee from "@/components/logo-marquee";
 import Works from "@/components/works";
-import ServicesOrbit from "@/components/services-orbit";
 import GalleryMarquee from "@/components/gallery-marquee";
 import About from "@/components/about";
 import VideoBanner from "@/components/video-banner";
@@ -17,11 +16,10 @@ export default function Home() {
       <Hero />
       <LogoMarquee />
       <Works />
-      <ServicesOrbit />
       {/* <GalleryMarquee /> */}
       <About />
       <VideoBanner />
-      <CTA bg="bg-[#E4E7F7]" />
+      <CTA bg="bg-[#eaffb4]" />
       <Footer />
     </main>
   );

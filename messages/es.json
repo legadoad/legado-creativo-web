@@ -77,16 +77,16 @@
       "satisfaction": "Tasa de Satisfacción"
     },
     "contentTitle": "No Solo Diseñamos,",
-    "contentTitleAccent": " Resolvemos Problemas",
-    "paragraph1": "En VU Creative Agency, creemos que el gran diseño es más que estética—se trata de crear conexiones significativas entre las marcas y sus audiencias. Nuestro equipo multidisciplinario combina visión artística con pensamiento estratégico para entregar trabajo que resuena.",
-    "paragraph2": "Desde startups hasta empresas Fortune 500, nos hemos asociado con diversos clientes para transformar su presencia digital y elevar su identidad de marca.",
+    "contentTitleAccent": " construimos marcas con dirección.",
+    "paragraph1": "Creemos que el marketing efectivo no se trata de verse bien, sino de generar impacto real: conectar, posicionar y convertir. Cada proyecto nace desde la estrategia y se ejecuta con una visión clara: hacer que tu marca no pase desapercibida.",
+    "paragraph2": "Somos un equipo creativo con mentalidad estratégica. Combinamos storytelling, diseño y marketing para crear experiencias digitales que elevan la percepción de marca y generan resultados medibles. Trabajamos con marcas que entienden que crecer no es improvisar, es construir con intención.",
     "bulletPoints": [
-      "Equipo de diseño galardonado con reconocimiento global",
-      "Soluciones personalizadas adaptadas a tu marca única",
-      "Entrega rápida sin comprometer la calidad",
-      "Soporte continuo y consultoría de marca"
+      "Estrategias diseñadas para posicionar, no solo publicar",
+      "Creatividad con propósito: cada pieza responde a un objetivo",
+      "Contenido que conecta, convierte y construye marca",
+      "Acompañamiento estratégico en cada etapa del crecimiento"
     ],
-    "learnMore": "Conoce Más Sobre Nosotros",
+    "learnMore": "Descubre cómo llevar tu marca al siguiente nivel",
     "valuesTitle": "Nuestros Valores",
     "values": {
       "excellence": {
@@ -166,9 +166,10 @@
   },
   "videoBanner": {
     "sectionLabel": "VÉANOS EN ACCIÓN",
-    "titleLine1": "Donde la Creatividad",
-    "titleLine2": "Cobra Vida",
-    "subtitle": "Echa un vistazo a nuestro proceso creativo y ve cómo transformamos ideas en experiencias visuales impactantes.",
+    "titleLine1": "Donde la ",
+    "titleHighlight": "creatividad",
+    "titleLine2": " Cobra Vida",
+    "subtitle": "Descubre cómo transformamos ideas en experiencias visuales que generan impacto.",
     "showreelLabel": "Showreel de la Agencia",
     "showreelTitle": "Highlights Creativos 2024",
     "stat1Value": "50+",
@@ -303,11 +304,10 @@
     ]
   },
   "aboutCta": {
-    "titleLine1": "¿Listo para Crear",
-    "titleLine2": "Algo Increíble?",
-    "subtitle": "Demos vida a tu visión. Ponte en contacto y comencemos a construir algo extraordinario juntos.",
-    "primary": "Iniciar un Proyecto",
-    "secondary": "Ver Nuestro Trabajo"
+    "label": "Conectemos",
+    "title": "¿Cómo podemos ayudarte a innovar? Escríbenos.",
+    "highlightWord": "innovar?",
+    "buttonText": "Conéctate con nosotros"
   },
   "servicesHero": {
     "badge": "Lo Que Hacemos",

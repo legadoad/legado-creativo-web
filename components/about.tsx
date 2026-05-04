@@ -82,7 +82,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-32 px-6 bg-gradient-to-b from-primary/5 via-background to-background relative overflow-hidden"
+      className="py-20 px-6 bg-gradient-to-b from-primary/5 via-background to-background relative overflow-hidden"
     >
       <motion.div
         style={{ y: bgCircle1Y }}
@@ -206,7 +206,7 @@ export default function About() {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image Collage with parallax */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -324,44 +324,6 @@ export default function About() {
             </motion.button>
           </motion.div>
         </div>
-
-        {/* Values Section - Removed team section, kept only values */}
-        <motion.div
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={containerVariants}
-        >
-          <motion.h3
-            variants={itemVariants}
-            className="text-3xl font-bold text-foreground text-center mb-12"
-          >
-            {t("valuesTitle")}
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {values.map((value, i) => (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.05 }}
-                className="group relative p-6 bg-card/30 backdrop-blur-sm border border-accent/10 rounded-2xl text-center hover:border-accent/30 transition-all duration-300"
-              >
-                <motion.div
-                  whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-14 h-14 mx-auto mb-4 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent/20"
-                >
-                  <value.icon className="w-7 h-7 text-accent" />
-                </motion.div>
-                <h4 className="text-lg font-bold text-foreground mb-2">
-                  {t(`values.${value.key}.title`)}
-                </h4>
-                <p className="text-sm text-foreground/60">
-                  {t(`values.${value.key}.desc`)}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

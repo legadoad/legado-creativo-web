@@ -28,43 +28,13 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source
-          src="https://www.monks.com/data/2025-06/Monks-Sizzle_1280x720.mp4?VersionId=e_Tm.MWDsvT7_TH5rRxdV8GpsPlsTS1q"
-          type="video/webm"
-        />
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/Banner.mp4" type="video/mp4" />
       </video>
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/55" />
-      <div className="absolute inset-0 bg-[#2d2d2d]/40" />
       {/* Content */}
       <motion.div
         style={{ y: textY, opacity }}
         className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 gap-8"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-        >
-          <Image
-            src="/Logos/LEGADO_Logotipo-06.png"
-            alt="Legado Logo"
-            width={520}
-            height={200}
-            className="h-auto w-auto max-h-40"
-            priority
-          />
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-          className="text-white/80 text-2xl md:text-4xl font-light tracking-wide max-w-3xl"
-        >
-          Accelerating growth through Marketing and Technology.
-        </motion.p>
       </motion.div>
       import Image from "next/image"
       {/* Scroll indicator */}

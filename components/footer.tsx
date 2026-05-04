@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="border-t border-border bg-gradient-to-b from-transparent to-primary/5 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-2 mb-6 group">
               <Image
                 src="/Logos/LEGADO_Logotipo-06.png"
@@ -23,12 +23,12 @@ export default function Footer() {
                 priority
               />
             </Link>
-            <p className="text-foreground/60 text-sm">{t("tagline")}</p>
+            <p className="text-foreground/60 text-sm text-center md:text-left">{t("tagline")}</p>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-foreground mb-4">{t("work")}</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center md:text-left">
               <li>
                 <Link
                   href="/#work"
@@ -56,11 +56,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-foreground mb-4">
               {t("company")}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center md:text-left">
               <li>
                 <Link
                   href="/about"
@@ -96,7 +96,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-foreground mb-4">
               {t("connect")}
             </h4>
@@ -124,7 +124,7 @@ export default function Footer() {
 
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-foreground/40 text-sm">{t("copyright")}</p>
+            <p className="text-foreground/40 text-sm text-center">{t("copyright")}</p>
             <div className="flex gap-6">
               <Link
                 href="#"

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { strokes } from "@/components/stroke-underline";
 
 export default function VideoBanner() {
   const t = useTranslations("videoBanner");
@@ -41,7 +42,7 @@ export default function VideoBanner() {
   };
 
   return (
-    <section ref={sectionRef} className="relative py-32 overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 overflow-hidden">
       {/* Background Blur Effects */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
@@ -52,14 +53,18 @@ export default function VideoBanner() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center "
         >
           <p className="text-accent text-sm font-semibold tracking-widest mb-4">
             {t("sectionLabel")}
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             {t("titleLine1")}
-            <span className="block text-accent">{t("titleLine2")}</span>
+            <span className="text-accent relative inline-block">
+              {t("titleHighlight")}
+              {isInView && <strokes.oval />}
+            </span>
+            {t("titleLine2")}
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             {t("subtitle")}

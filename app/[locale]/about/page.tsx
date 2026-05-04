@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AboutPageHero from "@/components/about-page-hero"
@@ -12,7 +13,9 @@ export const metadata = {
   description: "Learn about VU Creative Agency - our story, team, values, and creative journey.",
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations("aboutCta")
+
   return (
     <main className="min-h-screen bg-background">
       <Header />
@@ -23,11 +26,11 @@ export default function AboutPage() {
       <AboutTeam />
       <CTA
         bg="bg-[#F7EDD8]"
-        label="Connect"
-        title="How can we help you innovate? Drop us a line."
-        highlightWord="innovate?"
+        label={t("label")}
+        title={t("title")}
+        highlightWord={t("highlightWord")}
         strokeVariant="oval"
-        buttonText="Connect with us"
+        buttonText={t("buttonText")}
         href="/contact"
       />
       <Footer />

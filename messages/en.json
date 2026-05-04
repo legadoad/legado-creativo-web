@@ -77,32 +77,16 @@
       "satisfaction": "Satisfaction Rate"
     },
     "contentTitle": "We Don't Just Design,",
-    "contentTitleAccent": " We Solve Problems",
-    "paragraph1": "At VU Creative Agency, we believe great design is more than aesthetics—it's about creating meaningful connections between brands and their audiences. Our multidisciplinary team combines artistic vision with strategic thinking to deliver work that resonates.",
-    "paragraph2": "From startups to Fortune 500 companies, we've partnered with diverse clients to transform their digital presence and elevate their brand identity.",
+    "contentTitleAccent": " We build brands with direction.",
+    "paragraph1": "We believe great marketing isn’t about looking good. It’s about creating real impact: connecting with the right audience, positioning your brand with clarity, and driving measurable growth. Every project starts with strategy and is executed with intention.",
+    "paragraph2": "We are a creative team with a strategic mindset. Blending storytelling, design, and marketing, we craft digital experiences that elevate brand perception and turn attention into results. We partner with brands that understand that growth isn’t accidental - it’s built with purpose!",
     "bulletPoints": [
-      "Award-winning design team with global recognition",
-      "Custom solutions tailored to your unique brand",
-      "Rapid delivery without compromising quality",
-      "Ongoing support and brand consultation"
+      "Strategy-led execution, not just content creation",
+      "Purpose-driven creativity behind every piece",
+      "Content designed to connect, convert, and build brand equity",
+      "Ongoing strategic guidance at every stage of growth"
     ],
-    "learnMore": "Learn More About Us",
-    "valuesTitle": "Our Core Values",
-    "values": {
-      "excellence": {
-        "title": "Excellence",
-        "desc": "We pursue perfection in every pixel"
-      },
-      "collaboration": {
-        "title": "Collaboration",
-        "desc": "Your vision drives our creativity"
-      },
-      "innovation": {
-        "title": "Innovation",
-        "desc": "Pushing boundaries of design"
-      },
-      "passion": { "title": "Passion", "desc": "We love what we do" }
-    }
+    "learnMore": "Discover how to take your brand to the next level"
   },
   "homeServices": {
     "sectionLabel": "WHAT WE DO",
@@ -163,9 +147,10 @@
   },
   "videoBanner": {
     "sectionLabel": "SEE US IN ACTION",
-    "titleLine1": "Where Creativity",
-    "titleLine2": "Comes to Life",
-    "subtitle": "Take a glimpse into our creative process and see how we transform ideas into stunning visual experiences.",
+    "titleLine1": "Where ",
+    "titleHighlight": "creativity",
+    "titleLine2": " Comes to Life",
+    "subtitle": "Discover how we transform ideas into visual experiences that make an impact.",
     "showreelLabel": "Agency Showreel",
     "showreelTitle": "2024 Creative Highlights",
     "stat1Value": "50+",
@@ -300,11 +285,10 @@
     ]
   },
   "aboutCta": {
-    "titleLine1": "Ready to Create",
-    "titleLine2": "Something Amazing?",
-    "subtitle": "Let's bring your vision to life. Get in touch and let's start building something extraordinary together.",
-    "primary": "Start a Project",
-    "secondary": "View Our Work"
+    "label": "Connect",
+    "title": "How can we help you innovate? Drop us a line.",
+    "highlightWord": "innovate?",
+    "buttonText": "Connect with us"
   },
   "servicesHero": {
     "badge": "What We Do",
