@@ -32,7 +32,7 @@ function StrokeOval() {
       viewBox="0 0 457 166"
       fill="none"
       preserveAspectRatio="none"
-      className="absolute inset-x-0 bottom-0 w-full h-[0.45em] pointer-events-none opacity-70"
+      className="absolute inset-0 pointer-events-none opacity-70"
       aria-hidden
     >
       <motion.path
@@ -56,7 +56,7 @@ function StrokeLoop() {
       viewBox="0 0 457 166"
       fill="none"
       preserveAspectRatio="none"
-      className="absolute inset-x-0 bottom-0 w-full h-[0.5em] pointer-events-none opacity-70"
+      className="absolute inset-0 pointer-events-none opacity-70"
       aria-hidden
     >
       <motion.path

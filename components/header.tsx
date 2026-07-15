@@ -5,7 +5,6 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useRouter as useNextRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, Globe } from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -41,15 +40,16 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: "/gallery", label: t("gallery") },
+    { href: "/", label: t("home") },
     { href: "/services", label: t("services") },
     { href: "/about", label: t("about") },
     { href: "/contact", label: t("contact") },
   ];
 
-  // at top: transparent bg, white text
-  // scrolled: white bg, dark text
-  const isTransparent = atTop;
+  // transparent bg with white text only over the home hero;
+  // every other page starts on a white background, so use the solid style there
+  const isHome = pathname === "/";
+  const isTransparent = atTop && isHome;
 
   return (
     <motion.header
@@ -91,8 +91,6 @@ export default function Header() {
             </Link>
           ))}
 
-          <ThemeToggle />
-
           {/* Language Switcher */}
           <button
             onClick={() => switchLocale(locale === "en" ? "es" : "en")}
@@ -117,7 +115,6 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle />
           <button
             onClick={() => switchLocale(locale === "en" ? "es" : "en")}
             className={`flex items-center gap-1 px-2 py-1.5 text-xs font-medium uppercase transition ${

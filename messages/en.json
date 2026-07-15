@@ -12,17 +12,13 @@
       "title": "Services | VU Creative Agency",
       "description": "Explore our creative services - graphic design, web design, branding, UI/UX and more."
     },
-    "gallery": {
-      "title": "Gallery | VU Creative Agency",
-      "description": "Explore our portfolio of web designs, brand identities, graphics, and creative projects."
-    },
     "contact": {
       "title": "Contact Us | VU Creative Agency",
       "description": "Get in touch with VU Creative Agency. Let's discuss your next project."
     }
   },
   "header": {
-    "gallery": "Gallery",
+    "home": "Home",
     "services": "Services",
     "about": "About",
     "contact": "Contact",

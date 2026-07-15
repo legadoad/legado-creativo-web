@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
@@ -60,9 +60,9 @@ export default function CTA({
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-[1.1] tracking-tight md:indent-24 text-center md:text-left"
           >
-            {parts[0].trimEnd()}{" "}
+            {parts[0].trimEnd()}{" "}
             {highlightWord && (<span className="relative inline-block">{highlightWord}{isInView && <Stroke />}</span>)}
-            {parts[1]?.trimStart()}
+            {parts[1] && <>{" "}{parts[1].trimStart()}</>}
           </motion.h2>
         </div>
 
