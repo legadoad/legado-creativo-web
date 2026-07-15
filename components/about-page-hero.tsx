@@ -75,7 +75,7 @@ export default function AboutPageHero() {
       </motion.div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(209,113,226,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(209,113,226,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgb(var(--glow-rgb)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--glow-rgb)/0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <motion.div
         className="absolute top-32 right-20 w-4 h-4 bg-accent rounded-full"
@@ -86,12 +86,28 @@ export default function AboutPageHero() {
         transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
       <motion.div
+        className="absolute bottom-24 right-16 w-4 h-4 bg-accent rounded-full"
+        animate={{
+          y: [15, -15, 15],
+          x: [8, -8, 8],
+        }}
+        transition={{ duration: 6.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 }}
+      />
+      <motion.div
         className="absolute bottom-40 left-20 w-6 h-6 border-2 border-chart-2 rounded-full"
         animate={{
           y: [20, -20, 20],
           rotate: [0, 180, 360],
         }}
         transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-24 left-16 w-6 h-6 border-2 border-chart-2 rounded-full"
+        animate={{
+          y: [-18, 18, -18],
+          rotate: [0, -180, -360],
+        }}
+        transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1.5 }}
       />
       <motion.div
         className="absolute top-1/2 right-32 w-3 h-3 bg-chart-2/50 rotate-45"
@@ -101,13 +117,21 @@ export default function AboutPageHero() {
         }}
         transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
+      <motion.div
+        className="absolute bottom-1/3 left-32 w-3 h-3 bg-chart-2/50 rotate-45"
+        animate={{
+          y: [12, -12, 12],
+          rotate: [45, -135, -315],
+        }}
+        transition={{ duration: 7.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
+      />
 
       <motion.div className="relative z-10 max-w-5xl mx-auto px-6 text-center" style={{ opacity, scale }}>
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.div
             variants={itemVariants}
             className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-8"
-            whileHover={{ scale: 1.05, borderColor: "rgba(209,113,226,0.5)" }}
+            whileHover={{ scale: 1.05, borderColor: "rgb(var(--glow-rgb) / 0.5)" }}
           >
             <motion.div
               animate={{ rotate: [0, 360] }}

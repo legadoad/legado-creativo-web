@@ -33,7 +33,7 @@ export default function LogoMarquee() {
           <motion.div key={index} className="flex items-center mx-12" whileHover={{ scale: 1.1 }}>
             <motion.span
               className="text-2xl md:text-3xl font-bold text-foreground/20 hover:text-accent/60 transition-colors duration-300 cursor-default"
-              whileHover={{ color: "rgba(212, 0, 255, 0.6)" }}
+              whileHover={{ color: "rgb(var(--magenta-rgb) / 0.6)" }}
             >
               {brand}
             </motion.span>

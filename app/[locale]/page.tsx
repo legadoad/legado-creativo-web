@@ -19,7 +19,7 @@ export default function Home() {
       {/* <GalleryMarquee /> */}
       <About />
       <VideoBanner />
-      <CTA bg="bg-[#eaffb4]" />
+      <CTA bg="bg-secondary-lime" />
       <Footer />
     </main>
   );

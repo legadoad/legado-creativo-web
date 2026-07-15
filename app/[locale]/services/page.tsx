@@ -21,7 +21,7 @@ export default function ServicesPage() {
       <ServicesProcess />
       <ServicesFaq />
       <CTA
-        bg="bg-[#D8EAE2]"
+        bg="bg-section-mint"
         label="Work with us"
         title="Ready to start your next project? Let's talk."
         highlightWord="project?"

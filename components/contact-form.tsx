@@ -139,7 +139,7 @@ export default function ContactForm() {
               animate={{
                 boxShadow:
                   focusedField === "name"
-                    ? "0 0 0 2px rgba(209, 113, 226, 0.3)"
+                    ? "0 0 0 2px rgb(var(--glow-rgb) / 0.3)"
                     : "none",
               }}
               className="rounded-xl"
@@ -166,7 +166,7 @@ export default function ContactForm() {
               animate={{
                 boxShadow:
                   focusedField === "email"
-                    ? "0 0 0 2px rgba(209, 113, 226, 0.3)"
+                    ? "0 0 0 2px rgb(var(--glow-rgb) / 0.3)"
                     : "none",
               }}
               className="rounded-xl"

@@ -61,7 +61,7 @@ export default function ServicesPageHero() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-[#2d2d2d]/40" />
+      <div className="absolute inset-0 bg-[rgb(var(--overlay-dark-rgb)/0.4)]" />
 
       {/* Content */}
       <motion.div
@@ -87,7 +87,7 @@ export default function ServicesPageHero() {
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight indent-24"
             >
               {"What we "}
-              <span className="relative inline-block text-white">
+              <span className="relative inline-block indent-0 text-white">
                 {"do"}
                 <StrokeOval />
               </span>

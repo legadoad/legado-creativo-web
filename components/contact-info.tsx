@@ -130,8 +130,8 @@ export default function ContactInfo() {
         variants={itemVariants}
         whileHover={{
           scale: 1.02,
-          borderColor: "rgba(209, 113, 226, 0.4)",
-          boxShadow: "0 10px 40px -10px rgba(209, 113, 226, 0.2)",
+          borderColor: "rgb(var(--glow-rgb) / 0.4)",
+          boxShadow: "0 10px 40px -10px rgb(var(--glow-rgb) / 0.2)",
         }}
         transition={{ duration: 0.3 }}
       >

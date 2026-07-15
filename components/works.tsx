@@ -62,7 +62,7 @@ export default function Works() {
                 </div>
 
                 {/* Card image */}
-                <div className="relative z-10 aspect-[0.82/1] overflow-hidden rounded-2xl bg-[#d8d2c9]">
+                <div className="relative z-10 aspect-[0.82/1] overflow-hidden rounded-2xl bg-section-sand">
                   <Image
                     src={solutionImages[index]}
                     alt={t(`cards.${index}.title`)}

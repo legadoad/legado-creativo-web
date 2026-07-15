@@ -138,7 +138,7 @@ export default function Services() {
                   </motion.div>
 
                   <motion.h3
-                    animate={{ color: hoveredIndex === index ? "rgb(212, 0, 255)" : "rgb(255, 255, 255)" }}
+                    animate={{ color: hoveredIndex === index ? "rgb(var(--magenta-rgb))" : "rgb(255 255 255)" }}
                     className="text-2xl font-bold mb-3"
                   >
                     {service.title}

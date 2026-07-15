@@ -9,7 +9,7 @@ import { strokes, type StrokeVariant } from "@/components/stroke-underline";
 // ─── Props ────────────────────────────────────────────────────────────────────
 
 interface CTAProps {
-  /** Tailwind bg class e.g. "bg-[#c9b8f0]" */
+  /** Tailwind bg class e.g. "bg-section-lavender" */
   bg?: string;
   /** Small label aligned top-right of the headline */
   label?: string;
@@ -25,7 +25,7 @@ interface CTAProps {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function CTA({
-  bg = "bg-[#c9b8f0]",
+  bg = "bg-section-lavender",
   label = "Connect",
   title = "How can we help you innovate? Drop us a line.",
   highlightWord = "innovate?",
@@ -61,7 +61,7 @@ export default function CTA({
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-[1.1] tracking-tight md:indent-24 text-center md:text-left"
           >
             {parts[0].trimEnd()}{" "}
-            {highlightWord && (<span className="relative inline-block">{highlightWord}{isInView && <Stroke />}</span>)}
+            {highlightWord && (<span className="relative inline-block indent-0">{highlightWord}{isInView && <Stroke />}</span>)}
             {parts[1] && <>{" "}{parts[1].trimStart()}</>}
           </motion.h2>
         </div>

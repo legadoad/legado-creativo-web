@@ -23,21 +23,31 @@
   --border: oklch(0.88 0.005 247.839);
   --input: oklch(0.92 0.002 247.839);
   --ring: oklch(55.65% 0.245 261.54);
-  --chart-1: oklch(55.65% 0.245 261.54);
   --chart-2: oklch(67.64% 0.104 266.86);
-  --chart-3: oklch(0.45 0.2 250);
-  --chart-4: oklch(0.58 0.22 275);
-  --chart-5: oklch(0.62 0.18 255);
   --radius: 0.625rem;
   --sidebar: oklch(0.98 0.001 0);
   --sidebar-foreground: oklch(0.15 0.01 247.839);
-  --sidebar-primary: oklch(55.65% 0.245 261.54);
-  --sidebar-primary-foreground: oklch(0.98 0.001 0);
   --sidebar-accent: oklch(55.65% 0.245 261.54);
   --sidebar-accent-foreground: oklch(0.98 0.001 0);
   --sidebar-border: oklch(0.92 0.002 247.839);
   --sidebar-ring: oklch(55.65% 0.245 261.54);
   --gradient-overlay: var(--primary);
+
+  /* Secondary brand colors */
+  --secondary-lime: oklch(95.67% 0.1072 125.08); /* #e0feae */
+  --secondary-blue: oklch(67.64% 0.104 266.86); /* #7a95d8 */
+  --secondary-magenta: oklch(85% 0.11 318.42); /* paled rgba(212, 0, 255, 0.6) */
+
+  /* Channel-triplet colors, for use as rgb(var(--x-rgb) / <alpha>) where alpha varies by call site */
+  --glow-rgb: 209 113 226; /* decorative glow used across hero/timeline/contact sections */
+  --magenta-rgb: 212 0 255; /* vivid hover accent (logo marquee, service cards) */
+  --overlay-dark-rgb: 45 45 45; /* dark image overlay */
+
+  /* Per-page section tint colors */
+  --section-lavender: oklch(81.57% 0.0797 298.53); /* #c9b8f0 */
+  --section-mint: oklch(92.14% 0.0219 167.44); /* #D8EAE2 */
+  --section-cream: oklch(94.84% 0.0297 85.56); /* #F7EDD8 */
+  --section-sand: oklch(86.6% 0.0139 78.25); /* #d8d2c9 */
 }
 
 .dark {
@@ -60,15 +70,9 @@
   --border: oklch(0.2 0.008 247.839);
   --input: oklch(0.2 0.008 247.839);
   --ring: oklch(67.64% 0.104 266.86);
-  --chart-1: oklch(67.64% 0.104 266.86);
   --chart-2: oklch(55.65% 0.245 261.54);
-  --chart-3: oklch(0.55 0.18 250);
-  --chart-4: oklch(0.7 0.15 275);
-  --chart-5: oklch(0.75 0.1 255);
   --sidebar: oklch(0.12 0.008 247.839);
   --sidebar-foreground: oklch(0.95 0.002 247.839);
-  --sidebar-primary: oklch(67.64% 0.104 266.86);
-  --sidebar-primary-foreground: oklch(0.08 0.01 247.839);
   --sidebar-accent: oklch(67.64% 0.104 266.86);
   --sidebar-accent-foreground: oklch(0.08 0.01 247.839);
   --sidebar-border: oklch(0.2 0.008 247.839);
@@ -98,24 +102,25 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
   --color-sidebar-accent: var(--sidebar-accent);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-gradient-overlay: var(--gradient-overlay);
+  --color-secondary-lime: var(--secondary-lime);
+  --color-secondary-blue: var(--secondary-blue);
+  --color-secondary-magenta: var(--secondary-magenta);
+  --color-section-lavender: var(--section-lavender);
+  --color-section-mint: var(--section-mint);
+  --color-section-cream: var(--section-cream);
+  --color-section-sand: var(--section-sand);
 }
 
 /* Added smooth theme transition */
@@ -156,10 +161,10 @@ html {
   @keyframes glow {
     0%,
     100% {
-      box-shadow: 0 0 20px rgba(209, 113, 226, 0.3);
+      box-shadow: 0 0 20px rgb(var(--glow-rgb) / 0.3);
     }
     50% {
-      box-shadow: 0 0 40px rgba(209, 113, 226, 0.5);
+      box-shadow: 0 0 40px rgb(var(--glow-rgb) / 0.5);
     }
   }
 

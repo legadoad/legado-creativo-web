@@ -56,8 +56,8 @@ export default function AboutStory() {
               }}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 25px 50px -12px rgba(209, 113, 226, 0.25)",
-                borderColor: "rgba(209, 113, 226, 0.5)",
+                boxShadow: "0 25px 50px -12px rgb(var(--glow-rgb) / 0.25)",
+                borderColor: "rgb(var(--glow-rgb) / 0.5)",
               }}
             >
               <motion.div

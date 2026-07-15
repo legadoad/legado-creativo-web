@@ -66,8 +66,8 @@ export default function AboutTimeline() {
                       className="bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-colors duration-300"
                       whileHover={{
                         y: -8,
-                        boxShadow: "0 20px 40px -15px rgba(209, 113, 226, 0.2)",
-                        borderColor: "rgba(209, 113, 226, 0.5)",
+                        boxShadow: "0 20px 40px -15px rgb(var(--glow-rgb) / 0.2)",
+                        borderColor: "rgb(var(--glow-rgb) / 0.5)",
                       }}
                       transition={{ duration: 0.3 }}
                     >
