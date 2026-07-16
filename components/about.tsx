@@ -257,7 +257,7 @@ export default function About() {
                 }}
                 className="absolute top-10 right-10 bg-accent text-background px-6 py-3 rounded-full font-bold shadow-lg shadow-accent/30"
               >
-                Since 2014
+                Since 2018
               </motion.div>
 
               {/* Decorative Element */}

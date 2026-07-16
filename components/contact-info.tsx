@@ -7,13 +7,13 @@ import { useTranslations } from "next-intl"
 
 const contactIcons = [Mail, Phone, MapPin, Clock]
 const contactHrefs = [
-  "mailto:hello@vucreative.agency",
+  "mailto:hello@legadocreativo.com",
   "tel:+15551234567",
   "#",
   null,
 ]
 const contactValues = [
-  "hello@vucreative.agency",
+  "hello@legadocreativo.com",
   "+1 (555) 123-4567",
   "123 Creative Ave, New York, NY 10001",
   null, // Will use translation for hours value

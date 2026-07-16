@@ -18,7 +18,7 @@ export default function Home() {
       <Works />
       {/* <GalleryMarquee /> */}
       <About />
-      <VideoBanner />
+      {/* <VideoBanner /> */}
       <CTA bg="bg-secondary-lime" />
       <Footer />
     </main>

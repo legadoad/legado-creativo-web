@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Sparkles } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function AboutPageHero() {
-  const t = useTranslations("aboutHero")
-  const containerRef = useRef<HTMLElement>(null)
+  const t = useTranslations("aboutHero");
+  const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95])
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -26,7 +26,7 @@ export default function AboutPageHero() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -35,7 +35,7 @@ export default function AboutPageHero() {
       y: 0,
       transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] },
     },
-  }
+  };
 
   const statVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -48,7 +48,7 @@ export default function AboutPageHero() {
         ease: [0.25, 0.1, 0.25, 1],
       },
     }),
-  }
+  };
 
   return (
     <section
@@ -62,7 +62,11 @@ export default function AboutPageHero() {
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
           }}
-          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          transition={{
+            duration: 8,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
         />
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
@@ -70,7 +74,12 @@ export default function AboutPageHero() {
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
           }}
-          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 8,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
       </motion.div>
 
@@ -83,7 +92,11 @@ export default function AboutPageHero() {
           y: [-20, 20, -20],
           x: [-10, 10, -10],
         }}
-        transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+        transition={{
+          duration: 6,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
       />
       <motion.div
         className="absolute bottom-24 right-16 w-4 h-4 bg-accent rounded-full"
@@ -91,7 +104,12 @@ export default function AboutPageHero() {
           y: [15, -15, 15],
           x: [8, -8, 8],
         }}
-        transition={{ duration: 6.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 }}
+        transition={{
+          duration: 6.5,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 0.5,
+        }}
       />
       <motion.div
         className="absolute bottom-40 left-20 w-6 h-6 border-2 border-chart-2 rounded-full"
@@ -99,7 +117,11 @@ export default function AboutPageHero() {
           y: [20, -20, 20],
           rotate: [0, 180, 360],
         }}
-        transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+        transition={{
+          duration: 8,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
       />
       <motion.div
         className="absolute top-24 left-16 w-6 h-6 border-2 border-chart-2 rounded-full"
@@ -107,7 +129,12 @@ export default function AboutPageHero() {
           y: [-18, 18, -18],
           rotate: [0, -180, -360],
         }}
-        transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1.5 }}
+        transition={{
+          duration: 9,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
       />
       <motion.div
         className="absolute top-1/2 right-32 w-3 h-3 bg-chart-2/50 rotate-45"
@@ -115,7 +142,11 @@ export default function AboutPageHero() {
           y: [-15, 15, -15],
           rotate: [45, 225, 405],
         }}
-        transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+        transition={{
+          duration: 7,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
       />
       <motion.div
         className="absolute bottom-1/3 left-32 w-3 h-3 bg-chart-2/50 rotate-45"
@@ -123,31 +154,59 @@ export default function AboutPageHero() {
           y: [12, -12, 12],
           rotate: [45, -135, -315],
         }}
-        transition={{ duration: 7.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
+        transition={{
+          duration: 7.5,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 1,
+        }}
       />
 
-      <motion.div className="relative z-10 max-w-5xl mx-auto px-6 text-center" style={{ opacity, scale }}>
-        <motion.div variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div
+        className="relative z-10 max-w-5xl mx-auto px-6 text-center"
+        style={{ opacity, scale }}
+      >
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <motion.div
             variants={itemVariants}
             className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-8"
-            whileHover={{ scale: 1.05, borderColor: "rgb(var(--glow-rgb) / 0.5)" }}
+            whileHover={{
+              scale: 1.05,
+              borderColor: "rgb(var(--glow-rgb) / 0.5)",
+            }}
           >
             <motion.div
               animate={{ rotate: [0, 360] }}
-              transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+              transition={{
+                duration: 4,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "linear",
+              }}
             >
               <Sparkles className="w-4 h-4 text-accent" />
             </motion.div>
-            <span className="text-accent text-sm font-medium">{t("badge")}</span>
+            <span className="text-accent text-sm font-medium">
+              {t("badge")}
+            </span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+          >
             <span className="text-foreground">{t("titleLine1")} </span>
             <motion.span
               className="bg-gradient-to-r from-accent via-chart-2 to-accent bg-[length:200%_auto] bg-clip-text text-transparent inline-block"
               animate={{ backgroundPosition: ["0% center", "200% center"] }}
-              transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+              transition={{
+                duration: 4,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "linear",
+              }}
             >
               {t("titleLine2")}
             </motion.span>
@@ -159,30 +218,6 @@ export default function AboutPageHero() {
           >
             {t("subtitle")}
           </motion.p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            {[0, 1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                custom={i}
-                variants={statVariants}
-                initial="hidden"
-                animate="visible"
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="cursor-default"
-              >
-                <motion.div
-                  className="text-4xl md:text-5xl font-bold text-accent mb-2"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 + i * 0.1 }}
-                >
-                  {t(`stats.${i}.value`)}
-                </motion.div>
-                <div className="text-foreground/60 text-sm">{t(`stats.${i}.label`)}</div>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
       </motion.div>
 
@@ -195,15 +230,23 @@ export default function AboutPageHero() {
         <motion.div
           className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
           animate={{ y: [0, 5, 0] }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          transition={{
+            duration: 2,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
         >
           <motion.div
             className="w-1.5 h-3 bg-accent rounded-full"
             animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            transition={{
+              duration: 1.5,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
           />
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

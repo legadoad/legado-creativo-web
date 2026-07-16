@@ -75,7 +75,7 @@ export default function ServicesPageHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="absolute top-0 left-0 text-sm font-medium text-white/50 tracking-wide leading-none pt-1"
+              className="invisible absolute top-0 left-0 text-sm font-medium text-white/50 tracking-wide leading-none pt-1"
             >
               Services
             </motion.p>

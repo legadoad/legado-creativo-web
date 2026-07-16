@@ -1,20 +1,20 @@
 {
   "metadata": {
     "home": {
-      "title": "VU Creative Agency - Diseño Web y Gráfico",
+      "title": "Legado Creativo - Diseño Web y Gráfico",
       "description": "Soluciones impactantes de diseño web y gráfico que elevan tu marca. Creamos experiencias digitales modernas e impactantes."
     },
     "about": {
-      "title": "Sobre Nosotros | VU Creative Agency",
-      "description": "Conoce VU Creative Agency - nuestra historia, equipo, valores y trayectoria creativa."
+      "title": "Sobre Nosotros | Legado Creativo",
+      "description": "Conoce Legado Creativo - nuestra historia, equipo, valores y trayectoria creativa."
     },
     "services": {
-      "title": "Servicios | VU Creative Agency",
+      "title": "Servicios | Legado Creativo",
       "description": "Explora nuestros servicios creativos - diseño gráfico, diseño web, branding, UI/UX y más."
     },
     "contact": {
-      "title": "Contáctanos | VU Creative Agency",
-      "description": "Ponte en contacto con VU Creative Agency. Hablemos de tu próximo proyecto."
+      "title": "Contáctanos | Legado Creativo",
+      "description": "Ponte en contacto con Legado Creativo. Hablemos de tu próximo proyecto."
     }
   },
   "header": {
@@ -25,7 +25,7 @@
     "cta": "Contáctanos"
   },
   "hero": {
-    "badge": "CONOCE VU CREATIVE",
+    "badge": "CONOCE LEGADO CREATIVO",
     "titleLine1": "Diseño Que",
     "titleLine2": "Te Mueve",
     "description": "Creamos experiencias digitales impactantes a través del diseño web y gráficos que cuentan tu historia, cautivan a tu audiencia y generan resultados.",
@@ -34,24 +34,21 @@
     "scroll": "SCROLL",
     "yearsLabel": "10+ Años",
     "yearsDescription": "Creando excelencia digital",
-    "imageAlt": "Espacio de trabajo de VU Creative Agency"
+    "imageAlt": "Espacio de trabajo de Legado Creativo"
   },
   "footer": {
-    "brandName": "VU Creative",
+    "brandName": "Legado Creativo",
     "tagline": "Creando experiencias digitales que inspiran y convierten.",
-    "work": "Trabajo",
-    "portfolio": "Portafolio",
-    "caseStudies": "Casos de Éxito",
-    "testimonials": "Testimonios",
     "company": "Empresa",
     "about": "Nosotros",
     "team": "Equipo",
     "services": "Servicios",
     "contact": "Contacto",
     "connect": "Conectar",
-    "copyright": "© 2025 VU Creative Agency. Todos los derechos reservados.",
+    "copyright": "© 2025 Legado Creativo. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+    "terms": "Términos de Servicio",
+    "poweredBy": "Desarrollado por Developwave"
   },
   "cta": {
     "titleLine1": "¿Listo para Transformar",
@@ -193,13 +190,13 @@
   },
   "aboutStory": {
     "titleLine1": "La Historia Detrás de",
-    "titleLine2": " VU Creative",
+    "titleLine2": " Legado Creativo",
     "paragraphs": [
-      "VU Creative Agency nació de una creencia simple: el gran diseño tiene el poder de transformar negocios y conectar personas de maneras significativas.",
+      "Legado Creativo nació de una creencia simple: el gran diseño tiene el poder de transformar negocios y conectar personas de maneras significativas.",
       "Lo que comenzó como un pequeño estudio con solo tres diseñadores apasionados ha evolucionado hasta convertirse en una potencia creativa de servicio completo, trabajando con marcas de todo el mundo para dar vida a sus visiones.",
       "Nuestro viaje ha sido definido por la curiosidad, la colaboración y un compromiso inquebrantable con la excelencia. No solo creamos diseños—creamos experiencias que resuenan, inspiran y generan resultados."
     ],
-    "founded": "2014",
+    "founded": "2018",
     "foundedLabel": "Fundada en NYC",
     "teamCount": "15+ Miembros del Equipo",
     "teamSpread": "En 4 continentes"
@@ -210,32 +207,32 @@
     "subtitle": "Una década de creatividad, crecimiento e innumerables proyectos que nos formaron.",
     "milestones": [
       {
-        "year": "2014",
+        "year": "2018",
         "title": "El Comienzo",
         "description": "Fundada en un pequeño apartamento de NYC con grandes sueños y tres diseñadores apasionados."
       },
       {
-        "year": "2016",
+        "year": "2020",
         "title": "Primer Gran Cliente",
         "description": "Conseguimos nuestro primer cliente Fortune 500, marcando un punto de inflexión en nuestro camino."
       },
       {
-        "year": "2018",
+        "year": "2022",
         "title": "Expansión Global",
         "description": "Abrimos oficinas en Londres y Tokio, expandiendo nuestro alcance a través de continentes."
       },
       {
-        "year": "2020",
+        "year": "2024",
         "title": "Reconocimiento",
         "description": "Ganamos nuestro primer Webby Award y múltiples reconocimientos de la industria del diseño."
       },
       {
-        "year": "2022",
+        "year": "2026",
         "title": "Crecimiento del Equipo",
         "description": "Expandimos a más de 15 miembros del equipo con diversos orígenes y experiencia."
       },
       {
-        "year": "2024",
+        "year": "2028",
         "title": "Laboratorio de Innovación",
         "description": "Lanzamos nuestro laboratorio de innovación en diseño con IA para experiencias de próxima generación."
       }
@@ -244,7 +241,7 @@
   "aboutTeam": {
     "title": "Conoce al",
     "titleAccent": "Equipo",
-    "subtitle": "Las mentes creativas detrás de VU Creative Agency. Somos un grupo diverso unido por nuestro amor por el gran diseño.",
+    "subtitle": "Las mentes creativas detrás de Legado Creativo. Somos un grupo diverso unido por nuestro amor por el gran diseño.",
     "members": [
       {
         "name": "Marcus Chen",
@@ -626,7 +623,7 @@
     "quickResponseText": "Normalmente respondemos dentro de 2-4 horas en horario laboral. Para consultas urgentes, llámanos."
   },
   "contactMap": {
-    "title": "VU Creative Agency HQ",
+    "title": "Legado Creativo HQ",
     "addressLine1": "123 Creative Avenue, Suite 500",
     "addressLine2": "New York, NY 10001, USA",
     "openMaps": "Abrir en Google Maps"

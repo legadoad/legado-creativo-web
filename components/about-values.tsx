@@ -14,6 +14,14 @@ const valueColors = [
   "from-purple-500 to-violet-500",
   "from-accent to-chart-2",
 ]
+const valueGlow = [
+  "hover:border-pink-500/50 hover:shadow-pink-500/20",
+  "hover:border-amber-500/50 hover:shadow-amber-500/20",
+  "hover:border-blue-500/50 hover:shadow-blue-500/20",
+  "hover:border-green-500/50 hover:shadow-green-500/20",
+  "hover:border-purple-500/50 hover:shadow-purple-500/20",
+  "hover:border-accent/50 hover:shadow-accent/20",
+]
 
 export default function AboutValues() {
   const t = useTranslations("aboutValues")
@@ -69,6 +77,7 @@ export default function AboutValues() {
         >
           {valueIcons.map((Icon, i) => {
             const color = valueColors[i]
+            const glow = valueGlow[i]
             return (
               <motion.div
                 key={i}
@@ -77,12 +86,12 @@ export default function AboutValues() {
                   y: -12,
                   transition: { duration: 0.3 },
                 }}
-                className="group relative bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-colors duration-300 cursor-default"
+                className={`group relative bg-card border border-border rounded-2xl p-8 shadow-none hover:shadow-xl transition-all duration-300 cursor-default ${glow}`}
               >
                 <motion.div
                   className={`absolute inset-0 bg-gradient-to-br ${color} rounded-2xl`}
                   initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 0.05 }}
+                  whileHover={{ opacity: 0.12 }}
                   transition={{ duration: 0.3 }}
                 />
 

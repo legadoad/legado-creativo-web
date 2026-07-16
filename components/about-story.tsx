@@ -37,7 +37,7 @@ export default function AboutStory() {
             >
               <Image
                 src="/modern-creative-agency-office-workspace-with-desig.jpg"
-                alt="VU Creative Agency workspace"
+                alt="Legado Creativo workspace"
                 fill
                 className="object-cover"
               />

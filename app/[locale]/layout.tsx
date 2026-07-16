@@ -12,7 +12,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VU Creative Agency - Web & Graphic Design",
+  title: "Legado Creativo - Web & Graphic Design",
   description:
     "Stunning web design and graphic design solutions that elevate your brand. We create modern, impactful digital experiences.",
   icons: {

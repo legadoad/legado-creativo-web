@@ -7,7 +7,7 @@ import ServicesFaq from "@/components/services-faq";
 import CTA from "@/components/cta";
 
 export const metadata = {
-  title: "Services | VU Creative Agency",
+  title: "Services | Legado Creativo",
   description:
     "Explore our creative services - graphic design, web design, branding, UI/UX and more.",
 };

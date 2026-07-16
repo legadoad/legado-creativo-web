@@ -5,9 +5,9 @@ import ContactForm from "@/components/contact-form";
 import ContactInfo from "@/components/contact-info";
 
 export const metadata = {
-  title: "Contact Us | VU Creative Agency",
+  title: "Contact Us | Legado Creativo",
   description:
-    "Get in touch with VU Creative Agency. Let's discuss your next project.",
+    "Get in touch with Legado Creativo. Let's discuss your next project.",
 };
 
 export default function ContactPage() {

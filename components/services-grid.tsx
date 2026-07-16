@@ -16,6 +16,16 @@ const serviceColors = [
   "from-yellow-500 to-orange-500",
   "from-orange-500 to-pink-500",
 ]
+const serviceGlow = [
+  "hover:border-pink-500/50 hover:shadow-pink-500/20",
+  "hover:border-accent/50 hover:shadow-accent/20",
+  "hover:border-blue-500/50 hover:shadow-blue-500/20",
+  "hover:border-cyan-500/50 hover:shadow-cyan-500/20",
+  "hover:border-teal-500/50 hover:shadow-teal-500/20",
+  "hover:border-green-500/50 hover:shadow-green-500/20",
+  "hover:border-yellow-500/50 hover:shadow-yellow-500/20",
+  "hover:border-orange-500/50 hover:shadow-orange-500/20",
+]
 
 export default function ServicesGrid() {
   const t = useTranslations("servicesGrid")
@@ -67,6 +77,7 @@ export default function ServicesGrid() {
             {serviceIcons.map((Icon, index) => {
               const isExpanded = expandedIndex === index
               const color = serviceColors[index]
+              const glow = serviceGlow[index]
               return (
                 <motion.div
                   key={index}
@@ -76,14 +87,14 @@ export default function ServicesGrid() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
                   onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                  className={`group relative p-6 rounded-2xl border border-border bg-gradient-to-br from-card to-card/50 hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 cursor-pointer ${
+                  className={`group relative p-6 rounded-2xl border border-border bg-gradient-to-br from-card to-card/50 transition-all duration-500 hover:shadow-2xl cursor-pointer ${glow} ${
                     isExpanded ? "md:col-span-2 lg:col-span-2" : ""
                   }`}
                 >
                   {/* Gradient overlay on hover */}
                   <motion.div
                     initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 0.05 }}
+                    whileHover={{ opacity: 0.12 }}
                     className={`absolute inset-0 bg-gradient-to-br ${color} rounded-2xl`}
                   />
 

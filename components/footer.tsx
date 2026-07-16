@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { Mail, Linkedin, Instagram, Twitter } from "lucide-react";
+import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-gradient-to-b from-transparent to-primary/5 py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-12">
           <div className="flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-2 mb-6 group">
               <Image
@@ -23,37 +23,9 @@ export default function Footer() {
                 priority
               />
             </Link>
-            <p className="text-foreground/60 text-sm text-center md:text-left">{t("tagline")}</p>
-          </div>
-
-          <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-semibold text-foreground mb-4">{t("work")}</h4>
-            <ul className="space-y-2 text-center md:text-left">
-              <li>
-                <Link
-                  href="/#work"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("portfolio")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#work"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("caseStudies")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#work"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("testimonials")}
-                </Link>
-              </li>
-            </ul>
+            <p className="text-foreground/60 text-sm text-center md:text-left max-w-xs">
+              {t("tagline")}
+            </p>
           </div>
 
           <div className="flex flex-col items-center md:items-start">
@@ -69,14 +41,7 @@ export default function Footer() {
                   {t("about")}
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/about#team"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("team")}
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/#services"
@@ -105,7 +70,7 @@ export default function Footer() {
                 { icon: Mail, href: "/contact" },
                 { icon: Linkedin, href: "#" },
                 { icon: Instagram, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Facebook, href: "#" },
               ].map((social, i) => {
                 const Icon = social.icon;
                 return (
@@ -124,7 +89,9 @@ export default function Footer() {
 
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-foreground/40 text-sm text-center">{t("copyright")}</p>
+            <p className="text-foreground/40 text-sm text-center">
+              {t("copyright")}
+            </p>
             <div className="flex gap-6">
               <Link
                 href="#"
@@ -139,6 +106,16 @@ export default function Footer() {
                 {t("terms")}
               </Link>
             </div>
+          </div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://developwave.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/25 hover:text-foreground/50 text-xs transition"
+            >
+              {t("poweredBy")}
+            </a>
           </div>
         </div>
       </div>

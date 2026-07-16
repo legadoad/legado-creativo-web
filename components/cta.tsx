@@ -49,7 +49,7 @@ export default function CTA({
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:absolute md:top-0 md:left-0 text-sm font-medium text-black/50 tracking-wide leading-none md:pt-1 text-center md:text-left mb-4 md:mb-0"
+            className="invisible md:absolute md:top-0 md:left-0 text-sm font-medium text-black/50 tracking-wide leading-none md:pt-1 text-center md:text-left mb-4 md:mb-0"
           >
             {label}
           </motion.p>

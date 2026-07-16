@@ -1,20 +1,20 @@
 {
   "metadata": {
     "home": {
-      "title": "VU Creative Agency - Web & Graphic Design",
+      "title": "Legado Creativo - Web & Graphic Design",
       "description": "Stunning web design and graphic design solutions that elevate your brand. We create modern, impactful digital experiences."
     },
     "about": {
-      "title": "About Us | VU Creative Agency",
-      "description": "Learn about VU Creative Agency - our story, team, values, and creative journey."
+      "title": "About Us | Legado Creativo",
+      "description": "Learn about Legado Creativo - our story, team, values, and creative journey."
     },
     "services": {
-      "title": "Services | VU Creative Agency",
+      "title": "Services | Legado Creativo",
       "description": "Explore our creative services - graphic design, web design, branding, UI/UX and more."
     },
     "contact": {
-      "title": "Contact Us | VU Creative Agency",
-      "description": "Get in touch with VU Creative Agency. Let's discuss your next project."
+      "title": "Contact Us | Legado Creativo",
+      "description": "Get in touch with Legado Creativo. Let's discuss your next project."
     }
   },
   "header": {
@@ -25,7 +25,7 @@
     "cta": "Get in Touch"
   },
   "hero": {
-    "badge": "MEET VU CREATIVE",
+    "badge": "MEET LEGADO CREATIVO",
     "titleLine1": "Design That",
     "titleLine2": "Moves You",
     "description": "We craft stunning digital experiences through web design and graphics that tell your story, captivate your audience, and drive results.",
@@ -34,24 +34,21 @@
     "scroll": "SCROLL",
     "yearsLabel": "10+ Years",
     "yearsDescription": "Crafting digital excellence",
-    "imageAlt": "VU Creative Agency workspace"
+    "imageAlt": "Legado Creativo workspace"
   },
   "footer": {
-    "brandName": "VU Creative",
+    "brandName": "Legado Creativo",
     "tagline": "Crafting digital experiences that inspire and convert.",
-    "work": "Work",
-    "portfolio": "Portfolio",
-    "caseStudies": "Case Studies",
-    "testimonials": "Testimonials",
     "company": "Company",
     "about": "About",
     "team": "Team",
     "services": "Services",
     "contact": "Contact",
     "connect": "Connect",
-    "copyright": "© 2025 VU Creative Agency. All rights reserved.",
+    "copyright": "© 2025 Legado Creativo. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "poweredBy": "Powered by Developwave"
   },
   "cta": {
     "titleLine1": "Ready to Transform",
@@ -174,13 +171,13 @@
   },
   "aboutStory": {
     "titleLine1": "The Story Behind",
-    "titleLine2": " VU Creative",
+    "titleLine2": " Legado Creativo",
     "paragraphs": [
-      "VU Creative Agency was born from a simple belief: great design has the power to transform businesses and connect people in meaningful ways.",
+      "Legado Creativo was born from a simple belief: great design has the power to transform businesses and connect people in meaningful ways.",
       "What started as a small studio with just three passionate designers has evolved into a full-service creative powerhouse, working with brands across the globe to bring their visions to life.",
       "Our journey has been defined by curiosity, collaboration, and an unwavering commitment to excellence. We don't just create designs—we craft experiences that resonate, inspire, and drive results."
     ],
-    "founded": "2014",
+    "founded": "2018",
     "foundedLabel": "Founded in NYC",
     "teamCount": "15+ Team Members",
     "teamSpread": "Across 4 continents"
@@ -191,32 +188,32 @@
     "subtitle": "A decade of creativity, growth, and countless projects that shaped who we are today.",
     "milestones": [
       {
-        "year": "2014",
+        "year": "2018",
         "title": "The Beginning",
         "description": "Founded in a small NYC apartment with big dreams and three passionate designers."
       },
       {
-        "year": "2016",
+        "year": "2020",
         "title": "First Major Client",
         "description": "Landed our first Fortune 500 client, marking a turning point in our journey."
       },
       {
-        "year": "2018",
+        "year": "2022",
         "title": "Global Expansion",
         "description": "Opened offices in London and Tokyo, expanding our reach across continents."
       },
       {
-        "year": "2020",
+        "year": "2024",
         "title": "Award Recognition",
         "description": "Won our first Webby Award and multiple design industry accolades."
       },
       {
-        "year": "2022",
+        "year": "2026",
         "title": "Team Growth",
         "description": "Expanded to 15+ team members with diverse backgrounds and expertise."
       },
       {
-        "year": "2024",
+        "year": "2028",
         "title": "Innovation Lab",
         "description": "Launched our AI-powered design innovation lab for next-gen experiences."
       }
@@ -225,7 +222,7 @@
   "aboutTeam": {
     "title": "Meet the",
     "titleAccent": "Team",
-    "subtitle": "The creative minds behind VU Creative Agency. We're a diverse group united by our love for great design.",
+    "subtitle": "The creative minds behind Legado Creativo. We're a diverse group united by our love for great design.",
     "members": [
       {
         "name": "Marcus Chen",
@@ -607,7 +604,7 @@
     "quickResponseText": "We typically respond within 2-4 hours during business hours. For urgent inquiries, give us a call."
   },
   "contactMap": {
-    "title": "VU Creative Agency HQ",
+    "title": "Legado Creativo HQ",
     "addressLine1": "123 Creative Avenue, Suite 500",
     "addressLine2": "New York, NY 10001, USA",
     "openMaps": "Open in Google Maps"
