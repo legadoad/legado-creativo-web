@@ -79,7 +79,7 @@ export default function ContactInfo() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition"
+                className="w-12 h-12 bg-secondary-lime rounded-xl flex items-center justify-center shrink-0 transition"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Icon className="w-5 h-5 text-accent" />
@@ -111,14 +111,14 @@ export default function ContactInfo() {
                 key={i}
                 href={social.href}
                 aria-label={social.label}
-                className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center text-foreground/60 hover:bg-accent/10 hover:border-accent/50 hover:text-accent transition-all"
+                className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center hover:bg-accent/20 transition"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.6 + i * 0.1, type: "spring", stiffness: 200 }}
-                whileHover={{ scale: 1.15, rotate: 5 }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Icon size={20} />
+                <Icon className="w-5 h-5 text-accent" />
               </motion.a>
             )
           })}

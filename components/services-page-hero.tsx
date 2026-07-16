@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 function StrokeOval() {
   return (
@@ -30,6 +31,7 @@ function StrokeOval() {
 }
 
 export default function ServicesPageHero() {
+  const t = useTranslations("servicesHero");
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -77,7 +79,7 @@ export default function ServicesPageHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="invisible absolute top-0 left-0 text-sm font-medium text-white/50 tracking-wide leading-none pt-1"
             >
-              Services
+              {t("badge")}
             </motion.p>
 
             <motion.h1
@@ -86,12 +88,12 @@ export default function ServicesPageHero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight indent-24"
             >
-              {"What we "}
+              {t("titleLine1")}
               <span className="relative inline-block indent-0 text-white">
-                {"do"}
+                {t("titleLine2")}
                 <StrokeOval />
               </span>
-              {" best, built for your brand."}
+              {t("titleLine3")}
             </motion.h1>
           </div>
 
@@ -103,7 +105,7 @@ export default function ServicesPageHero() {
           >
             <Link href="/contact" className="inline-flex items-center group">
               <span className="bg-white text-black text-sm font-medium pl-6 pr-5 py-3.5 rounded-full transition-colors duration-200 group-hover:bg-white/90">
-                Start a project
+                {t("button")}
               </span>
               <span className="bg-white text-black w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-200 group-hover:bg-white/90">
                 <motion.span

@@ -25,12 +25,12 @@
     "cta": "Contáctanos"
   },
   "hero": {
-    "badge": "CONOCE LEGADO CREATIVO",
-    "titleLine1": "Diseño Que",
-    "titleLine2": "Te Mueve",
-    "description": "Creamos experiencias digitales impactantes a través del diseño web y gráficos que cuentan tu historia, cautivan a tu audiencia y generan resultados.",
-    "ctaPrimary": "Ver Nuestro Trabajo",
-    "ctaSecondary": "Ver Showreel",
+    "badge": "AGENCIA MULTICULTURAL DE MARCA",
+    "titleLine1": "Tu marca tiene una historia.",
+    "titleLine2": "Nosotros la hacemos inolvidable.",
+    "description": "Tu marca tiene una historia. Nosotros la hacemos inolvidable.",
+    "ctaPrimary": "Hablemos",
+    "ctaSecondary": "Ver Portafolio",
     "scroll": "SCROLL",
     "yearsLabel": "10+ Años",
     "yearsDescription": "Creando excelencia digital",
@@ -38,7 +38,11 @@
   },
   "footer": {
     "brandName": "Legado Creativo",
-    "tagline": "Creando experiencias digitales que inspiran y convierten.",
+    "tagline": "Construyendo marcas con estrategia, narrativa y creatividad.",
+    "work": "Trabajo",
+    "portfolio": "Portafolio",
+    "caseStudies": "Casos de Éxito",
+    "testimonials": "Testimonios",
     "company": "Empresa",
     "about": "Nosotros",
     "team": "Equipo",
@@ -51,18 +55,16 @@
     "poweredBy": "Desarrollado por Developwave"
   },
   "cta": {
-    "titleLine1": "¿Listo para Transformar",
-    "titleLine2": "Tu Marca?",
-    "description": "Colaboremos y creemos algo extraordinario. Ponte en contacto con nuestro equipo hoy para hablar de tu proyecto.",
-    "primary": "Inicia Tu Proyecto",
-    "secondary": "Agenda una Llamada",
-    "trustedBy": "MARCAS QUE CONFÍAN EN NOSOTROS"
+    "label": "TRABAJEMOS JUNTOS",
+    "title": "¿Lista para construir una marca que se recuerde?",
+    "highlightWord": "recuerde?",
+    "buttonText": "Contáctanos"
   },
   "homeAbout": {
     "sectionLabel": "QUIÉNES SOMOS",
-    "titleLine1": "Creando Experiencias",
-    "titleLine2": "Digitales",
-    "subtitle": "Somos un equipo de diseñadores y estrategas apasionados dedicados a dar vida a la visión de tu marca.",
+    "titleLine1": "Una agencia multicultural",
+    "titleLine2": " de estrategia de marca.",
+    "subtitle": "Somos estrategas creativos que entienden dos mundos, dos idiomas y dos mercados — pensamos antes de diseñar.",
     "stats": {
       "projects": "Proyectos Completados",
       "clients": "Clientes Satisfechos",
@@ -71,15 +73,16 @@
     },
     "contentTitle": "No Solo Diseñamos,",
     "contentTitleAccent": " construimos marcas con dirección.",
-    "paragraph1": "Creemos que el marketing efectivo no se trata de verse bien, sino de generar impacto real: conectar, posicionar y convertir. Cada proyecto nace desde la estrategia y se ejecuta con una visión clara: hacer que tu marca no pase desapercibida.",
-    "paragraph2": "Somos un equipo creativo con mentalidad estratégica. Combinamos storytelling, diseño y marketing para crear experiencias digitales que elevan la percepción de marca y generan resultados medibles. Trabajamos con marcas que entienden que crecer no es improvisar, es construir con intención.",
+    "paragraph1": "Legado Creativo nació para llenar un vacío: marcas que merecen estrategia real, no solo diseño. Combinamos storytelling, estrategia de marca y creatividad para construir marcas que se recuerdan por las razones correctas.",
+    "paragraph2": "Somos una agencia multicultural con visión bicultural. Entendemos el mercado latino y el americano desde adentro — y eso nos da una ventaja que ninguna agencia genérica puede replicar.",
     "bulletPoints": [
-      "Estrategias diseñadas para posicionar, no solo publicar",
-      "Creatividad con propósito: cada pieza responde a un objetivo",
-      "Contenido que conecta, convierte y construye marca",
-      "Acompañamiento estratégico en cada etapa del crecimiento"
+      "Estrategia antes que estética — ninguna decisión sin propósito.",
+      "Visión bicultural: dos mercados, una voz.",
+      "Contenido con intención: cada pieza responde a un objetivo claro.",
+      "Acompañamiento real en cada etapa del crecimiento de tu marca."
     ],
-    "learnMore": "Descubre cómo llevar tu marca al siguiente nivel",
+    "foundedBadge": "Desde 2018",
+    "learnMore": "Descubre cómo construir una marca que dure →",
     "valuesTitle": "Nuestros Valores",
     "values": {
       "excellence": {
@@ -122,22 +125,22 @@
       {
         "number": "01",
         "title": "Marca y Posicionamiento",
-        "description": "Define lo que representas y cómo te presentas."
+        "description": "Define quién eres y cómo te presentas al mundo con intención."
       },
       {
         "number": "02",
         "title": "Contenido y Narrativa",
-        "description": "Convierte ideas en historias con las que las personas conectan."
+        "description": "Convierte tu historia en mensajes que conectan con las personas correctas."
       },
       {
         "number": "03",
         "title": "Creatividad y Producción",
-        "description": "Da vida a tu marca a través de visuales y ejecución."
+        "description": "Da vida a tu marca con visuales y producción que comunican."
       },
       {
         "number": "04",
         "title": "Crecimiento Digital y Campañas",
-        "description": "Escala tu marca con estrategia, contenido y rendimiento."
+        "description": "Escala tu marca con estrategia, contenido y rendimiento medible."
       }
     ]
   },
@@ -160,9 +163,9 @@
   "videoBanner": {
     "sectionLabel": "VÉANOS EN ACCIÓN",
     "titleLine1": "Donde la ",
-    "titleHighlight": "creatividad",
+    "titleHighlight": "Creatividad",
     "titleLine2": " Cobra Vida",
-    "subtitle": "Descubre cómo transformamos ideas en experiencias visuales que generan impacto.",
+    "subtitle": "Descubre cómo transformamos ideas en marcas que generan impacto real.",
     "showreelLabel": "Showreel de la Agencia",
     "showreelTitle": "Highlights Creativos 2024",
     "stat1Value": "50+",
@@ -172,141 +175,143 @@
     "features": [
       { "label": "Motion Graphics", "desc": "Animaciones impactantes" },
       { "label": "Films de Marca", "desc": "Historias convincentes" },
-      { "label": "Videos de Producto", "desc": "Mostrando excelencia" },
-      { "label": "Contenido Social", "desc": "Clips virales" }
+      { "label": "Contenido para Reels", "desc": "Mostrando excelencia" },
+      { "label": "Estrategia Social", "desc": "Clips virales" }
     ]
   },
   "aboutHero": {
-    "badge": "Nuestra Historia",
-    "titleLine1": "Somos ",
-    "titleLine2": "Creadores",
-    "subtitle": "Un equipo apasionado de diseñadores, desarrolladores y soñadores dedicados a transformar ideas en experiencias digitales extraordinarias.",
+    "badge": "NUESTRA HISTORIA",
+    "titleLine1": "La Estrategia Detrás",
+    "titleLine2": " de Tu Marca",
+    "subtitle": "Somos Legado Creativo — una agencia multicultural de estrategia de marca para negocios que quieren construir algo que dure.",
     "stats": [
-      { "value": "10+", "label": "Años de Experiencia" },
-      { "value": "250+", "label": "Proyectos Entregados" },
-      { "value": "120+", "label": "Clientes Satisfechos" },
-      { "value": "15+", "label": "Premios Ganados" }
+      { "value": "2 Mercados", "label": "Latino y americano." },
+      { "value": "Servicio Integral", "label": "De la estrategia hasta la ejecución." },
+      { "value": "Bilingüe", "label": "EN + ES en todo." },
+      { "value": "100% Estratégico", "label": "Ninguna decisión sin propósito." }
     ]
   },
   "aboutStory": {
     "titleLine1": "La Historia Detrás de",
-    "titleLine2": " Legado Creativo",
+    "titleLine2": " Legado",
     "paragraphs": [
-      "Legado Creativo nació de una creencia simple: el gran diseño tiene el poder de transformar negocios y conectar personas de maneras significativas.",
-      "Lo que comenzó como un pequeño estudio con solo tres diseñadores apasionados ha evolucionado hasta convertirse en una potencia creativa de servicio completo, trabajando con marcas de todo el mundo para dar vida a sus visiones.",
-      "Nuestro viaje ha sido definido por la curiosidad, la colaboración y un compromiso inquebrantable con la excelencia. No solo creamos diseños—creamos experiencias que resuenan, inspiran y generan resultados."
+      "Legado nació de una convicción: las marcas en Estados Unidos — y especialmente las latinas — merecen el mismo nivel estratégico que las grandes agencias globales le entregan a las Fortune 500s, pero con alguien que de verdad las entiende. Alguien que conoce los dos mundos, los dos idiomas y los dos mercados.",
+      "Victoria Urbaneja fundó Legado Creativo para llenar ese vacío. No como una agencia más de diseño — sino como una socia estratégica que combina visión de negocio con ejecución creativa, y que acompaña a sus clientes desde la primera conversación hasta el impacto real.",
+      "Creemos que una marca no se construye desde el diseño — se construye desde la claridad. Cuando sabes exactamente quién eres, a quién le hablas y qué quieres que sientan cuando te descubren, el diseño deja de ser decoración y se convierte en comunicación. Eso es lo que hacemos: ayudarte a encontrar esa claridad y convertirla en algo que se ve, se siente y se recuerda."
     ],
     "founded": "2018",
-    "foundedLabel": "Fundada en NYC",
+    "foundedLabel": "Fundada en Boston",
     "teamCount": "15+ Miembros del Equipo",
     "teamSpread": "En 4 continentes"
   },
   "aboutTimeline": {
-    "title": "Nuestro",
-    "titleAccent": "Recorrido",
-    "subtitle": "Una década de creatividad, crecimiento e innumerables proyectos que nos formaron.",
+    "title": "Lo que nos",
+    "titleAccent": " Define",
+    "subtitle": "Somos una agencia de estrategia con diseño — y esa diferencia lo cambia todo.",
     "milestones": [
       {
-        "year": "2018",
-        "title": "El Comienzo",
-        "description": "Fundada en un pequeño apartamento de NYC con grandes sueños y tres diseñadores apasionados."
+        "year": "01",
+        "title": "Estrategia Primero",
+        "description": "Todo proyecto empieza con preguntas, no con diseño. Antes de crear, entendemos."
       },
       {
-        "year": "2020",
-        "title": "Primer Gran Cliente",
-        "description": "Conseguimos nuestro primer cliente Fortune 500, marcando un punto de inflexión en nuestro camino."
+        "year": "02",
+        "title": "Dos Mundos, Una Voz",
+        "description": "Entendemos el mercado latino y el americano desde adentro. Eso nos da una ventaja real."
       },
       {
-        "year": "2022",
-        "title": "Expansión Global",
-        "description": "Abrimos oficinas en Londres y Tokio, expandiendo nuestro alcance a través de continentes."
+        "year": "03",
+        "title": "Acompañamiento Real",
+        "description": "No entregamos archivos y desaparecemos. Nos quedamos hasta que tu marca aterrice bien."
       },
       {
-        "year": "2024",
-        "title": "Reconocimiento",
-        "description": "Ganamos nuestro primer Webby Award y múltiples reconocimientos de la industria del diseño."
+        "year": "04",
+        "title": "Integración Total",
+        "description": "Estrategia, diseño, contenido y campaña desde un solo lugar."
       },
       {
-        "year": "2026",
-        "title": "Crecimiento del Equipo",
-        "description": "Expandimos a más de 15 miembros del equipo con diversos orígenes y experiencia."
+        "year": "05",
+        "title": "Impacto Medible",
+        "description": "No medimos el éxito en proyectos entregados — lo medimos en marcas que crecen."
       },
       {
-        "year": "2028",
-        "title": "Laboratorio de Innovación",
-        "description": "Lanzamos nuestro laboratorio de innovación en diseño con IA para experiencias de próxima generación."
+        "year": "06",
+        "title": "Legado",
+        "description": "Construimos marcas que se quedan. Eso es lo que significa Legado."
       }
     ]
   },
   "aboutTeam": {
     "title": "Conoce al",
-    "titleAccent": "Equipo",
-    "subtitle": "Las mentes creativas detrás de Legado Creativo. Somos un grupo diverso unido por nuestro amor por el gran diseño.",
+    "titleAccent": " Equipo",
+    "subtitle": "Las mentes detrás de Legado Creativo.",
     "members": [
       {
-        "name": "Marcus Chen",
-        "role": "Director Creativo",
-        "bio": "Más de 15 años liderando equipos creativos para marcas globales."
+        "name": "Victoria Urbaneja",
+        "role": "Fundadora & Directora de Estrategia",
+        "bio": "Victoria Urbaneja es periodista, publicista y fundadora de Legado Creativo. Con trayectoria en comunicación estratégica para marcas globales como Adidas, Novartis y Univision, Victoria combina visión editorial, pensamiento estratégico y ejecución creativa para construir marcas que impactan en dos mercados. Su propósito es claro: darle voz a la comunidad latina en Estados Unidos — y asegurarse de que esa voz se escuche con la misma fuerza y profesionalismo que cualquier gran marca del mundo."
       },
       {
-        "name": "Sarah Williams",
-        "role": "Diseñadora Principal",
-        "bio": "Diseñadora visual galardonada con pasión por la tipografía."
+        "name": "[Agregar miembro del equipo]",
+        "role": "[Cargo]",
+        "bio": "[Agregar demás miembros del equipo o colaboradores aquí.]"
       },
       {
-        "name": "David Park",
-        "role": "Diseñador de Motion",
-        "bio": "Dando vida a las marcas a través de animaciones dinámicas."
+        "name": "[Agregar miembro del equipo]",
+        "role": "[Cargo]",
+        "bio": "[Agregar demás miembros del equipo o colaboradores aquí.]"
       },
       {
-        "name": "Emma Rodriguez",
-        "role": "Estratega de Marca",
-        "bio": "Creando historias de marca que resuenan y convierten."
+        "name": "[Agregar miembro del equipo]",
+        "role": "[Cargo]",
+        "bio": "[Agregar demás miembros del equipo o colaboradores aquí.]"
       }
     ]
   },
   "aboutValues": {
     "title": "Nuestros",
-    "titleAccent": "Valores",
-    "subtitle": "Los principios que guían cada decisión que tomamos y cada proyecto que emprendemos.",
+    "titleAccent": " Valores",
+    "subtitle": "Los principios que guían cada decisión y cada proyecto.",
     "items": [
       {
-        "title": "Pasión",
-        "description": "Ponemos el corazón en cada proyecto, tratando cada uno como propio."
+        "title": "Estrategia",
+        "description": "Cada decisión tiene un porqué. No diseñamos por diseñar — construimos desde la intención."
       },
       {
-        "title": "Innovación",
-        "description": "Constantemente empujando límites y explorando nuevos territorios creativos."
+        "title": "Narrativa",
+        "description": "Tu marca tiene una historia única. Nuestro trabajo es encontrarla y hacer que resuene."
       },
       {
-        "title": "Precisión",
-        "description": "Atención meticulosa al detalle en cada píxel e interacción."
+        "title": "Raíces",
+        "description": "Entendemos los dos mundos porque vivimos en ellos. Eso no se aprende — se vive."
+      },
+      {
+        "title": "Honestidad",
+        "description": "Te decimos lo que tu marca necesita, no lo que quieres oír."
       },
       {
         "title": "Colaboración",
-        "description": "Trabajando junto a los clientes como verdaderos socios creativos."
+        "description": "Somos socios en el crecimiento de tu marca. Tu éxito es nuestra misión."
       },
       {
-        "title": "Creatividad",
-        "description": "Exploración valiente de ideas que desafían el status quo."
-      },
-      {
-        "title": "Excelencia",
-        "description": "Nunca conformarnos con lo bueno cuando lo grandioso está al alcance."
+        "title": "Impacto",
+        "description": "No medimos el éxito en proyectos entregados — lo medimos en marcas que crecen y perduran."
       }
     ]
   },
   "aboutCta": {
-    "label": "Conectemos",
-    "title": "¿Cómo podemos ayudarte a innovar? Escríbenos.",
-    "highlightWord": "innovar?",
-    "buttonText": "Conéctate con nosotros"
+    "label": "CONECTEMOS",
+    "title": "¿Cómo podemos ayudarte a construir tu marca?",
+    "highlightWord": "marca?",
+    "buttonText": "Conéctate con Nosotros"
   },
   "servicesHero": {
-    "badge": "Lo Que Hacemos",
-    "titleLine1": "Servicios ",
-    "titleLine2": "Creativos",
+    "badge": "SERVICIOS",
+    "titleLine1": "Lo que hacemos ",
+    "titleLine2": "mejor",
+    "titleLine3": ", construido para tu marca.",
     "subtitle": "Desde visuales impactantes hasta experiencias digitales fluidas, ofrecemos soluciones creativas integrales que hacen tu marca inolvidable.",
+    "button": "Iniciar un Proyecto",
     "pills": [
       "Diseño Gráfico",
       "Diseño Web",
@@ -320,13 +325,13 @@
     "sectionLabel": "SOLUCIONES INTEGRALES",
     "title": "Todo lo que Tu Marca",
     "titleAccent": "Necesita",
-    "subtitle": "Servicios creativos de espectro completo para llevar tu marca del concepto a la realidad",
-    "learnMore": "Saber Más",
+    "subtitle": "Cuatro áreas integradas. Un solo equipo. Una dirección estratégica.",
+    "learnMore": "Ver Más",
     "showLess": "Ver Menos",
     "items": [
       {
-        "title": "Diseño Gráfico",
-        "description": "Visuales llamativos que cuentan la historia de tu marca. Desde logos hasta materiales de marketing, creamos diseños que dejan impresiones duraderas.",
+        "title": "Estrategia de Marca",
+        "description": "Posicionamiento, mensajes y voz para una marca que se recuerda.",
         "features": [
           "Diseño de Logo",
           "Material Impreso",
@@ -335,8 +340,8 @@
         ]
       },
       {
-        "title": "Diseño y Desarrollo Web",
-        "description": "Sitios web hermosos y responsivos que convierten visitantes en clientes. Combinamos estética con funcionalidad para experiencias digitales impactantes.",
+        "title": "Identidad Visual",
+        "description": "Logo, sistema visual y guía de marca completa.",
         "features": [
           "Sitios Personalizados",
           "E-commerce",
@@ -345,8 +350,8 @@
         ]
       },
       {
-        "title": "Diseño UI/UX",
-        "description": "Interfaces intuitivas diseñadas para el engagement. Creamos experiencias de usuario fluidas que deleitan y retienen a tu audiencia.",
+        "title": "Brand Playbook",
+        "description": "El manual estratégico que mantiene tu marca consistente, coherente y lista para escalar.",
         "features": [
           "Investigación de Usuarios",
           "Wireframing",
@@ -355,8 +360,8 @@
         ]
       },
       {
-        "title": "Identidad de Marca",
-        "description": "Estrategias de marca integrales que elevan tu identidad. Construimos marcas memorables que resuenan con tu mercado objetivo.",
+        "title": "Visual Content Studio",
+        "description": "Producción visual de alto nivel para redes, campañas y presencia digital.",
         "features": [
           "Estrategia de Marca",
           "Identidad Visual",
@@ -365,8 +370,8 @@
         ]
       },
       {
-        "title": "Motion Graphics",
-        "description": "Animaciones dinámicas que dan vida a tu mensaje. Desde videos explicativos hasta contenido social, creamos movimiento que cautiva.",
+        "title": "Estrategia de Contenido",
+        "description": "Un plan claro de qué publicar, cuándo y para quién.",
         "features": [
           "Animación",
           "Edición de Video",
@@ -375,8 +380,8 @@
         ]
       },
       {
-        "title": "Fotografía",
-        "description": "Fotografía profesional que muestra tu marca. Capturamos visuales impactantes para productos, eventos y campañas de marketing.",
+        "title": "Copywriting Bilingüe",
+        "description": "Textos en español e inglés que conectan y convierten.",
         "features": [
           "Fotos de Producto",
           "Cobertura de Eventos",
@@ -385,8 +390,8 @@
         ]
       },
       {
-        "title": "Ilustración",
-        "description": "Ilustraciones personalizadas que añaden carácter a tu marca. Desde iconos hasta obras completas, llevamos creatividad a cada trazo.",
+        "title": "Brand Activation",
+        "description": "Activaciones de marca que conectan con tu audiencia donde está — online y offline.",
         "features": [
           "Iconos Personalizados",
           "Diseño de Personajes",
@@ -395,8 +400,8 @@
         ]
       },
       {
-        "title": "Diseño para Redes Sociales",
-        "description": "Contenido social que detiene el scroll y genera engagement. Creamos estrategias visuales cohesivas para todas tus plataformas sociales.",
+        "title": "Creator & Influencer Strategy",
+        "description": "Estrategia con creators y voces auténticas para amplificar tu marca en los mercados que importan.",
         "features": [
           "Plantillas de Posts",
           "Diseño de Stories",
@@ -410,28 +415,28 @@
     "sectionLabel": "CÓMO TRABAJAMOS",
     "title": "Nuestro Proceso",
     "titleAccent": "Creativo",
-    "subtitle": "Una metodología probada que entrega resultados excepcionales cada vez",
+    "subtitle": "Un método probado que pone la estrategia primero, siempre.",
     "stepLabel": "PASO",
     "steps": [
       {
-        "title": "Descubrimiento",
-        "description": "Comenzamos entendiendo tu visión, objetivos y audiencia objetivo a través de conversaciones profundas.",
-        "details": "Todo gran proyecto comienza con una conversación. Nos sumergimos profundamente en tu marca, tus desafíos y tus aspiraciones."
+        "title": "Conversamos",
+        "description": "Todo empieza con una conversación real. Entendemos tu negocio, tu competencia, a quién quieres llegar y qué quieres que sientan cuando ven tu marca.",
+        "details": "Todo empieza con una conversación real. Entendemos tu negocio, tu competencia, a quién quieres llegar y qué quieres que sientan cuando ven tu marca."
       },
       {
-        "title": "Investigación",
-        "description": "Análisis de mercado integral e investigación de competencia para informar nuestra estrategia creativa.",
-        "details": "Analizamos tu industria, estudiamos a tus competidores e identificamos oportunidades para que tu marca destaque."
+        "title": "Estrategiamos",
+        "description": "Antes de tocar el diseño, construimos la base. Posicionamiento, mensajes, voz y dirección de mercado. Nada es arbitrario — todo tiene un porqué.",
+        "details": "Antes de tocar el diseño, construimos la base. Posicionamiento, mensajes, voz y dirección de mercado. Nada es arbitrario — todo tiene un porqué."
       },
       {
-        "title": "Diseño",
-        "description": "Proceso de diseño iterativo con múltiples conceptos y refinamientos basados en tu feedback.",
-        "details": "Nuestros diseñadores dan vida a las ideas a través de bocetos, mockups y prototipos, refinando hasta la perfección."
+        "title": "Creamos",
+        "description": "Con la estrategia clara, diseñamos. Cada decisión visual responde a un objetivo. Cada palabra tiene un propósito. Trabajamos contigo en cada etapa.",
+        "details": "Con la estrategia clara, diseñamos. Cada decisión visual responde a un objetivo. Cada palabra tiene un propósito. Trabajamos contigo en cada etapa."
       },
       {
-        "title": "Entrega",
-        "description": "Activos finales entregados con guías completas y soporte continuo para la implementación.",
-        "details": "Entregamos activos pulidos listos para producción, completos con guías para asegurar una aplicación consistente de la marca."
+        "title": "Lanzamos y Acompañamos",
+        "description": "Entregamos todo listo para usar — y no desaparecemos. Nos quedamos para asegurarnos de que tu marca aterrice bien y genere el impacto que construimos juntos.",
+        "details": "Entregamos todo listo para usar — y no desaparecemos. Nos quedamos para asegurarnos de que tu marca aterrice bien y genere el impacto que construimos juntos."
       }
     ]
   },
@@ -442,37 +447,36 @@
     "subtitle": "Todo lo que necesitas saber sobre trabajar con nosotros",
     "items": [
       {
+        "question": "¿Por dónde empieza un proyecto con Legado?",
+        "answer": "Todo empieza con una conversación. Nos cuentas sobre tu negocio, objetivos y audiencia. A partir de ahí, construimos una propuesta estratégica personalizada."
+      },
+      {
         "question": "¿Cuánto tiempo toma un proyecto típico?",
-        "answer": "Los tiempos de proyecto varían según el alcance y complejidad. Un diseño de logo típicamente toma 2-3 semanas, mientras que una identidad de marca completa puede tomar 6-8 semanas. Los proyectos web van de 4-12 semanas dependiendo de las funcionalidades y páginas."
+        "answer": "Depende del alcance. Una identidad de marca completa toma entre 4-8 semanas. Una estrategia de contenido mensual puede estar lista en 1-2 semanas. Te damos tiempos claros antes de empezar."
+      },
+      {
+        "question": "¿Trabajan en inglés y español?",
+        "answer": "Sí. Todo lo que hacemos está disponible en ambos idiomas — desde la estrategia hasta el copy y las piezas de diseño."
+      },
+      {
+        "question": "¿Solo trabajan con marcas latinas?",
+        "answer": "No. Legado trabaja con cualquier marca que quiera conectar con el mercado latino, el americano o ambos. Nuestra ventaja es entender los dos mundos."
       },
       {
         "question": "¿Qué incluye el proceso de revisiones?",
-        "answer": "Cada paquete incluye un número determinado de rondas de revisión. Durante cada ronda, puedes proporcionar feedback consolidado que implementaremos. Revisiones adicionales más allá de las rondas incluidas están disponibles por hora."
+        "answer": "Cada proyecto incluye rondas de revisión definidas desde el inicio para que el resultado final sea exactamente lo que necesitas."
       },
       {
-        "question": "¿Ofrecen soporte continuo después de completar el proyecto?",
-        "answer": "¡Sí! Ofrecemos paquetes de mantenimiento y acuerdos de retención para necesidades de diseño continuas. También proporcionamos 30 días de soporte gratuito después de la entrega del proyecto para abordar cualquier inquietud inmediata."
-      },
-      {
-        "question": "¿Puedo actualizar mi paquete a mitad del proyecto?",
-        "answer": "Absolutamente. Si tus necesidades evolucionan durante el proyecto, podemos discutir la actualización de tu paquete o agregar servicios específicos. Proporcionaremos una cotización revisada basada en los requisitos adicionales."
-      },
-      {
-        "question": "¿Qué formatos de archivo recibiré?",
-        "answer": "Recibirás todos los archivos fuente en formatos estándar de la industria incluyendo AI, PSD, PDF, PNG, JPG y SVG. Para proyectos web, obtendrás el código fuente completo y acceso a todos los activos."
-      },
-      {
-        "question": "¿Cómo funcionan los pagos?",
-        "answer": "Típicamente requerimos 50% por adelantado para comenzar el trabajo, con el 50% restante al completar el proyecto. Para proyectos más grandes, podemos organizar pagos basados en hitos."
+        "question": "¿Ofrecen soporte después de entregar el proyecto?",
+        "answer": "Sí. No desaparecemos cuando entregamos. Acompañamos la implementación y estamos disponibles para ajustes."
       }
     ]
   },
   "servicesCta": {
-    "badge": "¿Listo para Empezar?",
-    "title": "Creemos Algo Increíble Juntos",
-    "subtitle": "¿Tienes un proyecto en mente? Nos encantaría escucharlo. Agenda una consulta gratuita para hablar de tu visión.",
-    "primary": "Inicia Tu Proyecto",
-    "secondary": "Conoce Sobre Nosotros"
+    "label": "TRABAJEMOS JUNTOS",
+    "title": "¿Listo para empezar tu próximo proyecto?",
+    "highlightWord": "proyecto?",
+    "buttonText": "Iniciar un Proyecto"
   },
   "galleryHero": {
     "sectionLabel": "NUESTRO PORTAFOLIO",
@@ -577,14 +581,14 @@
     "secondary": "Ver Nuestros Servicios"
   },
   "contactHero": {
-    "badge": "Hablemos",
+    "badge": "HABLEMOS",
     "titleLine1": "Ponte en ",
     "titleLine2": "Contacto",
-    "subtitle": "¿Tienes un proyecto en mente? Nos encantaría escucharlo. Escríbenos y creemos algo increíble juntos."
+    "subtitle": "¿Lista para construir una marca que dure? Cuéntanos tu proyecto — la primera conversación es gratis."
   },
   "contactForm": {
     "title": "Envíanos un mensaje",
-    "subtitle": "Completa el formulario y te responderemos lo antes posible.",
+    "subtitle": "Completa el formulario y te responderemos a la brevedad.",
     "nameLabel": "Nombre",
     "namePlaceholder": "Juan Pérez",
     "emailLabel": "Correo Electrónico",
@@ -595,11 +599,11 @@
     "serviceLabel": "¿Qué servicio te interesa?",
     "serviceDefault": "Selecciona un servicio",
     "serviceOptions": {
-      "webDesign": "Diseño Web",
-      "brandIdentity": "Identidad de Marca",
-      "uiUx": "Diseño UI/UX",
-      "motionGraphics": "Motion Graphics",
-      "printDesign": "Diseño de Impresión",
+      "webDesign": "Estrategia de Marca",
+      "brandIdentity": "Identidad Visual",
+      "uiUx": "Contenido y Social Media",
+      "motionGraphics": "Brand Activation",
+      "printDesign": "Paquete Completo",
       "other": "Otro"
     },
     "messageLabel": "Detalles del Proyecto",
@@ -612,15 +616,15 @@
   },
   "contactInfo": {
     "title": "Información de Contacto",
-    "subtitle": "¿Prefieres contactarnos directamente? Así puedes encontrarnos.",
-    "email": "Correo",
+    "subtitle": "¿Prefieres contactarnos directamente? Estamos aquí.",
+    "email": "Email",
     "phone": "Teléfono",
     "address": "Dirección",
-    "hours": "Horario de Atención",
+    "hours": "Horario",
     "hoursValue": "Lun - Vie: 9AM - 6PM EST",
     "followUs": "Síguenos",
-    "quickResponse": "Respuesta Rápida",
-    "quickResponseText": "Normalmente respondemos dentro de 2-4 horas en horario laboral. Para consultas urgentes, llámanos."
+    "quickResponse": "Nota rápida",
+    "quickResponseText": "Normalmente respondemos dentro de 24 horas en días hábiles."
   },
   "contactMap": {
     "title": "Legado Creativo HQ",

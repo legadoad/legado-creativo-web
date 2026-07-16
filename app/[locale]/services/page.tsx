@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ServicesPageHero from "@/components/services-page-hero";
@@ -12,7 +13,9 @@ export const metadata = {
     "Explore our creative services - graphic design, web design, branding, UI/UX and more.",
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const t = await getTranslations("servicesCta");
+
   return (
     <main className="min-h-screen bg-background">
       <Header />
@@ -22,11 +25,11 @@ export default function ServicesPage() {
       <ServicesFaq />
       <CTA
         bg="bg-section-mint"
-        label="Work with us"
-        title="Ready to start your next project? Let's talk."
-        highlightWord="project?"
+        label={t("label")}
+        title={t("title")}
+        highlightWord={t("highlightWord")}
         strokeVariant="wide"
-        buttonText="Start a project"
+        buttonText={t("buttonText")}
         href="/contact"
       />
       <Footer />
