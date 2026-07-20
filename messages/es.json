@@ -65,12 +65,24 @@
     "titleLine1": "Una agencia multicultural",
     "titleLine2": " de estrategia de marca.",
     "subtitle": "Somos estrategas creativos que entienden dos mundos, dos idiomas y dos mercados — pensamos antes de diseñar.",
-    "stats": {
-      "projects": "Proyectos Completados",
-      "clients": "Clientes Satisfechos",
-      "years": "Años de Experiencia",
-      "satisfaction": "Tasa de Satisfacción"
-    },
+    "stats": [
+      {
+        "title": "2 Mercados",
+        "desc": "Latino y americano."
+      },
+      {
+        "title": "Servicio Integral",
+        "desc": "De la estrategia hasta la ejecución, todo en un solo lugar."
+      },
+      {
+        "title": "Bilingüe",
+        "desc": "EN + ES en todo lo que hacemos."
+      },
+      {
+        "title": "100% Estratégico",
+        "desc": "Ninguna decisión sin propósito."
+      }
+    ],
     "contentTitle": "No Solo Diseñamos,",
     "contentTitleAccent": " construimos marcas con dirección.",
     "paragraph1": "Legado Creativo nació para llenar un vacío: marcas que merecen estrategia real, no solo diseño. Combinamos storytelling, estrategia de marca y creatividad para construir marcas que se recuerdan por las razones correctas.",

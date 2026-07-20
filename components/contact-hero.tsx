@@ -63,35 +63,55 @@ export default function ContactHero() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgb(var(--glow-rgb)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--glow-rgb)/0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
+      {/* Solid circles */}
       <motion.div
-        className="absolute top-10 left-6 sm:top-16 sm:left-16 w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full"
+        className="absolute top-[20%] left-[10%] w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full"
         animate={{ y: [-15, 15, -15], x: [-8, 8, -8] }}
         transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-10 right-6 sm:bottom-16 sm:right-16 w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full"
+        className="absolute top-[72%] left-[58%] w-3 h-3 sm:w-4 sm:h-4 bg-[#e0feae] rounded-full"
         animate={{ y: [12, -12, 12], x: [6, -6, 6] }}
         transition={{ duration: 5.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 }}
       />
       <motion.div
-        className="absolute bottom-10 left-6 sm:bottom-16 sm:left-16 w-4 h-4 sm:w-5 sm:h-5 border-2 border-chart-2 rounded-full"
+        className="absolute top-[46%] left-[6%] w-3 h-3 sm:w-4 sm:h-4 bg-[#7a95d8] rounded-full"
+        animate={{ y: [-10, 10, -10], x: [-6, 6, -6] }}
+        transition={{ duration: 6.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.8 }}
+      />
+
+      {/* Outline circles */}
+      <motion.div
+        className="absolute top-[82%] left-[24%] w-4 h-4 sm:w-5 sm:h-5 border-2 border-chart-2 rounded-full"
         animate={{ y: [15, -15, 15], rotate: [0, 180, 360] }}
         transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-10 right-6 sm:top-16 sm:right-16 w-4 h-4 sm:w-5 sm:h-5 border-2 border-chart-2 rounded-full"
+        className="absolute top-[21%] left-[86%] w-4 h-4 sm:w-5 sm:h-5 border-2 border-[#e0feae] rounded-full"
         animate={{ y: [-14, 14, -14], rotate: [0, -180, -360] }}
         transition={{ duration: 7.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1.5 }}
       />
       <motion.div
-        className="absolute top-1/4 left-3 sm:left-8 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-chart-2/50 rotate-45"
+        className="absolute top-[50%] left-[92%] w-4 h-4 sm:w-5 sm:h-5 border-2 border-[#7a95d8] rounded-full"
+        animate={{ y: [13, -13, 13], rotate: [0, 180, 360] }}
+        transition={{ duration: 7.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 2 }}
+      />
+
+      {/* Blurred squares */}
+      <motion.div
+        className="absolute top-[36%] left-[90%] w-2.5 h-2.5 sm:w-3 sm:h-3 bg-chart-2/50 rotate-45"
         animate={{ y: [-12, 12, -12], rotate: [45, 225, 405] }}
         transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-3 sm:right-8 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-chart-2/50 rotate-45"
+        className="absolute top-[80%] left-[78%] w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#e0feae]/50 rotate-45"
         animate={{ y: [10, -10, 10], rotate: [45, -135, -315] }}
         transition={{ duration: 6.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
+      />
+      <motion.div
+        className="absolute top-[19%] left-[50%] w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#7a95d8]/50 rotate-45"
+        animate={{ y: [-11, 11, -11], rotate: [45, 225, 405] }}
+        transition={{ duration: 6.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1.8 }}
       />
 
       <motion.div className="relative z-10 max-w-4xl mx-auto px-6 text-center" style={{ opacity }}>

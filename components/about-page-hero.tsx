@@ -86,8 +86,9 @@ export default function AboutPageHero() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgb(var(--glow-rgb)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--glow-rgb)/0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
+      {/* Solid circles */}
       <motion.div
-        className="absolute top-32 right-20 w-4 h-4 bg-accent rounded-full"
+        className="absolute top-[18%] left-[12%] w-4 h-4 bg-accent rounded-full"
         animate={{
           y: [-20, 20, -20],
           x: [-10, 10, -10],
@@ -99,7 +100,7 @@ export default function AboutPageHero() {
         }}
       />
       <motion.div
-        className="absolute bottom-24 right-16 w-4 h-4 bg-accent rounded-full"
+        className="absolute top-[80%] left-[58%] w-4 h-4 bg-[#e0feae] rounded-full"
         animate={{
           y: [15, -15, 15],
           x: [8, -8, 8],
@@ -112,7 +113,22 @@ export default function AboutPageHero() {
         }}
       />
       <motion.div
-        className="absolute bottom-40 left-20 w-6 h-6 border-2 border-chart-2 rounded-full"
+        className="absolute top-[46%] left-[6%] w-4 h-4 bg-[#7a95d8] rounded-full"
+        animate={{
+          y: [-16, 16, -16],
+          x: [-9, 9, -9],
+        }}
+        transition={{
+          duration: 6.8,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 0.8,
+        }}
+      />
+
+      {/* Outline circles */}
+      <motion.div
+        className="absolute top-[78%] left-[20%] w-6 h-6 border-2 border-chart-2 rounded-full"
         animate={{
           y: [20, -20, 20],
           rotate: [0, 180, 360],
@@ -124,7 +140,7 @@ export default function AboutPageHero() {
         }}
       />
       <motion.div
-        className="absolute top-24 left-16 w-6 h-6 border-2 border-chart-2 rounded-full"
+        className="absolute top-[19%] left-[85%] w-6 h-6 border-2 border-[#e0feae] rounded-full"
         animate={{
           y: [-18, 18, -18],
           rotate: [0, -180, -360],
@@ -137,7 +153,22 @@ export default function AboutPageHero() {
         }}
       />
       <motion.div
-        className="absolute top-1/2 right-32 w-3 h-3 bg-chart-2/50 rotate-45"
+        className="absolute top-[50%] left-[92%] w-6 h-6 border-2 border-[#7a95d8] rounded-full"
+        animate={{
+          y: [17, -17, 17],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          duration: 8.5,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+      />
+
+      {/* Blurred squares */}
+      <motion.div
+        className="absolute top-[35%] left-[90%] w-3 h-3 bg-chart-2/50 rotate-45"
         animate={{
           y: [-15, 15, -15],
           rotate: [45, 225, 405],
@@ -149,7 +180,7 @@ export default function AboutPageHero() {
         }}
       />
       <motion.div
-        className="absolute bottom-1/3 left-32 w-3 h-3 bg-chart-2/50 rotate-45"
+        className="absolute top-[74%] left-[80%] w-3 h-3 bg-[#e0feae]/50 rotate-45"
         animate={{
           y: [12, -12, 12],
           rotate: [45, -135, -315],
@@ -159,6 +190,19 @@ export default function AboutPageHero() {
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
           delay: 1,
+        }}
+      />
+      <motion.div
+        className="absolute top-[17%] left-[50%] w-3 h-3 bg-[#7a95d8]/50 rotate-45"
+        animate={{
+          y: [-13, 13, -13],
+          rotate: [45, 225, 405],
+        }}
+        transition={{
+          duration: 7.8,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 1.8,
         }}
       />
 

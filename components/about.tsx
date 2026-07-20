@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { CheckCircle2, Award, Users, Zap, Heart } from "lucide-react";
 import {
   motion,
@@ -15,12 +15,6 @@ export default function About() {
   const t = useTranslations("homeAbout");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  const [countUp, setCountUp] = useState({
-    projects: 0,
-    clients: 0,
-    years: 0,
-    satisfaction: 0,
-  });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -31,28 +25,6 @@ export default function About() {
   const bgCircle2Y = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const imageY = useTransform(scrollYProgress, [0, 1], [50, -50]);
   const smoothImageY = useSpring(imageY, { stiffness: 100, damping: 30 });
-
-  useEffect(() => {
-    if (isInView) {
-      const duration = 2000;
-      const steps = 60;
-      const interval = duration / steps;
-      let step = 0;
-
-      const timer = setInterval(() => {
-        step++;
-        setCountUp({
-          projects: Math.min(Math.floor((250 * step) / steps), 250),
-          clients: Math.min(Math.floor((120 * step) / steps), 120),
-          years: Math.min(Math.floor((10 * step) / steps), 10),
-          satisfaction: Math.min(Math.floor((98 * step) / steps), 98),
-        });
-        if (step >= steps) clearInterval(timer);
-      }, interval);
-
-      return () => clearInterval(timer);
-    }
-  }, [isInView]);
 
   const values = [
     { icon: Award, key: "excellence" },
@@ -158,20 +130,7 @@ export default function About() {
           variants={containerVariants}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24"
         >
-          {[
-            {
-              value: countUp.projects,
-              label: t("stats.projects"),
-              suffix: "+",
-            },
-            { value: countUp.clients, label: t("stats.clients"), suffix: "+" },
-            { value: countUp.years, label: t("stats.years"), suffix: "+" },
-            {
-              value: countUp.satisfaction,
-              label: t("stats.satisfaction"),
-              suffix: "%",
-            },
-          ].map((stat, i) => (
+          {[0, 1, 2, 3].map((i) => (
             <motion.div
               key={i}
               variants={itemVariants}
@@ -185,7 +144,7 @@ export default function About() {
               />
               <div className="relative bg-card/50 backdrop-blur-sm border border-accent/10 rounded-2xl p-6 text-center hover:border-accent/30 transition-all duration-300">
                 <motion.div
-                  className="text-5xl md:text-6xl font-bold text-accent mb-2"
+                  className="text-2xl md:text-3xl font-bold text-accent mb-2"
                   initial={{ scale: 0.5 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{
@@ -194,11 +153,10 @@ export default function About() {
                     stiffness: 200,
                   }}
                 >
-                  {stat.value}
-                  {stat.suffix}
+                  {t(`stats.${i}.title`)}
                 </motion.div>
-                <div className="text-sm text-foreground/60 uppercase tracking-wider">
-                  {stat.label}
+                <div className="text-sm text-foreground/60">
+                  {t(`stats.${i}.desc`)}
                 </div>
               </div>
             </motion.div>

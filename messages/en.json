@@ -65,12 +65,24 @@
     "titleLine1": "A multicultural brand",
     "titleLine2": " strategy agency.",
     "subtitle": "We're creative strategists who understand two worlds, two languages, and two markets — we think before we design.",
-    "stats": {
-      "projects": "Projects Completed",
-      "clients": "Happy Clients",
-      "years": "Years Experience",
-      "satisfaction": "Satisfaction Rate"
-    },
+    "stats": [
+      {
+        "title": "2 Markets",
+        "desc": "Latino and American."
+      },
+      {
+        "title": "Full-Service",
+        "desc": "From strategy to execution, all in one place."
+      },
+      {
+        "title": "Bilingual",
+        "desc": "EN + ES in everything we do."
+      },
+      {
+        "title": "100% Strategic",
+        "desc": "No decision without purpose."
+      }
+    ],
     "contentTitle": "We Don't Just Design,",
     "contentTitleAccent": " We build brands with direction.",
     "paragraph1": "Legado Creativo was built to fill a gap: brands that deserve real strategy, not just design. We combine storytelling, brand strategy, and creativity to build brands that are remembered for the right reasons.",
