@@ -39,20 +39,16 @@
   "footer": {
     "brandName": "Legado Creativo",
     "tagline": "Construyendo marcas con estrategia, narrativa y creatividad.",
-    "work": "Trabajo",
-    "portfolio": "Portafolio",
-    "caseStudies": "Casos de Éxito",
-    "testimonials": "Testimonios",
     "company": "Empresa",
+    "home": "Inicio",
     "about": "Nosotros",
-    "team": "Equipo",
     "services": "Servicios",
     "contact": "Contacto",
     "connect": "Conectar",
     "copyright": "© 2025 Legado Creativo. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
-    "poweredBy": "Desarrollado por Developwave"
+    "poweredBy": "Powered by DevelopWave"
   },
   "cta": {
     "label": "TRABAJEMOS JUNTOS",
@@ -66,10 +62,6 @@
     "titleLine2": " de estrategia de marca.",
     "subtitle": "Somos estrategas creativos que entienden dos mundos, dos idiomas y dos mercados — pensamos antes de diseñar.",
     "stats": [
-      {
-        "title": "2 Mercados",
-        "desc": "Latino y americano."
-      },
       {
         "title": "Servicio Integral",
         "desc": "De la estrategia hasta la ejecución, todo en un solo lugar."

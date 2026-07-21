@@ -24,11 +24,11 @@ export default async function ServicesPage() {
       <ServicesProcess />
       <ServicesFaq />
       <CTA
-        bg="bg-section-mint"
+        bg="bg-[var(--secondary-blue)]"
         label={t("label")}
         title={t("title")}
         highlightWord={t("highlightWord")}
-        strokeVariant="wide"
+        strokeVariant="oval"
         buttonText={t("buttonText")}
         href="/contact"
       />

@@ -63,11 +63,10 @@ export default function AboutTimeline() {
                   {/* Content */}
                   <div className={`flex-1 ${isEven ? "md:text-right" : "md:text-left"}`}>
                     <motion.div
-                      className="bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-colors duration-300"
+                      className="bg-secondary-lime border border-accent rounded-2xl p-8 hover:border-accent/50 transition-colors duration-300"
                       whileHover={{
                         y: -8,
                         boxShadow: "0 20px 40px -15px rgb(var(--glow-rgb) / 0.2)",
-                        borderColor: "rgb(var(--glow-rgb) / 0.5)",
                       }}
                       transition={{ duration: 0.3 }}
                     >

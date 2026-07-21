@@ -26,7 +26,7 @@ export default async function AboutPage() {
       <AboutValues />
       {/* <AboutTeam /> */}
       <CTA
-        bg="bg-section-cream"
+        bg="bg-[var(--secondary-magenta)]"
         label={t("label")}
         title={t("title")}
         highlightWord={t("highlightWord")}

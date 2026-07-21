@@ -2,10 +2,11 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Heart, Lightbulb, Target, Handshake, Palette, Sparkles } from "lucide-react"
+import { Target, Fingerprint, Sprout, Heart, Handshake, Sparkles } from "lucide-react"
 import { useTranslations } from "next-intl"
 
-const valueIcons = [Heart, Lightbulb, Target, Handshake, Palette, Sparkles]
+// Orden fijo por título: Estrategia, Narrativa, Raíces, Honestidad, Colaboración, Impacto
+const valueIcons = [Target, Fingerprint, Sprout, Heart, Handshake, Sparkles]
 const valueColors = [
   "from-pink-500 to-rose-500",
   "from-amber-500 to-orange-500",

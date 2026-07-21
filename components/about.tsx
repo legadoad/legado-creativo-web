@@ -128,9 +128,9 @@ export default function About() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24"
         >
-          {[0, 1, 2, 3].map((i) => (
+          {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
               variants={itemVariants}

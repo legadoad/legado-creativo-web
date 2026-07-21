@@ -39,20 +39,16 @@
   "footer": {
     "brandName": "Legado Creativo",
     "tagline": "Building brands with strategy, story, and creativity.",
-    "work": "Work",
-    "portfolio": "Portfolio",
-    "caseStudies": "Case Studies",
-    "testimonials": "Testimonials",
     "company": "Company",
+    "home": "Home",
     "about": "About",
-    "team": "Team",
     "services": "Services",
     "contact": "Contact",
     "connect": "Connect",
     "copyright": "© 2025 Legado Creativo. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "poweredBy": "Powered by Developwave"
+    "poweredBy": "Powered by DevelopWave"
   },
   "cta": {
     "label": "LET'S WORK TOGETHER",
@@ -66,10 +62,6 @@
     "titleLine2": " strategy agency.",
     "subtitle": "We're creative strategists who understand two worlds, two languages, and two markets — we think before we design.",
     "stats": [
-      {
-        "title": "2 Markets",
-        "desc": "Latino and American."
-      },
       {
         "title": "Full-Service",
         "desc": "From strategy to execution, all in one place."
