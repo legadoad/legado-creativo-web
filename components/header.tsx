@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useRouter as useNextRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
@@ -10,9 +10,7 @@ import Image from "next/image";
 
 export default function Header() {
   const [atTop, setAtTop] = useState(true);
-  const [visible, setVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const lastScrollY = useRef(0);
   const pathname = usePathname();
   const nextRouter = useNextRouter();
   const locale = useLocale();
@@ -20,15 +18,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentY = window.scrollY;
-      setAtTop(currentY < 10);
-      // scrolling down → hide, scrolling up → show
-      if (currentY > lastScrollY.current && currentY > 80) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-      lastScrollY.current = currentY;
+      setAtTop(window.scrollY < 10);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -52,9 +42,7 @@ export default function Header() {
   const isTransparent = atTop && isHome;
 
   return (
-    <motion.header
-      animate={{ y: visible ? 0 : "-100%" }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+    <header
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
         isTransparent
           ? "bg-transparent"
@@ -178,6 +166,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }
