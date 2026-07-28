@@ -31,6 +31,9 @@ export default async function ServicesPage() {
         strokeVariant="oval"
         buttonText={t("buttonText")}
         href="/contact"
+        textColor="text-[var(--secondary-lime)]"
+        buttonBg="bg-[var(--secondary-lime)]"
+        buttonTextColor="text-[var(--secondary-blue)]"
       />
       <Footer />
     </main>

@@ -2,16 +2,17 @@
 
 import { useRef, useState } from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { MessageSquare, Search, PenTool, Rocket } from "lucide-react"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 
-const stepIcons = [MessageSquare, Search, PenTool, Rocket]
+const STEP_COUNT = 4
 
 export default function ServicesProcess() {
   const t = useTranslations("servicesProcess")
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
-  const [activeStep, setActiveStep] = useState(0)
+  const [activeStep, setActiveStep] = useState<number | null>(null)
+  const displayStep = activeStep ?? 0
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -74,17 +75,18 @@ export default function ServicesProcess() {
             {/* Vertical line - connects circle centers */}
             <div className="absolute left-6 top-[50px] bottom-[50px] w-0.5 bg-border" />
             <motion.div
-              className="absolute left-6 w-0.5 bg-accent origin-top"
+              className="absolute left-6 w-0.5 bg-primary origin-top"
               style={{ top: '50px', height: 'calc(100% - 100px)' }}
               initial={{ scaleY: 0 }}
-              animate={isInView ? { scaleY: activeStep / (stepIcons.length - 1) } : {}}
+              animate={isInView ? { scaleY: activeStep === null ? 0 : activeStep / (STEP_COUNT - 1) } : {}}
               transition={{ duration: 0.7 }}
             />
 
             <div className="space-y-8">
-              {stepIcons.map((Icon, index) => {
+              {Array.from({ length: STEP_COUNT }).map((_, index) => {
                 const isActive = index === activeStep
-                const isPast = index < activeStep
+                const isPast = activeStep !== null && index < activeStep
+                const isFilled = isActive || isPast
                 return (
                   <motion.div
                     key={index}
@@ -98,38 +100,27 @@ export default function ServicesProcess() {
                     <motion.div
                       animate={{ scale: isActive ? 1.1 : 1 }}
                       whileHover={{ scale: 1.15 }}
-                      style={{
-                        backgroundColor: isActive || isPast ? "var(--accent)" : "var(--card)",
-                        borderColor: isActive || isPast ? "var(--accent)" : "var(--border)",
-                      }}
-                      className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 border"
+                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 border ${isFilled ? "bg-secondary-lime border-primary" : "bg-card border-border"
+                        }`}
                     >
-                      <Icon
-                        className={`w-5 h-5 transition-colors duration-300 ${isActive || isPast ? "text-white" : "text-foreground/40"}`}
-                      />
+                      <span
+                        className={`text-sm font-bold transition-colors  duration-300 ${isFilled ? "text-primary" : "text-foreground/40"}`}
+                      >
+                      </span>
                     </motion.div>
 
                     <motion.div
                       whileHover={{ x: 8 }}
-                      animate={{
-                        backgroundColor: isActive ? "hsl(var(--accent) / 0.1)" : "transparent",
-                        borderColor: isActive ? "hsl(var(--accent) / 0.2)" : "transparent",
-                      }}
-                      className="p-6 rounded-xl border transition-all duration-300 hover:border-border"
+                      className={`p-6 rounded-xl border transition-all duration-300 ${isFilled
+                          ? "bg-secondary-lime border-primary"
+                          : "hover:bg-secondary-lime/50 hover:border-secondary-lime"
+                        }`}
                     >
-                      <div className="flex items-center gap-3 mb-2">
-                        <motion.span
-                          animate={{ color: isActive ? "hsl(var(--accent))" : "hsl(var(--accent) / 0.7)" }}
-                          className="text-sm font-bold"
-                        >
-                          0{index + 1}
-                        </motion.span>
-                        <h3
-                          className={`text-xl font-bold transition-colors ${isActive ? "text-accent" : "text-foreground"}`}
-                        >
-                          {t(`steps.${index}.title`)}
-                        </h3>
-                      </div>
+                      <h3
+                        className={`text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground"}`}
+                      >
+                        {t(`steps.${index}.title`)}
+                      </h3>
                       <p className="text-foreground/60 text-sm">{t(`steps.${index}.description`)}</p>
                     </motion.div>
                   </motion.div>
@@ -156,59 +147,39 @@ export default function ServicesProcess() {
               />
 
               <div className="relative z-10">
-                <motion.div
-                  key={activeStep}
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                  className="w-20 h-20 bg-gradient-to-br from-accent to-chart-2 rounded-2xl flex items-center justify-center mb-8"
-                >
-                  {(() => {
-                    const Icon = stepIcons[activeStep]
-                    return <Icon className="w-10 h-10 text-background" />
-                  })()}
-                </motion.div>
 
-                <motion.span
-                  key={`step-${activeStep}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-accent text-sm font-bold tracking-widest"
-                >
-                  {t("stepLabel")} 0{activeStep + 1}
-                </motion.span>
+                  <Image src="/Logos/LEGADO_isotipo-02.png" alt="Legado" width={60} height={60} />
+
                 <motion.h3
-                  key={`title-${activeStep}`}
+                  key={`title-${displayStep}`}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
                   className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6"
                 >
-                  {t(`steps.${activeStep}.title`)}
+                  {t(`steps.${displayStep}.title`)}
                 </motion.h3>
                 <motion.p
-                  key={`details-${activeStep}`}
+                  key={`details-${displayStep}`}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                   className="text-foreground/70 text-lg leading-relaxed mb-8"
                 >
-                  {t(`steps.${activeStep}.details`)}
+                  {t(`steps.${displayStep}.details`)}
                 </motion.p>
 
                 {/* Progress dots */}
                 <div className="flex gap-2">
-                  {stepIcons.map((_, i) => (
+                  {Array.from({ length: STEP_COUNT }).map((_, i) => (
                     <motion.button
                       key={i}
                       onClick={() => setActiveStep(i)}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
-                      animate={{
-                        width: i === activeStep ? 32 : 8,
-                        backgroundColor: i === activeStep ? "hsl(var(--accent))" : "hsl(var(--foreground) / 0.2)",
-                      }}
-                      className="h-2 rounded-full transition-all duration-300 cursor-pointer"
+                      animate={{ width: i === displayStep ? 32 : 8 }}
+                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === displayStep ? "bg-secondary-lime" : "bg-foreground/20"
+                        }`}
                     />
                   ))}
                 </div>
