@@ -9,11 +9,11 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="border-t border-border bg-gradient-to-b from-transparent to-primary/5 py-16 px-6">
+    <footer className="border-t border-border bg-gradient-to-b from-transparent to-primary/5 pt-8 pb-4 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-6">
           <div className="flex flex-col items-center md:items-start">
-            <Link href="/" className="flex items-center gap-2 mb-6 group">
+            <Link href="/" className="flex items-center gap-2 mb-3 group">
               <Image
                 src="/Logos/LEGADO_Logotipo-06.png"
                 alt="Legado Logo"
@@ -29,48 +29,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-semibold text-foreground mb-4">
-              {t("company")}
-            </h4>
-            <ul className="space-y-2 text-center md:text-left">
-              <li>
-                <Link
-                  href="/"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("home")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("about")}
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/#services"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("services")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-foreground/60 hover:text-accent text-sm transition"
-                >
-                  {t("contact")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-semibold text-foreground mb-4">
+            <h4 className="font-semibold text-foreground mb-3">
               {t("connect")}
             </h4>
             <div className="flex gap-4">
@@ -95,8 +54,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-border pt-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <p className="text-foreground/40 text-sm text-center">
               {t("copyright")}
             </p>
@@ -115,7 +74,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="mt-4 text-center">
+          <div className="mt-1 text-center">
             <a
               href="https://developwave.com"
               target="_blank"

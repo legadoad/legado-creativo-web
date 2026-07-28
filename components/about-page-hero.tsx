@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 export default function AboutPageHero() {
   const t = useTranslations("aboutHero");
@@ -242,18 +243,22 @@ export default function AboutPageHero() {
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
           >
-            <span className="text-foreground">{t("titleLine1")} </span>
-            <motion.span
+            <TypingAnimation
+              as="span"
+              className="text-foreground"
+              duration={60}
+              showCursor={false}
+            >
+              {`${t("titleLine1")} `}
+            </TypingAnimation>
+            <TypingAnimation
+              as="span"
               className="bg-gradient-to-r from-accent via-chart-2 to-accent bg-[length:200%_auto] bg-clip-text text-transparent inline-block"
-              animate={{ backgroundPosition: ["0% center", "200% center"] }}
-              transition={{
-                duration: 4,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "linear",
-              }}
+              duration={60}
+              delay={(t("titleLine1").length + 1) * 60}
             >
               {t("titleLine2")}
-            </motion.span>
+            </TypingAnimation>
           </motion.h1>
 
           <motion.p
