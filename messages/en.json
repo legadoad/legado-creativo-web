@@ -310,88 +310,40 @@
     "sectionLabel": "COMPREHENSIVE SOLUTIONS",
     "title": "Everything Your Brand",
     "titleAccent": "Needs",
-    "subtitle": "Four integrated areas. One team. One strategic direction.",
-    "learnMore": "Learn More",
-    "showLess": "Show Less",
-    "items": [
+    "subtitle": "Three integrated areas. One team. One strategic direction.",
+    "ctaLabel": "Get in Touch",
+    "categories": [
       {
-        "title": "Brand Strategy",
-        "description": "Positioning, messaging, and voice for a brand that sticks.",
-        "features": [
-          "Logo Design",
-          "Print Materials",
-          "Illustrations",
-          "Packaging"
-        ]
-      },
-      {
-        "title": "Visual Identity",
-        "description": "Logo, visual system, and complete brand guide.",
-        "features": [
-          "Custom Websites",
-          "E-commerce",
-          "Web Applications",
-          "CMS Development"
-        ]
-      },
-      {
-        "title": "Brand Playbook",
-        "description": "The strategic manual that keeps your brand consistent, cohesive, and ready to scale.",
-        "features": [
-          "User Research",
-          "Wireframing",
-          "Prototyping",
-          "Usability Testing"
-        ]
-      },
-      {
-        "title": "Visual Content Studio",
-        "description": "High-level visual production for social media, campaigns, and digital presence.",
-        "features": [
-          "Brand Strategy",
+        "title": "Creative",
+        "description": "Brand strategy, visual identity, and content that gives your brand a distinct, memorable presence.",
+        "items": [
           "Visual Identity",
-          "Brand Guidelines",
-          "Rebranding"
+          "Brand Playbook",
+          "Visual Content Studio",
+          "Brand Activation",
+          "Bilingual Copywriting"
         ]
       },
       {
-        "title": "Content Strategy",
-        "description": "A clear plan for what to post, when, and for whom.",
-        "features": [
-          "Animation",
-          "Video Editing",
-          "Social Content",
-          "Explainer Videos"
+        "title": "Media",
+        "description": "Social media management, video production, and influencer strategy that keeps your audience engaged.",
+        "items": [
+          "Social Media Management",
+          "Influencer Marketing & Community",
+          "Video Production",
+          "Content Strategy",
+          "Creator & Influencer Strategy"
         ]
       },
       {
-        "title": "Bilingual Copywriting",
-        "description": "Spanish and English copy that connects and converts.",
-        "features": [
-          "Product Photos",
-          "Event Coverage",
-          "Lifestyle Shots",
-          "Photo Editing"
-        ]
-      },
-      {
-        "title": "Brand Activation",
-        "description": "Brand activations that connect with your audience where they are — online and offline.",
-        "features": [
-          "Custom Icons",
-          "Character Design",
-          "Digital Art",
-          "Infographics"
-        ]
-      },
-      {
-        "title": "Creator & Influencer Strategy",
-        "description": "Strategy with authentic creators and voices to amplify your brand in the markets that matter.",
-        "features": [
-          "Post Templates",
-          "Story Design",
-          "Ad Creatives",
-          "Content Strategy"
+        "title": "Technology",
+        "description": "Custom websites, e-commerce, and web applications built to perform and scale.",
+        "items": [
+          "Custom Web Design",
+          "E-commerce Development",
+          "Web Applications",
+          "UX/UI Design",
+          "CMS Development"
         ]
       }
     ]

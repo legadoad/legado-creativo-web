@@ -329,88 +329,40 @@
     "sectionLabel": "SOLUCIONES INTEGRALES",
     "title": "Todo lo que tu marca",
     "titleAccent": "necesita",
-    "subtitle": "Cuatro áreas integradas. Un solo equipo. Una dirección estratégica.",
-    "learnMore": "Ver más",
-    "showLess": "Ver menos",
-    "items": [
+    "subtitle": "Tres áreas integradas. Un solo equipo. Una dirección estratégica.",
+    "ctaLabel": "Hablemos",
+    "categories": [
       {
-        "title": "Estrategia de marca",
-        "description": "Posicionamiento, mensajes y voz para una marca que se recuerda.",
-        "features": [
-          "Diseño de logo",
-          "Material impreso",
-          "Ilustraciones",
-          "Packaging"
-        ]
-      },
-      {
-        "title": "Identidad visual",
-        "description": "Logo, sistema visual y guía de marca completa.",
-        "features": [
-          "Sitios personalizados",
-          "E-commerce",
-          "Aplicaciones web",
-          "Desarrollo CMS"
-        ]
-      },
-      {
-        "title": "Brand Playbook",
-        "description": "El manual estratégico que mantiene tu marca consistente, coherente y lista para escalar.",
-        "features": [
-          "Investigación de usuarios",
-          "Wireframing",
-          "Prototipado",
-          "Pruebas de usabilidad"
-        ]
-      },
-      {
-        "title": "Visual Content Studio",
-        "description": "Producción visual de alto nivel para redes, campañas y presencia digital.",
-        "features": [
-          "Estrategia de marca",
+        "title": "Creative",
+        "description": "Estrategia de marca, identidad visual y contenido que le dan a tu marca una presencia distintiva y memorable.",
+        "items": [
           "Identidad visual",
-          "Guías de marca",
-          "Rebranding"
+          "Brand Playbook",
+          "Visual Content Studio",
+          "Brand Activation",
+          "Copywriting bilingüe"
         ]
       },
       {
-        "title": "Estrategia de contenido",
-        "description": "Un plan claro de qué publicar, cuándo y para quién.",
-        "features": [
-          "Animación",
-          "Edición de video",
-          "Contenido social",
-          "Videos explicativos"
+        "title": "Media",
+        "description": "Gestión de redes, producción de video y estrategia de influencers que mantienen a tu audiencia conectada.",
+        "items": [
+          "Gestión de redes sociales",
+          "Influencer Marketing & Community",
+          "Producción de video",
+          "Estrategia de contenido",
+          "Creator & Influencer Strategy"
         ]
       },
       {
-        "title": "Copywriting bilingüe",
-        "description": "Textos en español e inglés que conectan y convierten.",
-        "features": [
-          "Fotos de producto",
-          "Cobertura de eventos",
-          "Fotos lifestyle",
-          "Edición de fotos"
-        ]
-      },
-      {
-        "title": "Brand Activation",
-        "description": "Activaciones de marca que conectan con tu audiencia donde está, online y offline.",
-        "features": [
-          "Iconos personalizados",
-          "Diseño de personajes",
-          "Arte digital",
-          "Infografías"
-        ]
-      },
-      {
-        "title": "Creator & Influencer Strategy",
-        "description": "Estrategia con creators y voces auténticas para amplificar tu marca en los mercados que importan.",
-        "features": [
-          "Plantillas de posts",
-          "Diseño de stories",
-          "Creativos de ads",
-          "Estrategia de contenido"
+        "title": "Technology",
+        "description": "Sitios web, e-commerce y aplicaciones web personalizados, construidos para rendir y escalar.",
+        "items": [
+          "Diseño web a medida",
+          "Desarrollo e-commerce",
+          "Aplicaciones web",
+          "Diseño UX/UI",
+          "Desarrollo CMS"
         ]
       }
     ]
