@@ -20,6 +20,12 @@ interface CTAProps {
   strokeVariant?: StrokeVariant;
   buttonText?: string;
   href?: string;
+  /** Tailwind text color class for the headline, e.g. "text-white" */
+  textColor?: string;
+  /** Tailwind bg color class for the button, e.g. "bg-white" */
+  buttonBg?: string;
+  /** Tailwind text color class for the button label/icon, e.g. "text-black" */
+  buttonTextColor?: string;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -32,6 +38,9 @@ export default function CTA({
   strokeVariant = "oval",
   buttonText = "Connect with us",
   href = "/contact",
+  textColor = "text-black",
+  buttonBg = "bg-black",
+  buttonTextColor = "text-white",
 }: CTAProps) {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -58,7 +67,7 @@ export default function CTA({
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-[1.1] tracking-tight md:indent-24 text-center md:text-left"
+            className={`text-4xl md:text-6xl lg:text-7xl font-bold ${textColor} leading-[1.1] tracking-tight md:indent-24 text-center md:text-left`}
           >
             {parts[0].trimEnd()}{" "}
             {highlightWord && (<span className="relative inline-block indent-0">{highlightWord}{isInView && <Stroke />}</span>)}
@@ -75,12 +84,12 @@ export default function CTA({
         >
           <Link href={href} className="inline-flex items-center group cursor-pointer">
             {/* Text pill — fully rounded on both sides */}
-            <span className="bg-black text-white text-sm font-medium pl-6 pr-5 py-3.5 rounded-full transition-colors duration-200 group-hover:bg-black/80">
+            <span className={`${buttonBg} ${buttonTextColor} text-sm font-medium pl-6 pr-5 py-3.5 rounded-full transition-opacity duration-200 group-hover:opacity-80`}>
               {buttonText}
             </span>
 
             {/* Arrow circle — overlaps slightly for the joined look */}
-            <span className="bg-black text-white w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-200 group-hover:bg-black/80">
+            <span className={`${buttonBg} ${buttonTextColor} w-11 h-11 rounded-full flex items-center justify-center transition-opacity duration-200 group-hover:opacity-80`}>
               <motion.span
                 animate={{ x: [0, 3, 0] }}
                 transition={{ duration: 1.4, repeat: Number.POSITIVE_INFINITY }}
