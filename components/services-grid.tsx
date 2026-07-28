@@ -188,7 +188,7 @@ export default function ServicesGrid() {
                       </p>
                       <Link
                         href="/contact"
-                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition"
+                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition"
                       >
                         {t("ctaLabel")}
                         <ArrowRight className="w-4 h-4" />
