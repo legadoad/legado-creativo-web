@@ -59,7 +59,7 @@ export default function ServicesFaq() {
                   animate={{
                     backgroundColor: isOpen ? "hsl(var(--accent) / 0.05)" : "hsl(var(--card))",
                   }}
-                  className="w-full p-6 flex items-center justify-between text-left transition-colors"
+                  className="w-full p-6 flex items-center justify-between text-left transition-colors cursor-pointer"
                 >
                   <span
                     className={`font-semibold text-lg transition-colors ${isOpen ? "text-accent" : "text-foreground"}`}

@@ -167,11 +167,7 @@ export default function ServicesPricing() {
               <Link href="/contact">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
-                    className={`w-full py-6 text-lg font-semibold rounded-xl transition-all duration-300 ${
-                      pkg.popular
-                        ? "bg-accent hover:bg-accent/90 text-background"
-                        : "bg-card border border-accent text-accent hover:bg-accent hover:text-background"
-                    }`}
+                    className="w-full py-6 text-lg font-semibold rounded-xl transition-all duration-300 bg-secondary-lime hover:bg-secondary-lime/90 text-primary cursor-pointer"
                   >
                     Get Started
                   </Button>

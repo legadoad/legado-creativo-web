@@ -106,7 +106,7 @@ export default function VideoBanner() {
               onClick={togglePlay}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 rounded-full bg-accent/90 backdrop-blur-sm flex items-center justify-center group"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 rounded-full bg-accent/90 backdrop-blur-sm flex items-center justify-center group cursor-pointer"
             >
               <motion.div
                 className="absolute inset-0 rounded-full bg-accent"
@@ -126,7 +126,7 @@ export default function VideoBanner() {
                 onClick={toggleMute}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 rounded-full bg-background/50 backdrop-blur-sm border border-accent/20 flex items-center justify-center"
+                className="w-12 h-12 rounded-full bg-background/50 backdrop-blur-sm border border-accent/20 flex items-center justify-center cursor-pointer"
               >
                 {isMuted ? (
                   <VolumeX className="w-5 h-5 text-foreground" />

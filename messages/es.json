@@ -1,16 +1,16 @@
 {
   "metadata": {
     "home": {
-      "title": "Legado Creativo - Diseño Web y Gráfico",
+      "title": "Legado Creativo - Diseño web y gráfico",
       "description": "Soluciones impactantes de diseño web y gráfico que elevan tu marca. Creamos experiencias digitales modernas e impactantes."
     },
     "about": {
-      "title": "Sobre Nosotros | Legado Creativo",
-      "description": "Conoce Legado Creativo - nuestra historia, equipo, valores y trayectoria creativa."
+      "title": "Sobre nosotros | Legado Creativo",
+      "description": "Conoce Legado Creativo: nuestra historia, equipo, valores y trayectoria creativa."
     },
     "services": {
       "title": "Servicios | Legado Creativo",
-      "description": "Explora nuestros servicios creativos - diseño gráfico, diseño web, branding, UI/UX y más."
+      "description": "Explora nuestros servicios creativos: diseño gráfico, diseño web, branding, UI/UX y más."
     },
     "contact": {
       "title": "Contáctanos | Legado Creativo",
@@ -30,9 +30,9 @@
     "titleLine2": "Nosotros la hacemos inolvidable.",
     "description": "Tu marca tiene una historia. Nosotros la hacemos inolvidable.",
     "ctaPrimary": "Hablemos",
-    "ctaSecondary": "Ver Portafolio",
+    "ctaSecondary": "Ver portafolio",
     "scroll": "SCROLL",
-    "yearsLabel": "10+ Años",
+    "yearsLabel": "10+ años",
     "yearsDescription": "Creando excelencia digital",
     "imageAlt": "Espacio de trabajo de Legado Creativo"
   },
@@ -46,8 +46,8 @@
     "contact": "Contacto",
     "connect": "Conectar",
     "copyright": "© 2025 Legado Creativo. Todos los derechos reservados.",
-    "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
     "poweredBy": "Powered by DevelopWave"
   },
   "cta": {
@@ -60,10 +60,10 @@
     "sectionLabel": "QUIÉNES SOMOS",
     "titleLine1": "Una agencia multicultural",
     "titleLine2": " de estrategia de marca.",
-    "subtitle": "Somos estrategas creativos que entienden dos mundos, dos idiomas y dos mercados — pensamos antes de diseñar.",
+    "subtitle": "Somos estrategas creativos que entienden dos mundos, dos idiomas y dos mercados. Pensamos antes de diseñar.",
     "stats": [
       {
-        "title": "Servicio Integral",
+        "title": "Servicio integral",
         "desc": "De la estrategia hasta la ejecución, todo en un solo lugar."
       },
       {
@@ -75,19 +75,19 @@
         "desc": "Ninguna decisión sin propósito."
       }
     ],
-    "contentTitle": "No Solo Diseñamos,",
+    "contentTitle": "No solo diseñamos,",
     "contentTitleAccent": " construimos marcas con dirección.",
     "paragraph1": "Legado Creativo nació para llenar un vacío: marcas que merecen estrategia real, no solo diseño. Combinamos storytelling, estrategia de marca y creatividad para construir marcas que se recuerdan por las razones correctas.",
-    "paragraph2": "Somos una agencia multicultural con visión bicultural. Entendemos el mercado latino y el americano desde adentro — y eso nos da una ventaja que ninguna agencia genérica puede replicar.",
+    "paragraph2": "Somos una agencia multicultural con visión bicultural. Entendemos el mercado latino y el americano desde adentro, y eso nos da una ventaja que ninguna agencia genérica puede replicar.",
     "bulletPoints": [
-      "Estrategia antes que estética — ninguna decisión sin propósito.",
+      "Estrategia antes que estética: ninguna decisión sin propósito.",
       "Visión bicultural: dos mercados, una voz.",
       "Contenido con intención: cada pieza responde a un objetivo claro.",
       "Acompañamiento real en cada etapa del crecimiento de tu marca."
     ],
     "foundedBadge": "Desde 2018",
     "learnMore": "Descubre cómo construir una marca que dure →",
-    "valuesTitle": "Nuestros Valores",
+    "valuesTitle": "Nuestros valores",
     "values": {
       "excellence": {
         "title": "Excelencia",
@@ -106,11 +106,11 @@
   },
   "homeServices": {
     "sectionLabel": "LO QUE HACEMOS",
-    "title": "Nuestros Servicios",
-    "servicesCount": "8 Servicios",
+    "title": "Nuestros servicios",
+    "servicesCount": "8 servicios",
     "items": [
       {
-        "name": "Diseño Web",
+        "name": "Diseño web",
         "description": "Sitios web hermosos y responsivos"
       },
       { "name": "Branding", "description": "Identidad que destaca" },
@@ -123,27 +123,27 @@
     ]
   },
   "works": {
-    "title": "Soluciones Creativas",
+    "title": "Soluciones creativas",
     "subtitle": "Construimos marcas con claridad, estrategia e intención.",
     "cards": [
       {
         "number": "01",
-        "title": "Marca y Posicionamiento",
+        "title": "Marca y posicionamiento",
         "description": "Define quién eres y cómo te presentas al mundo con intención."
       },
       {
         "number": "02",
-        "title": "Contenido y Narrativa",
+        "title": "Contenido y narrativa",
         "description": "Convierte tu historia en mensajes que conectan con las personas correctas."
       },
       {
         "number": "03",
-        "title": "Creatividad y Producción",
+        "title": "Creatividad y producción",
         "description": "Da vida a tu marca con visuales y producción que comunican."
       },
       {
         "number": "04",
-        "title": "Crecimiento Digital y Campañas",
+        "title": "Crecimiento digital y campañas",
         "description": "Escala tu marca con estrategia, contenido y rendimiento medible."
       }
     ]
@@ -167,76 +167,76 @@
   "videoBanner": {
     "sectionLabel": "VÉANOS EN ACCIÓN",
     "titleLine1": "Donde la ",
-    "titleHighlight": "Creatividad",
-    "titleLine2": " Cobra Vida",
+    "titleHighlight": "creatividad",
+    "titleLine2": " cobra vida",
     "subtitle": "Descubre cómo transformamos ideas en marcas que generan impacto real.",
-    "showreelLabel": "Showreel de la Agencia",
-    "showreelTitle": "Highlights Creativos 2024",
+    "showreelLabel": "Showreel de la agencia",
+    "showreelTitle": "Highlights creativos 2024",
     "stat1Value": "50+",
-    "stat1Label": "Videos Producidos",
+    "stat1Label": "Videos producidos",
     "stat2Value": "1M+",
-    "stat2Label": "Vistas Generadas",
+    "stat2Label": "Vistas generadas",
     "features": [
-      { "label": "Motion Graphics", "desc": "Animaciones impactantes" },
-      { "label": "Films de Marca", "desc": "Historias convincentes" },
-      { "label": "Contenido para Reels", "desc": "Mostrando excelencia" },
-      { "label": "Estrategia Social", "desc": "Clips virales" }
+      { "label": "Motion graphics", "desc": "Animaciones impactantes" },
+      { "label": "Films de marca", "desc": "Historias convincentes" },
+      { "label": "Contenido para reels", "desc": "Mostrando excelencia" },
+      { "label": "Estrategia social", "desc": "Clips virales" }
     ]
   },
   "aboutHero": {
     "badge": "NUESTRA HISTORIA",
-    "titleLine1": "La Estrategia Detrás",
-    "titleLine2": " de Tu Marca",
-    "subtitle": "Somos Legado Creativo — una agencia multicultural de estrategia de marca para negocios que quieren construir algo que dure.",
+    "titleLine1": "La estrategia detrás",
+    "titleLine2": " de tu marca",
+    "subtitle": "Somos Legado Creativo, una agencia multicultural de estrategia de marca para negocios que quieren construir algo que dure.",
     "stats": [
-      { "value": "2 Mercados", "label": "Latino y americano." },
-      { "value": "Servicio Integral", "label": "De la estrategia hasta la ejecución." },
+      { "value": "2 mercados", "label": "Latino y americano." },
+      { "value": "Servicio integral", "label": "De la estrategia hasta la ejecución." },
       { "value": "Bilingüe", "label": "EN + ES en todo." },
       { "value": "100% Estratégico", "label": "Ninguna decisión sin propósito." }
     ]
   },
   "aboutStory": {
-    "titleLine1": "La Historia Detrás de",
+    "titleLine1": "La historia detrás de",
     "titleLine2": " Legado",
     "paragraphs": [
-      "Legado nació de una convicción: las marcas en Estados Unidos — y especialmente las latinas — merecen el mismo nivel estratégico que las grandes agencias globales le entregan a las Fortune 500s, pero con alguien que de verdad las entiende. Alguien que conoce los dos mundos, los dos idiomas y los dos mercados.",
-      "Victoria Urbaneja fundó Legado Creativo para llenar ese vacío. No como una agencia más de diseño — sino como una socia estratégica que combina visión de negocio con ejecución creativa, y que acompaña a sus clientes desde la primera conversación hasta el impacto real.",
-      "Creemos que una marca no se construye desde el diseño — se construye desde la claridad. Cuando sabes exactamente quién eres, a quién le hablas y qué quieres que sientan cuando te descubren, el diseño deja de ser decoración y se convierte en comunicación. Eso es lo que hacemos: ayudarte a encontrar esa claridad y convertirla en algo que se ve, se siente y se recuerda."
+      "Legado nació de una convicción: las marcas en Estados Unidos, y especialmente las latinas, merecen el mismo nivel estratégico que las grandes agencias globales le entregan a las Fortune 500s, pero con alguien que de verdad las entiende. Alguien que conoce los dos mundos, los dos idiomas y los dos mercados.",
+      "Victoria Urbaneja fundó Legado Creativo para llenar ese vacío. No como una agencia más de diseño, sino como una socia estratégica que combina visión de negocio con ejecución creativa, y que acompaña a sus clientes desde la primera conversación hasta el impacto real.",
+      "Creemos que una marca no se construye desde el diseño; se construye desde la claridad. Cuando sabes exactamente quién eres, a quién le hablas y qué quieres que sientan cuando te descubren, el diseño deja de ser decoración y se convierte en comunicación. Eso es lo que hacemos: ayudarte a encontrar esa claridad y convertirla en algo que se ve, se siente y se recuerda."
     ],
     "founded": "2018",
     "foundedLabel": "Fundada en Boston",
-    "teamCount": "15+ Miembros del Equipo",
+    "teamCount": "15+ miembros del equipo",
     "teamSpread": "En 4 continentes"
   },
   "aboutTimeline": {
     "title": "Lo que nos",
-    "titleAccent": " Define",
-    "subtitle": "Somos una agencia de estrategia con diseño — y esa diferencia lo cambia todo.",
+    "titleAccent": " define",
+    "subtitle": "Somos una agencia de estrategia con diseño, y esa diferencia lo cambia todo.",
     "milestones": [
       {
         "year": "01",
-        "title": "Estrategia Primero",
+        "title": "Estrategia primero",
         "description": "Todo proyecto empieza con preguntas, no con diseño. Antes de crear, entendemos."
       },
       {
         "year": "02",
-        "title": "Dos Mundos, Una Voz",
+        "title": "Dos mundos, una voz",
         "description": "Entendemos el mercado latino y el americano desde adentro. Eso nos da una ventaja real."
       },
       {
         "year": "03",
-        "title": "Acompañamiento Real",
+        "title": "Acompañamiento real",
         "description": "No entregamos archivos y desaparecemos. Nos quedamos hasta que tu marca aterrice bien."
       },
       {
         "year": "04",
-        "title": "Integración Total",
+        "title": "Integración total",
         "description": "Estrategia, diseño, contenido y campaña desde un solo lugar."
       },
       {
         "year": "05",
-        "title": "Impacto Medible",
-        "description": "No medimos el éxito en proyectos entregados — lo medimos en marcas que crecen."
+        "title": "Impacto medible",
+        "description": "No medimos el éxito en proyectos entregados; lo medimos en marcas que crecen."
       },
       {
         "year": "06",
@@ -247,13 +247,13 @@
   },
   "aboutTeam": {
     "title": "Conoce al",
-    "titleAccent": " Equipo",
+    "titleAccent": " equipo",
     "subtitle": "Las mentes detrás de Legado Creativo.",
     "members": [
       {
         "name": "Victoria Urbaneja",
-        "role": "Fundadora & Directora de Estrategia",
-        "bio": "Victoria Urbaneja es periodista, publicista y fundadora de Legado Creativo. Con trayectoria en comunicación estratégica para marcas globales como Adidas, Novartis y Univision, Victoria combina visión editorial, pensamiento estratégico y ejecución creativa para construir marcas que impactan en dos mercados. Su propósito es claro: darle voz a la comunidad latina en Estados Unidos — y asegurarse de que esa voz se escuche con la misma fuerza y profesionalismo que cualquier gran marca del mundo."
+        "role": "Fundadora & directora de estrategia",
+        "bio": "Victoria Urbaneja es periodista, publicista y fundadora de Legado Creativo. Con trayectoria en comunicación estratégica para marcas globales como Adidas, Novartis y Univision, Victoria combina visión editorial, pensamiento estratégico y ejecución creativa para construir marcas que impactan en dos mercados. Su propósito es claro: darle voz a la comunidad latina en Estados Unidos, y asegurarse de que esa voz se escuche con la misma fuerza y profesionalismo que cualquier gran marca del mundo."
       },
       {
         "name": "[Agregar miembro del equipo]",
@@ -274,12 +274,12 @@
   },
   "aboutValues": {
     "title": "Nuestros",
-    "titleAccent": " Valores",
+    "titleAccent": " valores",
     "subtitle": "Los principios que guían cada decisión y cada proyecto.",
     "items": [
       {
         "title": "Estrategia",
-        "description": "Cada decisión tiene un porqué. No diseñamos por diseñar — construimos desde la intención."
+        "description": "Cada decisión tiene un porqué. No diseñamos por diseñar; construimos desde la intención."
       },
       {
         "title": "Narrativa",
@@ -287,7 +287,7 @@
       },
       {
         "title": "Raíces",
-        "description": "Entendemos los dos mundos porque vivimos en ellos. Eso no se aprende — se vive."
+        "description": "Entendemos los dos mundos porque vivimos en ellos. Eso no se aprende, se vive."
       },
       {
         "title": "Honestidad",
@@ -299,7 +299,7 @@
       },
       {
         "title": "Impacto",
-        "description": "No medimos el éxito en proyectos entregados — lo medimos en marcas que crecen y perduran."
+        "description": "No medimos el éxito en proyectos entregados; lo medimos en marcas que crecen y perduran."
       }
     ]
   },
@@ -315,10 +315,10 @@
     "titleLine2": "mejor",
     "titleLine3": ", construido para tu marca.",
     "subtitle": "Desde visuales impactantes hasta experiencias digitales fluidas, ofrecemos soluciones creativas integrales que hacen tu marca inolvidable.",
-    "button": "Iniciar un Proyecto",
+    "button": "Iniciar un proyecto",
     "pills": [
-      "Diseño Gráfico",
-      "Diseño Web",
+      "Diseño gráfico",
+      "Diseño web",
       "Branding",
       "UI/UX",
       "Motion",
@@ -327,29 +327,29 @@
   },
   "servicesGrid": {
     "sectionLabel": "SOLUCIONES INTEGRALES",
-    "title": "Todo lo que Tu Marca",
-    "titleAccent": "Necesita",
+    "title": "Todo lo que tu marca",
+    "titleAccent": "necesita",
     "subtitle": "Cuatro áreas integradas. Un solo equipo. Una dirección estratégica.",
-    "learnMore": "Ver Más",
-    "showLess": "Ver Menos",
+    "learnMore": "Ver más",
+    "showLess": "Ver menos",
     "items": [
       {
-        "title": "Estrategia de Marca",
+        "title": "Estrategia de marca",
         "description": "Posicionamiento, mensajes y voz para una marca que se recuerda.",
         "features": [
-          "Diseño de Logo",
-          "Material Impreso",
+          "Diseño de logo",
+          "Material impreso",
           "Ilustraciones",
           "Packaging"
         ]
       },
       {
-        "title": "Identidad Visual",
+        "title": "Identidad visual",
         "description": "Logo, sistema visual y guía de marca completa.",
         "features": [
-          "Sitios Personalizados",
+          "Sitios personalizados",
           "E-commerce",
-          "Aplicaciones Web",
+          "Aplicaciones web",
           "Desarrollo CMS"
         ]
       },
@@ -357,49 +357,49 @@
         "title": "Brand Playbook",
         "description": "El manual estratégico que mantiene tu marca consistente, coherente y lista para escalar.",
         "features": [
-          "Investigación de Usuarios",
+          "Investigación de usuarios",
           "Wireframing",
           "Prototipado",
-          "Pruebas de Usabilidad"
+          "Pruebas de usabilidad"
         ]
       },
       {
         "title": "Visual Content Studio",
         "description": "Producción visual de alto nivel para redes, campañas y presencia digital.",
         "features": [
-          "Estrategia de Marca",
-          "Identidad Visual",
-          "Guías de Marca",
+          "Estrategia de marca",
+          "Identidad visual",
+          "Guías de marca",
           "Rebranding"
         ]
       },
       {
-        "title": "Estrategia de Contenido",
+        "title": "Estrategia de contenido",
         "description": "Un plan claro de qué publicar, cuándo y para quién.",
         "features": [
           "Animación",
-          "Edición de Video",
-          "Contenido Social",
-          "Videos Explicativos"
+          "Edición de video",
+          "Contenido social",
+          "Videos explicativos"
         ]
       },
       {
-        "title": "Copywriting Bilingüe",
+        "title": "Copywriting bilingüe",
         "description": "Textos en español e inglés que conectan y convierten.",
         "features": [
-          "Fotos de Producto",
-          "Cobertura de Eventos",
-          "Fotos Lifestyle",
-          "Edición de Fotos"
+          "Fotos de producto",
+          "Cobertura de eventos",
+          "Fotos lifestyle",
+          "Edición de fotos"
         ]
       },
       {
         "title": "Brand Activation",
-        "description": "Activaciones de marca que conectan con tu audiencia donde está — online y offline.",
+        "description": "Activaciones de marca que conectan con tu audiencia donde está, online y offline.",
         "features": [
-          "Iconos Personalizados",
-          "Diseño de Personajes",
-          "Arte Digital",
+          "Iconos personalizados",
+          "Diseño de personajes",
+          "Arte digital",
           "Infografías"
         ]
       },
@@ -407,18 +407,18 @@
         "title": "Creator & Influencer Strategy",
         "description": "Estrategia con creators y voces auténticas para amplificar tu marca en los mercados que importan.",
         "features": [
-          "Plantillas de Posts",
-          "Diseño de Stories",
-          "Creativos de Ads",
-          "Estrategia de Contenido"
+          "Plantillas de posts",
+          "Diseño de stories",
+          "Creativos de ads",
+          "Estrategia de contenido"
         ]
       }
     ]
   },
   "servicesProcess": {
     "sectionLabel": "CÓMO TRABAJAMOS",
-    "title": "Nuestro Proceso",
-    "titleAccent": "Creativo",
+    "title": "Nuestro proceso",
+    "titleAccent": "creativo",
     "subtitle": "Un método probado que pone la estrategia primero, siempre.",
     "stepLabel": "PASO",
     "steps": [
@@ -429,8 +429,8 @@
       },
       {
         "title": "Estrategiamos",
-        "description": "Antes de tocar el diseño, construimos la base. Posicionamiento, mensajes, voz y dirección de mercado. Nada es arbitrario — todo tiene un porqué.",
-        "details": "Antes de tocar el diseño, construimos la base. Posicionamiento, mensajes, voz y dirección de mercado. Nada es arbitrario — todo tiene un porqué."
+        "description": "Antes de tocar el diseño, construimos la base. Posicionamiento, mensajes, voz y dirección de mercado. Nada es arbitrario: todo tiene un porqué.",
+        "details": "Antes de tocar el diseño, construimos la base. Posicionamiento, mensajes, voz y dirección de mercado. Nada es arbitrario: todo tiene un porqué."
       },
       {
         "title": "Creamos",
@@ -438,16 +438,16 @@
         "details": "Con la estrategia clara, diseñamos. Cada decisión visual responde a un objetivo. Cada palabra tiene un propósito. Trabajamos contigo en cada etapa."
       },
       {
-        "title": "Lanzamos y Acompañamos",
-        "description": "Entregamos todo listo para usar — y no desaparecemos. Nos quedamos para asegurarnos de que tu marca aterrice bien y genere el impacto que construimos juntos.",
-        "details": "Entregamos todo listo para usar — y no desaparecemos. Nos quedamos para asegurarnos de que tu marca aterrice bien y genere el impacto que construimos juntos."
+        "title": "Lanzamos y acompañamos",
+        "description": "Entregamos todo listo para usar, y no desaparecemos. Nos quedamos para asegurarnos de que tu marca aterrice bien y genere el impacto que construimos juntos.",
+        "details": "Entregamos todo listo para usar, y no desaparecemos. Nos quedamos para asegurarnos de que tu marca aterrice bien y genere el impacto que construimos juntos."
       }
     ]
   },
   "servicesFaq": {
     "sectionLabel": "FAQ",
     "title": "Preguntas",
-    "titleAccent": "Frecuentes",
+    "titleAccent": "frecuentes",
     "subtitle": "Todo lo que necesitas saber sobre trabajar con nosotros",
     "items": [
       {
@@ -460,7 +460,7 @@
       },
       {
         "question": "¿Trabajan en inglés y español?",
-        "answer": "Sí. Todo lo que hacemos está disponible en ambos idiomas — desde la estrategia hasta el copy y las piezas de diseño."
+        "answer": "Sí. Todo lo que hacemos está disponible en ambos idiomas, desde la estrategia hasta el copy y las piezas de diseño."
       },
       {
         "question": "¿Solo trabajan con marcas latinas?",
@@ -480,86 +480,86 @@
     "label": "TRABAJEMOS JUNTOS",
     "title": "¿Listo para empezar tu próximo proyecto?",
     "highlightWord": "proyecto?",
-    "buttonText": "Iniciar un Proyecto"
+    "buttonText": "Iniciar un proyecto"
   },
   "galleryHero": {
     "sectionLabel": "NUESTRO PORTAFOLIO",
     "titleLine1": "Galería",
-    "titleLine2": "Creativa",
+    "titleLine2": "creativa",
     "subtitle": "Explora nuestra colección de diseños galardonados, identidades de marca, sitios web y proyectos creativos que muestran nuestra pasión por la excelencia visual.",
-    "stats": ["250+ Proyectos", "120+ Clientes", "15+ Premios", "10+ Años"]
+    "stats": ["250+ proyectos", "120+ clientes", "15+ premios", "10+ años"]
   },
   "galleryGrid": {
     "categories": [
       "Todos",
-      "Diseño Web",
+      "Diseño web",
       "Branding",
       "Gráficos",
-      "Apps Móviles",
+      "Apps móviles",
       "UI/UX",
       "Fotografía"
     ],
-    "viewLive": "Ver Proyecto en Vivo",
+    "viewLive": "Ver proyecto en vivo",
     "client": "Cliente",
     "year": "Año",
     "projects": [
       {
-        "title": "E-Commerce de Moda de Lujo",
+        "title": "E-commerce de moda de lujo",
         "description": "Una plataforma e-commerce premium para marcas de moda de alta gama con experiencia de compra inmersiva.",
         "client": "Luxe Fashion Co."
       },
       {
-        "title": "Identidad de Marca TechVault",
+        "title": "Identidad de marca TechVault",
         "description": "Sistema completo de identidad de marca incluyendo logo, colores y guías para una startup tecnológica.",
         "client": "TechVault Inc."
       },
       {
-        "title": "Interfaz de App Minimalista",
+        "title": "Interfaz de app minimalista",
         "description": "Diseño de app móvil limpio e intuitivo enfocado en la experiencia de usuario.",
         "client": "AppFlow"
       },
       {
-        "title": "Visuales de Campaña Creativa",
+        "title": "Visuales de campaña creativa",
         "description": "Materiales visuales llamativos para el lanzamiento de un producto.",
         "client": "Nova Marketing"
       },
       {
-        "title": "Rediseño de Sitio Web de Restaurante",
+        "title": "Rediseño de sitio web de restaurante",
         "description": "Rediseño moderno de sitio web para un establecimiento gastronómico de alta gama.",
         "client": "The Golden Fork"
       },
       {
-        "title": "UI de Dashboard Financiero",
+        "title": "UI de dashboard financiero",
         "description": "Diseño integral de dashboard para plataforma de analítica financiera.",
         "client": "FinanceFlow"
       },
       {
-        "title": "Paquete de Marca para Startup",
+        "title": "Paquete de marca para startup",
         "description": "Paquete completo de branding para una startup tecnológica innovadora.",
         "client": "Innovate Labs"
       },
       {
-        "title": "Fotografía de Producto",
+        "title": "Fotografía de producto",
         "description": "Fotografía profesional de producto para bienes de lujo.",
         "client": "Premium Goods"
       },
       {
-        "title": "Kit de Redes Sociales",
+        "title": "Kit de redes sociales",
         "description": "Plantillas y activos de diseño integrales para redes sociales.",
         "client": "Social Spark"
       },
       {
-        "title": "Diseño de App de Fitness",
+        "title": "Diseño de app de fitness",
         "description": "App de seguimiento de salud y fitness con elementos de gamificación.",
         "client": "FitLife"
       },
       {
-        "title": "Portafolio de Arquitectura",
+        "title": "Portafolio de arquitectura",
         "description": "Sitio web de portafolio elegante para una firma de arquitectura.",
         "client": "Modern Arch"
       },
       {
-        "title": "Branding de Evento",
+        "title": "Branding de evento",
         "description": "Branding completo para una conferencia de tecnología.",
         "client": "TechCon 2024"
       }
@@ -568,34 +568,34 @@
   "galleryStats": {
     "sectionLabel": "EN NÚMEROS",
     "title": "Nuestro",
-    "titleAccent": "Impacto",
+    "titleAccent": "impacto",
     "stats": [
-      { "label": "Proyectos Completados" },
-      { "label": "Clientes Satisfechos" },
-      { "label": "Premios de Diseño" },
-      { "label": "Países Alcanzados" }
+      { "label": "Proyectos completados" },
+      { "label": "Clientes satisfechos" },
+      { "label": "Premios de diseño" },
+      { "label": "Países alcanzados" }
     ]
   },
   "galleryCta": {
     "badge": "¿Listo para crear algo increíble?",
-    "titleLine1": "Construyamos Tu",
-    "titleLine2": "Próximo Proyecto",
+    "titleLine1": "Construyamos tu",
+    "titleLine2": "próximo proyecto",
     "subtitle": "¿Inspirado por lo que has visto? Nos encantaría dar vida a tu visión con la misma creatividad y atención al detalle.",
-    "primary": "Inicia Tu Proyecto",
-    "secondary": "Ver Nuestros Servicios"
+    "primary": "Inicia tu proyecto",
+    "secondary": "Ver nuestros servicios"
   },
   "contactHero": {
     "badge": "HABLEMOS",
     "titleLine1": "Ponte en ",
-    "titleLine2": "Contacto",
-    "subtitle": "¿Lista para construir una marca que dure? Cuéntanos tu proyecto — la primera conversación es gratis."
+    "titleLine2": "contacto",
+    "subtitle": "¿Lista para construir una marca que dure? Cuéntanos tu proyecto: la primera conversación es gratis."
   },
   "contactForm": {
     "title": "Envíanos un mensaje",
     "subtitle": "Completa el formulario y te responderemos a la brevedad.",
     "nameLabel": "Nombre",
     "namePlaceholder": "Juan Pérez",
-    "emailLabel": "Correo Electrónico",
+    "emailLabel": "Correo electrónico",
     "emailPlaceholder": "juan@ejemplo.com",
     "companyLabel": "Empresa",
     "companyOptional": "(opcional)",
@@ -603,23 +603,23 @@
     "serviceLabel": "¿Qué servicio te interesa?",
     "serviceDefault": "Selecciona un servicio",
     "serviceOptions": {
-      "webDesign": "Estrategia de Marca",
-      "brandIdentity": "Identidad Visual",
-      "uiUx": "Contenido y Social Media",
+      "webDesign": "Estrategia de marca",
+      "brandIdentity": "Identidad visual",
+      "uiUx": "Contenido y social media",
       "motionGraphics": "Brand Activation",
-      "printDesign": "Paquete Completo",
+      "printDesign": "Paquete completo",
       "other": "Otro"
     },
-    "messageLabel": "Detalles del Proyecto",
+    "messageLabel": "Detalles del proyecto",
     "messagePlaceholder": "Cuéntanos sobre tu proyecto, objetivos, plazos...",
-    "submit": "Enviar Mensaje",
+    "submit": "Enviar mensaje",
     "submitting": "Enviando...",
-    "successTitle": "¡Mensaje Enviado!",
+    "successTitle": "¡Mensaje enviado!",
     "successMessage": "Gracias por escribirnos. Te responderemos dentro de 24 horas.",
     "sendAnother": "Enviar otro mensaje"
   },
   "contactInfo": {
-    "title": "Información de Contacto",
+    "title": "Información de contacto",
     "subtitle": "¿Prefieres contactarnos directamente? Estamos aquí.",
     "email": "Email",
     "phone": "Teléfono",

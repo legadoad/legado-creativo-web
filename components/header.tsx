@@ -94,7 +94,7 @@ export default function Header() {
           {/* Language Switcher */}
           <button
             onClick={() => switchLocale(locale === "en" ? "es" : "en")}
-            className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium uppercase transition rounded-md ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium uppercase transition rounded-md cursor-pointer ${
               isTransparent
                 ? "text-white/80 hover:text-white hover:bg-white/10"
                 : "text-gray-600 hover:text-accent hover:bg-accent/10"
@@ -107,7 +107,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="px-6 py-2 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition"
+            className="px-6 py-2 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition cursor-pointer"
           >
             {t("cta")}
           </Link>
@@ -117,7 +117,7 @@ export default function Header() {
         <div className="md:hidden flex items-center gap-3">
           <button
             onClick={() => switchLocale(locale === "en" ? "es" : "en")}
-            className={`flex items-center gap-1 px-2 py-1.5 text-xs font-medium uppercase transition ${
+            className={`flex items-center gap-1 px-2 py-1.5 text-xs font-medium uppercase transition cursor-pointer ${
               isTransparent ? "text-white/80" : "text-gray-600"
             }`}
           >
@@ -125,7 +125,7 @@ export default function Header() {
             <span>{locale}</span>
           </button>
           <button
-            className={isTransparent ? "text-white" : "text-gray-800"}
+            className={`cursor-pointer ${isTransparent ? "text-white" : "text-gray-800"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -169,7 +169,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="block px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition text-center"
+                className="block px-6 py-3 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition text-center cursor-pointer"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t("cta")}

@@ -208,7 +208,7 @@ export default function ServicesProcess() {
                         width: i === activeStep ? 32 : 8,
                         backgroundColor: i === activeStep ? "hsl(var(--accent))" : "hsl(var(--foreground) / 0.2)",
                       }}
-                      className="h-2 rounded-full transition-all duration-300"
+                      className="h-2 rounded-full transition-all duration-300 cursor-pointer"
                     />
                   ))}
                 </div>

@@ -73,7 +73,7 @@ export default function CTA({
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex justify-center md:justify-start"
         >
-          <Link href={href} className="inline-flex items-center group">
+          <Link href={href} className="inline-flex items-center group cursor-pointer">
             {/* Text pill — fully rounded on both sides */}
             <span className="bg-black text-white text-sm font-medium pl-6 pr-5 py-3.5 rounded-full transition-colors duration-200 group-hover:bg-black/80">
               {buttonText}

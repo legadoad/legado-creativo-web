@@ -270,11 +270,11 @@ export default function About() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-accent text-background font-semibold rounded-xl overflow-hidden"
+              className="group relative px-8 py-4 bg-secondary-lime text-primary font-semibold rounded-xl overflow-hidden cursor-pointer"
             >
               <span className="relative z-10">{t("learnMore")}</span>
               <motion.div
-                className="absolute inset-0 bg-primary"
+                className="absolute inset-0 bg-secondary-lime/70"
                 initial={{ y: "100%" }}
                 whileHover={{ y: 0 }}
                 transition={{ duration: 0.3 }}
