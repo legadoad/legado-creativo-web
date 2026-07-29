@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
@@ -14,12 +14,38 @@ export default function ServicesProcess() {
   const [activeStep, setActiveStep] = useState<number | null>(null)
   const displayStep = activeStep ?? 0
 
+  const timelineRef = useRef<HTMLDivElement>(null)
+  const firstCircleRef = useRef<HTMLDivElement>(null)
+  const lastCircleRef = useRef<HTMLDivElement>(null)
+  const [lineBounds, setLineBounds] = useState({ top: 0, height: 0 })
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   })
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100])
+
+  useLayoutEffect(() => {
+    const updateLineBounds = () => {
+      const container = timelineRef.current
+      const first = firstCircleRef.current
+      const last = lastCircleRef.current
+      if (!container || !first || !last) return
+
+      const containerRect = container.getBoundingClientRect()
+      const firstRect = first.getBoundingClientRect()
+      const lastRect = last.getBoundingClientRect()
+      const top = firstRect.top + firstRect.height / 2 - containerRect.top
+      const bottom = lastRect.top + lastRect.height / 2 - containerRect.top
+      setLineBounds({ top, height: bottom - top })
+    }
+
+    updateLineBounds()
+    window.addEventListener("resize", updateLineBounds)
+    document.fonts?.ready.then(updateLineBounds)
+    return () => window.removeEventListener("resize", updateLineBounds)
+  }, [])
 
   return (
     <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden bg-card/30">
@@ -71,12 +97,15 @@ export default function ServicesProcess() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Steps Timeline */}
-          <div className="relative">
+          <div ref={timelineRef} className="relative">
             {/* Vertical line - connects circle centers */}
-            <div className="absolute left-6 top-[50px] bottom-[50px] w-0.5 bg-border" />
+            <div
+              className="absolute left-6 w-0.5 bg-border"
+              style={{ top: lineBounds.top, height: lineBounds.height }}
+            />
             <motion.div
               className="absolute left-6 w-0.5 bg-primary origin-top"
-              style={{ top: '50px', height: 'calc(100% - 100px)' }}
+              style={{ top: lineBounds.top, height: lineBounds.height }}
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: activeStep === null ? 0 : activeStep / (STEP_COUNT - 1) } : {}}
               transition={{ duration: 0.7 }}
@@ -98,6 +127,7 @@ export default function ServicesProcess() {
                   >
                     {/* Step circle - centered vertically */}
                     <motion.div
+                      ref={index === 0 ? firstCircleRef : index === STEP_COUNT - 1 ? lastCircleRef : undefined}
                       animate={{ scale: isActive ? 1.1 : 1 }}
                       whileHover={{ scale: 1.15 }}
                       className={`absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 border ${isFilled ? "bg-secondary-lime border-primary" : "bg-card border-border"
@@ -117,7 +147,7 @@ export default function ServicesProcess() {
                         }`}
                     >
                       <h3
-                        className={`text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground"}`}
+                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground"}`}
                       >
                         {t(`steps.${index}.title`)}
                       </h3>
