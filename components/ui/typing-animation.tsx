@@ -46,6 +46,8 @@ interface TypingAnimationProps extends Omit<MotionProps, "children"> {
   children?: string
   words?: string[]
   className?: string
+  /** Per-word class override, matched by index against `words`; applied on top of `className` for the word currently being typed. */
+  wordClassNames?: string[]
   duration?: number
   typeSpeed?: number
   deleteSpeed?: number
@@ -63,6 +65,7 @@ export function TypingAnimation({
   children,
   words,
   className,
+  wordClassNames,
   duration = 100,
   typeSpeed,
   deleteSpeed,
@@ -219,7 +222,8 @@ export function TypingAnimation({
       className={cn(
         "leading-20 tracking-[-0.02em]",
         Component === "span" && "inline-block",
-        className
+        className,
+        wordClassNames?.[currentWordIndex % wordClassNames.length]
       )}
       {...props}
     >

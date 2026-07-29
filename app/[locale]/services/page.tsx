@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ServicesPageHero from "@/components/services-page-hero";
+import ServicesStatement from "@/components/services-statement";
 import ServicesGrid from "@/components/services-grid";
 import ServicesProcess from "@/components/services-process";
 import ServicesFaq from "@/components/services-faq";
@@ -21,6 +22,7 @@ export default async function ServicesPage() {
       <Header />
       <ServicesPageHero />
       <ServicesGrid />
+      <ServicesStatement />
       <ServicesProcess />
       <ServicesFaq />
       <CTA

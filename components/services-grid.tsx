@@ -1,40 +1,62 @@
 "use client"
 
 import { useRef, useState } from "react"
-import { motion, useInView, AnimatePresence } from "framer-motion"
-import { Palette, Globe, Smartphone, Sparkles, Video, Camera, PenTool, Layers, ArrowRight } from "lucide-react"
+import { motion, AnimatePresence, useInView } from "framer-motion"
+import { ArrowRight, ChevronDown } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 
-const serviceIcons = [Palette, Globe, Smartphone, Sparkles, Video, Camera, PenTool, Layers]
-const serviceColors = [
-  "from-pink-500 to-accent",
-  "from-accent to-blue-500",
-  "from-blue-500 to-cyan-500",
-  "from-cyan-500 to-teal-500",
-  "from-teal-500 to-green-500",
-  "from-green-500 to-yellow-500",
-  "from-yellow-500 to-orange-500",
-  "from-orange-500 to-pink-500",
+const categoryStyles = [
+  { tint: "bg-section-lavender/78", direction: "animate-marquee" },
+  { tint: "bg-section-mint/78", direction: "animate-marquee-reverse" },
+  { tint: "bg-secondary-blue/72", direction: "animate-marquee" },
 ]
-const serviceGlow = [
-  "hover:border-pink-500/50 hover:shadow-pink-500/20",
-  "hover:border-accent/50 hover:shadow-accent/20",
-  "hover:border-blue-500/50 hover:shadow-blue-500/20",
-  "hover:border-cyan-500/50 hover:shadow-cyan-500/20",
-  "hover:border-teal-500/50 hover:shadow-teal-500/20",
-  "hover:border-green-500/50 hover:shadow-green-500/20",
-  "hover:border-yellow-500/50 hover:shadow-yellow-500/20",
-  "hover:border-orange-500/50 hover:shadow-orange-500/20",
+
+const categoryImages = [
+  [
+    "/brand-identity-design-system-logo-mockup.jpg",
+    "/creative-poster-design-colorful-typography.jpg",
+    "/creative-visual-campaign-poster-design.jpg",
+    "/event-branding-design-conference-materials.jpg",
+    "/startup-branding-package-mockup-dark.jpg",
+  ],
+  [
+    "/digital-marketing-dashboard-app-interface.jpg",
+    "/social-media-post-design-creative.jpg",
+    "/creative-agency-showreel-dark-cinematic.jpg",
+    "/social-media-design-kit-templates-dark.jpg",
+    "/digital-marketing-app-interface.jpg",
+  ],
+  [
+    "/modern-website-design-on-laptop-mockup.jpg",
+    "/modern-ecommerce-website-design-dark-theme.jpg",
+    "/interactive-portfolio-website-modern-design.jpg",
+    "/mobile-app-ui-design-dark-theme.jpg",
+    "/finance-dashboard-ui-design-dark-theme.jpg",
+  ],
 ]
 
 export default function ServicesGrid() {
   const t = useTranslations("servicesGrid")
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
+  const categories = categoryStyles.map((style, index) => ({
+    ...style,
+    title: t(`categories.${index}.title`),
+    description: t(`categories.${index}.description`),
+    items: t.raw(`categories.${index}.items`) as string[],
+    images: categoryImages[index],
+  }))
+
+  const toggleExpanded = (index: number) => {
+    setExpandedIndex((current) => (current === index ? null : index))
+  }
+
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
+    <section ref={sectionRef} className="py-32 relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -49,12 +71,12 @@ export default function ServicesGrid() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -71,100 +93,113 @@ export default function ServicesGrid() {
             {t("subtitle")}
           </p>
         </motion.div>
+      </div>
 
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <AnimatePresence mode="popLayout">
-            {serviceIcons.map((Icon, index) => {
-              const isExpanded = expandedIndex === index
-              const color = serviceColors[index]
-              const glow = serviceGlow[index]
-              return (
-                <motion.div
-                  key={index}
-                  layout
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                  className={`group relative p-6 rounded-2xl border border-border bg-gradient-to-br from-card to-card/50 transition-all duration-500 hover:shadow-2xl cursor-pointer ${glow} ${
-                    isExpanded ? "md:col-span-2 lg:col-span-2" : ""
+      <div className="relative z-10 flex flex-col gap-2 md:gap-3">
+        {categories.map((category, index) => {
+          const isHovered = hoveredIndex === index
+          const isExpanded = expandedIndex === index
+          const loopedImages = [...category.images, ...category.images]
+
+          return (
+            <div key={category.title}>
+              <div
+                role="button"
+                tabIndex={0}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => {
+                  setHoveredIndex(index)
+                  toggleExpanded(index)
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault()
+                    setHoveredIndex(index)
+                    toggleExpanded(index)
+                  }
+                }}
+                className="group relative h-64 md:h-80 overflow-hidden cursor-pointer select-none"
+              >
+                {/* Infinite image filmstrip */}
+                <div
+                  className={`absolute top-0 left-0 h-full flex ${category.direction} transition-[filter] duration-500 ${
+                    isHovered ? "blur-none" : "blur-md"
+                  }`}
+                  style={{ animationDuration: `${category.images.length * 8}s` }}
+                >
+                  {loopedImages.map((src, i) => (
+                    <div
+                      key={i}
+                      className="relative h-full w-56 sm:w-72 md:w-96 flex-shrink-0"
+                    >
+                      <img
+                        src={src}
+                        alt={category.items[i % category.items.length]}
+                        className="w-full h-full object-cover"
+                      />
+                      <div
+                        className={`absolute inset-0 flex items-center justify-center text-center p-4 bg-black/35 transition-opacity duration-500 ${
+                          isHovered ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        <span className="text-white text-lg md:text-2xl font-semibold leading-snug">
+                          {category.items[i % category.items.length]}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Color tint + centered category title */}
+                <div
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${category.tint} ${
+                    isHovered ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
-                  {/* Gradient overlay on hover */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 0.12 }}
-                    className={`absolute inset-0 bg-gradient-to-br ${color} rounded-2xl`}
-                  />
+                  <span className="text-4xl md:text-6xl font-bold lowercase text-foreground/80">
+                    {category.title}
+                  </span>
+                </div>
 
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className={`w-12 h-12 mb-4 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center`}
-                    >
-                      <Icon className="w-6 h-6 text-background" />
-                    </motion.div>
-
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
-                      {t(`items.${index}.title`)}
-                    </h3>
-
-                    <p
-                      className={`text-foreground/60 text-sm leading-relaxed mb-4 ${isExpanded ? "" : "line-clamp-2"}`}
-                    >
-                      {t(`items.${index}.description`)}
-                    </p>
-
-                    {/* Features - shown when expanded */}
-                    <AnimatePresence>
-                      {isExpanded && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {(t.raw(`items.${index}.features`) as string[]).map((feature, i) => (
-                              <motion.span
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: i * 0.1 }}
-                                className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full"
-                              >
-                                {feature}
-                              </motion.span>
-                            ))}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                    <div className="flex items-center gap-2 text-accent text-sm font-medium">
-                      <span>{isExpanded ? t("showLess") : t("learnMore")}</span>
-                      <motion.div animate={{ rotate: isExpanded ? 90 : 0 }} transition={{ duration: 0.3 }}>
-                        <ArrowRight className="w-4 h-4" />
-                      </motion.div>
-                    </div>
-                  </div>
-
-                  {/* Corner number */}
-                  <motion.div
-                    initial={{ opacity: 0.05 }}
-                    whileHover={{ opacity: 0.1 }}
-                    className="absolute top-4 right-4 text-4xl font-bold text-foreground/5"
-                  >
-                    0{index + 1}
-                  </motion.div>
+                {/* Expand indicator */}
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0, opacity: isHovered ? 1 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center"
+                >
+                  <ChevronDown className="w-4 h-4 text-white" />
                 </motion.div>
-              )
-            })}
-          </AnimatePresence>
-        </motion.div>
+              </div>
+
+              {/* FAQ-style expanded panel */}
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden bg-card"
+                  >
+                    <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                      <p className="text-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl">
+                        {category.description}
+                      </p>
+                      <Link
+                        href="/contact"
+                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition"
+                      >
+                        {t("ctaLabel")}
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
