@@ -1,4 +1,4 @@
-"use client"
+;"use client"
 
 import { useLayoutEffect, useRef, useState } from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
