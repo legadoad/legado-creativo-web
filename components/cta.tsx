@@ -67,7 +67,7 @@ export default function CTA({
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className={`text-4xl md:text-6xl lg:text-7xl font-bold ${textColor} leading-[1.1] tracking-tight md:indent-24 text-center md:text-left`}
+            className={`font-sans text-4xl md:text-6xl lg:text-7xl font-bold ${textColor} leading-[1.1] tracking-tight md:indent-24 text-center md:text-left`}
           >
             {parts[0].trimEnd()}{" "}
             {highlightWord && (<span className="relative inline-block indent-0">{highlightWord}{isInView && <Stroke />}</span>)}

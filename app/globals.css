@@ -81,8 +81,9 @@
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: var(--font-montserrat), "Geist Fallback";
+  --font-heading: var(--font-lemon-milk), var(--font-montserrat);
+  --font-mono: var(--font-geist-mono), "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -149,6 +150,10 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 
   /* Smooth scroll behavior */

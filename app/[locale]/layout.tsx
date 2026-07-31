@@ -1,6 +1,7 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
@@ -8,8 +9,29 @@ import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const lemonMilk = localFont({
+  variable: "--font-lemon-milk",
+  src: [
+    { path: "../../public/fonts/LEMONMILK-Light.otf", weight: "300", style: "normal" },
+    { path: "../../public/fonts/LEMONMILK-LightItalic.otf", weight: "300", style: "italic" },
+    { path: "../../public/fonts/LEMONMILK-Regular.otf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/LEMONMILK-RegularItalic.otf", weight: "400", style: "italic" },
+    { path: "../../public/fonts/LEMONMILK-Medium.otf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/LEMONMILK-MediumItalic.otf", weight: "500", style: "italic" },
+    { path: "../../public/fonts/LEMONMILK-Bold.otf", weight: "700", style: "normal" },
+    { path: "../../public/fonts/LEMONMILK-BoldItalic.otf", weight: "700", style: "italic" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Legado Creativo - Web & Graphic Design",
@@ -52,7 +74,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`font-sans antialiased`}>
+      <body
+        className={`${montserrat.variable} ${lemonMilk.variable} ${geistMono.variable} font-sans antialiased`}
+      >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
