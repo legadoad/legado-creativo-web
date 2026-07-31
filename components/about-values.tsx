@@ -48,13 +48,13 @@ export default function AboutValues() {
       rotateX: 0,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1] as const,
       },
     },
   }
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 overflow-hidden">
+    <section ref={sectionRef} className="py-16 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-20"
@@ -62,7 +62,7 @@ export default function AboutValues() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-foreground/60 text-lg max-w-2xl mx-auto">

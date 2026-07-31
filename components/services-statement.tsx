@@ -61,7 +61,9 @@ export default function ServicesStatement() {
           duration={45}
           deleteSpeed={25}
           pauseDelay={2200}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight transition-colors duration-500"
+          whileHover={{ scale: 1.03 }}
+          transition={{ duration: 0.3 }}
+          className="text-fluid-h1 font-bold tracking-tight transition-colors duration-500 cursor-default inline-block"
         />
       </div>
     </section>

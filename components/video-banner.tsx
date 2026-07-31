@@ -1,18 +1,17 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { Sparkles, Clapperboard, Video, Share2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { strokes } from "@/components/stroke-underline";
+
+const featureIcons = [Sparkles, Clapperboard, Video, Share2];
 
 export default function VideoBanner() {
   const t = useTranslations("videoBanner");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -23,29 +22,11 @@ export default function VideoBanner() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
 
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
   return (
-    <section ref={sectionRef} className="relative py-20 overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 overflow-hidden">
       {/* Background Blur Effects */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-32 w-64 h-64 md:w-96 md:h-96 bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
@@ -58,7 +39,7 @@ export default function VideoBanner() {
           <p className="text-accent text-sm font-semibold tracking-widest mb-4">
             {t("sectionLabel")}
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
             {t("titleLine1")}
             <span className="text-accent relative inline-block">
               {t("titleHighlight")}
@@ -79,13 +60,17 @@ export default function VideoBanner() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative aspect-video rounded-[8px] overflow-hidden border border-accent/20 shadow-2xl shadow-accent/10"
           >
-            {/* Video Placeholder - Replace with actual video */}
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{
-                backgroundImage: `url('/creative-agency-showreel-dark-cinematic.jpg')`,
-              }}
-            />
+            {/* Placeholder video — swap the source for the final showreel later */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/creative-agency-showreel-dark-cinematic.jpg"
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/Banner.mp4" type="video/mp4" />
+            </video>
 
             {/* Video Overlay with Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-gradient-overlay/80 via-transparent to-background/30" />
@@ -101,52 +86,17 @@ export default function VideoBanner() {
               />
             </div>
 
-            {/* Center Play Button */}
-            <motion.button
-              onClick={togglePlay}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 rounded-full bg-accent/90 backdrop-blur-sm flex items-center justify-center group cursor-pointer"
-            >
-              <motion.div
-                className="absolute inset-0 rounded-full bg-accent"
-                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
-                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-              />
-              {isPlaying ? (
-                <Pause className="w-10 h-10 md:w-12 md:h-12 text-background relative z-10" />
-              ) : (
-                <Play className="w-10 h-10 md:w-12 md:h-12 text-background relative z-10 ml-1" />
-              )}
-            </motion.button>
-
-            {/* Video Controls */}
-            <div className="absolute bottom-6 right-6 flex gap-3">
-              <motion.button
-                onClick={toggleMute}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 rounded-full bg-background/50 backdrop-blur-sm border border-accent/20 flex items-center justify-center cursor-pointer"
-              >
-                {isMuted ? (
-                  <VolumeX className="w-5 h-5 text-foreground" />
-                ) : (
-                  <Volume2 className="w-5 h-5 text-foreground" />
-                )}
-              </motion.button>
-            </div>
-
             {/* Floating Text Overlay */}
-            <div className="absolute bottom-8 left-8">
+            <div className="hidden sm:block absolute sm:bottom-8 sm:left-8">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.5 }}
               >
-                <p className="text-foreground/60 text-sm uppercase tracking-widest mb-2">
+                <p className="text-foreground/60 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2">
                   {t("showreelLabel")}
                 </p>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                   {t("showreelTitle")}
                 </h3>
               </motion.div>
@@ -158,7 +108,7 @@ export default function VideoBanner() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.6 }}
-            className="absolute -left-4 md:-left-8 top-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-[4px] p-4 md:p-6 shadow-xl"
+            className="hidden md:block absolute md:-left-8 top-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-[4px] p-4 md:p-6 shadow-xl"
           >
             <div className="text-3xl md:text-4xl font-bold text-accent mb-1">
               {t("stat1Value")}
@@ -170,7 +120,7 @@ export default function VideoBanner() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.8 }}
-            className="absolute -right-4 md:-right-8 bottom-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-[4px] p-4 md:p-6 shadow-xl"
+            className="hidden md:block absolute md:-right-8 bottom-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-[4px] p-4 md:p-6 shadow-xl"
           >
             <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
               {t("stat2Value")}
@@ -184,25 +134,39 @@ export default function VideoBanner() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-8 md:mt-8"
         >
-          {[0, 1, 2, 3].map((i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.6 + i * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="text-center p-6 bg-card/30 backdrop-blur-sm border border-accent/10 rounded-[4px] hover:border-accent/30 transition-all"
-            >
-              <h4 className="text-lg font-semibold text-foreground mb-1">
-                {t(`features.${i}.label`)}
-              </h4>
-              <p className="text-sm text-foreground/60">
-                {t(`features.${i}.desc`)}
-              </p>
-            </motion.div>
-          ))}
+          {[0, 1, 2, 3].map((i) => {
+            // Divisor a la izquierda salvo en la primera columna de cada fila
+            // (móvil: 2 columnas, desktop: 4 columnas)
+            const divider = [
+              "",
+              "border-l border-accent/15",
+              "border-accent/15 md:border-l",
+              "border-l border-accent/15",
+            ][i];
+            const Icon = featureIcons[i];
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.6 + i * 0.1 }}
+                className={`group flex flex-col items-center text-center px-2 md:px-4 ${divider}`}
+              >
+                <Icon
+                  className="w-6 h-6 text-accent mb-3 transition-transform duration-300 group-hover:-translate-y-1"
+                  strokeWidth={1.5}
+                />
+                <h4 className="text-base md:text-lg font-semibold text-foreground mb-1.5">
+                  {t(`features.${i}.label`)}
+                </h4>
+                <p className="text-sm text-foreground/50 leading-snug">
+                  {t(`features.${i}.desc`)}
+                </p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

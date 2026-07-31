@@ -89,7 +89,7 @@ export default function ContactForm() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
+      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
     },
   };
 
@@ -101,7 +101,7 @@ export default function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <motion.h2
-        className="text-3xl font-bold text-foreground mb-2"
+        className="text-3xl font-bold text-foreground mb-2 tracking-tight"
         initial={{ opacity: 0, x: -20 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ delay: 0.1 }}

@@ -555,8 +555,11 @@
   "contactHero": {
     "badge": "HABLEMOS",
     "titleLine1": "Ponte en ",
-    "titleLine2": "contacto",
+    "titleLine2": " contacto",
     "subtitle": "¿Lista para construir una marca que dure? Cuéntanos tu proyecto: la primera conversación es gratis."
+  },
+  "contactMarquee": {
+    "phrases": ["Hablemos", "Let's talk", "Conversemos", "Empieza tu marca"]
   },
   "contactForm": {
     "title": "Envíanos un mensaje",

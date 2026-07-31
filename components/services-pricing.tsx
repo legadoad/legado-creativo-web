@@ -58,7 +58,7 @@ export default function ServicesPricing() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 px-6 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           animate={{ x: [0, 30, 0] }}
@@ -87,7 +87,7 @@ export default function ServicesPricing() {
           >
             PRICING
           </motion.p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6">
             Transparent <span className="text-accent">Pricing</span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">

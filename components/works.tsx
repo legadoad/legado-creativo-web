@@ -22,7 +22,7 @@ export default function Works() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 px-6 bg-background text-foreground"
+      className="py-16 px-6 bg-background text-foreground"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title */}
@@ -32,7 +32,7 @@ export default function Works() {
           transition={{ duration: 0.7 }}
           className="mb-16 md:mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[0.95] max-w-4xl">
+          <h2 className="text-fluid-h2 font-bold tracking-tight max-w-4xl">
             {t("title")}
           </h2>
           <p className="mt-4 text-lg md:text-xl text-foreground/60 max-w-2xl">

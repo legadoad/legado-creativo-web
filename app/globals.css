@@ -283,6 +283,33 @@ html {
 }
 
 @layer utilities {
+  /* Fluid typography: escala suave entre móvil y desktop sin desbordar.
+     Reemplaza patrones tipo `text-5xl md:text-7xl` por una sola clase.
+     Formato clamp(mínimo-móvil, valor-fluido, máximo-desktop). */
+  .text-fluid-hero {
+    font-size: clamp(2.5rem, 7vw + 1rem, 6rem); /* ~40px → 96px */
+    line-height: 1.05;
+  }
+  .text-fluid-h1 {
+    font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem); /* ~36px → 72px */
+    line-height: 1.05;
+  }
+  .text-fluid-h2 {
+    font-size: clamp(1.875rem, 3.5vw + 1rem, 3.25rem); /* ~30px → 52px */
+    line-height: 1.1;
+  }
+  .text-fluid-statement {
+    font-size: clamp(2rem, 4.5vw + 1rem, 3.75rem); /* ~32px → 60px */
+    line-height: 1.1;
+  }
+  .text-fluid-h3 {
+    font-size: clamp(1.375rem, 1.5vw + 0.9rem, 2rem); /* ~22px → 32px */
+    line-height: 1.15;
+  }
+  .text-fluid-lead {
+    font-size: clamp(1.05rem, 1vw + 0.85rem, 1.25rem); /* ~17px → 20px */
+  }
+
   .animate-marquee {
     animation: marquee 20s linear infinite;
   }

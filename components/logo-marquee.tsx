@@ -37,13 +37,7 @@ export default function LogoMarquee() {
             >
               {brand}
             </motion.span>
-            <motion.span
-              className="ml-12 text-accent/30"
-              animate={{ rotate: [0, 180, 360], scale: [1, 1.2, 1] }}
-              transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, delay: index * 0.2 }}
-            >
-              ★
-            </motion.span>
+            <span className="ml-12 text-foreground/20">•</span>
           </motion.div>
         ))}
       </motion.div>

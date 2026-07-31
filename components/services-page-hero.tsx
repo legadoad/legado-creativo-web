@@ -86,7 +86,7 @@ export default function ServicesPageHero() {
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight indent-24"
+              className="text-fluid-hero font-bold text-white tracking-tight indent-24"
             >
               {t("titleLine1")}
               <span className="relative inline-block indent-0 text-white">

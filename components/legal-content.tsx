@@ -38,7 +38,7 @@ export default function LegalContent({ namespace }: { namespace: string }) {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight text-foreground">
+          <h1 className="text-fluid-h1 font-bold mb-4 text-foreground">
             {t("title")}
           </h1>
           <p className="text-foreground/50 text-sm mb-10">{t("lastUpdated")}</p>

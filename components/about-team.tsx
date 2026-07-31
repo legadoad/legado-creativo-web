@@ -23,7 +23,7 @@ export default function AboutTeam() {
     <section
       ref={sectionRef}
       id="team"
-      className="py-32 px-6 bg-gradient-to-b from-transparent via-card/50 to-transparent overflow-hidden"
+      className="py-16 px-6 bg-gradient-to-b from-transparent via-card/50 to-transparent overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -32,7 +32,7 @@ export default function AboutTeam() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-foreground/60 text-lg max-w-2xl mx-auto">

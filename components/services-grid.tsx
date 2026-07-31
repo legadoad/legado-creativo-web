@@ -57,7 +57,7 @@ export default function ServicesGrid() {
   }
 
   return (
-    <section ref={sectionRef} className="py-32 relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -87,7 +87,7 @@ export default function ServicesGrid() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
             <TypingAnimation
               as="span"
               className="text-foreground"
@@ -173,7 +173,7 @@ export default function ServicesGrid() {
                     isHovered ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
-                  <span className="text-4xl md:text-6xl font-bold lowercase text-foreground/80">
+                  <span className="text-fluid-h2 font-bold lowercase text-foreground/80">
                     {category.title}
                   </span>
                 </div>

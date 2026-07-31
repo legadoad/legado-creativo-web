@@ -13,7 +13,7 @@ export default function ServicesFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden bg-card/30">
+    <section ref={sectionRef} className="py-16 px-6 relative overflow-hidden bg-card/30">
       <motion.div
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : {}}
@@ -36,7 +36,7 @@ export default function ServicesFaq() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-lg text-foreground/60">{t("subtitle")}</p>

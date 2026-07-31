@@ -539,6 +539,9 @@
     "titleLine2": "touch",
     "subtitle": "Ready to build a brand that lasts? Tell us about your project. The first conversation is on us."
   },
+  "contactMarquee": {
+    "phrases": ["Let's talk", "Hablemos", "Get in touch", "Start your brand"]
+  },
   "contactForm": {
     "title": "Send us a message",
     "subtitle": "Fill out the form and we'll get back to you shortly.",

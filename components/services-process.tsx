@@ -49,7 +49,7 @@ export default function ServicesProcess() {
   return (
     <section
       ref={sectionRef}
-      className="py-32 px-6 relative overflow-hidden bg-card/30"
+      className="py-16 px-6 relative overflow-hidden bg-card/30"
     >
       {/* Decorative shapes */}
       <motion.div
@@ -89,7 +89,7 @@ export default function ServicesProcess() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">

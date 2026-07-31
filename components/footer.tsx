@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col justify-center items-center md:items-end">
             <h4 className="font-semibold text-foreground mb-3">
               {t("connect")}
             </h4>

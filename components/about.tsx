@@ -31,7 +31,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 md:py-32 px-6 bg-background relative overflow-hidden"
+      className="py-16 px-6 bg-background relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -49,7 +49,7 @@ export default function About() {
           </motion.p>
           <motion.h2
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold text-foreground tracking-tight leading-[0.95] mb-8"
+            className="text-fluid-h1 font-bold text-foreground tracking-tight mb-8"
           >
             {t("titleLine1")}
             <span className="text-accent">{t("titleLine2")}</span>
