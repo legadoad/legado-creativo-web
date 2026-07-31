@@ -51,7 +51,7 @@ export default function ServicesFaq() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-2xl border border-border overflow-hidden"
+                className="rounded-[4px] border border-border overflow-hidden"
               >
                 <motion.button
                   onClick={() => setOpenIndex(isOpen ? null : index)}

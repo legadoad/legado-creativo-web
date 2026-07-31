@@ -103,7 +103,7 @@ export default function ServicesPricing() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -12, scale: pkg.popular ? 1.02 : 1.05 }}
-              className={`relative group p-8 rounded-3xl border transition-all duration-500 ${
+              className={`relative group p-8 rounded-[4px] border transition-all duration-500 ${
                 pkg.popular
                   ? "bg-gradient-to-b from-accent/10 to-card border-accent/30 scale-105"
                   : "bg-card border-border hover:border-accent/30"
@@ -167,7 +167,7 @@ export default function ServicesPricing() {
               <Link href="/contact">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
-                    className="w-full py-6 text-lg font-semibold rounded-xl transition-all duration-300 bg-secondary-lime hover:bg-secondary-lime/90 text-secondary-blue cursor-pointer"
+                    className="w-full py-6 text-lg font-semibold rounded-full transition-all duration-300 bg-secondary-lime hover:bg-secondary-lime/90 text-secondary-blue cursor-pointer"
                   >
                     Get Started
                   </Button>

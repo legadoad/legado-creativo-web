@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 "use client";
 
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
-=======
-;"use client"
-
-import { useLayoutEffect, useRef, useState } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useTranslations } from "next-intl"
-import Image from "next/image"
->>>>>>> 3a462e4f70d9e0bbec739876e80c58ed858a01e5
 
 const STEP_COUNT = 4;
 
@@ -116,11 +107,7 @@ export default function ServicesProcess() {
             />
             <motion.div
               className="absolute left-6 w-0.5 bg-primary origin-top"
-<<<<<<< HEAD
-              style={{ top: "50px", height: "calc(100% - 100px)" }}
-=======
               style={{ top: lineBounds.top, height: lineBounds.height }}
->>>>>>> 3a462e4f70d9e0bbec739876e80c58ed858a01e5
               initial={{ scaleY: 0 }}
               animate={
                 isInView
@@ -165,18 +152,14 @@ export default function ServicesProcess() {
 
                     <motion.div
                       whileHover={{ x: 8 }}
-                      className={`p-6 rounded-xl border transition-all duration-300 ${
+                      className={`p-6 rounded-[4px] border transition-all duration-300 ${
                         isFilled
                           ? "bg-secondary-lime border-primary"
                           : "hover:bg-secondary-lime/50 hover:border-secondary-lime"
                       }`}
                     >
                       <h3
-<<<<<<< HEAD
-                        className={`text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue" : "text-foreground"}`}
-=======
-                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground"}`}
->>>>>>> 3a462e4f70d9e0bbec739876e80c58ed858a01e5
+                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue" : "text-foreground"}`}
                       >
                         {t(`steps.${index}.title`)}
                       </h3>
@@ -198,7 +181,7 @@ export default function ServicesProcess() {
           >
             <motion.div
               layout
-              className="relative p-10 rounded-3xl bg-gradient-to-br from-card to-card/50 border border-border overflow-hidden"
+              className="relative p-10 rounded-[4px] bg-gradient-to-br from-card to-card/50 border border-border overflow-hidden"
             >
               {/* Background decoration */}
               <motion.div

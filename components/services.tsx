@@ -112,7 +112,7 @@ export default function Services() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="group p-8 rounded-2xl border border-border bg-gradient-to-br from-card to-card/50 relative overflow-hidden cursor-pointer"
+                className="group p-8 rounded-[4px] border border-border bg-gradient-to-br from-card to-card/50 relative overflow-hidden cursor-pointer"
                 style={{ transformPerspective: 1000 }}
               >
                 <motion.div
@@ -132,7 +132,7 @@ export default function Services() {
                       scale: hoveredIndex === index ? 1.1 : 1,
                     }}
                     transition={{ duration: 0.5 }}
-                    className={`w-14 h-14 mb-6 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
+                    className={`w-14 h-14 mb-6 bg-gradient-to-br ${service.color} rounded-[4px] flex items-center justify-center`}
                   >
                     <Icon className="w-7 h-7 text-background" />
                   </motion.div>

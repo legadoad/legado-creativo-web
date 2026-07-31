@@ -15,6 +15,14 @@
     "contact": {
       "title": "Contáctanos | Legado Creativo",
       "description": "Ponte en contacto con Legado Creativo. Hablemos de tu próximo proyecto."
+    },
+    "privacy": {
+      "title": "Política de Privacidad | Legado Creativo",
+      "description": "Cómo Legado Creativo recopila, usa y protege tu información personal en Estados Unidos y en todo el mundo."
+    },
+    "terms": {
+      "title": "Términos de Servicio | Legado Creativo",
+      "description": "Los términos y condiciones que rigen el uso del sitio web y los servicios de Legado Creativo."
     }
   },
   "header": {
@@ -583,17 +591,252 @@
     "subtitle": "¿Prefieres contactarnos directamente? Estamos aquí.",
     "email": "Email",
     "phone": "Teléfono",
-    "address": "Dirección",
     "hours": "Horario",
     "hoursValue": "Lun a Vie: 9AM a 6PM EST",
     "followUs": "Síguenos",
     "quickResponse": "Nota rápida",
     "quickResponseText": "Normalmente respondemos dentro de 24 horas en días hábiles."
   },
-  "contactMap": {
-    "title": "Legado Creativo HQ",
-    "addressLine1": "123 Creative Avenue, Suite 500",
-    "addressLine2": "New York, NY 10001, USA",
-    "openMaps": "Abrir en Google Maps"
+  "privacyPolicy": {
+    "badge": "Legal",
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 30 de julio de 2026",
+    "intro": [
+      "Legado Creativo (\"Legado Creativo\", \"nosotros\" o \"nuestro\") es un estudio de estrategia de marca y creatividad con sede en Estados Unidos que trabaja con clientes y colaboradores de todo el mundo. Esta Política de Privacidad explica qué información recopilamos, cómo la usamos y las opciones que tienes.",
+      "Al usar nuestro sitio web o contactarnos, aceptas las prácticas descritas en esta política. Como trabajamos a nivel internacional, buscamos respetar los derechos de privacidad que te correspondan según las leyes de tu país o región, incluidas las leyes de Estados Unidos, la Unión Europea, el Reino Unido y otras jurisdicciones cuando corresponda."
+    ],
+    "sections": [
+      {
+        "heading": "Quiénes somos",
+        "body": [
+          "Legado Creativo es el responsable del tratamiento de tu información personal. Si tienes preguntas sobre esta política o sobre cómo se manejan tus datos, puedes escribirnos a vickyurbaneja@gmail.com."
+        ]
+      },
+      {
+        "heading": "Información que recopilamos",
+        "body": [
+          "Solo recopilamos la información que nos ayuda a responderte y a prestar nuestros servicios. Esto incluye:"
+        ],
+        "list": [
+          "Información que nos proporcionas directamente, como tu nombre, correo electrónico, teléfono, nombre de tu empresa y los detalles de cualquier mensaje o solicitud de proyecto que nos envíes a través del formulario de contacto o por correo.",
+          "Información recopilada automáticamente cuando visitas nuestro sitio web, como tu dirección IP, tipo de navegador, información del dispositivo, páginas visitadas y ubicación general, obtenida mediante cookies y tecnologías similares.",
+          "Información relacionada con una relación de trabajo, como datos de facturación, archivos de proyectos y comunicaciones, cuando te conviertes en cliente o colaborador."
+        ]
+      },
+      {
+        "heading": "Cómo usamos tu información",
+        "body": ["Usamos la información que recopilamos para:"],
+        "list": [
+          "Responder a tus consultas y comunicarnos contigo sobre tu proyecto.",
+          "Prestar, entregar y mejorar nuestros servicios creativos y de estrategia de marca.",
+          "Enviar información administrativa como propuestas, facturas y actualizaciones de servicio.",
+          "Operar, mantener y mejorar nuestro sitio web y entender cómo se utiliza.",
+          "Cumplir con obligaciones legales y proteger nuestros derechos y los de nuestros clientes.",
+          "Con tu consentimiento, enviarte actualizaciones ocasionales o comunicaciones de marketing, de las que puedes darte de baja en cualquier momento."
+        ]
+      },
+      {
+        "heading": "Bases legales para el tratamiento",
+        "body": [
+          "Cuando la ley lo exige (por ejemplo, bajo el Reglamento General de Protección de Datos de la UE y el Reino Unido), tratamos tus datos personales sobre las siguientes bases legales: tu consentimiento; la ejecución de un contrato contigo; nuestros intereses legítimos para operar y promover nuestro negocio; y el cumplimiento de nuestras obligaciones legales."
+        ]
+      },
+      {
+        "heading": "Cookies y analítica",
+        "body": [
+          "Nuestro sitio web puede usar cookies y tecnologías similares para mantener el sitio en funcionamiento, recordar tus preferencias y entender cómo interactúan los visitantes con nuestro contenido. Puedes controlar o desactivar las cookies desde la configuración de tu navegador. Algunas funciones del sitio podrían no funcionar correctamente si desactivas las cookies."
+        ]
+      },
+      {
+        "heading": "Cómo compartimos tu información",
+        "body": [
+          "No vendemos tu información personal. Solo podemos compartirla en las siguientes circunstancias:"
+        ],
+        "list": [
+          "Con proveedores de servicios de confianza que nos ayudan a operar nuestro negocio, como alojamiento, correo, analítica y procesadores de pago, quienes solo pueden usar tus datos para prestarnos sus servicios.",
+          "Cuando lo exija la ley, un reglamento, un proceso legal o una solicitud gubernamental válida.",
+          "Para proteger los derechos, la propiedad o la seguridad de Legado Creativo, nuestros clientes u otras personas.",
+          "En relación con una transferencia de negocio, fusión o adquisición, en cuyo caso te notificaremos cualquier cambio en la propiedad o el uso de tu información."
+        ]
+      },
+      {
+        "heading": "Transferencias internacionales de datos",
+        "body": [
+          "Legado Creativo opera desde Estados Unidos, y nuestros proveedores de servicios pueden estar ubicados en Estados Unidos u otros países. Si accedes a nuestros servicios desde fuera de Estados Unidos, tu información puede transferirse, almacenarse y procesarse en Estados Unidos u otras jurisdicciones cuyas leyes de protección de datos pueden diferir de las de tu país.",
+          "Cuando corresponde, adoptamos las salvaguardas adecuadas, como cláusulas contractuales estándar, para proteger tu información cuando se transfiere internacionalmente."
+        ]
+      },
+      {
+        "heading": "Conservación de datos",
+        "body": [
+          "Conservamos tu información personal únicamente durante el tiempo necesario para cumplir los fines descritos en esta política, mantener nuestra relación comercial y cumplir con nuestras obligaciones legales, contables y de reporte. Cuando ya no es necesaria, la eliminamos o anonimizamos de forma segura."
+        ]
+      },
+      {
+        "heading": "Tus derechos y opciones",
+        "body": [
+          "Según el lugar donde vivas, puedes tener derecho a:"
+        ],
+        "list": [
+          "Acceder a la información personal que tenemos sobre ti y solicitar una copia.",
+          "Corregir información inexacta o incompleta.",
+          "Solicitar la eliminación de tu información personal.",
+          "Oponerte o restringir ciertos tratamientos de tus datos.",
+          "Retirar tu consentimiento en cualquier momento, cuando el tratamiento se base en el consentimiento.",
+          "Solicitar que no vendamos ni compartamos tu información personal (como reconoce la Ley de Privacidad del Consumidor de California)."
+        ]
+      },
+      {
+        "heading": "Cómo ejercer tus derechos",
+        "body": [
+          "Para ejercer cualquiera de estos derechos, escríbenos a vickyurbaneja@gmail.com. Responderemos dentro del plazo que exija la ley aplicable. No te discriminaremos por ejercer tus derechos de privacidad."
+        ]
+      },
+      {
+        "heading": "Seguridad de los datos",
+        "body": [
+          "Aplicamos medidas técnicas y organizativas razonables para proteger tu información personal contra pérdida, uso indebido y acceso no autorizado. Sin embargo, ningún método de transmisión por internet es completamente seguro, por lo que no podemos garantizar una seguridad absoluta."
+        ]
+      },
+      {
+        "heading": "Privacidad de menores",
+        "body": [
+          "Nuestro sitio web y servicios no están dirigidos a menores de 16 años, y no recopilamos conscientemente su información personal. Si crees que un menor nos ha proporcionado información personal, contáctanos para que podamos eliminarla."
+        ]
+      },
+      {
+        "heading": "Cambios en esta política",
+        "body": [
+          "Podemos actualizar esta Política de Privacidad de vez en cuando para reflejar cambios en nuestras prácticas o requisitos legales. Cuando lo hagamos, actualizaremos la fecha de \"Última actualización\" que aparece arriba. Te recomendamos revisar esta página periódicamente."
+        ]
+      },
+      {
+        "heading": "Contáctanos",
+        "body": [
+          "Si tienes preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o tu información personal, escríbenos a vickyurbaneja@gmail.com."
+        ]
+      }
+    ]
+  },
+  "termsOfService": {
+    "badge": "Legal",
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: 30 de julio de 2026",
+    "intro": [
+      "Bienvenido a Legado Creativo. Estos Términos de Servicio (\"Términos\") rigen tu acceso y uso de nuestro sitio web y de los servicios creativos y de estrategia de marca que prestamos (en conjunto, los \"Servicios\").",
+      "Al acceder a nuestro sitio web o contratar nuestros Servicios, aceptas quedar obligado por estos Términos. Si no estás de acuerdo, por favor no uses nuestro sitio web ni nuestros Servicios. Legado Creativo opera desde Estados Unidos y trabaja con clientes y colaboradores de todo el mundo."
+    ],
+    "sections": [
+      {
+        "heading": "Aceptación de estos términos",
+        "body": [
+          "Al usar este sitio web o contratar a Legado Creativo para cualquier proyecto, confirmas que tienes al menos 18 años y que cuentas con la autoridad para aceptar estos Términos, ya sea en tu propio nombre o en nombre de una organización que representes."
+        ]
+      },
+      {
+        "heading": "Nuestros servicios",
+        "body": [
+          "Legado Creativo ofrece estrategia de marca, diseño gráfico, diseño web y servicios creativos relacionados. El alcance específico, los entregables, los plazos y las tarifas de cada proyecto se definirán en una propuesta, orden de trabajo o acuerdo escrito entre tú y Legado Creativo. En caso de conflicto, ese acuerdo de proyecto prevalecerá sobre estos Términos respecto del trabajo que cubra."
+        ]
+      },
+      {
+        "heading": "Propuestas, tarifas y pagos",
+        "body": [
+          "Las tarifas, los calendarios de pago y los anticipos se establecen en cada propuesta o acuerdo de proyecto. Salvo que se indique lo contrario, las facturas vencen dentro del plazo especificado en el acuerdo aplicable. Podemos pausar o suspender el trabajo en proyectos con saldos vencidos. Como trabajamos con clientes internacionales, eres responsable de cualquier impuesto, costo de conversión de divisa o comisión de transferencia que aplique a tus pagos."
+        ]
+      },
+      {
+        "heading": "Responsabilidades del cliente",
+        "body": [
+          "Para ayudarnos a entregar nuestro trabajo a tiempo, aceptas:"
+        ],
+        "list": [
+          "Proporcionar información precisa y completa, así como los materiales necesarios para el proyecto.",
+          "Revisar los entregables y dar comentarios dentro de los plazos razonables acordados.",
+          "Asegurarte de que tienes los derechos sobre cualquier contenido, logotipo, imagen o texto que nos proporciones.",
+          "Realizar los pagos conforme al calendario acordado."
+        ]
+      },
+      {
+        "heading": "Propiedad intelectual",
+        "body": [
+          "Cualquier material, herramienta y conocimiento preexistente que Legado Creativo utilice para crear tu proyecto sigue siendo de nuestra propiedad. Una vez recibido el pago completo, los entregables finales creados específicamente para ti se transfieren o licencian a tu favor según lo descrito en tu acuerdo de proyecto.",
+          "Salvo acuerdo en contrario, Legado Creativo conserva el derecho de mostrar el trabajo terminado en su portafolio y materiales de marketing como ejemplo de sus servicios. Los borradores, conceptos y diseños no utilizados siguen siendo propiedad de Legado Creativo."
+        ]
+      },
+      {
+        "heading": "Contenido del sitio web y licencia",
+        "body": [
+          "Todo el contenido de este sitio web, incluidos textos, gráficos, logotipos, imágenes y diseño, es propiedad de Legado Creativo o está licenciado a su favor y está protegido por leyes de propiedad intelectual. Puedes ver y usar el sitio web únicamente para fines personales y no comerciales. No puedes copiar, reproducir, distribuir ni crear obras derivadas de nuestro contenido sin nuestro permiso previo por escrito."
+        ]
+      },
+      {
+        "heading": "Uso aceptable",
+        "body": [
+          "Aceptas no usar nuestro sitio web ni nuestros Servicios para:"
+        ],
+        "list": [
+          "Infringir cualquier ley o reglamento aplicable.",
+          "Vulnerar la propiedad intelectual u otros derechos de terceros.",
+          "Cargar o transmitir código malicioso, o interferir con el funcionamiento del sitio web.",
+          "Intentar obtener acceso no autorizado a nuestros sistemas o datos.",
+          "Enviar comunicaciones no solicitadas o usar el sitio con fines fraudulentos."
+        ]
+      },
+      {
+        "heading": "Enlaces a terceros",
+        "body": [
+          "Nuestro sitio web puede contener enlaces a sitios o servicios de terceros que no poseemos ni controlamos. No somos responsables del contenido, las políticas ni las prácticas de esos sitios, y te recomendamos revisar sus términos y políticas de privacidad."
+        ]
+      },
+      {
+        "heading": "Confidencialidad",
+        "body": [
+          "Ambas partes acuerdan mantener confidencial cualquier información comercial, técnica o financiera no pública compartida durante un proyecto, y usarla únicamente para llevar a cabo el trabajo. Esta obligación continúa después de finalizado el proyecto."
+        ]
+      },
+      {
+        "heading": "Renuncia de garantías",
+        "body": [
+          "Nuestro sitio web y Servicios se proporcionan \"tal cual\" y \"según disponibilidad\", sin garantías de ningún tipo, ya sean expresas o implícitas. Aunque nos esforzamos por la excelencia en cada proyecto, no garantizamos resultados de negocio específicos, posicionamiento, ingresos ni resultados derivados de nuestro trabajo creativo. En la máxima medida permitida por la ley, renunciamos a todas las garantías implícitas, incluidas las de comerciabilidad e idoneidad para un fin determinado."
+        ]
+      },
+      {
+        "heading": "Limitación de responsabilidad",
+        "body": [
+          "En la máxima medida permitida por la ley, Legado Creativo y su fundadora no serán responsables por daños indirectos, incidentales, especiales o consecuentes, ni por pérdida de ganancias, datos o negocio, derivados del uso de nuestro sitio web o Servicios. Nuestra responsabilidad total por cualquier reclamación relacionada con un proyecto no excederá el monto que nos hayas pagado por ese proyecto en particular."
+        ]
+      },
+      {
+        "heading": "Indemnización",
+        "body": [
+          "Aceptas indemnizar y eximir de responsabilidad a Legado Creativo, su fundadora y sus colaboradores frente a cualquier reclamación, daño o gasto derivado del incumplimiento de estos Términos, del uso indebido de los Servicios o de la violación de cualquier ley o derecho de terceros, incluido lo relacionado con el contenido o los materiales que nos proporciones."
+        ]
+      },
+      {
+        "heading": "Terminación",
+        "body": [
+          "Cualquiera de las partes puede finalizar una relación de trabajo según lo descrito en el acuerdo de proyecto aplicable. También podemos suspender o cancelar tu acceso a nuestro sitio web en cualquier momento si incumples estos Términos. Tras la terminación, las tarifas devengadas por el trabajo realizado siguen siendo exigibles, y las secciones de estos Términos que por su naturaleza deban subsistir seguirán vigentes."
+        ]
+      },
+      {
+        "heading": "Ley aplicable",
+        "body": [
+          "Estos Términos se rigen por las leyes del Estado de Massachusetts y de Estados Unidos, sin considerar sus principios sobre conflicto de leyes. Cualquier disputa derivada de estos Términos o de nuestros Servicios estará sujeta a la jurisdicción exclusiva de los tribunales estatales y federales ubicados en Boston, Massachusetts, salvo que la ley aplicable en tu país de residencia disponga lo contrario."
+        ]
+      },
+      {
+        "heading": "Cambios en estos términos",
+        "body": [
+          "Podemos actualizar estos Términos de vez en cuando. Cuando lo hagamos, actualizaremos la fecha de \"Última actualización\" que aparece arriba. El uso continuado de nuestro sitio web o Servicios después de que los cambios entren en vigor significa que aceptas los Términos revisados."
+        ]
+      },
+      {
+        "heading": "Contáctanos",
+        "body": [
+          "Si tienes preguntas sobre estos Términos de Servicio, escríbenos a vickyurbaneja@gmail.com."
+        ]
+      }
+    ]
   }
 }

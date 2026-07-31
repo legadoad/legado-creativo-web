@@ -26,7 +26,7 @@ export default function ContactForm() {
     return (
       <motion.div
         ref={sectionRef}
-        className="bg-card border border-border rounded-2xl p-12 text-center"
+        className="bg-card border border-border rounded-[4px] p-12 text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -142,7 +142,7 @@ export default function ContactForm() {
                     ? "0 0 0 2px rgb(var(--glow-rgb) / 0.3)"
                     : "none",
               }}
-              className="rounded-xl"
+              className="rounded-[4px]"
             >
               <input
                 type="text"
@@ -150,7 +150,7 @@ export default function ContactForm() {
                 required
                 onFocus={() => setFocusedField("name")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
+                className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
                 placeholder={t("namePlaceholder")}
               />
             </motion.div>
@@ -169,7 +169,7 @@ export default function ContactForm() {
                     ? "0 0 0 2px rgb(var(--glow-rgb) / 0.3)"
                     : "none",
               }}
-              className="rounded-xl"
+              className="rounded-[4px]"
             >
               <input
                 type="email"
@@ -177,7 +177,7 @@ export default function ContactForm() {
                 required
                 onFocus={() => setFocusedField("email")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
+                className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
                 placeholder={t("emailPlaceholder")}
               />
             </motion.div>
@@ -196,7 +196,7 @@ export default function ContactForm() {
             id="company"
             onFocus={() => setFocusedField("company")}
             onBlur={() => setFocusedField(null)}
-            className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
+            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
             placeholder={t("companyPlaceholder")}
           />
         </motion.div>
@@ -211,7 +211,7 @@ export default function ContactForm() {
           <select
             id="service"
             required
-            className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground focus:border-accent focus:ring-1 focus:ring-accent outline-none transition appearance-none cursor-pointer"
+            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground focus:border-accent focus:ring-1 focus:ring-accent outline-none transition appearance-none cursor-pointer"
           >
             <option value="">{t("serviceDefault")}</option>
             <option value="web-design">{t("serviceOptions.webDesign")}</option>
@@ -236,7 +236,7 @@ export default function ContactForm() {
             required
             onFocus={() => setFocusedField("message")}
             onBlur={() => setFocusedField(null)}
-            className="w-full px-4 py-3 bg-card border border-border rounded-xl text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition resize-none"
+            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition resize-none"
             placeholder={t("messagePlaceholder")}
           />
         </motion.div>
@@ -245,7 +245,7 @@ export default function ContactForm() {
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-xl hover:bg-secondary-lime/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
+            className="w-full px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-full hover:bg-secondary-lime/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

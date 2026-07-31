@@ -33,7 +33,7 @@ export default function ParallaxBannerAlt() {
         {/* Layer 2 - medium */}
         <motion.div
           style={{ y: y2, rotate }}
-          className="absolute top-1/4 right-[15%] w-32 h-32 border-2 border-accent/20 rounded-3xl"
+          className="absolute top-1/4 right-[15%] w-32 h-32 border-2 border-accent/20 rounded-[4px]"
         />
         <motion.div
           style={{ y: y2 }}
@@ -110,9 +110,9 @@ export default function ParallaxBannerAlt() {
             <motion.div
               whileHover={{ y: -10, rotate: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="absolute top-0 left-0 w-64 h-80 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl border border-accent/20 backdrop-blur-sm p-6 cursor-pointer"
+              className="absolute top-0 left-0 w-64 h-80 bg-gradient-to-br from-accent/20 to-accent/5 rounded-[4px] border border-accent/20 backdrop-blur-sm p-6 cursor-pointer"
             >
-              <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-accent/20 rounded-[4px] flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
@@ -131,9 +131,9 @@ export default function ParallaxBannerAlt() {
             <motion.div
               whileHover={{ y: -10, rotate: 2 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="absolute top-12 left-32 w-64 h-80 bg-gradient-to-br from-pink-500/20 to-pink-500/5 rounded-2xl border border-pink-500/20 backdrop-blur-sm p-6 cursor-pointer"
+              className="absolute top-12 left-32 w-64 h-80 bg-gradient-to-br from-pink-500/20 to-pink-500/5 rounded-[4px] border border-pink-500/20 backdrop-blur-sm p-6 cursor-pointer"
             >
-              <div className="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-pink-500/20 rounded-[4px] flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
@@ -152,9 +152,9 @@ export default function ParallaxBannerAlt() {
             <motion.div
               whileHover={{ y: -10 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="absolute top-24 left-64 w-64 h-80 bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-2xl border border-foreground/10 backdrop-blur-sm p-6 cursor-pointer"
+              className="absolute top-24 left-64 w-64 h-80 bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-[4px] border border-foreground/10 backdrop-blur-sm p-6 cursor-pointer"
             >
-              <div className="w-12 h-12 bg-foreground/10 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-foreground/10 rounded-[4px] flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"

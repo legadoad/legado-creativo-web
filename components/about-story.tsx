@@ -130,7 +130,7 @@ export default function AboutStory() {
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <motion.div
-            className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
+            className="relative aspect-[4/5] rounded-[4px] overflow-hidden shadow-2xl"
             animate={{ y: [0, -14, 0] }}
             transition={{
               duration: 5,
@@ -149,7 +149,7 @@ export default function AboutStory() {
           </motion.div>
 
           <motion.div
-            className="absolute -bottom-5 -left-5 sm:-bottom-7 sm:-left-7 bg-card border border-border rounded-xl sm:rounded-2xl p-3 sm:p-5 shadow-2xl"
+            className="absolute -bottom-5 -left-5 sm:-bottom-7 sm:-left-7 bg-card border border-border rounded-[4px] p-3 sm:p-5 shadow-2xl"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -168,7 +168,7 @@ export default function AboutStory() {
           </motion.div>
 
           <motion.div
-            className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-14 h-14 sm:w-20 sm:h-20 border-2 border-accent/30 rounded-2xl"
+            className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-14 h-14 sm:w-20 sm:h-20 border-2 border-accent/30 rounded-[4px]"
             initial={{ opacity: 0, rotate: 10 }}
             animate={isInView ? { opacity: 1, rotate: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -226,7 +226,7 @@ export default function AboutStory() {
                 className="flex-shrink-0 w-[80vw] sm:w-[420px] lg:w-[460px] flex flex-col justify-center"
               >
                 <motion.div
-                  className="bg-card border border-border rounded-2xl p-8 lg:p-10 hover:border-accent/50 transition-colors duration-300 h-full flex flex-col justify-center"
+                  className="bg-card border border-border rounded-[4px] p-8 lg:p-10 hover:border-accent/50 transition-colors duration-300 h-full flex flex-col justify-center"
                   whileHover={{
                     y: -8,
                     boxShadow: "0 20px 40px -15px rgb(var(--glow-rgb) / 0.2)",
@@ -251,7 +251,7 @@ export default function AboutStory() {
 
           {/* Closing / team panel */}
           <div className="flex-shrink-0 w-[80vw] sm:w-[420px] lg:w-[460px] flex flex-col justify-center">
-            <div className="bg-card border border-border rounded-2xl p-8 lg:p-10 h-full flex flex-col justify-center">
+            <div className="bg-card border border-border rounded-[4px] p-8 lg:p-10 h-full flex flex-col justify-center">
               <div className="w-14 h-14 rounded-full bg-secondary-lime border-2 border-accent flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-accent" />
               </div>

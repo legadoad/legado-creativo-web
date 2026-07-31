@@ -7,21 +7,21 @@ import { useTranslations } from "next-intl"
 
 // Orden fijo por título: Estrategia, Narrativa, Raíces, Honestidad, Colaboración, Impacto
 const valueIcons = [Target, Fingerprint, Sprout, Heart, Handshake, Sparkles]
-const valueColors = [
-  "from-pink-500 to-rose-500",
-  "from-amber-500 to-orange-500",
-  "from-blue-500 to-cyan-500",
-  "from-green-500 to-emerald-500",
-  "from-purple-500 to-violet-500",
-  "from-accent to-chart-2",
+const valueIconBg = [
+  "bg-secondary-lime",
+  "bg-section-lavender/60",
+  "bg-secondary-blue/20",
+  "bg-section-mint/60",
+  "bg-secondary-magenta/20",
+  "bg-accent/10",
 ]
-const valueGlow = [
-  "hover:border-pink-500/50 hover:shadow-pink-500/20",
-  "hover:border-amber-500/50 hover:shadow-amber-500/20",
-  "hover:border-blue-500/50 hover:shadow-blue-500/20",
-  "hover:border-green-500/50 hover:shadow-green-500/20",
-  "hover:border-purple-500/50 hover:shadow-purple-500/20",
-  "hover:border-accent/50 hover:shadow-accent/20",
+const valueIconColor = [
+  "text-accent",
+  "text-primary",
+  "text-secondary-blue",
+  "text-primary",
+  "text-secondary-magenta",
+  "text-accent",
 ]
 
 export default function AboutValues() {
@@ -77,8 +77,8 @@ export default function AboutValues() {
           animate={isInView ? "visible" : "hidden"}
         >
           {valueIcons.map((Icon, i) => {
-            const color = valueColors[i]
-            const glow = valueGlow[i]
+            const iconBg = valueIconBg[i]
+            const iconColor = valueIconColor[i]
             return (
               <motion.div
                 key={i}
@@ -87,22 +87,15 @@ export default function AboutValues() {
                   y: -12,
                   transition: { duration: 0.3 },
                 }}
-                className={`group relative bg-card border border-border rounded-2xl p-8 shadow-none hover:shadow-xl transition-all duration-300 cursor-default ${glow}`}
+                className="group relative bg-card border border-border rounded-[4px] p-8 shadow-none hover:shadow-xl hover:border-accent/50 hover:shadow-accent/20 transition-all duration-300 cursor-default"
               >
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${color} rounded-2xl`}
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 0.12 }}
-                  transition={{ duration: 0.3 }}
-                />
-
                 <div className="relative z-10">
                   <motion.div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-6`}
+                    className={`w-14 h-14 rounded-[4px] ${iconBg} flex items-center justify-center mb-6`}
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Icon className="w-7 h-7 text-white" />
+                    <Icon className={`w-7 h-7 ${iconColor}`} />
                   </motion.div>
 
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">

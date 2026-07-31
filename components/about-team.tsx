@@ -56,7 +56,7 @@ export default function AboutTeam() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <motion.div
-                className="relative overflow-hidden rounded-2xl mb-6"
+                className="relative overflow-hidden rounded-[4px] mb-6"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4 }}
               >
@@ -108,7 +108,7 @@ export default function AboutTeam() {
                 </motion.div>
 
                 <motion.div
-                  className="absolute inset-0 border-2 border-accent/50 rounded-2xl"
+                  className="absolute inset-0 border-2 border-accent/50 rounded-[4px]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: hoveredIndex === i ? 1 : 0 }}
                   transition={{ duration: 0.3 }}

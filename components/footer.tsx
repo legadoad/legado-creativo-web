@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Mail, Instagram, Facebook } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -34,17 +34,35 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4">
               {[
-                { icon: Mail, href: "/contact" },
-                { icon: Linkedin, href: "#" },
-                { icon: Instagram, href: "#" },
-                { icon: Facebook, href: "#" },
+                { icon: Instagram, href: "https://instagram.com/legadoad", label: "Instagram", external: true },
+                { icon: Facebook, href: "https://www.facebook.com/legadoad", label: "Facebook", external: true },
+                { icon: Mail, href: "/contact", label: "Email", external: false },
               ].map((social, i) => {
                 const Icon = social.icon;
+                const className =
+                  "w-10 h-10 bg-card border border-border rounded-[4px] flex items-center justify-center text-foreground/60 hover:bg-accent/10 hover:border-accent/50 hover:text-accent transition";
+
+                if (social.external) {
+                  return (
+                    <a
+                      key={i}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className={className}
+                    >
+                      <Icon size={18} />
+                    </a>
+                  );
+                }
+
                 return (
                   <Link
                     key={i}
                     href={social.href}
-                    className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center text-foreground/60 hover:bg-accent/10 hover:border-accent/50 hover:text-accent transition"
+                    aria-label={social.label}
+                    className={className}
                   >
                     <Icon size={18} />
                   </Link>
@@ -61,13 +79,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-6">
               <Link
-                href="#"
+                href="/privacy"
                 className="text-foreground/40 hover:text-accent text-sm transition"
               >
                 {t("privacy")}
               </Link>
               <Link
-                href="#"
+                href="/terms"
                 className="text-foreground/40 hover:text-accent text-sm transition"
               >
                 {t("terms")}

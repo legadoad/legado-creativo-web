@@ -80,7 +80,7 @@ export default function GalleryMarquee() {
             whileHover={{ scale: 1.05, zIndex: 10 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="w-72 md:w-96 h-56 md:h-72 rounded-2xl overflow-hidden border border-border/50 hover:border-accent/50 transition-all duration-500 relative">
+            <div className="w-72 md:w-96 h-56 md:h-72 rounded-[4px] overflow-hidden border border-border/50 hover:border-accent/50 transition-all duration-500 relative">
               <motion.img
                 src={img.src || "/placeholder.svg"}
                 alt={img.alt}
@@ -124,7 +124,7 @@ export default function GalleryMarquee() {
               whileHover={{ scale: 1.05, zIndex: 10 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="w-72 md:w-96 h-56 md:h-72 rounded-2xl overflow-hidden border border-border/50 hover:border-accent/50 transition-all duration-500 relative">
+              <div className="w-72 md:w-96 h-56 md:h-72 rounded-[4px] overflow-hidden border border-border/50 hover:border-accent/50 transition-all duration-500 relative">
                 <motion.img
                   src={img.src || "/placeholder.svg"}
                   alt={img.alt}

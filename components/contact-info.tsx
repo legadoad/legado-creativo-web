@@ -2,20 +2,18 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Mail, Phone, MapPin, Clock, Linkedin, Instagram, Twitter, Dribbble } from "lucide-react"
+import { Mail, Phone, Clock, Linkedin, Instagram, Twitter, Dribbble } from "lucide-react"
 import { useTranslations } from "next-intl"
 
-const contactIcons = [Mail, Phone, MapPin, Clock]
+const contactIcons = [Mail, Phone, Clock]
 const contactHrefs = [
-  "mailto:hello@legadocreativo.com",
-  "tel:+15551234567",
-  "#",
+  "mailto:vickyurbaneja@gmail.com",
+  "tel:+16175155000",
   null,
 ]
 const contactValues = [
-  "hello@legadocreativo.com",
-  "+1 (555) 123-4567",
-  "123 Creative Ave, New York, NY 10001",
+  "vickyurbaneja@gmail.com",
+  "+1 (617) 515-5000",
   null, // Will use translation for hours value
 ]
 
@@ -28,7 +26,7 @@ const socials = [
 
 export default function ContactInfo() {
   const t = useTranslations("contactInfo")
-  const labelKeys = ["email", "phone", "address", "hours"]
+  const labelKeys = ["email", "phone", "hours"]
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: "-50px" })
 
@@ -79,7 +77,7 @@ export default function ContactInfo() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="w-12 h-12 bg-secondary-lime rounded-xl flex items-center justify-center shrink-0 transition"
+                className="w-12 h-12 bg-secondary-lime rounded-[4px] flex items-center justify-center shrink-0 transition"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Icon className="w-5 h-5 text-accent" />
@@ -111,7 +109,7 @@ export default function ContactInfo() {
                 key={i}
                 href={social.href}
                 aria-label={social.label}
-                className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center hover:bg-accent/20 transition"
+                className="w-12 h-12 bg-accent/10 rounded-[4px] flex items-center justify-center hover:bg-accent/20 transition"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.6 + i * 0.1, type: "spring", stiffness: 200 }}
@@ -126,7 +124,7 @@ export default function ContactInfo() {
       </motion.div>
 
       <motion.div
-        className="mt-12 p-6 bg-gradient-to-br from-accent/10 to-chart-2/5 border border-accent/20 rounded-2xl"
+        className="mt-12 p-6 bg-gradient-to-br from-accent/10 to-chart-2/5 border border-accent/20 rounded-[4px]"
         variants={itemVariants}
         whileHover={{
           scale: 1.02,

@@ -15,6 +15,14 @@
     "contact": {
       "title": "Contact us | Legado Creativo",
       "description": "Get in touch with Legado Creativo. Let's discuss your next project."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Legado Creativo",
+      "description": "How Legado Creativo collects, uses, and protects your personal information across the United States and worldwide."
+    },
+    "terms": {
+      "title": "Terms of Service | Legado Creativo",
+      "description": "The terms and conditions that govern your use of the Legado Creativo website and services."
     }
   },
   "header": {
@@ -564,17 +572,252 @@
     "subtitle": "Prefer to reach out directly? We're here.",
     "email": "Email",
     "phone": "Phone",
-    "address": "Location",
     "hours": "Hours",
     "hoursValue": "Mon to Fri: 9AM to 6PM EST",
     "followUs": "Follow us",
     "quickResponse": "Quick note",
     "quickResponseText": "We typically respond within 24 hours on business days."
   },
-  "contactMap": {
-    "title": "Legado Creativo HQ",
-    "addressLine1": "123 Creative Avenue, Suite 500",
-    "addressLine2": "New York, NY 10001, USA",
-    "openMaps": "Open in Google Maps"
+  "privacyPolicy": {
+    "badge": "Legal",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: July 30, 2026",
+    "intro": [
+      "Legado Creativo (\"Legado Creativo,\" \"we,\" \"us,\" or \"our\") is a creative and brand strategy studio based in the United States that works with clients and collaborators around the world. This Privacy Policy explains what information we collect, how we use it, and the choices you have.",
+      "By using our website or contacting us, you agree to the practices described in this policy. Because we work internationally, we aim to honor the privacy rights available to you under the laws of your country or region, including the laws of the United States, the European Union, the United Kingdom, and other jurisdictions where applicable."
+    ],
+    "sections": [
+      {
+        "heading": "Who we are",
+        "body": [
+          "Legado Creativo is the data controller responsible for your personal information. If you have any questions about this policy or how your data is handled, you can reach us at vickyurbaneja@gmail.com."
+        ]
+      },
+      {
+        "heading": "Information we collect",
+        "body": [
+          "We only collect information that helps us respond to you and deliver our services. This includes:"
+        ],
+        "list": [
+          "Information you provide directly, such as your name, email address, phone number, company name, and the details of any message or project inquiry you send us through our contact form or by email.",
+          "Information collected automatically when you visit our website, such as your IP address, browser type, device information, pages viewed, and general location, gathered through cookies and similar technologies.",
+          "Information related to a working relationship, such as billing details, project files, and communications, when you become a client or collaborator."
+        ]
+      },
+      {
+        "heading": "How we use your information",
+        "body": ["We use the information we collect to:"],
+        "list": [
+          "Respond to your inquiries and communicate with you about your project.",
+          "Provide, deliver, and improve our creative and brand strategy services.",
+          "Send administrative information such as proposals, invoices, and service updates.",
+          "Operate, maintain, and improve our website and understand how it is used.",
+          "Comply with legal obligations and protect our rights and those of our clients.",
+          "With your consent, send occasional updates or marketing communications, which you can opt out of at any time."
+        ]
+      },
+      {
+        "heading": "Legal bases for processing",
+        "body": [
+          "Where required by law (for example, under the EU and UK General Data Protection Regulation), we process your personal data on the following legal bases: your consent; the performance of a contract with you; our legitimate interests in operating and promoting our business; and compliance with our legal obligations."
+        ]
+      },
+      {
+        "heading": "Cookies and analytics",
+        "body": [
+          "Our website may use cookies and similar technologies to keep the site functioning, remember your preferences, and understand how visitors interact with our content. You can control or disable cookies through your browser settings. Some features of the site may not work properly if cookies are disabled."
+        ]
+      },
+      {
+        "heading": "How we share your information",
+        "body": [
+          "We do not sell your personal information. We may share it only in the following circumstances:"
+        ],
+        "list": [
+          "With trusted service providers who help us operate our business, such as hosting, email, analytics, and payment processors, who are only permitted to use your data to provide services to us.",
+          "When required by law, regulation, legal process, or a valid government request.",
+          "To protect the rights, property, or safety of Legado Creativo, our clients, or others.",
+          "In connection with a business transfer, merger, or acquisition, in which case we will notify you of any change in ownership or use of your information."
+        ]
+      },
+      {
+        "heading": "International data transfers",
+        "body": [
+          "Legado Creativo operates from the United States, and our service providers may be located in the United States or other countries. If you access our services from outside the United States, your information may be transferred to, stored, and processed in the United States or other jurisdictions whose data protection laws may differ from those of your country.",
+          "Where required, we take appropriate safeguards, such as standard contractual clauses, to protect your information when it is transferred internationally."
+        ]
+      },
+      {
+        "heading": "Data retention",
+        "body": [
+          "We keep your personal information only for as long as necessary to fulfill the purposes described in this policy, to maintain our business relationship, and to comply with our legal, accounting, and reporting obligations. When it is no longer needed, we securely delete or anonymize it."
+        ]
+      },
+      {
+        "heading": "Your rights and choices",
+        "body": [
+          "Depending on where you live, you may have the right to:"
+        ],
+        "list": [
+          "Access the personal information we hold about you and request a copy of it.",
+          "Correct inaccurate or incomplete information.",
+          "Request deletion of your personal information.",
+          "Object to or restrict certain processing of your data.",
+          "Withdraw consent at any time, where processing is based on consent.",
+          "Request that we not sell or share your personal information (as recognized under laws such as the California Consumer Privacy Act)."
+        ]
+      },
+      {
+        "heading": "Exercising your rights",
+        "body": [
+          "To exercise any of these rights, contact us at vickyurbaneja@gmail.com. We will respond within the timeframe required by applicable law. We will not discriminate against you for exercising any of your privacy rights."
+        ]
+      },
+      {
+        "heading": "Data security",
+        "body": [
+          "We use reasonable technical and organizational measures to protect your personal information against loss, misuse, and unauthorized access. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security."
+        ]
+      },
+      {
+        "heading": "Children's privacy",
+        "body": [
+          "Our website and services are not directed to children under the age of 16, and we do not knowingly collect personal information from them. If you believe a child has provided us with personal information, please contact us so we can delete it."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "body": [
+          "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we do, we will revise the \"Last updated\" date above. We encourage you to review this page periodically."
+        ]
+      },
+      {
+        "heading": "Contact us",
+        "body": [
+          "If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us at vickyurbaneja@gmail.com."
+        ]
+      }
+    ]
+  },
+  "termsOfService": {
+    "badge": "Legal",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: July 30, 2026",
+    "intro": [
+      "Welcome to Legado Creativo. These Terms of Service (\"Terms\") govern your access to and use of our website and the creative and brand strategy services we provide (together, the \"Services\").",
+      "By accessing our website or engaging our Services, you agree to be bound by these Terms. If you do not agree, please do not use our website or Services. Legado Creativo operates from the United States and works with clients and collaborators worldwide."
+    ],
+    "sections": [
+      {
+        "heading": "Acceptance of these terms",
+        "body": [
+          "By using this website or engaging Legado Creativo for any project, you confirm that you are at least 18 years old and that you have the authority to enter into these Terms, whether on your own behalf or on behalf of an organization you represent."
+        ]
+      },
+      {
+        "heading": "Our services",
+        "body": [
+          "Legado Creativo provides brand strategy, graphic design, web design, and related creative services. The specific scope, deliverables, timeline, and fees for any project will be defined in a separate proposal, statement of work, or written agreement between you and Legado Creativo. In the event of a conflict, that project agreement takes precedence over these Terms for the work it covers."
+        ]
+      },
+      {
+        "heading": "Proposals, fees, and payment",
+        "body": [
+          "Fees, payment schedules, and deposits are set out in each project proposal or agreement. Unless otherwise stated, invoices are due within the period specified in the applicable agreement. We may pause or suspend work on projects with overdue balances. Because we work with international clients, you are responsible for any taxes, currency conversion costs, or transfer fees that apply to your payments."
+        ]
+      },
+      {
+        "heading": "Client responsibilities",
+        "body": [
+          "To help us deliver our work on time, you agree to:"
+        ],
+        "list": [
+          "Provide accurate, complete information and any materials needed for the project.",
+          "Review deliverables and give feedback within reasonable, agreed timeframes.",
+          "Ensure you have the rights to any content, logos, images, or text you provide to us.",
+          "Make payments according to the agreed schedule."
+        ]
+      },
+      {
+        "heading": "Intellectual property",
+        "body": [
+          "Any pre-existing materials, tools, and know-how that Legado Creativo uses to create your project remain our property. Upon full payment, final deliverables created specifically for you are transferred or licensed to you as described in your project agreement.",
+          "Unless agreed otherwise, Legado Creativo retains the right to display completed work in our portfolio and marketing materials as an example of our services. Drafts, concepts, and unused designs remain the property of Legado Creativo."
+        ]
+      },
+      {
+        "heading": "Website content and license",
+        "body": [
+          "All content on this website, including text, graphics, logos, images, and design, is owned by or licensed to Legado Creativo and is protected by intellectual property laws. You may view and use the website for your personal, non-commercial purposes only. You may not copy, reproduce, distribute, or create derivative works from our content without our prior written permission."
+        ]
+      },
+      {
+        "heading": "Acceptable use",
+        "body": [
+          "You agree not to use our website or Services to:"
+        ],
+        "list": [
+          "Violate any applicable law or regulation.",
+          "Infringe the intellectual property or other rights of any third party.",
+          "Upload or transmit malicious code, or interfere with the operation of the website.",
+          "Attempt to gain unauthorized access to our systems or data.",
+          "Use the site to send unsolicited communications or for any fraudulent purpose."
+        ]
+      },
+      {
+        "heading": "Third-party links",
+        "body": [
+          "Our website may contain links to third-party websites or services that we do not own or control. We are not responsible for the content, policies, or practices of any third-party sites, and we encourage you to review their terms and privacy policies."
+        ]
+      },
+      {
+        "heading": "Confidentiality",
+        "body": [
+          "Both parties agree to keep confidential any non-public business, technical, or financial information shared during a project, and to use it only for the purpose of carrying out the work. This obligation continues after the project ends."
+        ]
+      },
+      {
+        "heading": "Disclaimers",
+        "body": [
+          "Our website and Services are provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. While we strive for excellence in every project, we do not guarantee specific business results, rankings, revenue, or outcomes from our creative work. To the fullest extent permitted by law, we disclaim all implied warranties, including merchantability and fitness for a particular purpose."
+        ]
+      },
+      {
+        "heading": "Limitation of liability",
+        "body": [
+          "To the fullest extent permitted by law, Legado Creativo and its founder will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of profits, data, or business, arising from your use of our website or Services. Our total liability for any claim relating to a project will not exceed the amount you paid to us for that specific project."
+        ]
+      },
+      {
+        "heading": "Indemnification",
+        "body": [
+          "You agree to indemnify and hold harmless Legado Creativo, its founder, and its collaborators from any claims, damages, or expenses arising from your breach of these Terms, your misuse of the Services, or your violation of any law or third-party right, including in relation to content or materials you provide to us."
+        ]
+      },
+      {
+        "heading": "Termination",
+        "body": [
+          "Either party may end a working relationship as described in the applicable project agreement. We may also suspend or terminate your access to our website at any time if you violate these Terms. Upon termination, any fees earned for work completed remain payable, and the sections of these Terms that by their nature should survive will continue to apply."
+        ]
+      },
+      {
+        "heading": "Governing law",
+        "body": [
+          "These Terms are governed by the laws of the Commonwealth of Massachusetts and the United States, without regard to conflict-of-law principles. Any dispute arising from these Terms or our Services will be subject to the exclusive jurisdiction of the state and federal courts located in Boston, Massachusetts, unless otherwise required by applicable law in your country of residence."
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "body": [
+          "We may update these Terms from time to time. When we do, we will update the \"Last updated\" date above. Your continued use of our website or Services after changes take effect means you accept the revised Terms."
+        ]
+      },
+      {
+        "heading": "Contact us",
+        "body": [
+          "If you have any questions about these Terms of Service, please contact us at vickyurbaneja@gmail.com."
+        ]
+      }
+    ]
   }
 }

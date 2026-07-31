@@ -77,7 +77,7 @@ export default function VideoBanner() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative aspect-video rounded-3xl overflow-hidden border border-accent/20 shadow-2xl shadow-accent/10"
+            className="relative aspect-video rounded-[8px] overflow-hidden border border-accent/20 shadow-2xl shadow-accent/10"
           >
             {/* Video Placeholder - Replace with actual video */}
             <div
@@ -158,7 +158,7 @@ export default function VideoBanner() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.6 }}
-            className="absolute -left-4 md:-left-8 top-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-2xl p-4 md:p-6 shadow-xl"
+            className="absolute -left-4 md:-left-8 top-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-[4px] p-4 md:p-6 shadow-xl"
           >
             <div className="text-3xl md:text-4xl font-bold text-accent mb-1">
               {t("stat1Value")}
@@ -170,7 +170,7 @@ export default function VideoBanner() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.8 }}
-            className="absolute -right-4 md:-right-8 bottom-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-2xl p-4 md:p-6 shadow-xl"
+            className="absolute -right-4 md:-right-8 bottom-1/4 bg-card/80 backdrop-blur-sm border border-accent/20 rounded-[4px] p-4 md:p-6 shadow-xl"
           >
             <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
               {t("stat2Value")}
@@ -193,7 +193,7 @@ export default function VideoBanner() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6 + i * 0.1 }}
               whileHover={{ y: -5 }}
-              className="text-center p-6 bg-card/30 backdrop-blur-sm border border-accent/10 rounded-2xl hover:border-accent/30 transition-all"
+              className="text-center p-6 bg-card/30 backdrop-blur-sm border border-accent/10 rounded-[4px] hover:border-accent/30 transition-all"
             >
               <h4 className="text-lg font-semibold text-foreground mb-1">
                 {t(`features.${i}.label`)}
