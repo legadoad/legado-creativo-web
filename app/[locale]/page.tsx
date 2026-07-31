@@ -28,6 +28,9 @@ export default function Home() {
         title={t("title")}
         highlightWord={t("highlightWord")}
         buttonText={t("buttonText")}
+        textColor="text-secondary-blue"
+        buttonTextColor="text-secondary-lime"
+        buttonBg="bg-secondary-blue"
       />
       <Footer />
     </main>

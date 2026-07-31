@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Legado Creativo - Diseño web y gráfico",
+      "title": "Diseño web y gráfico | Legado Creativo",
       "description": "Soluciones impactantes de diseño web y gráfico que elevan tu marca. Creamos experiencias digitales modernas e impactantes."
     },
     "about": {
@@ -71,7 +71,7 @@
         "desc": "EN + ES en todo lo que hacemos."
       },
       {
-        "title": "100% Estratégico",
+        "title": "100% estratégico",
         "desc": "Ninguna decisión sin propósito."
       }
     ],
@@ -192,7 +192,7 @@
       { "value": "2 mercados", "label": "Latino y americano." },
       { "value": "Servicio integral", "label": "De la estrategia hasta la ejecución." },
       { "value": "Bilingüe", "label": "EN + ES en todo." },
-      { "value": "100% Estratégico", "label": "Ninguna decisión sin propósito." }
+      { "value": "100% estratégico", "label": "Ninguna decisión sin propósito." }
     ]
   },
   "aboutStory": {
@@ -585,7 +585,7 @@
     "phone": "Teléfono",
     "address": "Dirección",
     "hours": "Horario",
-    "hoursValue": "Lun - Vie: 9AM - 6PM EST",
+    "hoursValue": "Lun a Vie: 9AM a 6PM EST",
     "followUs": "Síguenos",
     "quickResponse": "Nota rápida",
     "quickResponseText": "Normalmente respondemos dentro de 24 horas en días hábiles."

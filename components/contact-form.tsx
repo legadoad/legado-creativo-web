@@ -245,7 +245,7 @@ export default function ContactForm() {
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-secondary-lime text-primary font-semibold rounded-xl hover:bg-secondary-lime/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
+            className="w-full px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-xl hover:bg-secondary-lime/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

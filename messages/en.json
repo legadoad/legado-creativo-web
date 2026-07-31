@@ -1,19 +1,19 @@
 {
   "metadata": {
     "home": {
-      "title": "Legado Creativo - Web & Graphic Design",
+      "title": "Web & graphic design | Legado Creativo",
       "description": "Stunning web design and graphic design solutions that elevate your brand. We create modern, impactful digital experiences."
     },
     "about": {
-      "title": "About Us | Legado Creativo",
-      "description": "Learn about Legado Creativo - our story, team, values, and creative journey."
+      "title": "About us | Legado Creativo",
+      "description": "Learn about Legado Creativo: our story, team, values, and creative journey."
     },
     "services": {
       "title": "Services | Legado Creativo",
-      "description": "Explore our creative services - graphic design, web design, branding, UI/UX and more."
+      "description": "Explore our creative services: graphic design, web design, branding, UI/UX and more."
     },
     "contact": {
-      "title": "Contact Us | Legado Creativo",
+      "title": "Contact us | Legado Creativo",
       "description": "Get in touch with Legado Creativo. Let's discuss your next project."
     }
   },
@@ -22,17 +22,17 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "cta": "Get in Touch"
+    "cta": "Get in touch"
   },
   "hero": {
     "badge": "MULTICULTURAL BRAND AGENCY",
     "titleLine1": "Your brand has a story.",
     "titleLine2": "We make it unforgettable.",
     "description": "Your brand has a story. We make it unforgettable.",
-    "ctaPrimary": "Let's Talk",
-    "ctaSecondary": "See Our Work",
+    "ctaPrimary": "Let's talk",
+    "ctaSecondary": "See our work",
     "scroll": "SCROLL",
-    "yearsLabel": "10+ Years",
+    "yearsLabel": "10+ years",
     "yearsDescription": "Crafting digital excellence",
     "imageAlt": "Legado Creativo workspace"
   },
@@ -46,24 +46,24 @@
     "contact": "Contact",
     "connect": "Connect",
     "copyright": "© 2025 Legado Creativo. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
     "poweredBy": "Powered by DevelopWave"
   },
   "cta": {
     "label": "LET'S WORK TOGETHER",
     "title": "Ready to build a brand people remember?",
     "highlightWord": "remember?",
-    "buttonText": "Contact Us"
+    "buttonText": "Contact us"
   },
   "homeAbout": {
     "sectionLabel": "WHO WE ARE",
     "titleLine1": "A multicultural brand",
     "titleLine2": " strategy agency.",
-    "subtitle": "We're creative strategists who understand two worlds, two languages, and two markets — we think before we design.",
+    "subtitle": "We're creative strategists who understand two worlds, two languages, and two markets. We think before we design.",
     "stats": [
       {
-        "title": "Full-Service",
+        "title": "Full-service",
         "desc": "From strategy to execution, all in one place."
       },
       {
@@ -71,16 +71,16 @@
         "desc": "EN + ES in everything we do."
       },
       {
-        "title": "100% Strategic",
+        "title": "100% strategic",
         "desc": "No decision without purpose."
       }
     ],
-    "contentTitle": "We Don't Just Design,",
-    "contentTitleAccent": " We build brands with direction.",
+    "contentTitle": "We don't just design,",
+    "contentTitleAccent": " we build brands with direction.",
     "paragraph1": "Legado Creativo was built to fill a gap: brands that deserve real strategy, not just design. We combine storytelling, brand strategy, and creativity to build brands that are remembered for the right reasons.",
-    "paragraph2": "We're a multicultural agency with a bicultural lens. We understand the Latino and American markets from the inside — and that gives us an edge no generic agency can replicate.",
+    "paragraph2": "We're a multicultural agency with a bicultural lens. We understand the Latino and American markets from the inside, and that gives us an edge no generic agency can replicate.",
     "bulletPoints": [
-      "Strategy before aesthetics — no decision without purpose.",
+      "Strategy before aesthetics: no decision without purpose.",
       "Bicultural vision: two markets, one voice.",
       "Intentional content: every piece responds to a clear goal.",
       "Real partnership at every stage of your brand's growth."
@@ -90,10 +90,10 @@
   },
   "homeServices": {
     "sectionLabel": "WHAT WE DO",
-    "title": "Our Services",
-    "servicesCount": "8 Services",
+    "title": "Our services",
+    "servicesCount": "8 services",
     "items": [
-      { "name": "Web Design", "description": "Beautiful, responsive websites" },
+      { "name": "Web design", "description": "Beautiful, responsive websites" },
       { "name": "Branding", "description": "Identity that stands out" },
       { "name": "UI/UX", "description": "Intuitive user experiences" },
       { "name": "Graphics", "description": "Stunning visual content" },
@@ -104,27 +104,27 @@
     ]
   },
   "works": {
-    "title": "Creative Solutions",
+    "title": "Creative solutions",
     "subtitle": "We build brands with clarity, strategy, and intention.",
     "cards": [
       {
         "number": "01",
-        "title": "Brand & Positioning",
+        "title": "Brand & positioning",
         "description": "Define who you are and how you present yourself to the world with intention."
       },
       {
         "number": "02",
-        "title": "Content & Story",
+        "title": "Content & story",
         "description": "Turn your story into messages that connect with the right people."
       },
       {
         "number": "03",
-        "title": "Creativity & Production",
+        "title": "Creativity & production",
         "description": "Bring your brand to life with visuals and production that communicate."
       },
       {
         "number": "04",
-        "title": "Digital Growth & Campaigns",
+        "title": "Digital growth & campaigns",
         "description": "Scale your brand with strategy, content, and measurable performance."
       }
     ]
@@ -148,41 +148,41 @@
   "videoBanner": {
     "sectionLabel": "SEE US IN ACTION",
     "titleLine1": "Where ",
-    "titleHighlight": "Creativity",
-    "titleLine2": " Comes to Life",
+    "titleHighlight": "creativity",
+    "titleLine2": " comes to life",
     "subtitle": "Discover how we turn ideas into brands that create real impact.",
-    "showreelLabel": "Agency Showreel",
-    "showreelTitle": "2024 Creative Highlights",
+    "showreelLabel": "Agency showreel",
+    "showreelTitle": "2024 creative highlights",
     "stat1Value": "50+",
-    "stat1Label": "Videos Produced",
+    "stat1Label": "Videos produced",
     "stat2Value": "1M+",
-    "stat2Label": "Views Generated",
+    "stat2Label": "Views generated",
     "features": [
-      { "label": "Motion Graphics", "desc": "Stunning animations" },
-      { "label": "Brand Films", "desc": "Compelling stories" },
-      { "label": "Reel Content", "desc": "Showcase excellence" },
-      { "label": "Social Strategy", "desc": "Viral-worthy clips" }
+      { "label": "Motion graphics", "desc": "Stunning animations" },
+      { "label": "Brand films", "desc": "Compelling stories" },
+      { "label": "Reel content", "desc": "Showcase excellence" },
+      { "label": "Social strategy", "desc": "Viral-worthy clips" }
     ]
   },
   "aboutHero": {
     "badge": "OUR STORY",
-    "titleLine1": "The Strategy Behind",
-    "titleLine2": " Your Brand",
-    "subtitle": "We are Legado Creativo — a multicultural brand strategy agency for businesses ready to build something that lasts.",
+    "titleLine1": "The strategy behind",
+    "titleLine2": " your brand",
+    "subtitle": "We are Legado Creativo, a multicultural brand strategy agency for businesses ready to build something that lasts.",
     "stats": [
-      { "value": "2 Markets", "label": "Latino and American." },
-      { "value": "Full Service", "label": "From strategy to execution." },
+      { "value": "2 markets", "label": "Latino and American." },
+      { "value": "Full service", "label": "From strategy to execution." },
       { "value": "Bilingual", "label": "EN + ES in everything." },
-      { "value": "100% Strategic", "label": "No decision without purpose." }
+      { "value": "100% strategic", "label": "No decision without purpose." }
     ]
   },
   "aboutStory": {
-    "titleLine1": "The Story Behind",
+    "titleLine1": "The story behind",
     "titleLine2": " Legado",
     "paragraphs": [
-      "Legado was built on a conviction: brands in the United States — and especially Latino-owned ones — deserve the same strategic depth that global agencies deliver to Fortune 500s, but from someone who truly understands them. Someone who knows both worlds, both languages, and both markets.",
-      "Victoria Urbaneja founded Legado Creativo to fill that gap. Not as another design shop — but as a strategic partner who combines business vision with creative execution, and walks alongside clients from the first conversation to real impact.",
-      "We believe a brand isn't built from design — it's built from clarity. When you know exactly who you are, who you're speaking to, and what you want people to feel when they discover you, design stops being decoration and becomes communication. That's what we do: help you find that clarity, then turn it into something that looks right, feels right, and is remembered."
+      "Legado was built on a conviction: brands in the United States, and especially Latino-owned ones, deserve the same strategic depth that global agencies deliver to Fortune 500s, but from someone who truly understands them. Someone who knows both worlds, both languages, and both markets.",
+      "Victoria Urbaneja founded Legado Creativo to fill that gap. Not as another design shop, but as a strategic partner who combines business vision with creative execution, and walks alongside clients from the first conversation to real impact.",
+      "We believe a brand isn't built from design, it's built from clarity. When you know exactly who you are, who you're speaking to, and what you want people to feel when they discover you, design stops being decoration and becomes communication. That's what we do: help you find that clarity, then turn it into something that looks right, feels right, and is remembered."
     ],
     "founded": "2018",
     "foundedLabel": "Founded in Boston",
@@ -190,34 +190,34 @@
     "teamSpread": "Across 4 continents"
   },
   "aboutTimeline": {
-    "title": "What Defines",
-    "titleAccent": " Us",
-    "subtitle": "We're a strategy agency with design — and that difference changes everything.",
+    "title": "What defines",
+    "titleAccent": " us",
+    "subtitle": "We're a strategy agency with design, and that difference changes everything.",
     "milestones": [
       {
         "year": "01",
-        "title": "Strategy First",
+        "title": "Strategy first",
         "description": "Every project starts with questions, not design. Before we create, we understand."
       },
       {
         "year": "02",
-        "title": "Two Worlds, One Voice",
+        "title": "Two worlds, one voice",
         "description": "We understand the Latino and American markets from the inside. That gives us a real edge."
       },
       {
         "year": "03",
-        "title": "Real Partnership",
+        "title": "Real partnership",
         "description": "We don't deliver files and disappear. We stay until your brand lands right."
       },
       {
         "year": "04",
-        "title": "Full Integration",
+        "title": "Full integration",
         "description": "Strategy, design, content, and campaigns from one place."
       },
       {
         "year": "05",
-        "title": "Measurable Impact",
-        "description": "We don't measure success in deliverables — we measure it in brands that grow."
+        "title": "Measurable impact",
+        "description": "We don't measure success in deliverables. We measure it in brands that grow."
       },
       {
         "year": "06",
@@ -228,13 +228,13 @@
   },
   "aboutTeam": {
     "title": "Meet the",
-    "titleAccent": " Team",
+    "titleAccent": " team",
     "subtitle": "The minds behind Legado Creativo.",
     "members": [
       {
         "name": "Victoria Urbaneja",
-        "role": "Founder & Strategy Director",
-        "bio": "Victoria Urbaneja is a journalist, publicist, and founder of Legado Creativo. With a background in strategic communications for global brands including Adidas, Novartis, and Univision, Victoria brings editorial vision, strategic thinking, and creative execution to every brand she builds. Her purpose is clear: to give the Latino community in the United States a voice — and to make sure that voice is heard with the same strength and professionalism as any world-class brand."
+        "role": "Founder & strategy director",
+        "bio": "Victoria Urbaneja is a journalist, publicist, and founder of Legado Creativo. With a background in strategic communications for global brands including Adidas, Novartis, and Univision, Victoria brings editorial vision, strategic thinking, and creative execution to every brand she builds. Her purpose is clear: to give the Latino community in the United States a voice, and to make sure that voice is heard with the same strength and professionalism as any world-class brand."
       },
       {
         "name": "[Add team member]",
@@ -255,12 +255,12 @@
   },
   "aboutValues": {
     "title": "Our",
-    "titleAccent": " Values",
+    "titleAccent": " values",
     "subtitle": "The principles that guide every decision and every project.",
     "items": [
       {
         "title": "Strategy",
-        "description": "Every decision has a reason. We don't design for the sake of it — we build with intention."
+        "description": "Every decision has a reason. We don't design for the sake of it. We build with intention."
       },
       {
         "title": "Story",
@@ -268,7 +268,7 @@
       },
       {
         "title": "Roots",
-        "description": "We understand both worlds because we live in them. That's not learned — it's lived."
+        "description": "We understand both worlds because we live in them. That's not learned. It's lived."
       },
       {
         "title": "Honesty",
@@ -280,7 +280,7 @@
       },
       {
         "title": "Impact",
-        "description": "We don't measure success in deliverables — we measure it in brands that grow and last."
+        "description": "We don't measure success in deliverables. We measure it in brands that grow and last."
       }
     ]
   },
@@ -288,7 +288,7 @@
     "label": "LET'S CONNECT",
     "title": "How can we help you build your brand?",
     "highlightWord": "brand?",
-    "buttonText": "Connect with Us"
+    "buttonText": "Connect with us"
   },
   "servicesHero": {
     "badge": "SERVICES",
@@ -296,10 +296,10 @@
     "titleLine2": "do",
     "titleLine3": " best, built for your brand.",
     "subtitle": "From stunning visuals to seamless digital experiences, we offer comprehensive creative solutions that make your brand unforgettable.",
-    "button": "Start a Project",
+    "button": "Start a project",
     "pills": [
-      "Graphic Design",
-      "Web Design",
+      "Graphic design",
+      "Web design",
       "Branding",
       "UI/UX",
       "Motion",
@@ -310,85 +310,85 @@
     "kicker": "OUR PHILOSOPHY",
     "sentences": [
       "What we do best, built for your brand.",
-      "Creative, media, and technology — under one roof.",
+      "Creative, media, and technology, under one roof.",
       "From brand strategy to web development, all in one team."
     ]
   },
   "servicesGrid": {
     "sectionLabel": "COMPREHENSIVE SOLUTIONS",
-    "title": "Everything Your Brand",
-    "titleAccent": "Needs",
+    "title": "Everything your brand",
+    "titleAccent": "needs",
     "subtitle": "Three integrated areas. One team. One strategic direction.",
-    "ctaLabel": "Get in Touch",
+    "ctaLabel": "Get in touch",
     "categories": [
       {
         "title": "Creative",
         "description": "Brand strategy, visual identity, and content that gives your brand a distinct, memorable presence.",
         "items": [
-          "Visual Identity",
-          "Brand Playbook",
-          "Visual Content Studio",
-          "Brand Activation",
-          "Bilingual Copywriting"
+          "Visual identity",
+          "Brand playbook",
+          "Visual content studio",
+          "Brand activation",
+          "Bilingual copywriting"
         ]
       },
       {
         "title": "Media",
         "description": "Social media management, video production, and influencer strategy that keeps your audience engaged.",
         "items": [
-          "Social Media Management",
-          "Influencer Marketing & Community",
-          "Video Production",
-          "Content Strategy",
-          "Creator & Influencer Strategy"
+          "Social media management",
+          "Influencer marketing & community",
+          "Video production",
+          "Content strategy",
+          "Creator & influencer strategy"
         ]
       },
       {
         "title": "Technology",
         "description": "Custom websites, e-commerce, and web applications built to perform and scale.",
         "items": [
-          "Custom Web Design",
-          "E-commerce Development",
-          "Web Applications",
-          "UX/UI Design",
-          "CMS Development"
+          "Custom web design",
+          "E-commerce development",
+          "Web applications",
+          "UX/UI design",
+          "CMS development"
         ]
       }
     ]
   },
   "servicesProcess": {
     "sectionLabel": "HOW WE WORK",
-    "title": "Our Creative",
-    "titleAccent": "Process",
+    "title": "Our creative",
+    "titleAccent": "process",
     "subtitle": "A proven method that puts strategy first, always.",
     "stepLabel": "STEP",
     "steps": [
       {
-        "title": "We Listen",
+        "title": "We listen",
         "description": "Everything starts with a real conversation. We get to know your business, your competition, who you want to reach, and what you want people to feel when they see your brand.",
         "details": "Everything starts with a real conversation. We get to know your business, your competition, who you want to reach, and what you want people to feel when they see your brand."
       },
       {
-        "title": "We Strategize",
-        "description": "Before we touch design, we build the foundation. Positioning, messaging, voice, and market direction. Nothing is arbitrary — everything has a reason.",
-        "details": "Before we touch design, we build the foundation. Positioning, messaging, voice, and market direction. Nothing is arbitrary — everything has a reason."
+        "title": "We strategize",
+        "description": "Before we touch design, we build the foundation. Positioning, messaging, voice, and market direction. Nothing is arbitrary. Everything has a reason.",
+        "details": "Before we touch design, we build the foundation. Positioning, messaging, voice, and market direction. Nothing is arbitrary. Everything has a reason."
       },
       {
-        "title": "We Create",
+        "title": "We create",
         "description": "With a clear strategy, we design. Every visual decision serves a goal. Every word has a purpose. We work with you every step of the way.",
         "details": "With a clear strategy, we design. Every visual decision serves a goal. Every word has a purpose. We work with you every step of the way."
       },
       {
-        "title": "We Launch & Stay",
-        "description": "We deliver everything ready to use — and we don't disappear. We stay to make sure your brand lands right and creates the impact we built together.",
-        "details": "We deliver everything ready to use — and we don't disappear. We stay to make sure your brand lands right and creates the impact we built together."
+        "title": "We launch & stay",
+        "description": "We deliver everything ready to use, and we don't disappear. We stay to make sure your brand lands right and creates the impact we built together.",
+        "details": "We deliver everything ready to use, and we don't disappear. We stay to make sure your brand lands right and creates the impact we built together."
       }
     ]
   },
   "servicesFaq": {
     "sectionLabel": "FAQ",
     "title": "Common",
-    "titleAccent": "Questions",
+    "titleAccent": "questions",
     "subtitle": "Everything you need to know about working with us",
     "items": [
       {
@@ -401,7 +401,7 @@
       },
       {
         "question": "Do you work in English and Spanish?",
-        "answer": "Yes. Everything we do is available in both languages — from strategy to copy and design pieces."
+        "answer": "Yes. Everything we do is available in both languages, from strategy to copy and design pieces."
       },
       {
         "question": "Do you only work with Latino brands?",
@@ -421,86 +421,86 @@
     "label": "WORK WITH US",
     "title": "Ready to start your next project?",
     "highlightWord": "project?",
-    "buttonText": "Start a Project"
+    "buttonText": "Start a project"
   },
   "galleryHero": {
     "sectionLabel": "OUR PORTFOLIO",
     "titleLine1": "Creative",
-    "titleLine2": "Gallery",
+    "titleLine2": "gallery",
     "subtitle": "Explore our collection of award-winning designs, brand identities, websites, and creative projects that showcase our passion for visual excellence.",
-    "stats": ["250+ Projects", "120+ Clients", "15+ Awards", "10+ Years"]
+    "stats": ["250+ projects", "120+ clients", "15+ awards", "10+ years"]
   },
   "galleryGrid": {
     "categories": [
       "All",
-      "Web Design",
+      "Web design",
       "Branding",
       "Graphics",
-      "Mobile Apps",
+      "Mobile apps",
       "UI/UX",
       "Photography"
     ],
-    "viewLive": "View Live Project",
+    "viewLive": "View live project",
     "client": "Client",
     "year": "Year",
     "projects": [
       {
-        "title": "Luxe Fashion E-Commerce",
+        "title": "Luxe fashion e-commerce",
         "description": "A premium e-commerce platform for high-end fashion brands with immersive shopping experience.",
         "client": "Luxe Fashion Co."
       },
       {
-        "title": "TechVault Brand Identity",
+        "title": "TechVault brand identity",
         "description": "Complete brand identity system including logo, colors, and guidelines for a tech startup.",
         "client": "TechVault Inc."
       },
       {
-        "title": "Minimalist App Interface",
+        "title": "Minimalist app interface",
         "description": "Clean and intuitive mobile app design focused on user experience.",
         "client": "AppFlow"
       },
       {
-        "title": "Creative Campaign Visuals",
+        "title": "Creative campaign visuals",
         "description": "Eye-catching visual campaign materials for a product launch.",
         "client": "Nova Marketing"
       },
       {
-        "title": "Restaurant Website Redesign",
+        "title": "Restaurant website redesign",
         "description": "Modern website redesign for an upscale dining establishment.",
         "client": "The Golden Fork"
       },
       {
-        "title": "Finance Dashboard UI",
+        "title": "Finance dashboard UI",
         "description": "Comprehensive dashboard design for financial analytics platform.",
         "client": "FinanceFlow"
       },
       {
-        "title": "Startup Brand Package",
+        "title": "Startup brand package",
         "description": "Full branding package for an innovative tech startup.",
         "client": "Innovate Labs"
       },
       {
-        "title": "Product Photography",
+        "title": "Product photography",
         "description": "Professional product photography for luxury goods.",
         "client": "Premium Goods"
       },
       {
-        "title": "Social Media Kit",
+        "title": "Social media kit",
         "description": "Comprehensive social media design templates and assets.",
         "client": "Social Spark"
       },
       {
-        "title": "Fitness App Design",
+        "title": "Fitness app design",
         "description": "Health and fitness tracking app with gamification elements.",
         "client": "FitLife"
       },
       {
-        "title": "Architecture Portfolio",
+        "title": "Architecture portfolio",
         "description": "Elegant portfolio website for an architecture firm.",
         "client": "Modern Arch"
       },
       {
-        "title": "Event Branding",
+        "title": "Event branding",
         "description": "Complete event branding for a tech conference.",
         "client": "TechCon 2024"
       }
@@ -509,27 +509,27 @@
   "galleryStats": {
     "sectionLabel": "BY THE NUMBERS",
     "title": "Our",
-    "titleAccent": "Impact",
+    "titleAccent": "impact",
     "stats": [
-      { "label": "Projects Completed" },
-      { "label": "Happy Clients" },
-      { "label": "Design Awards" },
-      { "label": "Countries Reached" }
+      { "label": "Projects completed" },
+      { "label": "Happy clients" },
+      { "label": "Design awards" },
+      { "label": "Countries reached" }
     ]
   },
   "galleryCta": {
     "badge": "Ready to create something amazing?",
-    "titleLine1": "Let's Build Your",
-    "titleLine2": "Next Project",
+    "titleLine1": "Let's build your",
+    "titleLine2": "next project",
     "subtitle": "Inspired by what you've seen? We'd love to bring your vision to life with the same creativity and attention to detail.",
-    "primary": "Start Your Project",
-    "secondary": "View Our Services"
+    "primary": "Start your project",
+    "secondary": "View our services"
   },
   "contactHero": {
     "badge": "LET'S TALK",
     "titleLine1": "Get in ",
-    "titleLine2": "Touch",
-    "subtitle": "Ready to build a brand that lasts? Tell us about your project — the first conversation is on us."
+    "titleLine2": "touch",
+    "subtitle": "Ready to build a brand that lasts? Tell us about your project. The first conversation is on us."
   },
   "contactForm": {
     "title": "Send us a message",
@@ -544,30 +544,30 @@
     "serviceLabel": "What service are you interested in?",
     "serviceDefault": "Select a service",
     "serviceOptions": {
-      "webDesign": "Brand Strategy",
-      "brandIdentity": "Visual Identity",
-      "uiUx": "Content & Social Media",
-      "motionGraphics": "Brand Activation",
-      "printDesign": "Full Package",
+      "webDesign": "Brand strategy",
+      "brandIdentity": "Visual identity",
+      "uiUx": "Content & social media",
+      "motionGraphics": "Brand activation",
+      "printDesign": "Full package",
       "other": "Other"
     },
-    "messageLabel": "Project Details",
+    "messageLabel": "Project details",
     "messagePlaceholder": "Tell us about your project, goals, timeline...",
-    "submit": "Send Message",
+    "submit": "Send message",
     "submitting": "Sending...",
-    "successTitle": "Message Sent!",
+    "successTitle": "Message sent!",
     "successMessage": "Thanks for reaching out. We'll get back to you within 24 hours.",
     "sendAnother": "Send another message"
   },
   "contactInfo": {
-    "title": "Contact Information",
+    "title": "Contact information",
     "subtitle": "Prefer to reach out directly? We're here.",
     "email": "Email",
     "phone": "Phone",
     "address": "Location",
     "hours": "Hours",
-    "hoursValue": "Mon - Fri: 9AM - 6PM EST",
-    "followUs": "Follow Us",
+    "hoursValue": "Mon to Fri: 9AM to 6PM EST",
+    "followUs": "Follow us",
     "quickResponse": "Quick note",
     "quickResponseText": "We typically respond within 24 hours on business days."
   },

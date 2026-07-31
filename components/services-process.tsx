@@ -1,28 +1,30 @@
-"use client"
+"use client";
 
-import { useRef, useState } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useTranslations } from "next-intl"
-import Image from "next/image"
+import { useRef, useState } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-const STEP_COUNT = 4
+const STEP_COUNT = 4;
 
 export default function ServicesProcess() {
-  const t = useTranslations("servicesProcess")
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
-  const [activeStep, setActiveStep] = useState<number | null>(null)
-  const displayStep = activeStep ?? 0
+  const t = useTranslations("servicesProcess");
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+  const displayStep = activeStep ?? 0;
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden bg-card/30">
+    <section
+      ref={sectionRef}
+      className="py-32 px-6 relative overflow-hidden bg-card/30"
+    >
       {/* Decorative shapes */}
       <motion.div
         style={{ y: backgroundY }}
@@ -76,17 +78,24 @@ export default function ServicesProcess() {
             <div className="absolute left-6 top-[50px] bottom-[50px] w-0.5 bg-border" />
             <motion.div
               className="absolute left-6 w-0.5 bg-primary origin-top"
-              style={{ top: '50px', height: 'calc(100% - 100px)' }}
+              style={{ top: "50px", height: "calc(100% - 100px)" }}
               initial={{ scaleY: 0 }}
-              animate={isInView ? { scaleY: activeStep === null ? 0 : activeStep / (STEP_COUNT - 1) } : {}}
+              animate={
+                isInView
+                  ? {
+                      scaleY:
+                        activeStep === null ? 0 : activeStep / (STEP_COUNT - 1),
+                    }
+                  : {}
+              }
               transition={{ duration: 0.7 }}
             />
 
             <div className="space-y-8">
               {Array.from({ length: STEP_COUNT }).map((_, index) => {
-                const isActive = index === activeStep
-                const isPast = activeStep !== null && index < activeStep
-                const isFilled = isActive || isPast
+                const isActive = index === activeStep;
+                const isPast = activeStep !== null && index < activeStep;
+                const isFilled = isActive || isPast;
                 return (
                   <motion.div
                     key={index}
@@ -100,31 +109,36 @@ export default function ServicesProcess() {
                     <motion.div
                       animate={{ scale: isActive ? 1.1 : 1 }}
                       whileHover={{ scale: 1.15 }}
-                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 border ${isFilled ? "bg-secondary-lime border-primary" : "bg-card border-border"
-                        }`}
+                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 border ${
+                        isFilled
+                          ? "bg-secondary-lime border-primary"
+                          : "bg-card border-border"
+                      }`}
                     >
                       <span
                         className={`text-sm font-bold transition-colors  duration-300 ${isFilled ? "text-primary" : "text-foreground/40"}`}
-                      >
-                      </span>
+                      ></span>
                     </motion.div>
 
                     <motion.div
                       whileHover={{ x: 8 }}
-                      className={`p-6 rounded-xl border transition-all duration-300 ${isFilled
+                      className={`p-6 rounded-xl border transition-all duration-300 ${
+                        isFilled
                           ? "bg-secondary-lime border-primary"
                           : "hover:bg-secondary-lime/50 hover:border-secondary-lime"
-                        }`}
+                      }`}
                     >
                       <h3
-                        className={`text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground"}`}
+                        className={`text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue" : "text-foreground"}`}
                       >
                         {t(`steps.${index}.title`)}
                       </h3>
-                      <p className="text-foreground/60 text-sm">{t(`steps.${index}.description`)}</p>
+                      <p className="text-foreground/60 text-sm">
+                        {t(`steps.${index}.description`)}
+                      </p>
                     </motion.div>
                   </motion.div>
-                )
+                );
               })}
             </div>
           </div>
@@ -147,8 +161,9 @@ export default function ServicesProcess() {
               />
 
               <div className="relative z-10">
-
-                  <Image src="/Logos/LEGADO_isotipo-02.png" alt="Legado" width={60} height={60} />
+                <span className="text-4xl font-bold text-secondary-blue leading-none">
+                  {String(displayStep + 1).padStart(2, "0")}
+                </span>
 
                 <motion.h3
                   key={`title-${displayStep}`}
@@ -178,8 +193,11 @@ export default function ServicesProcess() {
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
                       animate={{ width: i === displayStep ? 32 : 8 }}
-                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === displayStep ? "bg-secondary-lime" : "bg-foreground/20"
-                        }`}
+                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                        i === displayStep
+                          ? "bg-secondary-lime"
+                          : "bg-foreground/20"
+                      }`}
                     />
                   ))}
                 </div>
@@ -189,5 +207,5 @@ export default function ServicesProcess() {
         </div>
       </div>
     </section>
-  )
+  );
 }

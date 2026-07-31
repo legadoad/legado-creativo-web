@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ArrowRight, ChevronDown } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
+import { TypingAnimation } from "@/components/ui/typing-animation"
 
 const categoryStyles = [
   { tint: "bg-section-lavender/78", direction: "animate-marquee" },
@@ -87,7 +88,22 @@ export default function ServicesGrid() {
             {t("sectionLabel")}
           </motion.p>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            {t("title")} <span className="text-accent">{t("titleAccent")}</span>
+            <TypingAnimation
+              as="span"
+              className="text-foreground"
+              duration={60}
+              showCursor={false}
+            >
+              {t("title")}
+            </TypingAnimation>{" "}
+            <TypingAnimation
+              as="span"
+              className="text-accent"
+              duration={60}
+              delay={t("title").length * 60}
+            >
+              {t("titleAccent")}
+            </TypingAnimation>
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             {t("subtitle")}
@@ -188,7 +204,7 @@ export default function ServicesGrid() {
                       </p>
                       <Link
                         href="/contact"
-                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition"
+                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-lg hover:bg-secondary-lime/90 transition"
                       >
                         {t("ctaLabel")}
                         <ArrowRight className="w-4 h-4" />

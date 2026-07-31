@@ -123,46 +123,6 @@ export default function About() {
           </motion.p>
         </motion.div>
 
-        {/* Stats Row */}
-        <motion.div
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24"
-        >
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={i}
-              variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="relative group"
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl blur-xl"
-              />
-              <div className="relative bg-card/50 backdrop-blur-sm border border-accent/10 rounded-2xl p-6 text-center hover:border-accent/30 transition-all duration-300">
-                <motion.div
-                  className="text-2xl md:text-3xl font-bold text-accent mb-2"
-                  initial={{ scale: 0.5 }}
-                  animate={isInView ? { scale: 1 } : {}}
-                  transition={{
-                    delay: i * 0.1,
-                    type: "spring",
-                    stiffness: 200,
-                  }}
-                >
-                  {t(`stats.${i}.title`)}
-                </motion.div>
-                <div className="text-sm text-foreground/60">
-                  {t(`stats.${i}.desc`)}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image Collage with parallax */}
@@ -270,7 +230,7 @@ export default function About() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-secondary-lime text-primary font-semibold rounded-xl overflow-hidden cursor-pointer"
+              className="group relative px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-xl overflow-hidden cursor-pointer"
             >
               <span className="relative z-10">{t("learnMore")}</span>
               <motion.div

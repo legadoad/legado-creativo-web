@@ -95,7 +95,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="px-6 py-2 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition cursor-pointer"
+            className="px-6 py-2 bg-secondary-lime text-secondary-blue font-medium rounded-lg hover:bg-secondary-lime/90 transition cursor-pointer"
           >
             {t("cta")}
           </Link>
@@ -157,7 +157,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="block px-6 py-3 bg-secondary-lime text-primary font-medium rounded-lg hover:bg-secondary-lime/90 transition text-center cursor-pointer"
+                className="block px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-lg hover:bg-secondary-lime/90 transition text-center cursor-pointer"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t("cta")}
