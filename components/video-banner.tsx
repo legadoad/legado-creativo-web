@@ -39,7 +39,7 @@ export default function VideoBanner() {
           <p className="text-accent text-sm font-semibold tracking-widest mb-4">
             {t("sectionLabel")}
           </p>
-          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
             {t("titleLine1")}
             <span className="text-accent relative inline-block">
               {t("titleHighlight")}
@@ -96,7 +96,7 @@ export default function VideoBanner() {
                 <p className="text-foreground/60 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2">
                   {t("showreelLabel")}
                 </p>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1A1A1A]">
                   {t("showreelTitle")}
                 </h3>
               </motion.div>
@@ -134,7 +134,7 @@ export default function VideoBanner() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-8 md:mt-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 mt-8 md:gap-x-8"
         >
           {[0, 1, 2, 3].map((i) => {
             // Divisor a la izquierda salvo en la primera columna de cada fila
@@ -158,7 +158,7 @@ export default function VideoBanner() {
                   className="w-6 h-6 text-accent mb-3 transition-transform duration-300 group-hover:-translate-y-1"
                   strokeWidth={1.5}
                 />
-                <h4 className="text-base md:text-lg font-semibold text-foreground mb-1.5">
+                <h4 className="text-base md:text-lg font-semibold text-[#1A1A1A] mb-1.5">
                   {t(`features.${i}.label`)}
                 </h4>
                 <p className="text-sm text-foreground/50 leading-snug">

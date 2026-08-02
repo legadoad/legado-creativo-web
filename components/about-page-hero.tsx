@@ -67,7 +67,7 @@ export default function AboutPageHero() {
           >
             <TypingAnimation
               as="span"
-              className="text-foreground leading-[0.95] mr-[0.25em]"
+              className="text-[#1A1A1A] leading-[0.95] mr-[0.25em]"
               duration={60}
               showCursor={false}
             >

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 export default function About() {
   const t = useTranslations("homeAbout");
@@ -49,10 +50,24 @@ export default function About() {
           </motion.p>
           <motion.h2
             variants={itemVariants}
-            className="text-fluid-h1 font-bold text-foreground tracking-tight mb-8"
+            className="text-fluid-h1 font-bold text-[#1A1A1A] tracking-tight mb-8"
           >
-            {t("titleLine1")}
-            <span className="text-accent">{t("titleLine2")}</span>
+            <TypingAnimation
+              as="span"
+              className="text-[#1A1A1A]"
+              duration={60}
+              showCursor={false}
+            >
+              {t("titleLine1")}
+            </TypingAnimation>
+            <TypingAnimation
+              as="span"
+              className="text-accent"
+              duration={60}
+              delay={t("titleLine1").length * 60}
+            >
+              {t("titleLine2")}
+            </TypingAnimation>
           </motion.h2>
           <motion.p
             variants={itemVariants}
@@ -89,7 +104,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.35 }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight tracking-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight tracking-tight">
               {t("contentTitle")}
               <span className="text-accent">{t("contentTitleAccent")}</span>
             </h3>

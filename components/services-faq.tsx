@@ -36,7 +36,7 @@ export default function ServicesFaq() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-lg text-foreground/60">{t("subtitle")}</p>

@@ -160,7 +160,7 @@
     "titleLine2": " comes to life",
     "subtitle": "Discover how we turn ideas into brands that create real impact.",
     "showreelLabel": "Agency showreel",
-    "showreelTitle": "2024 creative highlights",
+    "showreelTitle": "Stories build brands. Brands build legacy!",
     "stat1Value": "50+",
     "stat1Label": "Videos produced",
     "stat2Value": "1M+",
@@ -338,6 +338,13 @@
           "Visual content studio",
           "Brand activation",
           "Bilingual copywriting"
+        ],
+        "itemDescriptions": [
+          "Logos, color systems, and typography that make your brand instantly recognizable.",
+          "Clear guidelines that keep every touchpoint consistent as you grow.",
+          "Photography, illustration, and design assets tailored to your brand world.",
+          "Campaigns and experiences that bring your brand to life in the real world.",
+          "Messaging that resonates in both English and Spanish, on-brand every time."
         ]
       },
       {
@@ -349,17 +356,31 @@
           "Video production",
           "Content strategy",
           "Creator & influencer strategy"
+        ],
+        "itemDescriptions": [
+          "Day-to-day content, scheduling, and community care across your channels.",
+          "Partnerships and community programs that grow real engagement.",
+          "Scripting, filming, and editing for content that stops the scroll.",
+          "A plan that aligns every post and campaign with your business goals.",
+          "Sourcing and managing creators who fit your brand voice."
         ]
       },
       {
         "title": "Technology",
         "description": "Custom websites, e-commerce, and web applications built to perform and scale.",
         "items": [
-          "Custom web design",
-          "E-commerce development",
-          "Web applications",
-          "UX/UI design",
-          "CMS development"
+          "Commercial landing page",
+          "Corporate business website",
+          "Digital catalog",
+          "SEO & GEO",
+          "Automated e-commerce"
+        ],
+        "itemDescriptions": [
+          "A one-page site built to turn ad traffic into fast quote requests.",
+          "Multi-page site that builds trust and ranks in local searches.",
+          "Self-managed product gallery that sends orders straight to WhatsApp.",
+          "Local and search visibility so customers find you first.",
+          "Full online store with payments, inventory, and automatic order confirmations."
         ]
       }
     ]
@@ -658,9 +679,7 @@
       },
       {
         "heading": "Your rights and choices",
-        "body": [
-          "Depending on where you live, you may have the right to:"
-        ],
+        "body": ["Depending on where you live, you may have the right to:"],
         "list": [
           "Access the personal information we hold about you and request a copy of it.",
           "Correct inaccurate or incomplete information.",
@@ -731,9 +750,7 @@
       },
       {
         "heading": "Client responsibilities",
-        "body": [
-          "To help us deliver our work on time, you agree to:"
-        ],
+        "body": ["To help us deliver our work on time, you agree to:"],
         "list": [
           "Provide accurate, complete information and any materials needed for the project.",
           "Review deliverables and give feedback within reasonable, agreed timeframes.",
@@ -756,9 +773,7 @@
       },
       {
         "heading": "Acceptable use",
-        "body": [
-          "You agree not to use our website or Services to:"
-        ],
+        "body": ["You agree not to use our website or Services to:"],
         "list": [
           "Violate any applicable law or regulation.",
           "Infringe the intellectual property or other rights of any third party.",

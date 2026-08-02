@@ -179,7 +179,7 @@
     "titleLine2": " cobra vida",
     "subtitle": "Descubre cómo transformamos ideas en marcas que generan impacto real.",
     "showreelLabel": "Showreel de la agencia",
-    "showreelTitle": "Highlights creativos 2024",
+    "showreelTitle": "Las historias construyen marcas. ¡Las marcas construyen un legado!",
     "stat1Value": "50+",
     "stat1Label": "Videos producidos",
     "stat2Value": "1M+",
@@ -198,9 +198,15 @@
     "subtitle": "Somos Legado Creativo, una agencia multicultural de estrategia de marca para negocios que quieren construir algo que dure.",
     "stats": [
       { "value": "2 mercados", "label": "Latino y americano." },
-      { "value": "Servicio integral", "label": "De la estrategia hasta la ejecución." },
+      {
+        "value": "Servicio integral",
+        "label": "De la estrategia hasta la ejecución."
+      },
       { "value": "Bilingüe", "label": "EN + ES en todo." },
-      { "value": "100% estratégico", "label": "Ninguna decisión sin propósito." }
+      {
+        "value": "100% estratégico",
+        "label": "Ninguna decisión sin propósito."
+      }
     ]
   },
   "aboutStory": {
@@ -357,6 +363,13 @@
           "Visual Content Studio",
           "Brand Activation",
           "Copywriting bilingüe"
+        ],
+        "itemDescriptions": [
+          "Logotipos, paleta de color y tipografía que hacen tu marca reconocible al instante.",
+          "Lineamientos claros que mantienen cada punto de contacto consistente mientras creces.",
+          "Fotografía, ilustración y piezas de diseño a la medida de tu marca.",
+          "Campañas y experiencias que llevan tu marca al mundo real.",
+          "Mensajes que conectan en inglés y español, siempre en el tono de tu marca."
         ]
       },
       {
@@ -368,17 +381,31 @@
           "Producción de video",
           "Estrategia de contenido",
           "Creator & Influencer Strategy"
+        ],
+        "itemDescriptions": [
+          "Contenido, programación y atención a la comunidad en todos tus canales.",
+          "Alianzas y programas de comunidad que generan interacción real.",
+          "Guion, filmación y edición para contenido que capta la atención.",
+          "Un plan que alinea cada publicación con los objetivos de tu negocio.",
+          "Selección y gestión de creadores afines a la voz de tu marca."
         ]
       },
       {
         "title": "Technology",
         "description": "Sitios web, e-commerce y aplicaciones web personalizados, construidos para rendir y escalar.",
         "items": [
-          "Diseño web a medida",
-          "Desarrollo e-commerce",
-          "Aplicaciones web",
-          "Diseño UX/UI",
-          "Desarrollo CMS"
+          "Landing Page Comercial",
+          "Web Corporativa Empresarial",
+          "Catálogo Digital",
+          "SEO & GEO",
+          "E-commerce Automatizado"
+        ],
+        "itemDescriptions": [
+          "Página única optimizada para captar cotizaciones desde tus campañas de pauta.",
+          "Sitio multi-página que genera confianza y posicionamiento en búsquedas locales.",
+          "Galería autoadministrable que envía tus pedidos directo a WhatsApp.",
+          "Posicionamiento local y en buscadores para que te encuentren primero.",
+          "Tienda en línea completa con pagos, inventario y confirmaciones automáticas."
         ]
       }
     ]
@@ -677,9 +704,7 @@
       },
       {
         "heading": "Tus derechos y opciones",
-        "body": [
-          "Según el lugar donde vivas, puedes tener derecho a:"
-        ],
+        "body": ["Según el lugar donde vivas, puedes tener derecho a:"],
         "list": [
           "Acceder a la información personal que tenemos sobre ti y solicitar una copia.",
           "Corregir información inexacta o incompleta.",

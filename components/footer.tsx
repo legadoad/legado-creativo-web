@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col justify-center items-center md:items-end">
-            <h4 className="font-semibold text-foreground mb-3">
+            <h4 className="font-semibold text-[#1A1A1A] mb-3">
               {t("connect")}
             </h4>
             <div className="flex gap-4">

@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ArrowRight, ChevronDown } from "lucide-react"
 import { useTranslations } from "next-intl"
@@ -40,6 +40,7 @@ const categoryImages = [
 export default function ServicesGrid() {
   const t = useTranslations("servicesGrid")
   const sectionRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
@@ -49,12 +50,27 @@ export default function ServicesGrid() {
     title: t(`categories.${index}.title`),
     description: t(`categories.${index}.description`),
     items: t.raw(`categories.${index}.items`) as string[],
+    itemDescriptions: t.raw(`categories.${index}.itemDescriptions`) as string[],
     images: categoryImages[index],
   }))
 
   const toggleExpanded = (index: number) => {
     setExpandedIndex((current) => (current === index ? null : index))
   }
+
+  useEffect(() => {
+    if (expandedIndex === null) return
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!listRef.current) return
+      if (!listRef.current.contains(event.target as Node)) {
+        setExpandedIndex(null)
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown)
+    return () => document.removeEventListener("pointerdown", handlePointerDown)
+  }, [expandedIndex])
 
   return (
     <section ref={sectionRef} className="py-16 relative overflow-hidden">
@@ -87,10 +103,10 @@ export default function ServicesGrid() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-fluid-h2 font-bold text-foreground mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
             <TypingAnimation
               as="span"
-              className="text-foreground"
+              className="text-[#1A1A1A]"
               duration={60}
               showCursor={false}
             >
@@ -111,10 +127,10 @@ export default function ServicesGrid() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 flex flex-col gap-2 md:gap-3">
+      <div ref={listRef} className="relative z-10 flex flex-col gap-2 md:gap-3">
         {categories.map((category, index) => {
-          const isHovered = hoveredIndex === index
           const isExpanded = expandedIndex === index
+          const isActive = hoveredIndex === index || isExpanded
           const loopedImages = [...category.images, ...category.images]
 
           return (
@@ -140,7 +156,7 @@ export default function ServicesGrid() {
                 {/* Infinite image filmstrip */}
                 <div
                   className={`absolute top-0 left-0 h-full flex ${category.direction} transition-[filter] duration-500 ${
-                    isHovered ? "blur-none" : "blur-md"
+                    isActive ? "blur-none" : "blur-md"
                   }`}
                   style={{ animationDuration: `${category.images.length * 8}s` }}
                 >
@@ -156,7 +172,7 @@ export default function ServicesGrid() {
                       />
                       <div
                         className={`absolute inset-0 flex items-center justify-center text-center p-4 bg-black/35 transition-opacity duration-500 ${
-                          isHovered ? "opacity-100" : "opacity-0"
+                          isActive ? "opacity-100" : "opacity-0"
                         }`}
                       >
                         <span className="text-white text-lg md:text-2xl font-semibold leading-snug">
@@ -170,17 +186,17 @@ export default function ServicesGrid() {
                 {/* Color tint + centered category title */}
                 <div
                   className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${category.tint} ${
-                    isHovered ? "opacity-0 pointer-events-none" : "opacity-100"
+                    isActive ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
-                  <span className="text-fluid-h2 font-bold lowercase text-foreground/80">
+                  <span className="text-fluid-h2 font-heading font-bold uppercase tracking-tight text-foreground/80">
                     {category.title}
                   </span>
                 </div>
 
                 {/* Expand indicator */}
                 <motion.div
-                  animate={{ rotate: isExpanded ? 180 : 0, opacity: isHovered ? 1 : 0 }}
+                  animate={{ rotate: isExpanded ? 180 : 0, opacity: isActive ? 1 : 0 }}
                   transition={{ duration: 0.3 }}
                   className="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center"
                 >
@@ -188,7 +204,7 @@ export default function ServicesGrid() {
                 </motion.div>
               </div>
 
-              {/* FAQ-style expanded panel */}
+              {/* Expanded panel: full item breakdown */}
               <AnimatePresence>
                 {isExpanded && (
                   <motion.div
@@ -198,17 +214,28 @@ export default function ServicesGrid() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden bg-card"
                   >
-                    <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                      <p className="text-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl">
-                        {category.description}
-                      </p>
-                      <Link
-                        href="/contact"
-                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition"
-                      >
-                        {t("ctaLabel")}
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                    <div className="max-w-5xl mx-auto px-6 py-8">
+                      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        {category.items.map((item, itemIndex) => (
+                          <div key={item}>
+                            <h3 className="text-[#1A1A1A] font-semibold text-base md:text-lg mb-1.5">
+                              {item}
+                            </h3>
+                            <p className="text-foreground/60 text-sm md:text-base leading-relaxed">
+                              {category.itemDescriptions[itemIndex]}
+                            </p>
+                          </div>
+                        ))}
+                        <div className="flex items-start">
+                          <Link
+                            href="/contact"
+                            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition"
+                          >
+                            {t("ctaLabel")}
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 )}
