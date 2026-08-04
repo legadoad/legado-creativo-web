@@ -32,7 +32,7 @@ export default function AboutTeam() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6">
+          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
@@ -116,7 +116,7 @@ export default function AboutTeam() {
               </motion.div>
 
               <motion.h3
-                className="text-xl font-bold text-[#1A1A1A] mb-1 group-hover:text-accent transition-colors"
+                className="text-xl font-bold text-[#282828] mb-1 group-hover:text-accent transition-colors"
                 animate={{ x: hoveredIndex === i ? 5 : 0 }}
                 transition={{ duration: 0.3 }}
               >

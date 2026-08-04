@@ -57,7 +57,7 @@ export default function ContactInfo() {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <motion.h2 className="text-3xl font-bold text-[#1A1A1A] mb-2 tracking-tight" variants={itemVariants}>
+      <motion.h2 className="text-3xl font-bold text-[#282828] mb-2 tracking-tight" variants={itemVariants}>
         {t("title")}
       </motion.h2>
       <motion.p className="text-foreground/60 mb-8" variants={itemVariants}>
@@ -100,7 +100,7 @@ export default function ContactInfo() {
       </div>
 
       <motion.div variants={itemVariants}>
-        <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4">{t("followUs")}</h3>
+        <h3 className="text-lg font-semibold text-[#282828] mb-4">{t("followUs")}</h3>
         <div className="flex gap-4">
           {socials.map((social, i) => {
             const Icon = social.icon

@@ -89,7 +89,7 @@ export default function ServicesProcess() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
@@ -159,7 +159,7 @@ export default function ServicesProcess() {
                       }`}
                     >
                       <h3
-                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue" : "text-[#1A1A1A]"}`}
+                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue" : "text-[#282828]"}`}
                       >
                         {t(`steps.${index}.title`)}
                       </h3>
@@ -200,7 +200,7 @@ export default function ServicesProcess() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mt-2 mb-6"
+                  className="text-3xl md:text-4xl font-bold text-[#282828] mt-2 mb-6"
                 >
                   {t(`steps.${displayStep}.title`)}
                 </motion.h3>

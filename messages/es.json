@@ -23,19 +23,24 @@
     "terms": {
       "title": "Términos de Servicio | Legado Creativo",
       "description": "Los términos y condiciones que rigen el uso del sitio web y los servicios de Legado Creativo."
+    },
+    "ourWork": {
+      "title": "Nuestro Trabajo | Legado Creativo",
+      "description": "La historia detrás de Legado Creativo: la trayectoria de nuestra fundadora, nuestros hitos y las marcas con las que hemos colaborado."
     }
   },
   "header": {
     "home": "Inicio",
     "services": "Servicios",
+    "work": "Nuestro Trabajo",
     "about": "Nosotros",
     "contact": "Contacto",
     "cta": "Contáctanos"
   },
   "hero": {
     "badge": "AGENCIA MULTICULTURAL DE MARCA",
-    "titleLine1": "Tu marca tiene una historia.",
-    "titleLine2": "Nosotros la hacemos inolvidable.",
+    "titleLine1": "Tu marca tiene una historia",
+    "titleLine2": "Nosotros la hacemos inolvidable",
     "description": "Tu marca tiene una historia. Nosotros la hacemos inolvidable.",
     "ctaPrimary": "Hablemos",
     "ctaSecondary": "Ver portafolio",
@@ -51,6 +56,7 @@
     "home": "Inicio",
     "about": "Nosotros",
     "services": "Servicios",
+    "work": "Nuestro Trabajo",
     "contact": "Contacto",
     "connect": "Conectar",
     "copyright": "© 2025 Legado Creativo. Todos los derechos reservados.",
@@ -67,7 +73,7 @@
   "homeAbout": {
     "sectionLabel": "QUIÉNES SOMOS",
     "titleLine1": "Una agencia multicultural",
-    "titleLine2": " de estrategia de marca.",
+    "titleLine2": " de estrategia de marca",
     "subtitle": "Somos estrategas creativos que entienden dos mundos, dos idiomas y dos mercados. Pensamos antes de diseñar.",
     "stats": [
       {
@@ -84,7 +90,7 @@
       }
     ],
     "contentTitle": "No solo diseñamos,",
-    "contentTitleAccent": " construimos marcas con dirección.",
+    "contentTitleAccent": " construimos marcas con dirección",
     "paragraph1": "Legado Creativo nació para llenar un vacío: marcas que merecen estrategia real, no solo diseño. Combinamos storytelling, estrategia de marca y creatividad para construir marcas que se recuerdan por las razones correctas.",
     "paragraph2": "Somos una agencia multicultural con visión bicultural. Entendemos el mercado latino y el americano desde adentro, y eso nos da una ventaja que ninguna agencia genérica puede replicar.",
     "bulletPoints": [
@@ -323,11 +329,61 @@
     "highlightWord": "marca?",
     "buttonText": "Conéctate con Nosotros"
   },
+  "ourWorkHero": {
+    "badge": "NUESTRO TRABAJO",
+    "titleLine1": "Quiénes somos: ",
+    "titleLine2": "Legado Creativo",
+    "subtitle": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos."
+  },
+  "ourWorkStats": {
+    "quote": "Estrategia antes que estética: ninguna decisión sin propósito.",
+    "stats": [
+      { "value": "2018", "label": "Año de fundación" },
+      { "value": "50+", "label": "Videos producidos" },
+      { "value": "1M+", "label": "Vistas generadas" }
+    ]
+  },
+  "ourWorkJourney": {
+    "sectionLabel": "LA TRAYECTORIA DE LA FUNDADORA",
+    "title": "La trayectoria detrás",
+    "titleAccent": " de la fundadora",
+    "subtitle": "Cada etapa moldeó la forma en que Legado construye marcas hoy.",
+    "milestoneLabel": "HITO",
+    "mediaLabel": "Placeholder de imagen / video",
+    "milestones": [
+      {
+        "company": "adidas",
+        "description": "Activaciones globales de FIFA World Cup, incluyendo el lanzamiento oficial del balón Jabulani, y el World Cup Trophy Tour con Coca-Cola."
+      },
+      {
+        "company": "Novartis",
+        "description": "Lanzamientos de producto y estrategia comercial en la industria de la salud; reconocida como \"Top-producing saleswoman\" tres años seguidos."
+      },
+      {
+        "company": "El Planeta Media",
+        "description": "Marketing y contenido para medios: cobertura de Copa América y el Mundial, y media kits clave para cerrar ventas de alto nivel."
+      },
+      {
+        "company": "Univision New England / Entravision",
+        "description": "Ventas y marketing integrado para medios hispanos, la cadena hispana líder de Nueva Inglaterra, en paralelo a la dirección de Legado."
+      },
+      {
+        "company": "Legado Creativo",
+        "description": "Todo lo aprendido en retail, salud, medios y TV converge aquí: estrategia de marca, contenido, producción creativa y campañas."
+      }
+    ]
+  },
+  "ourWorkBrands": {
+    "sectionLabel": "MARCAS CON LAS QUE HEMOS TRABAJADO",
+    "title": "Marcas con las",
+    "titleAccent": " que hemos trabajado",
+    "subtitle": "Marcas y clientes reales con los que hemos trabajado, antes y durante Legado."
+  },
   "servicesHero": {
     "badge": "SERVICIOS",
     "titleLine1": "Lo que hacemos ",
     "titleLine2": "mejor",
-    "titleLine3": ", construido para tu marca.",
+    "titleLine3": ", construido para tu marca",
     "subtitle": "Desde visuales impactantes hasta experiencias digitales fluidas, ofrecemos soluciones creativas integrales que hacen tu marca inolvidable.",
     "button": "Iniciar un proyecto",
     "pills": [

@@ -55,7 +55,7 @@ export default function GalleryMarquee() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-fluid-h2 font-bold text-[#1A1A1A] mb-4"
+          className="text-fluid-h2 font-bold text-[#282828] mb-4"
         >
           Design <span className="text-accent">Gallery</span>
         </motion.h2>

@@ -8,9 +8,30 @@ import { Link } from "@/i18n/navigation"
 import { TypingAnimation } from "@/components/ui/typing-animation"
 
 const categoryStyles = [
-  { tint: "bg-section-lavender/78", direction: "animate-marquee" },
-  { tint: "bg-section-mint/78", direction: "animate-marquee-reverse" },
-  { tint: "bg-secondary-blue/72", direction: "animate-marquee" },
+  {
+    tint: "bg-section-lavender/78",
+    direction: "animate-marquee",
+    dropdownBg: "bg-section-lavender/35",
+    dividerColor: "divide-foreground/25",
+    borderColor: "border-foreground/25",
+    rowHover: "hover:bg-foreground/10",
+  },
+  {
+    tint: "bg-section-mint/78",
+    direction: "animate-marquee-reverse",
+    dropdownBg: "bg-section-mint/55",
+    dividerColor: "divide-secondary-blue/40",
+    borderColor: "border-secondary-blue/40",
+    rowHover: "hover:bg-secondary-blue/15",
+  },
+  {
+    tint: "bg-secondary-blue/72",
+    direction: "animate-marquee",
+    dropdownBg: "bg-secondary-blue/30",
+    dividerColor: "divide-section-mint/90",
+    borderColor: "border-section-mint/90",
+    rowHover: "hover:bg-section-mint/35",
+  },
 ]
 
 const categoryImages = [
@@ -103,10 +124,10 @@ export default function ServicesGrid() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
             <TypingAnimation
               as="span"
-              className="text-[#1A1A1A]"
+              className="text-[#282828]"
               duration={60}
               showCursor={false}
             >
@@ -212,13 +233,18 @@ export default function ServicesGrid() {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden bg-card"
+                    className={`overflow-hidden ${category.dropdownBg}`}
                   >
                     <div className="max-w-5xl mx-auto px-6 py-8">
-                      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                      <div
+                        className={`flex flex-col divide-y border-t ${category.dividerColor} ${category.borderColor}`}
+                      >
                         {category.items.map((item, itemIndex) => (
-                          <div key={item}>
-                            <h3 className="text-[#1A1A1A] font-semibold text-base md:text-lg mb-1.5">
+                          <div
+                            key={item}
+                            className={`flex flex-col md:flex-row md:items-center gap-1.5 md:gap-8 py-5 px-3 -mx-3 rounded-lg transition-colors duration-200 ${category.rowHover}`}
+                          >
+                            <h3 className="text-[#282828] font-semibold text-base md:text-lg md:w-1/3 shrink-0">
                               {item}
                             </h3>
                             <p className="text-foreground/60 text-sm md:text-base leading-relaxed">
@@ -226,15 +252,15 @@ export default function ServicesGrid() {
                             </p>
                           </div>
                         ))}
-                        <div className="flex items-start">
-                          <Link
-                            href="/contact"
-                            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition"
-                          >
-                            {t("ctaLabel")}
-                            <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
+                      </div>
+                      <div className="mt-8 flex justify-start">
+                        <Link
+                          href="/contact"
+                          className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition"
+                        >
+                          {t("ctaLabel")}
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
                       </div>
                     </div>
                   </motion.div>

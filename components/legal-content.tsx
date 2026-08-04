@@ -38,7 +38,7 @@ export default function LegalContent({ namespace }: { namespace: string }) {
             </span>
           </div>
 
-          <h1 className="text-fluid-h1 font-bold mb-4 text-[#1A1A1A]">
+          <h1 className="text-fluid-h1 font-bold mb-4 text-[#282828]">
             {t("title")}
           </h1>
           <p className="text-foreground/50 text-sm mb-10">{t("lastUpdated")}</p>
@@ -64,7 +64,7 @@ export default function LegalContent({ namespace }: { namespace: string }) {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#1A1A1A]">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#282828]">
                 <span className="text-accent tabular-nums mr-3">
                   {String(i + 1).padStart(2, "0")}
                 </span>

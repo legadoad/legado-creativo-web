@@ -23,19 +23,24 @@
     "terms": {
       "title": "Terms of Service | Legado Creativo",
       "description": "The terms and conditions that govern your use of the Legado Creativo website and services."
+    },
+    "ourWork": {
+      "title": "Our Work | Legado Creativo",
+      "description": "The story behind Legado Creativo: our founder's journey, our milestones, and the brands we've partnered with."
     }
   },
   "header": {
     "home": "Home",
     "services": "Services",
+    "work": "Our Work",
     "about": "About",
     "contact": "Contact",
     "cta": "Get in touch"
   },
   "hero": {
     "badge": "MULTICULTURAL BRAND AGENCY",
-    "titleLine1": "Your brand has a story.",
-    "titleLine2": "We make it unforgettable.",
+    "titleLine1": "Your brand has a story",
+    "titleLine2": "We make it unforgettable",
     "description": "Your brand has a story. We make it unforgettable.",
     "ctaPrimary": "Let's talk",
     "ctaSecondary": "See our work",
@@ -51,6 +56,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "work": "Our Work",
     "contact": "Contact",
     "connect": "Connect",
     "copyright": "© 2025 Legado Creativo. All rights reserved.",
@@ -67,7 +73,7 @@
   "homeAbout": {
     "sectionLabel": "WHO WE ARE",
     "titleLine1": "A multicultural brand",
-    "titleLine2": " strategy agency.",
+    "titleLine2": " strategy agency",
     "subtitle": "We're creative strategists who understand two worlds, two languages, and two markets. We think before we design.",
     "stats": [
       {
@@ -84,7 +90,7 @@
       }
     ],
     "contentTitle": "We don't just design,",
-    "contentTitleAccent": " we build brands with direction.",
+    "contentTitleAccent": " we build brands with direction",
     "paragraph1": "Legado Creativo was built to fill a gap: brands that deserve real strategy, not just design. We combine storytelling, brand strategy, and creativity to build brands that are remembered for the right reasons.",
     "paragraph2": "We're a multicultural agency with a bicultural lens. We understand the Latino and American markets from the inside, and that gives us an edge no generic agency can replicate.",
     "bulletPoints": [
@@ -298,11 +304,61 @@
     "highlightWord": "brand?",
     "buttonText": "Connect with us"
   },
+  "ourWorkHero": {
+    "badge": "OUR WORK",
+    "titleLine1": "Who we are: ",
+    "titleLine2": "Legado Creativo",
+    "subtitle": "We're a multicultural creative agency: we understand the Latino and American markets from the inside. We tell brand stories with strategy first, for clients ranging from retail and health to media and events."
+  },
+  "ourWorkStats": {
+    "quote": "Strategy before aesthetics: no decision without purpose.",
+    "stats": [
+      { "value": "2018", "label": "Founding year" },
+      { "value": "50+", "label": "Videos produced" },
+      { "value": "1M+", "label": "Views generated" }
+    ]
+  },
+  "ourWorkJourney": {
+    "sectionLabel": "THE FOUNDER'S JOURNEY",
+    "title": "The trajectory behind",
+    "titleAccent": " the founder",
+    "subtitle": "Every stop shaped how Legado builds brands today.",
+    "milestoneLabel": "MILESTONE",
+    "mediaLabel": "Image / video placeholder",
+    "milestones": [
+      {
+        "company": "adidas",
+        "description": "Global FIFA World Cup activations, including the official Jabulani ball launch, and the World Cup Trophy Tour with Coca-Cola."
+      },
+      {
+        "company": "Novartis",
+        "description": "Product launches and commercial strategy in the health industry; recognized as \"Top-producing saleswoman\" three years running."
+      },
+      {
+        "company": "El Planeta Media",
+        "description": "Marketing and content for media: Copa América and World Cup coverage, and key media kits that closed high-level sales."
+      },
+      {
+        "company": "Univision New England / Entravision",
+        "description": "Sales and integrated marketing for Hispanic media, New England's leading Hispanic network, alongside leading Legado."
+      },
+      {
+        "company": "Legado Creativo",
+        "description": "Everything learned across retail, health, media, and TV converges here: brand strategy, content, creative production, and campaigns."
+      }
+    ]
+  },
+  "ourWorkBrands": {
+    "sectionLabel": "BRANDS WE'VE WORKED WITH",
+    "title": "Brands we've",
+    "titleAccent": " worked with",
+    "subtitle": "Real brands and clients we've worked with, before and during Legado."
+  },
   "servicesHero": {
     "badge": "SERVICES",
     "titleLine1": "What we ",
     "titleLine2": "do",
-    "titleLine3": " best, built for your brand.",
+    "titleLine3": " best, built for your brand",
     "subtitle": "From stunning visuals to seamless digital experiences, we offer comprehensive creative solutions that make your brand unforgettable.",
     "button": "Start a project",
     "pills": [

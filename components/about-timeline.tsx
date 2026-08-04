@@ -31,7 +31,7 @@ export default function AboutTimeline() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
@@ -79,7 +79,7 @@ export default function AboutTimeline() {
                       >
                         {t(`milestones.${i}.year`)}
                       </motion.div>
-                      <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3">{t(`milestones.${i}.title`)}</h3>
+                      <h3 className="text-2xl font-bold text-[#282828] mb-3">{t(`milestones.${i}.title`)}</h3>
                       <p className="text-foreground/60">{t(`milestones.${i}.description`)}</p>
                     </motion.div>
                   </div>

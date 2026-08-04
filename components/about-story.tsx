@@ -195,7 +195,7 @@ export default function AboutStory() {
             <p className="text-accent font-bold text-sm tracking-widest mb-4">
               {YEARS[0]} —
             </p>
-            <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6 tracking-tight">
+            <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
               {t("titleLine1")}
               <span className="text-accent">{t("titleLine2")}</span>
             </h2>

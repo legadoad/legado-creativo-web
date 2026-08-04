@@ -87,7 +87,7 @@ export default function ServicesPricing() {
           >
             PRICING
           </motion.p>
-          <h2 className="text-fluid-h2 font-bold text-[#1A1A1A] mb-6">
+          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6">
             Transparent <span className="text-accent">Pricing</span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
@@ -128,7 +128,7 @@ export default function ServicesPricing() {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">{pkg.name}</h3>
+                <h3 className="text-2xl font-bold text-[#282828] mb-2">{pkg.name}</h3>
                 <p className="text-foreground/60 text-sm mb-6">{pkg.description}</p>
                 <motion.div
                   initial={{ scale: 0 }}

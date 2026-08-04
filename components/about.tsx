@@ -50,11 +50,11 @@ export default function About() {
           </motion.p>
           <motion.h2
             variants={itemVariants}
-            className="text-fluid-h1 font-bold text-[#1A1A1A] tracking-tight mb-8"
+            className="text-fluid-h1 font-bold text-secondary-blue tracking-tight mb-8"
           >
             <TypingAnimation
               as="span"
-              className="text-[#1A1A1A]"
+              className="text-secondary-blue"
               duration={60}
               showCursor={false}
             >
@@ -104,7 +104,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.35 }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight tracking-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#282828] mb-6 leading-tight tracking-tight">
               {t("contentTitle")}
               <span className="text-accent">{t("contentTitleAccent")}</span>
             </h3>
