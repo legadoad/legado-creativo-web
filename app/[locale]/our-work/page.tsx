@@ -5,7 +5,9 @@ import OurWorkHero from "@/components/our-work-hero";
 import OurWorkStats from "@/components/our-work-stats";
 import OurWorkBrands from "@/components/our-work-brands";
 import OurWorkJourney from "@/components/our-work-journey";
+import OurWorkClosing from "@/components/our-work-closing";
 import CTA from "@/components/cta";
+import VideoBanner from "@/components/video-banner";
 
 export const metadata = {
   title: "Our Work | Legado Creativo",
@@ -23,6 +25,9 @@ export default async function OurWorkPage() {
 
       <OurWorkBrands />
       <OurWorkJourney />
+      <OurWorkClosing />
+      <VideoBanner />
+
       <CTA
         bg="bg-[var(--secondary-magenta)]"
         label={t("label")}

@@ -124,10 +124,10 @@ export default function ServicesGrid() {
           >
             {t("sectionLabel")}
           </motion.p>
-          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
             <TypingAnimation
               as="span"
-              className="text-[#282828]"
+              className="text-heading"
               duration={60}
               showCursor={false}
             >
@@ -244,7 +244,7 @@ export default function ServicesGrid() {
                             key={item}
                             className={`flex flex-col md:flex-row md:items-center gap-1.5 md:gap-8 py-5 px-3 -mx-3 rounded-lg transition-colors duration-200 ${category.rowHover}`}
                           >
-                            <h3 className="text-[#282828] font-semibold text-base md:text-lg md:w-1/3 shrink-0">
+                            <h3 className="text-heading font-semibold text-base md:text-lg md:w-1/3 shrink-0">
                               {item}
                             </h3>
                             <p className="text-foreground/60 text-sm md:text-base leading-relaxed">

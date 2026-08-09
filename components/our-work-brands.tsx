@@ -40,9 +40,6 @@ export default function OurWorkBrands() {
             {t("titleAccent")}
           </TypingAnimation>
         </h2>
-        <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
-          {t("subtitle")}
-        </p>
       </motion.div>
 
       <OurWorkLogoMarquee />

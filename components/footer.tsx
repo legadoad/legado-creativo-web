@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-semibold text-[#282828] mb-3">
+            <h4 className="font-semibold text-heading mb-3">
               {t("company")}
             </h4>
             <div className="flex flex-col items-center md:items-start gap-2">
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col justify-center items-center md:items-end">
-            <h4 className="font-semibold text-[#282828] mb-3">
+            <h4 className="font-semibold text-heading mb-3">
               {t("connect")}
             </h4>
             <div className="flex gap-4">

@@ -48,6 +48,9 @@
   --section-mint: oklch(92.14% 0.0219 167.44); /* #D8EAE2 */
   --section-cream: oklch(94.84% 0.0297 85.56); /* #F7EDD8 */
   --section-sand: oklch(86.6% 0.0139 78.25); /* #d8d2c9 */
+
+  /* Heading/body dark text color, used across headings site-wide */
+  --heading: #282828;
 }
 
 .dark {
@@ -122,6 +125,7 @@
   --color-section-mint: var(--section-mint);
   --color-section-cream: var(--section-cream);
   --color-section-sand: var(--section-sand);
+  --color-heading: var(--heading);
   --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
   @keyframes blink-cursor {
   0%, 49% {

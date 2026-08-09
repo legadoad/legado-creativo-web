@@ -32,7 +32,7 @@ export default function Works() {
           transition={{ duration: 0.7 }}
           className="mb-16 md:mb-20"
         >
-          <h2 className="text-fluid-h2 font-bold text-[#282828] tracking-tight max-w-4xl">
+          <h2 className="text-fluid-h2 font-bold text-heading tracking-tight max-w-4xl">
             {t("title")}
           </h2>
           <p className="mt-4 text-lg md:text-xl text-foreground/60 max-w-2xl">
@@ -73,7 +73,7 @@ export default function Works() {
 
                 {/* Text */}
                 <div className="pt-4 relative z-10">
-                  <h3 className="text-xl md:text-2xl font-bold text-[#282828] leading-tight">
+                  <h3 className="text-xl md:text-2xl font-bold text-heading leading-tight">
                     {t(`cards.${index}.title`)}
                   </h3>
                   <p className="mt-3 text-[15px] md:text-base text-foreground/60 leading-relaxed max-w-sm">

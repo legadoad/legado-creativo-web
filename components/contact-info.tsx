@@ -57,7 +57,7 @@ export default function ContactInfo() {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <motion.h2 className="text-3xl font-bold text-[#282828] mb-2 tracking-tight" variants={itemVariants}>
+      <motion.h2 className="text-3xl font-bold text-heading mb-2 tracking-tight" variants={itemVariants}>
         {t("title")}
       </motion.h2>
       <motion.p className="text-foreground/60 mb-8" variants={itemVariants}>
@@ -80,11 +80,11 @@ export default function ContactInfo() {
                 className="w-12 h-12 bg-secondary-lime rounded-[4px] flex items-center justify-center shrink-0 transition"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
-                <Icon className="w-5 h-5 text-accent" />
+                <Icon className="w-5 h-5 text-secondary-blue" />
               </motion.div>
               <div>
                 <div className="text-sm text-foreground/60 mb-1">{t(labelKeys[i])}</div>
-                <div className="text-foreground font-medium group-hover:text-accent transition">{value}</div>
+                <div className="text-foreground font-medium group-hover:text-secondary-blue transition">{value}</div>
               </div>
             </motion.div>
           )
@@ -100,7 +100,7 @@ export default function ContactInfo() {
       </div>
 
       <motion.div variants={itemVariants}>
-        <h3 className="text-lg font-semibold text-[#282828] mb-4">{t("followUs")}</h3>
+        <h3 className="text-lg font-semibold text-heading mb-4">{t("followUs")}</h3>
         <div className="flex gap-4">
           {socials.map((social, i) => {
             const Icon = social.icon

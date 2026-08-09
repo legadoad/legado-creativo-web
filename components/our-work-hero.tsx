@@ -63,11 +63,11 @@ export default function OurWorkHero() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-fluid-hero font-bold tracking-tight mb-8"
+            className="text-fluid-h1 font-bold tracking-tight mb-8"
           >
             <TypingAnimation
               as="span"
-              className="text-[#282828] leading-[0.95]"
+              className="text-heading leading-[0.95]"
               duration={60}
               showCursor={false}
             >

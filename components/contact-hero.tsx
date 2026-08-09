@@ -61,7 +61,7 @@ export default function ContactHero() {
           >
             <TypingAnimation
               as="span"
-              className="text-[#282828] leading-[0.95] mr-[0.25em]"
+              className="text-heading leading-[0.95] mr-[0.25em]"
               duration={60}
               showCursor={false}
             >

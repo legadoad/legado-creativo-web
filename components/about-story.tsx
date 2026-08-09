@@ -195,7 +195,7 @@ export default function AboutStory() {
             <p className="text-accent font-bold text-sm tracking-widest mb-4">
               {YEARS[0]} —
             </p>
-            <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
+            <h2 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
               {t("titleLine1")}
               <span className="text-accent">{t("titleLine2")}</span>
             </h2>
@@ -268,9 +268,6 @@ export default function AboutStory() {
               </div>
               <div className="text-foreground font-semibold text-lg">
                 {t("teamCount")}
-              </div>
-              <div className="text-foreground/60 text-sm">
-                {t("teamSpread")}
               </div>
             </div>
           </div>

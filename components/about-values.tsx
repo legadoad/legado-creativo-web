@@ -62,7 +62,7 @@ export default function AboutValues() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
             {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
@@ -98,7 +98,7 @@ export default function AboutValues() {
                     <Icon className={`w-7 h-7 ${iconColor}`} />
                   </motion.div>
 
-                  <h3 className="text-xl font-bold text-[#282828] mb-3 group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-bold text-heading mb-3 group-hover:text-accent transition-colors">
                     {t(`items.${i}.title`)}
                   </h3>
                   <p className="text-foreground/60 leading-relaxed">{t(`items.${i}.description`)}</p>

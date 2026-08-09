@@ -22,7 +22,7 @@ export default function OurWorkStats() {
           className="relative mb-14"
         >
           <Quote className="w-7 h-7 text-accent/40 mx-auto mb-4" />
-          <p className="text-2xl md:text-3xl font-semibold text-[#282828] leading-snug tracking-tight">
+          <p className="text-2xl md:text-3xl font-semibold text-heading leading-snug tracking-tight">
             {t("quote")}
           </p>
         </motion.div>

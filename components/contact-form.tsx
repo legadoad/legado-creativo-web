@@ -46,7 +46,7 @@ export default function ContactForm() {
           </motion.div>
         </motion.div>
         <motion.h3
-          className="text-2xl font-bold text-[#282828] mb-4"
+          className="text-2xl font-bold text-heading mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -101,7 +101,7 @@ export default function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <motion.h2
-        className="text-3xl font-bold text-[#282828] mb-2 tracking-tight"
+        className="text-3xl font-bold text-heading mb-2 tracking-tight"
         initial={{ opacity: 0, x: -20 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ delay: 0.1 }}

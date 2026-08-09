@@ -6,7 +6,6 @@ import LogoMarquee from "@/components/logo-marquee";
 import Works from "@/components/works";
 import GalleryMarquee from "@/components/gallery-marquee";
 import About from "@/components/about";
-import VideoBanner from "@/components/video-banner";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <Works />
       {/* <GalleryMarquee /> */}
       <About />
-      <VideoBanner />
       <CTA
         bg="bg-secondary-lime"
         label={t("label")}

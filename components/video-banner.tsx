@@ -39,7 +39,7 @@ export default function VideoBanner() {
           <p className="text-accent text-sm font-semibold tracking-widest mb-4">
             {t("sectionLabel")}
           </p>
-          <h2 className="text-fluid-h2 font-bold text-[#282828] mb-6 tracking-tight">
+          <h2 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
             {t("titleLine1")}
             <span className="text-accent relative inline-block">
               {t("titleHighlight")}
@@ -96,7 +96,7 @@ export default function VideoBanner() {
                 <p className="text-foreground/60 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2">
                   {t("showreelLabel")}
                 </p>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#282828]">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-heading">
                   {t("showreelTitle")}
                 </h3>
               </motion.div>
@@ -158,7 +158,7 @@ export default function VideoBanner() {
                   className="w-6 h-6 text-accent mb-3 transition-transform duration-300 group-hover:-translate-y-1"
                   strokeWidth={1.5}
                 />
-                <h4 className="text-base md:text-lg font-semibold text-[#282828] mb-1.5">
+                <h4 className="text-base md:text-lg font-semibold text-heading mb-1.5">
                   {t(`features.${i}.label`)}
                 </h4>
                 <p className="text-sm text-foreground/50 leading-snug">

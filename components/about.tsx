@@ -104,7 +104,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.35 }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-[#282828] mb-6 leading-tight tracking-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-heading mb-6 leading-tight tracking-tight">
               {t("contentTitle")}
               <span className="text-accent">{t("contentTitleAccent")}</span>
             </h3>
