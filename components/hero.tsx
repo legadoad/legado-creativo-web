@@ -43,7 +43,7 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 0.8 }}
       >
         <motion.div
-          className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
+          className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center pt-2"
           animate={{ y: [0, 5, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >

@@ -50,11 +50,11 @@ export default function OurWorkJourney() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <div className="relative">
-              <div className="absolute -inset-5 md:-inset-6 bg-secondary-lime rounded-[8px] -z-10" />
-              <div className="absolute -top-4 -right-4 w-16 h-16 md:w-20 md:h-20 border-2 border-accent/40 rounded-[8px] -z-10" />
+              {/* <div className="absolute -inset-5 md:-inset-6 bg-secondary-lime rounded-[8px] -z-10" />
+              <div className="absolute -top-4 -right-4 w-16 h-16 md:w-20 md:h-20 border-2 border-accent/40 rounded-[8px] -z-10" /> */}
               <div className="relative aspect-[3/4] w-full">
                 <Image
-                  src="/fotos-vicky/vicky-no-bg.png"
+                  src="/fotos-vicky/vicky-blanco-negro.jpeg"
                   alt={t("founderAlt")}
                   fill
                   sizes="(min-width: 1024px) 320px, 300px"
@@ -87,7 +87,7 @@ export default function OurWorkJourney() {
                   <p className="text-accent font-bold text-xs tracking-widest mb-3">
                     {t("milestoneLabel")} — {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="text-2xl md:text-3xl font-bold text-heading mb-3 tracking-tight">
+                  <h3 className="text-xl md:text-2xl font-bold text-heading mb-3 tracking-tight">
                     {milestone.company}
                   </h3>
                   <p className="text-foreground/60 text-base md:text-lg leading-relaxed max-w-xl">

@@ -168,7 +168,7 @@ export default function AboutStory() {
           </motion.div>
 
           <motion.div
-            className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-14 h-14 sm:w-20 sm:h-20 border-2 border-accent/30 rounded-[4px]"
+            // className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-14 h-14 sm:w-20 sm:h-20 border-2 border-accent/30 rounded-[4px]"
             initial={{ opacity: 0, rotate: 10 }}
             animate={isInView ? { opacity: 1, rotate: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}

@@ -14,7 +14,6 @@ const categoryStyles = [
     dropdownBg: "bg-section-lavender/35",
     dividerColor: "divide-foreground/25",
     borderColor: "border-foreground/25",
-    rowHover: "hover:bg-foreground/10",
   },
   {
     tint: "bg-section-mint/78",
@@ -22,7 +21,6 @@ const categoryStyles = [
     dropdownBg: "bg-section-mint/55",
     dividerColor: "divide-secondary-blue/40",
     borderColor: "border-secondary-blue/40",
-    rowHover: "hover:bg-secondary-blue/15",
   },
   {
     tint: "bg-secondary-blue/72",
@@ -30,7 +28,6 @@ const categoryStyles = [
     dropdownBg: "bg-secondary-blue/30",
     dividerColor: "divide-section-mint/90",
     borderColor: "border-section-mint/90",
-    rowHover: "hover:bg-section-mint/35",
   },
 ]
 
@@ -242,9 +239,9 @@ export default function ServicesGrid() {
                         {category.items.map((item, itemIndex) => (
                           <div
                             key={item}
-                            className={`flex flex-col md:flex-row md:items-center gap-1.5 md:gap-8 py-5 px-3 -mx-3 rounded-lg transition-colors duration-200 ${category.rowHover}`}
+                            className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-8 py-5 px-3 -mx-3 rounded-lg transition-colors duration-200 hover:bg-secondary-lime/70"
                           >
-                            <h3 className="text-heading font-semibold text-base md:text-lg md:w-1/3 shrink-0">
+                            <h3 className="text-heading font-semibold text-sm md:text-base md:w-1/3 shrink-0">
                               {item}
                             </h3>
                             <p className="text-foreground/60 text-sm md:text-base leading-relaxed">

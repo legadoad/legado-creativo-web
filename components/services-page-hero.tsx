@@ -56,7 +56,7 @@ export default function ServicesPageHero() {
       >
         <source src="/videos/services.mp4" type="video/mp4" />
         <source
-          src="https://www.monks.com/data/s3fs-public/2025-06/Monks-RealTimeBrands-Culture.mp4?VersionId=xbvPZh9tJI8sTs6EUyUkvKfiruxldRM5"
+          src="/videos/LEGADO BANNER WEB 1.mp4"
           type="video/mp4"
         />
       </video>
@@ -131,7 +131,7 @@ export default function ServicesPageHero() {
         transition={{ delay: 1.5, duration: 0.8 }}
       >
         <motion.div
-          className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
+          className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center pt-2"
           animate={{ y: [0, 5, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >

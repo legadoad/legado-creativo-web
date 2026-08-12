@@ -185,7 +185,7 @@
     "titleLine2": " cobra vida",
     "subtitle": "Descubre cómo transformamos ideas en marcas que generan impacto real",
     "showreelLabel": "Showreel de la agencia",
-    "showreelTitle": "Las historias construyen marcas. ¡Las marcas construyen un legado!",
+    "showreelTitle": "Brands that leave a legacy",
     "stat1Value": "50+",
     "stat1Label": "Videos producidos",
     "stat2Value": "1M+",
@@ -363,7 +363,7 @@
         "description": "Marketing y contenido para medios: cobertura de Copa América y el Mundial, y media kits clave para cerrar ventas de alto nivel"
       },
       {
-        "company": "Univision New England / Entravision",
+        "company": "Univision New England",
         "description": "Ventas y marketing integrado para medios hispanos, la cadena hispana líder de Nueva Inglaterra, en paralelo a la dirección de Legado"
       },
       {
@@ -659,11 +659,32 @@
     "serviceLabel": "¿Qué servicio te interesa?",
     "serviceDefault": "Selecciona un servicio",
     "serviceOptions": {
-      "webDesign": "Estrategia de marca",
-      "brandIdentity": "Identidad visual",
-      "uiUx": "Contenido y social media",
-      "motionGraphics": "Brand Activation",
-      "printDesign": "Paquete completo",
+      "groups": {
+        "creative": "Creative",
+        "media": "Media",
+        "technology": "Technology"
+      },
+      "creative": [
+        "Identidad visual",
+        "Brand Playbook",
+        "Visual Content Studio",
+        "Brand Activation",
+        "Copywriting bilingüe"
+      ],
+      "media": [
+        "Gestión de redes sociales",
+        "Influencer Marketing & Community",
+        "Producción de video",
+        "Estrategia de contenido",
+        "Creator & Influencer Strategy"
+      ],
+      "technology": [
+        "Landing Page Comercial",
+        "Web Corporativa Empresarial",
+        "Catálogo Digital",
+        "SEO & GEO",
+        "E-commerce Automatizado"
+      ],
       "other": "Otro"
     },
     "messageLabel": "Detalles del proyecto",

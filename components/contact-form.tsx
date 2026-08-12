@@ -8,6 +8,9 @@ import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const t = useTranslations("contactForm");
+  const creativeServices = t.raw("serviceOptions.creative") as string[];
+  const mediaServices = t.raw("serviceOptions.media") as string[];
+  const technologyServices = t.raw("serviceOptions.technology") as string[];
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -214,11 +217,27 @@ export default function ContactForm() {
             className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground focus:border-accent focus:ring-1 focus:ring-accent outline-none transition appearance-none cursor-pointer"
           >
             <option value="">{t("serviceDefault")}</option>
-            <option value="web-design">{t("serviceOptions.webDesign")}</option>
-            <option value="brand-identity">{t("serviceOptions.brandIdentity")}</option>
-            <option value="ui-ux">{t("serviceOptions.uiUx")}</option>
-            <option value="motion-graphics">{t("serviceOptions.motionGraphics")}</option>
-            <option value="print-design">{t("serviceOptions.printDesign")}</option>
+            <optgroup label={t("serviceOptions.groups.creative")}>
+              {creativeServices.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label={t("serviceOptions.groups.media")}>
+              {mediaServices.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label={t("serviceOptions.groups.technology")}>
+              {technologyServices.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </optgroup>
             <option value="other">{t("serviceOptions.other")}</option>
           </select>
         </motion.div>

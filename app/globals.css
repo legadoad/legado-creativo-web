@@ -50,7 +50,7 @@
   --section-sand: oklch(86.6% 0.0139 78.25); /* #d8d2c9 */
 
   /* Heading/body dark text color, used across headings site-wide */
-  --heading: #282828;
+  --heading: #3f3f46;
 }
 
 .dark {

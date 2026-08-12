@@ -338,7 +338,7 @@
         "description": "Marketing and content for media: Copa América and World Cup coverage, and key media kits that closed high-level sales"
       },
       {
-        "company": "Univision New England / Entravision",
+        "company": "Univision New England",
         "description": "Sales and integrated marketing for Hispanic media, New England's leading Hispanic network, alongside leading Legado"
       },
       {
@@ -634,11 +634,32 @@
     "serviceLabel": "What service are you interested in?",
     "serviceDefault": "Select a service",
     "serviceOptions": {
-      "webDesign": "Brand strategy",
-      "brandIdentity": "Visual identity",
-      "uiUx": "Content & social media",
-      "motionGraphics": "Brand activation",
-      "printDesign": "Full package",
+      "groups": {
+        "creative": "Creative",
+        "media": "Media",
+        "technology": "Technology"
+      },
+      "creative": [
+        "Visual identity",
+        "Brand playbook",
+        "Visual content studio",
+        "Brand activation",
+        "Bilingual copywriting"
+      ],
+      "media": [
+        "Social media management",
+        "Influencer marketing & community",
+        "Video production",
+        "Content strategy",
+        "Creator & influencer strategy"
+      ],
+      "technology": [
+        "Commercial landing page",
+        "Corporate business website",
+        "Digital catalog",
+        "SEO & GEO",
+        "Automated e-commerce"
+      ],
       "other": "Other"
     },
     "messageLabel": "Project details",

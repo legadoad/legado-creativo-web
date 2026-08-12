@@ -69,7 +69,7 @@ export default function VideoBanner() {
               poster="/creative-agency-showreel-dark-cinematic.jpg"
               className="w-full h-full object-cover"
             >
-              <source src="/videos/Banner.mp4" type="video/mp4" />
+              <source src="/videos/LEGADO BANNER WEB 1.mp4" type="video/mp4" />
             </video>
 
             {/* Video Overlay with Gradient */}
