@@ -70,8 +70,7 @@ export default function VideoBanner() {
               className="w-full h-full object-cover"
             >
               <source 
-              // src="/videos/LEGADO BANNER WEB 1.mp4" 
-              src="/videos/Banner compress.mp4" 
+              src="/videos/Legado Banner Web 1.mp4" 
               type="video/mp4" />
             </video>
 

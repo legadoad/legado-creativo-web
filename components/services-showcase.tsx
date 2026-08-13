@@ -105,8 +105,7 @@ export default function ServicesShowcase() {
         />
         <VideoPanel
           bg="bg-secondary-blue"
-          // videoSrc="/videos/LEGADO BANNER WEB 2.mp4"
-          videoSrc="/videos/Banner compress.mp4"
+          videoSrc="/videos/Legado Banner Web 1.mp4"
           labels={labels}
           startIndex={midpoint}
           badgeBg="bg-foreground/70"
