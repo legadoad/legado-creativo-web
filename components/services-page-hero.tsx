@@ -56,7 +56,8 @@ export default function ServicesPageHero() {
       >
         <source src="/videos/services.mp4" type="video/mp4" />
         <source
-          src="/videos/LEGADO BANNER WEB 1.mp4"
+          // src="/videos/LEGADO BANNER WEB 2.mp4"
+          src="/videos/Banner compress.mp4"
           type="video/mp4"
         />
       </video>

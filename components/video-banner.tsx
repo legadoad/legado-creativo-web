@@ -69,7 +69,10 @@ export default function VideoBanner() {
               poster="/creative-agency-showreel-dark-cinematic.jpg"
               className="w-full h-full object-cover"
             >
-              <source src="/videos/LEGADO BANNER WEB 1.mp4" type="video/mp4" />
+              <source 
+              // src="/videos/LEGADO BANNER WEB 1.mp4" 
+              src="/videos/Banner compress.mp4" 
+              type="video/mp4" />
             </video>
 
             {/* Video Overlay with Gradient */}
@@ -93,10 +96,10 @@ export default function VideoBanner() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.5 }}
               >
-                <p className="text-foreground/60 text-xs sm:text-sm uppercase tracking-widest mb-1 sm:mb-2">
+                <p className="text-foreground/60 text-xs sm:text-sm uppercase text-secondary-lime tracking-widest mb-1 sm:mb-2">
                   {t("showreelLabel")}
                 </p>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-heading">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-heading text-secondary-lime">
                   {t("showreelTitle")}
                 </h3>
               </motion.div>

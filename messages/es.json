@@ -62,7 +62,7 @@
     "copyright": "© 2025 Legado Creativo. Todos los derechos reservados",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
-    "poweredBy": "Powered by DevelopWave"
+    "poweredBy": "Diseñado por Legado Creativo"
   },
   "cta": {
     "label": "TRABAJEMOS JUNTOS",
@@ -117,6 +117,9 @@
       },
       "passion": { "title": "Pasión", "desc": "Amamos lo que hacemos" }
     }
+  },
+  "homeVideoShowcase": {
+    "ctaButton": "Ver todos los servicios"
   },
   "homeServices": {
     "sectionLabel": "LO QUE HACEMOS",
@@ -186,7 +189,7 @@
     "subtitle": "Descubre cómo transformamos ideas en marcas que generan impacto real",
     "showreelLabel": "Showreel de la agencia",
     "showreelTitle": "Brands that leave a legacy",
-    "stat1Value": "50+",
+    "stat1Value": "500+",
     "stat1Label": "Videos producidos",
     "stat2Value": "1M+",
     "stat2Label": "Vistas generadas",
@@ -372,9 +375,30 @@
       }
     ]
   },
-  "ourWorkClosing": {
-    "quote": "Estrategia antes que estética: ninguna decisión sin propósito.",
-    "description": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos."
+  "ourWorkProof": {
+    "sectionLabel": "PROYECTOS REALES",
+    "title": "Marcas reales, resultados medibles",
+    "viewProject": "Ver proyecto",
+    "cases": [
+      {
+        "name": "Porter Parts",
+        "url": "porterparts.com",
+        "result": "De un catálogo en PDF a una plataforma en vivo y filtrable.",
+        "tags": ["+18.000 productos", "Cotización automática", "Panel admin"]
+      },
+      {
+        "name": "Temple of Groom",
+        "url": "templeofgroom.com",
+        "result": "Diseño premium y reservas integradas para una barbería de lujo.",
+        "tags": ["Reservas en línea", "Pagos con Stripe", "Diseño premium"]
+      },
+      {
+        "name": "CJB Service",
+        "url": "cjbservice.com",
+        "result": "Presencia corporativa escalable, con gestión de contenido sin esfuerzo.",
+        "tags": ["SEO técnico", "Panel sin código", "Presencia corporativa"]
+      }
+    ]
   },
   "ourWorkBrands": {
     "sectionLabel": "MARCAS CON LAS QUE HEMOS TRABAJADO",

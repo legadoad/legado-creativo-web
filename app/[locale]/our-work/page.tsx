@@ -5,7 +5,7 @@ import OurWorkHero from "@/components/our-work-hero";
 import OurWorkStats from "@/components/our-work-stats";
 import OurWorkBrands from "@/components/our-work-brands";
 import OurWorkJourney from "@/components/our-work-journey";
-import OurWorkClosing from "@/components/our-work-closing";
+import OurWorkProof from "@/components/our-work-proof";
 import CTA from "@/components/cta";
 import VideoBanner from "@/components/video-banner";
 
@@ -25,7 +25,7 @@ export default async function OurWorkPage() {
 
       <OurWorkBrands />
       <OurWorkJourney />
-      <OurWorkClosing />
+      <OurWorkProof />
       <VideoBanner />
 
       <CTA

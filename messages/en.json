@@ -62,7 +62,7 @@
     "copyright": "© 2025 Legado Creativo. All rights reserved",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
-    "poweredBy": "Powered by DevelopWave"
+    "poweredBy": "Designed by Legado Creativo"
   },
   "cta": {
     "label": "LET'S WORK TOGETHER",
@@ -101,6 +101,9 @@
     ],
     "foundedBadge": "Since 2018",
     "learnMore": "Discover how to build a brand that lasts →"
+  },
+  "homeVideoShowcase": {
+    "ctaButton": "See All Services"
   },
   "homeServices": {
     "sectionLabel": "WHAT WE DO",
@@ -166,8 +169,8 @@
     "titleLine2": " comes to life",
     "subtitle": "Discover how we turn ideas into brands that create real impact",
     "showreelLabel": "Agency showreel",
-    "showreelTitle": "Stories build brands. Brands build legacy!",
-    "stat1Value": "50+",
+    "showreelTitle": "Brands that leave a legacy",
+    "stat1Value": "500+",
     "stat1Label": "Videos produced",
     "stat2Value": "1M+",
     "stat2Label": "Views generated",
@@ -347,9 +350,30 @@
       }
     ]
   },
-  "ourWorkClosing": {
-    "quote": "Strategy before aesthetics: no decision without purpose.",
-    "description": "We're a multicultural creative agency: we understand the Latino and American markets from the inside. We tell brand stories with strategy first, for clients ranging from retail and health to media and events."
+  "ourWorkProof": {
+    "sectionLabel": "REAL PROJECTS",
+    "title": "Real brands, measurable results",
+    "viewProject": "View project",
+    "cases": [
+      {
+        "name": "Porter Parts",
+        "url": "porterparts.com",
+        "result": "From a PDF catalog to a live, filterable platform.",
+        "tags": ["18,000+ products", "Automated quotes", "Admin panel"]
+      },
+      {
+        "name": "Temple of Groom",
+        "url": "templeofgroom.com",
+        "result": "Premium design and integrated booking for a luxury barbershop.",
+        "tags": ["Online booking", "Stripe payments", "Premium design"]
+      },
+      {
+        "name": "CJB Service",
+        "url": "cjbservice.com",
+        "result": "A scalable corporate presence, easy to manage without a developer.",
+        "tags": ["Technical SEO", "No-code content", "Corporate presence"]
+      }
+    ]
   },
   "ourWorkBrands": {
     "sectionLabel": "BRANDS WE'VE WORKED WITH",

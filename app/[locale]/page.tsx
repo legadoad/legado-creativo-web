@@ -6,6 +6,7 @@ import LogoMarquee from "@/components/logo-marquee";
 import Works from "@/components/works";
 import GalleryMarquee from "@/components/gallery-marquee";
 import About from "@/components/about";
+import ServicesShowcase from "@/components/services-showcase";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <LogoMarquee />
       <Works />
       {/* <GalleryMarquee /> */}
+      <ServicesShowcase />
       <About />
       <CTA
         bg="bg-secondary-lime"
