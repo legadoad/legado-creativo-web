@@ -1,4 +1,5 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { socialImages } from "@/lib/metadata";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ServicesPageHero from "@/components/services-page-hero";
@@ -8,13 +9,36 @@ import ServicesProcess from "@/components/services-process";
 import ServicesFaq from "@/components/services-faq";
 import CTA from "@/components/cta";
 
-export const metadata = {
-  title: "Services | Legado Creativo",
-  description:
-    "Explore our creative services - graphic design, web design, branding, UI/UX and more.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.services" });
+  const title = t("title");
+  const description = t("description");
+  const images = socialImages(locale);
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: images.openGraph },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: images.twitter,
+    },
+  };
+}
 
-export default async function ServicesPage() {
+export default async function ServicesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("servicesCta");
 
   return (

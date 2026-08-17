@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
@@ -33,10 +33,26 @@ const lemonMilk = localFont({
   ],
 });
 
+// Without this, Next.js can't know the [locale] segment's possible values at
+// build time and falls back to rendering every page on-demand per request
+// instead of serving pre-built static HTML from the CDN.
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+const BASE_URL = "https://legadocreativo.com";
+const SITE_NAME = "Legado Creativo";
+const DEFAULT_TITLE = "Legado Creativo - Web & Graphic Design";
+const DEFAULT_DESCRIPTION =
+  "Stunning web design and graphic design solutions that elevate your brand. We create modern, impactful digital experiences.";
+
+// Site-wide defaults. Individual pages override title/description (and can
+// override openGraph/twitter too) via their own generateMetadata — see
+// about/contact/services/our-work/privacy/terms for the pattern.
 export const metadata: Metadata = {
-  title: "Legado Creativo - Web & Graphic Design",
-  description:
-    "Stunning web design and graphic design solutions that elevate your brand. We create modern, impactful digital experiences.",
+  metadataBase: new URL(BASE_URL),
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
   icons: {
     icon: [
       { url: "/favicon/favicon.ico" },
@@ -53,6 +69,17 @@ export const metadata: Metadata = {
     apple: "/favicon/apple-touch-icon.png",
   },
   manifest: "/favicon/site.webmanifest",
+  openGraph: {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    siteName: SITE_NAME,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+  },
 };
 
 export default async function RootLayout({
@@ -68,6 +95,12 @@ export default async function RootLayout({
   if (!routing.locales.includes(locale as "en" | "es")) {
     notFound();
   }
+
+  // Tells next-intl which locale is being rendered so getMessages()/
+  // getTranslations() below (and in child Server Components) can read it
+  // from a request-scoped cache instead of falling back to headers() —
+  // that fallback is what forces a route into on-demand dynamic rendering.
+  setRequestLocale(locale);
 
   // Get messages for the current locale
   const messages = await getMessages();

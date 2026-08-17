@@ -399,12 +399,6 @@
         "tags": ["+18.000 productos", "Cotización automática", "Panel admin"]
       },
       {
-        "name": "Temple of Groom",
-        "url": "templeofgroom.com",
-        "result": "Diseño premium y reservas integradas para una barbería de lujo.",
-        "tags": ["Reservas en línea", "Pagos con Stripe", "Diseño premium"]
-      },
-      {
         "name": "CJB Service",
         "url": "cjbservice.com",
         "result": "Presencia corporativa escalable, con gestión de contenido sin esfuerzo.",
@@ -981,5 +975,12 @@
         ]
       }
     ]
+  },
+  "notFound": {
+    "badge": "404",
+    "title": "Esta página se salió del guion",
+    "description": "La página que buscas no existe o puede que se haya movido. Volvamos a encaminarte.",
+    "homeButton": "Volver al inicio",
+    "contactButton": "Contáctanos"
   }
 }

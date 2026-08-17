@@ -1,42 +1,37 @@
-"use client";
-import { useTranslations } from "next-intl";
-import Header from "@/components/header";
-import Hero from "@/components/hero";
-import LogoMarquee from "@/components/logo-marquee";
-import Works from "@/components/works";
-import GalleryMarquee from "@/components/gallery-marquee";
-import About from "@/components/about";
-import ServicesShowcase from "@/components/services-showcase";
-import InstagramFeed from "@/components/instagram-feed";
-import CTA from "@/components/cta";
-import Footer from "@/components/footer";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { socialImages } from "@/lib/metadata";
+import HomeContent from "@/components/home-content";
 
-export default function Home() {
-  const t = useTranslations("cta");
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.home" });
+  const title = t("title");
+  const description = t("description");
+  const images = socialImages(locale);
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: images.openGraph },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: images.twitter,
+    },
+  };
+}
 
-  // overflow-x-clip (not -hidden): `hidden` forces overflow-y:auto, which makes
-  // <main> a scroll container and breaks the pinned ServicesShowcase section.
-  return (
-    <main className="bg-background overflow-x-clip">
-      <Header />
-      <Hero />
-      <LogoMarquee />
-      <Works />
-      {/* <GalleryMarquee /> */}
-      <ServicesShowcase />
-      <About />
-      <CTA
-        bg="bg-secondary-lime"
-        label={t("label")}
-        title={t("title")}
-        highlightWord={t("highlightWord")}
-        buttonText={t("buttonText")}
-        textColor="text-secondary-blue"
-        buttonTextColor="text-secondary-lime"
-        buttonBg="bg-secondary-blue"
-      />
-      <InstagramFeed />
-      <Footer />
-    </main>
-  );
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <HomeContent />;
 }

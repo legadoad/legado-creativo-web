@@ -238,6 +238,10 @@ export default function InstagramFeed({
                     fill
                     sizes="(max-width: 768px) 40vw, 256px"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    // Instagram's media URLs come from rotating CDN subdomains we
+                    // can't whitelist in next.config's remotePatterns, so this one
+                    // image opts out of Next's optimizer instead of the whole site.
+                    unoptimized
                   />
 
                   {post.mediaType === "VIDEO" && (
@@ -319,6 +323,7 @@ export default function InstagramFeed({
                         fill
                         sizes="(max-width: 768px) 100vw, 58vw"
                         className="object-cover"
+                        unoptimized
                       />
                     )}
                   </motion.div>

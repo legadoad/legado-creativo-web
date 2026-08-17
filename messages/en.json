@@ -374,12 +374,6 @@
         "tags": ["18,000+ products", "Automated quotes", "Admin panel"]
       },
       {
-        "name": "Temple of Groom",
-        "url": "templeofgroom.com",
-        "result": "Premium design and integrated booking for a luxury barbershop.",
-        "tags": ["Online booking", "Stripe payments", "Premium design"]
-      },
-      {
         "name": "CJB Service",
         "url": "cjbservice.com",
         "result": "A scalable corporate presence, easy to manage without a developer.",
@@ -952,5 +946,12 @@
         ]
       }
     ]
+  },
+  "notFound": {
+    "badge": "404",
+    "title": "This page went off-brand",
+    "description": "The page you're looking for doesn't exist or may have moved. Let's get you back on track.",
+    "homeButton": "Back to home",
+    "contactButton": "Contact us"
   }
 }

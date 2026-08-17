@@ -1,0 +1,40 @@
+"use client";
+import { useTranslations } from "next-intl";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import LogoMarquee from "@/components/logo-marquee";
+import Works from "@/components/works";
+import About from "@/components/about";
+import ServicesShowcase from "@/components/services-showcase";
+import InstagramFeed from "@/components/instagram-feed";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
+
+export default function HomeContent() {
+  const t = useTranslations("cta");
+
+  // overflow-x-clip (not -hidden): `hidden` forces overflow-y:auto, which makes
+  // <main> a scroll container and breaks the pinned ServicesShowcase section.
+  return (
+    <main className="bg-background overflow-x-clip">
+      <Header />
+      <Hero />
+      <LogoMarquee />
+      <Works />
+      <ServicesShowcase />
+      <About />
+      <CTA
+        bg="bg-secondary-lime"
+        label={t("label")}
+        title={t("title")}
+        highlightWord={t("highlightWord")}
+        buttonText={t("buttonText")}
+        textColor="text-secondary-blue"
+        buttonTextColor="text-secondary-lime"
+        buttonBg="bg-secondary-blue"
+      />
+      <InstagramFeed />
+      <Footer />
+    </main>
+  );
+}

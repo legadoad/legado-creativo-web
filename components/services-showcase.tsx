@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import {
   AnimatePresence,
   motion,
+  useInView,
   useMotionTemplate,
   useMotionValueEvent,
   useScroll,
@@ -31,6 +32,7 @@ interface PanelProps {
   clipPath: MotionValue<string>;
   badgeBg: string;
   badgeText: string;
+  shouldLoadVideos: boolean;
 }
 
 function VideoPanel({
@@ -40,31 +42,36 @@ function VideoPanel({
   clipPath,
   badgeBg,
   badgeText,
+  shouldLoadVideos,
 }: PanelProps) {
   return (
     <div className={`relative h-full overflow-hidden ${bg}`}>
       {/* Video layers stay mounted and playing; only opacity crossfades.
-          Keeps fast scrolling smooth — no remount, no reload flicker. */}
+          Keeps fast scrolling smooth — no remount, no reload flicker.
+          Nothing downloads until the section scrolls near the viewport
+          (see shouldLoadVideos below) — until then the panel's own
+          background color shows through, so it never looks broken. */}
       <motion.div style={{ clipPath }} className="absolute inset-0">
-        {VIDEO_SOURCES.map((src, i) => (
-          <motion.div
-            key={src}
-            animate={{ opacity: i === videoIndex ? 1 : 0 }}
-            transition={{ duration: 0.7, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="h-full w-full object-cover"
+        {shouldLoadVideos &&
+          VIDEO_SOURCES.map((src, i) => (
+            <motion.div
+              key={src}
+              animate={{ opacity: i === videoIndex ? 1 : 0 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              className="absolute inset-0"
             >
-              <source src={src} type="video/mp4" />
-            </video>
-          </motion.div>
-        ))}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="h-full w-full object-cover"
+              >
+                <source src={src} type="video/mp4" />
+              </video>
+            </motion.div>
+          ))}
         {/* subtle tint so the frosted label and centered logo always read */}
         <div className="absolute inset-0 bg-black/15" />
       </motion.div>
@@ -101,6 +108,14 @@ export default function ServicesShowcase() {
   const labels = services.map((item) => item.name);
   const offset = Math.floor(labels.length / 2);
 
+  // Don't spend the ~13MB of video on visitors who never scroll this far —
+  // start loading once the section is within one viewport height of view,
+  // not only once it's actually on screen.
+  const shouldLoadVideos = useInView(sectionRef, {
+    once: true,
+    margin: "0px 0px 100% 0px",
+  });
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
@@ -132,12 +147,14 @@ export default function ServicesShowcase() {
             clipPath={leftClip}
             badgeBg="bg-white/55"
             badgeText="text-foreground"
+            shouldLoadVideos={shouldLoadVideos}
           />
           <VideoPanel
             bg="bg-secondary-blue"
             label={labels[rightIndex]}
             videoIndex={rightIndex % VIDEO_SOURCES.length}
             clipPath={rightClip}
+            shouldLoadVideos={shouldLoadVideos}
             badgeBg="bg-black/45"
             badgeText="text-white"
           />

@@ -1,4 +1,5 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { socialImages } from "@/lib/metadata";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import OurWorkHero from "@/components/our-work-hero";
@@ -9,13 +10,36 @@ import OurWorkProof from "@/components/our-work-proof";
 import CTA from "@/components/cta";
 import VideoBanner from "@/components/video-banner";
 
-export const metadata = {
-  title: "Our Work | Legado Creativo",
-  description:
-    "The story behind Legado Creativo: our founder's journey, our milestones, and the brands we've partnered with.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.ourWork" });
+  const title = t("title");
+  const description = t("description");
+  const images = socialImages(locale);
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: images.openGraph },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: images.twitter,
+    },
+  };
+}
 
-export default async function OurWorkPage() {
+export default async function OurWorkPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("cta");
 
   return (

@@ -1,3 +1,5 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { socialImages } from "@/lib/metadata";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ContactHero from "@/components/contact-hero";
@@ -6,13 +8,37 @@ import ContactForm from "@/components/contact-form";
 import ContactInfo from "@/components/contact-info";
 import InstagramFeed from "@/components/instagram-feed";
 
-export const metadata = {
-  title: "Contact Us | Legado Creativo",
-  description:
-    "Get in touch with Legado Creativo. Let's discuss your next project.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.contact" });
+  const title = t("title");
+  const description = t("description");
+  const images = socialImages(locale);
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: images.openGraph },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: images.twitter,
+    },
+  };
+}
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <main className="min-h-screen bg-background">
       <Header />

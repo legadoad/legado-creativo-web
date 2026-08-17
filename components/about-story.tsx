@@ -141,7 +141,7 @@ export default function AboutStory() {
             whileHover={{ scale: 1.03 }}
           >
             <Image
-              src="/WEB LEGADO\IMAGENES HOME\Since 2018\Since 2018.png"
+              src="/images/home/since-2018.png"
               alt="Legado Creativo workspace"
               fill
               className="object-cover"

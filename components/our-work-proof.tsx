@@ -9,9 +9,8 @@ import { ArrowUpRight, Lock } from "lucide-react";
 // Full-page screenshots. At rest the frame shows just the top slice (roughly
 // each site's hero); on hover it slow-scrolls down through the whole capture.
 const CASES = [
-  { img: "/portfolio/porterparts.webp", ratio: 1801 / 5228 },
-  { img: "/portfolio/templeofgroombarbershop.webp", ratio: 1100 / 6052 },
-  { img: "/portfolio/cjbservice.webp", ratio: 1801 / 6236 },
+  { img: "/portafolio/porterparts.webp", ratio: 1801 / 5228 },
+  { img: "/portafolio/cjbservice.webp", ratio: 1801 / 6236 },
 ];
 
 const SCREEN_HEIGHT = "clamp(220px, 24vw, 320px)";
@@ -46,7 +45,7 @@ export default function OurWorkProof() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-3xl mx-auto">
           {cases.map((c, i) => (
             <motion.article
               key={c.name}
