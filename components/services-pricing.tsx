@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Check, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 const packages = [
   {

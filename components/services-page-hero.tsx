@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 function StrokeOval() {

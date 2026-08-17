@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { strokes, type StrokeVariant } from "@/components/stroke-underline";
 
 // ─── Props ────────────────────────────────────────────────────────────────────
