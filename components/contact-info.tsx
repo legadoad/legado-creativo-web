@@ -19,7 +19,7 @@ const contactValues = [
 
 const socials = [
   { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/legadoad/" },
   { icon: Twitter, label: "Twitter", href: "#" },
   { icon: Dribbble, label: "Dribbble", href: "#" },
 ]
@@ -108,6 +108,8 @@ export default function ContactInfo() {
               <motion.a
                 key={i}
                 href={social.href}
+                target={social.href.startsWith("http") ? "_blank" : undefined}
+                rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={social.label}
                 className="w-12 h-12 bg-accent/10 rounded-[4px] flex items-center justify-center hover:bg-accent/20 transition"
                 initial={{ opacity: 0, scale: 0 }}

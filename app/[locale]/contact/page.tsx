@@ -4,6 +4,7 @@ import ContactHero from "@/components/contact-hero";
 import ContactMarquee from "@/components/contact-marquee";
 import ContactForm from "@/components/contact-form";
 import ContactInfo from "@/components/contact-info";
+import InstagramFeed from "@/components/instagram-feed";
 
 export const metadata = {
   title: "Contact Us | Legado Creativo",
@@ -23,6 +24,7 @@ export default function ContactPage() {
           <ContactInfo />
         </div>
       </div>
+      <InstagramFeed />
       <Footer />
     </main>
   );

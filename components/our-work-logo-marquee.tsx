@@ -4,9 +4,31 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
-// Placeholder tiles repeating the Legado mark until real client logos are
-// uploaded — swap the `src` per tile once those assets land in /public/Clients.
-const PLACEHOLDER_TILES = Array.from({ length: 8 });
+const CLIENT_LOGOS = [
+  { src: "/Clients/amuleto.png", alt: "Amuleto" },
+  { src: "/Clients/bicca.png", alt: "Bicca" },
+  { src: "/Clients/biomedical.png", alt: "Biomedical" },
+  { src: "/Clients/cic.png", alt: "CIC" },
+  { src: "/Clients/estrella-law.png", alt: "Estrella Law" },
+  { src: "/Clients/euroka.png", alt: "Euroka" },
+  { src: "/Clients/europro.png", alt: "Europro" },
+  { src: "/Clients/everett-furniture.png", alt: "Everett Furniture" },
+  { src: "/Clients/gsp-latam.png", alt: "GSP Latam" },
+  { src: "/Clients/gsp-na.png", alt: "GSP NA" },
+  { src: "/Clients/gsp-xtv.png", alt: "GSP XTV" },
+  { src: "/Clients/la-fabrica.png", alt: "La Fabrica" },
+  { src: "/Clients/la-garita.png", alt: "La Garita" },
+  { src: "/Clients/legado.png", alt: "Legado" },
+  { src: "/Clients/mayaguez.png", alt: "Mayaguez" },
+  { src: "/Clients/nv-cargo.png", alt: "NV Cargo" },
+  { src: "/Clients/peka.png", alt: "Peka" },
+  { src: "/Clients/pollo-royal.png", alt: "Pollo Royal" },
+  { src: "/Clients/porter.png", alt: "Porter" },
+  { src: "/Clients/salgado.png", alt: "Salgado" },
+  { src: "/Clients/swift-demolition.png", alt: "Swift Demolition" },
+  { src: "/Clients/waltham-furniture.png", alt: "Waltham Furniture" },
+  { src: "/Clients/eclat.png", alt: "Éclat" },
+];
 
 export default function OurWorkLogoMarquee() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,18 +46,18 @@ export default function OurWorkLogoMarquee() {
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
       <div className="flex animate-marquee whitespace-nowrap">
-        {[...PLACEHOLDER_TILES, ...PLACEHOLDER_TILES, ...PLACEHOLDER_TILES].map(
-          (_, index) => (
+        {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map(
+          (logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-4 md:mx-6 w-32 h-16 md:w-40 md:h-20 rounded-[4px] border border-dashed border-border/70 bg-background/60 flex items-center justify-center px-4 hover:border-accent/40 transition-colors duration-300"
+              className="flex-shrink-0 mx-6 md:mx-10 flex items-center justify-center"
             >
               <Image
-                src="/Logos/LEGADO_isotipo-03.png"
-                alt="Legado Creativo"
-                width={120}
-                height={48}
-                className="h-8 md:h-10 w-auto object-contain opacity-50 grayscale hover:opacity-90 hover:grayscale-0 transition-all duration-300"
+                src={logo.src}
+                alt={logo.alt}
+                width={220}
+                height={100}
+                className="h-20 md:h-24 w-auto max-w-[190px] md:max-w-[240px] object-contain opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
               />
             </div>
           )
