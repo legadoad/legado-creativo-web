@@ -22,11 +22,11 @@ export default async function OurWorkPage() {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <OurWorkHero />
+      <VideoBanner />
 
-      <OurWorkBrands />
       <OurWorkJourney />
       <OurWorkProof />
-      <VideoBanner />
+      <OurWorkBrands />
 
       <CTA
         bg="bg-[var(--secondary-magenta)]"

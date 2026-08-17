@@ -99,7 +99,7 @@
       "Intentional content: every piece responds to a clear goal",
       "Real partnership at every stage of your brand's growth"
     ],
-    "foundedBadge": "Since 2018",
+    "foundedBadge": "Creativity guides the direction",
     "learnMore": "Discover how to build a brand that lasts →"
   },
   "homeVideoShowcase": {
@@ -352,7 +352,8 @@
   },
   "ourWorkProof": {
     "sectionLabel": "REAL PROJECTS",
-    "title": "Real brands, measurable results",
+    "title": "Real brands,",
+    "titleAccent": "measurable results",
     "viewProject": "View project",
     "cases": [
       {
@@ -434,7 +435,7 @@
         "description": "Social media management, video production, and influencer strategy that keeps your audience engaged",
         "items": [
           "Social media management",
-          "Influencer marketing & community",
+          "Marketing & community",
           "Video production",
           "Content strategy",
           "Creator & influencer strategy"

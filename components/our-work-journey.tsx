@@ -85,9 +85,9 @@ export default function OurWorkJourney() {
                 >
                   <span className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full bg-background border-2 border-accent" />
                   <p className="text-accent font-bold text-xs tracking-widest mb-3">
-                    {t("milestoneLabel")} — {String(i + 1).padStart(2, "0")}
+                    {t("milestoneLabel")} {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-bold text-heading mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-heading mb-3 tracking-tight">
                     {milestone.company}
                   </h3>
                   <p className="text-foreground/60 text-base md:text-lg leading-relaxed max-w-xl">

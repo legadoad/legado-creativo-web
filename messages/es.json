@@ -99,7 +99,7 @@
       "Contenido con intención: cada pieza responde a un objetivo claro",
       "Acompañamiento real en cada etapa del crecimiento de tu marca"
     ],
-    "foundedBadge": "Desde 2018",
+    "foundedBadge": "La creatividad guía la dirección",
     "learnMore": "Descubre cómo construir una marca que dure →",
     "valuesTitle": "Nuestros valores",
     "values": {
@@ -377,7 +377,8 @@
   },
   "ourWorkProof": {
     "sectionLabel": "PROYECTOS REALES",
-    "title": "Marcas reales, resultados medibles",
+    "title": "Marcas reales,",
+    "titleAccent": "resultados medibles",
     "viewProject": "Ver proyecto",
     "cases": [
       {
@@ -459,7 +460,7 @@
         "description": "Gestión de redes, producción de video y estrategia de influencers que mantienen a tu audiencia conectada",
         "items": [
           "Gestión de redes sociales",
-          "Influencer Marketing & Community",
+          "Marketing & Community",
           "Producción de video",
           "Estrategia de contenido",
           "Creator & Influencer Strategy"

@@ -13,8 +13,10 @@ import Footer from "@/components/footer";
 export default function Home() {
   const t = useTranslations("cta");
 
+  // overflow-x-clip (not -hidden): `hidden` forces overflow-y:auto, which makes
+  // <main> a scroll container and breaks the pinned ServicesShowcase section.
   return (
-    <main className="bg-background overflow-x-hidden">
+    <main className="bg-background overflow-x-clip">
       <Header />
       <Hero />
       <LogoMarquee />

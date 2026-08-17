@@ -6,13 +6,15 @@ import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight, Lock } from "lucide-react";
 
-// Pre-cropped to each site's hero section (see _crop-final.js), sharing one
-// aspect ratio so the grid stays even without any runtime zoom/crop hacks.
+// Full-page screenshots. At rest the frame shows just the top slice (roughly
+// each site's hero); on hover it slow-scrolls down through the whole capture.
 const CASES = [
-  { img: "/portfolio/porterparts-hero.webp" },
-  { img: "/portfolio/templeofgroombarbershop-hero.webp" },
-  { img: "/portfolio/cjbservice-hero.webp" },
+  { img: "/portfolio/porterparts.webp", ratio: 1801 / 5228 },
+  { img: "/portfolio/templeofgroombarbershop.webp", ratio: 1100 / 6052 },
+  { img: "/portfolio/cjbservice.webp", ratio: 1801 / 6236 },
 ];
+
+const SCREEN_HEIGHT = "clamp(220px, 24vw, 320px)";
 
 export default function OurWorkProof() {
   const t = useTranslations("ourWorkProof");
@@ -38,8 +40,9 @@ export default function OurWorkProof() {
           <p className="text-accent text-sm font-semibold tracking-widest mb-4">
             {t("sectionLabel")}
           </p>
-          <h2 className="text-fluid-h2 font-bold text-heading tracking-tight">
-            {t("title")}
+          <h2 className="text-fluid-h2 font-bold text-accent tracking-tight">
+            {t("title")}{" "}
+            <span className="text-secondary-blue">{t("titleAccent")}</span>
           </h2>
         </motion.div>
 
@@ -65,15 +68,28 @@ export default function OurWorkProof() {
                 </div>
               </div>
 
-              {/* Screenshot */}
-              <div className="relative aspect-[1801/1450] overflow-hidden bg-muted">
-                <Image
-                  src={CASES[i].img}
-                  alt={`Sitio de ${c.name}`}
-                  fill
-                  sizes="(max-width: 768px) 92vw, 30vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
+              {/* Screenshot: fixed-height window, full capture slow-scrolls into view on hover */}
+              <div
+                className="relative overflow-hidden bg-muted"
+                style={{ height: SCREEN_HEIGHT }}
+              >
+                <div
+                  className="absolute inset-x-0 top-0 w-full transition-transform duration-700 ease-out motion-reduce:transition-none group-hover:duration-[9000ms] group-hover:ease-linear group-hover:translate-y-[calc(-100%+var(--screen-h))]"
+                  style={
+                    {
+                      aspectRatio: CASES[i].ratio,
+                      "--screen-h": SCREEN_HEIGHT,
+                    } as React.CSSProperties
+                  }
+                >
+                  <Image
+                    src={CASES[i].img}
+                    alt={`Sitio de ${c.name}`}
+                    fill
+                    sizes="(max-width: 768px) 92vw, 30vw"
+                    className="object-cover object-top"
+                  />
+                </div>
               </div>
 
               {/* Body */}

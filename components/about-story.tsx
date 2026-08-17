@@ -121,9 +121,10 @@ export default function AboutStory() {
           </div>
         </motion.div>
 
-        {/* Floating image, pinned to the right, stays put while cards scroll past behind it */}
+        {/* Floating image, pinned to the right, stays put while cards scroll past behind it.
+            Hidden below sm: cards are ~80vw wide on mobile, so the image would overlap their text. */}
         <motion.div
-          className="absolute z-20 right-4 sm:right-8 lg:right-16 top-1/2 -translate-y-1/2 w-[150px] sm:w-[230px] lg:w-[320px] xl:w-[360px]"
+          className="hidden sm:block absolute z-20 right-8 lg:right-16 top-1/2 -translate-y-1/2 w-[230px] lg:w-[320px] xl:w-[360px]"
           style={{ y: imageFloatY }}
           initial={{ opacity: 0, x: 60 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -187,7 +188,7 @@ export default function AboutStory() {
         {/* Horizontal timeline track */}
         <motion.div
           ref={trackRef}
-          className="flex items-stretch gap-6 md:gap-10 pl-4 sm:pl-8 lg:pl-16 pr-[200px] sm:pr-[300px] lg:pr-[420px] xl:pr-[460px]"
+          className="flex items-stretch gap-6 md:gap-10 pl-4 sm:pl-8 lg:pl-16 pr-8 sm:pr-[300px] lg:pr-[420px] xl:pr-[460px]"
           style={{ x: trackX }}
         >
           {/* Intro panel */}
@@ -227,6 +228,7 @@ export default function AboutStory() {
               >
                 <motion.div
                   className="bg-card border border-border rounded-[4px] p-8 lg:p-10 hover:border-accent/50 transition-colors duration-300 h-full flex flex-col justify-center"
+                  initial={{ y: 0, boxShadow: "0 0px 0px 0px rgb(var(--glow-rgb) / 0)" }}
                   whileHover={{
                     y: -8,
                     boxShadow: "0 20px 40px -15px rgb(var(--glow-rgb) / 0.2)",

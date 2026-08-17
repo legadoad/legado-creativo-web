@@ -118,15 +118,6 @@ export default function Footer() {
           <div className="mt-1 text-center">
             <p className="text-foreground/25 text-xs">
               {t("poweredBy")}
-              {" · "}
-              <a
-                href="https://developwave.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-foreground/50 transition"
-              >
-                DevelopWave
-              </a>
             </p>
           </div>
         </div>
