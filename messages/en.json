@@ -146,6 +146,17 @@
       }
     ]
   },
+  "instagramFeed": {
+    "label": "INSTAGRAM",
+    "title": "Follow our creative journey",
+    "highlightWord": "journey",
+    "subtitle": "Fresh work, behind-the-scenes, and stories — straight from our feed",
+    "followButton": "Follow us",
+    "viewOnInstagram": "View on Instagram",
+    "loading": "Loading posts...",
+    "previousPost": "Previous post",
+    "nextPost": "Next post"
+  },
   "logoMarquee": {
     "brands": [
       "BRANDING",

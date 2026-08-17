@@ -6,10 +6,10 @@ import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const solutionImages = [
-  "/modern-ecommerce-website-design-dark-theme.jpg",
-  "/digital-marketing-dashboard-app-interface.jpg",
-  "/brand-identity-design-system-logo-mockup.jpg",
-  "/interactive-portfolio-website-modern-design.jpg",
+  "/images/home/brand-positioning.png",
+  "/images/home/content-story.png",
+  "/images/home/creativity-production.png",
+  "/images/home/digital-growth.png",
 ];
 
 export default function Works() {

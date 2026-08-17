@@ -33,18 +33,18 @@ const categoryStyles = [
 
 const categoryImages = [
   [
-    "/brand-identity-design-system-logo-mockup.jpg",
-    "/creative-poster-design-colorful-typography.jpg",
-    "/creative-visual-campaign-poster-design.jpg",
-    "/event-branding-design-conference-materials.jpg",
-    "/startup-branding-package-mockup-dark.jpg",
+    "/images/services/creative/visual-identity.jpg",
+    "/images/services/creative/brand-playbook.jpg",
+    "/images/services/creative/visual-content-studio.jpg",
+    "/images/services/creative/brand-activation.jpg",
+    "/images/services/creative/bilingual-copywriting.jpg",
   ],
   [
-    "/digital-marketing-dashboard-app-interface.jpg",
-    "/social-media-post-design-creative.jpg",
-    "/creative-agency-showreel-dark-cinematic.jpg",
-    "/social-media-design-kit-templates-dark.jpg",
-    "/digital-marketing-app-interface.jpg",
+    "/images/services/media/social-media-management.jpg",
+    "/images/services/media/influencer-marketing-community.jpg",
+    "/images/services/media/video-production.jpg",
+    "/images/services/media/content-strategy.jpg",
+    "/images/services/media/creator-influencer-strategy.jpg",
   ],
   [
     "/modern-website-design-on-laptop-mockup.jpg",

@@ -57,7 +57,7 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4">
               {[
-                { icon: Instagram, href: "https://instagram.com/legadoad", label: "Instagram", external: true },
+                { icon: Instagram, href: "https://www.instagram.com/legadoad/", label: "Instagram", external: true },
                 { icon: Facebook, href: "https://www.facebook.com/legadoad", label: "Facebook", external: true },
                 { icon: Mail, href: "/contact", label: "Email", external: false },
               ].map((social, i) => {

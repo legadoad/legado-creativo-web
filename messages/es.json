@@ -165,6 +165,17 @@
       }
     ]
   },
+  "instagramFeed": {
+    "label": "INSTAGRAM",
+    "title": "Síguenos en nuestro proceso creativo",
+    "highlightWord": "creativo",
+    "subtitle": "Trabajo reciente, detrás de cámaras e historias — directo desde nuestro feed",
+    "followButton": "Síguenos",
+    "viewOnInstagram": "Ver en Instagram",
+    "loading": "Cargando publicaciones...",
+    "previousPost": "Publicación anterior",
+    "nextPost": "Siguiente publicación"
+  },
   "logoMarquee": {
     "brands": [
       "MARCA",

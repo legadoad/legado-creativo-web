@@ -30,12 +30,12 @@ function YearTick({
   const opacity = useTransform(
     progress,
     [Math.max(0, start - 0.08), start],
-    [0.35, 1]
+    [0.35, 1],
   );
   const scale = useTransform(
     progress,
     [Math.max(0, start - 0.08), start],
-    [0.9, 1.1]
+    [0.9, 1.1],
   );
 
   return (
@@ -63,8 +63,8 @@ export default function AboutStory() {
         setDistance(
           Math.max(
             0,
-            trackRef.current.scrollWidth - viewportRef.current.clientWidth
-          )
+            trackRef.current.scrollWidth - viewportRef.current.clientWidth,
+          ),
         );
       }
     }
@@ -141,7 +141,7 @@ export default function AboutStory() {
             whileHover={{ scale: 1.03 }}
           >
             <Image
-              src="/modern-creative-agency-office-workspace-with-desig.jpg"
+              src="/WEB LEGADO\IMAGENES HOME\Since 2018\Since 2018.png"
               alt="Legado Creativo workspace"
               fill
               className="object-cover"
@@ -239,9 +239,7 @@ export default function AboutStory() {
                     <div className="w-14 h-14 rounded-full bg-secondary-lime border-2 border-accent flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-accent" />
                     </div>
-                    <div className="text-3xl font-bold text-accent">
-                      {year}
-                    </div>
+                    <div className="text-3xl font-bold text-accent">{year}</div>
                   </div>
                   <p className="text-foreground/70 text-lg leading-relaxed">
                     {t(`paragraphs.${i}`)}

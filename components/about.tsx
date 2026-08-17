@@ -87,7 +87,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/3] rounded-[4px] overflow-hidden border border-border">
               <img
-                src="/modern-creative-agency-office-workspace-with-desig.jpg"
+                src="/images/home/since-2018-opt2.jpg"
                 alt="Our workspace"
                 className="w-full h-full object-cover"
               />

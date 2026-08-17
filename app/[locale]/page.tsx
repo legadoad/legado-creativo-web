@@ -7,6 +7,7 @@ import Works from "@/components/works";
 import GalleryMarquee from "@/components/gallery-marquee";
 import About from "@/components/about";
 import ServicesShowcase from "@/components/services-showcase";
+import InstagramFeed from "@/components/instagram-feed";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 
@@ -34,6 +35,7 @@ export default function Home() {
         buttonTextColor="text-secondary-lime"
         buttonBg="bg-secondary-blue"
       />
+      <InstagramFeed />
       <Footer />
     </main>
   );
