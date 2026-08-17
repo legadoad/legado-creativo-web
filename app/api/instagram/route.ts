@@ -6,9 +6,12 @@ import { getInstagramFeed } from "@/lib/instagram";
 // explicitly so Vercel's CDN serves the same response to every visitor for
 // a full day instead of re-invoking this function (and hitting the
 // Instagram Graph API) on every page load.
+//
+// Next.js statically parses segment config exports, so `revalidate` must be
+// a literal — it can't reference a `const` defined elsewhere in the file.
 const ONE_DAY = 60 * 60 * 24;
 
-export const revalidate = ONE_DAY;
+export const revalidate = 86400; // ONE_DAY, kept literal for Next.js's static config parser
 
 export async function GET(request: NextRequest) {
   const limitParam = request.nextUrl.searchParams.get("limit");
