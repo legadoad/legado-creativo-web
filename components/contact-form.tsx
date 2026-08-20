@@ -357,7 +357,11 @@ export default function ContactForm() {
               onSuccess={(token) => setValue("turnstileToken", token, { shouldValidate: true })}
               onExpire={() => setValue("turnstileToken", "", { shouldValidate: true })}
               onError={() => setValue("turnstileToken", "", { shouldValidate: true })}
-              options={{ theme: "light" }}
+              // "interaction-only": stays fully invisible and reserves no
+              // space for most visitors — Cloudflare verifies them silently
+              // in the background. A visible checkbox/challenge only
+              // appears if the visitor is flagged as needing one.
+              options={{ theme: "light", appearance: "interaction-only" }}
             />
             {errors.turnstileToken && (
               <p className="mt-1.5 text-xs text-destructive">{t("errors.turnstile")}</p>
