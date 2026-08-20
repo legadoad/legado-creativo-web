@@ -698,7 +698,13 @@
     "submitting": "Sending..",
     "successTitle": "Message sent!",
     "successMessage": "Thanks for reaching out. We'll get back to you within 24 hours",
-    "sendAnother": "Send another message"
+    "sendAnother": "Send another message",
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "turnstile": "Please complete the verification",
+      "submitFailed": "Something went wrong. Please try again or email us directly."
+    }
   },
   "contactInfo": {
     "title": "Contact information",

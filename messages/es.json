@@ -723,7 +723,13 @@
     "submitting": "Enviando..",
     "successTitle": "¡Mensaje enviado!",
     "successMessage": "Gracias por escribirnos. Te responderemos dentro de 24 horas",
-    "sendAnother": "Enviar otro mensaje"
+    "sendAnother": "Enviar otro mensaje",
+    "errors": {
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Ingresa un correo electrónico válido",
+      "turnstile": "Completa la verificación",
+      "submitFailed": "Algo salió mal. Intenta de nuevo o escríbenos directamente."
+    }
   },
   "contactInfo": {
     "title": "Información de contacto",

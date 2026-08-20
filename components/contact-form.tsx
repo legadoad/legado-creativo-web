@@ -1,28 +1,89 @@
 "use client";
 
-import type React from "react";
-import { useState, useRef } from "react";
+import { useRef, useState, type FocusEvent } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Send, CheckCircle, Loader2 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Send, CheckCircle, Loader2, AlertCircle } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Turnstile } from "@marsidev/react-turnstile";
+import { contactFormSchema, type ContactFormValues } from "@/lib/contact-schema";
+
+// Public by design — Cloudflare's site keys are meant to be visible
+// client-side, only the secret key (verified server-side) is sensitive.
+// Unset until the key is added: the widget just doesn't render, and the
+// API route skips verification too (see lib/turnstile.ts), so the form
+// keeps working in the meantime instead of being blocked on it.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export default function ContactForm() {
   const t = useTranslations("contactForm");
+  const locale = useLocale() as "en" | "es";
   const creativeServices = t.raw("serviceOptions.creative") as string[];
   const mediaServices = t.raw("serviceOptions.media") as string[];
   const technologyServices = t.raw("serviceOptions.technology") as string[];
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-50px" });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      service: "",
+      message: "",
+      website: "",
+      // Satisfies validation when Turnstile isn't configured yet — the
+      // server applies the same graceful skip (see lib/turnstile.ts).
+      turnstileToken: TURNSTILE_SITE_KEY ? "" : "not-configured",
+      // Determines which language the confirmation email is sent in.
+      locale,
+    },
+  });
+
+  const onSubmit = async (values: ContactFormValues) => {
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        throw new Error("submit_failed");
+      }
+
+      setIsSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError(t("errors.submitFailed"));
+    }
+  };
+
+  // register()'s own onBlur (triggers validation) and the visual
+  // focus-glow's onBlur (clears it) would otherwise silently overwrite one
+  // another if both were spread onto the same element — this merges them.
+  const withFocusTracking = (field: "name" | "email" | "company" | "message") => {
+    const { onBlur, ...rest } = register(field);
+    return {
+      ...rest,
+      onFocus: () => setFocusedField(field),
+      onBlur: (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        onBlur(e);
+        setFocusedField(null);
+      },
+    };
   };
 
   if (isSubmitted) {
@@ -121,12 +182,27 @@ export default function ContactForm() {
       </motion.p>
 
       <motion.form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
         className="space-y-6"
         variants={formVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
+        {/* Honeypot — hidden from real visitors (off-screen, not display:none
+            so it still reads as "visible" to naive bots), any value here
+            marks the submission as spam. See lib/contact-schema.ts. */}
+        <div className="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
+          <label htmlFor="website">Website</label>
+          <input
+            type="text"
+            id="website"
+            tabIndex={-1}
+            autoComplete="off"
+            {...register("website")}
+          />
+        </div>
+
         <motion.div
           variants={fieldVariants}
           className="grid sm:grid-cols-2 gap-6"
@@ -150,13 +226,15 @@ export default function ContactForm() {
               <input
                 type="text"
                 id="name"
-                required
-                onFocus={() => setFocusedField("name")}
-                onBlur={() => setFocusedField(null)}
+                aria-invalid={!!errors.name}
                 className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
                 placeholder={t("namePlaceholder")}
+                {...withFocusTracking("name")}
               />
             </motion.div>
+            {errors.name && (
+              <p className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
+            )}
           </div>
           <div className="relative">
             <label
@@ -177,13 +255,19 @@ export default function ContactForm() {
               <input
                 type="email"
                 id="email"
-                required
-                onFocus={() => setFocusedField("email")}
-                onBlur={() => setFocusedField(null)}
+                aria-invalid={!!errors.email}
                 className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
                 placeholder={t("emailPlaceholder")}
+                {...withFocusTracking("email")}
               />
             </motion.div>
+            {errors.email && (
+              <p className="mt-1.5 text-xs text-destructive">
+                {errors.email.type === "invalid_string" || errors.email.type === "invalid_format"
+                  ? t("errors.invalidEmail")
+                  : t("errors.required")}
+              </p>
+            )}
           </div>
         </motion.div>
 
@@ -197,10 +281,9 @@ export default function ContactForm() {
           <input
             type="text"
             id="company"
-            onFocus={() => setFocusedField("company")}
-            onBlur={() => setFocusedField(null)}
             className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
             placeholder={t("companyPlaceholder")}
+            {...withFocusTracking("company")}
           />
         </motion.div>
 
@@ -213,8 +296,10 @@ export default function ContactForm() {
           </label>
           <select
             id="service"
-            required
+            aria-invalid={!!errors.service}
             className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground focus:border-accent focus:ring-1 focus:ring-accent outline-none transition appearance-none cursor-pointer"
+            defaultValue=""
+            {...register("service")}
           >
             <option value="">{t("serviceDefault")}</option>
             <optgroup label={t("serviceOptions.groups.creative")}>
@@ -240,6 +325,9 @@ export default function ContactForm() {
             </optgroup>
             <option value="other">{t("serviceOptions.other")}</option>
           </select>
+          {errors.service && (
+            <p className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
+          )}
         </motion.div>
 
         <motion.div variants={fieldVariants}>
@@ -252,13 +340,41 @@ export default function ContactForm() {
           <textarea
             id="message"
             rows={5}
-            required
-            onFocus={() => setFocusedField("message")}
-            onBlur={() => setFocusedField(null)}
+            aria-invalid={!!errors.message}
             className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition resize-none"
             placeholder={t("messagePlaceholder")}
+            {...withFocusTracking("message")}
           />
+          {errors.message && (
+            <p className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
+          )}
         </motion.div>
+
+        {TURNSTILE_SITE_KEY && (
+          <motion.div variants={fieldVariants}>
+            <Turnstile
+              siteKey={TURNSTILE_SITE_KEY}
+              onSuccess={(token) => setValue("turnstileToken", token, { shouldValidate: true })}
+              onExpire={() => setValue("turnstileToken", "", { shouldValidate: true })}
+              onError={() => setValue("turnstileToken", "", { shouldValidate: true })}
+              options={{ theme: "light" }}
+            />
+            {errors.turnstileToken && (
+              <p className="mt-1.5 text-xs text-destructive">{t("errors.turnstile")}</p>
+            )}
+          </motion.div>
+        )}
+
+        {submitError && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-2 rounded-[4px] border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+          >
+            <AlertCircle className="w-4 h-4 shrink-0" />
+            {submitError}
+          </motion.div>
+        )}
 
         <motion.div variants={fieldVariants}>
           <motion.button
