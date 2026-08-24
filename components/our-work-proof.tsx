@@ -11,6 +11,7 @@ import { ArrowUpRight, Lock } from "lucide-react";
 const CASES = [
   { img: "/portafolio/porterparts.webp", ratio: 1801 / 5228 },
   { img: "/portafolio/cjbservice.webp", ratio: 1801 / 6236 },
+  { img: "/portafolio/presenciaconsciente.webp", ratio: 2560 / 7041 },
 ];
 
 const SCREEN_HEIGHT = "clamp(220px, 24vw, 320px)";
@@ -45,7 +46,7 @@ export default function OurWorkProof() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {cases.map((c, i) => (
             <motion.article
               key={c.name}

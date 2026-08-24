@@ -23,7 +23,7 @@ export default function VideoBanner() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
 
   return (
-    <section ref={sectionRef} className="relative py-16 overflow-hidden">
+    <section ref={sectionRef} className="relative pt-32 md:pt-40 pb-16 overflow-hidden">
       {/* Background Blur Effects */}
       <div className="absolute top-1/4 -left-32 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 md:w-96 md:h-96 bg-accent/20 rounded-full blur-[120px] pointer-events-none" />

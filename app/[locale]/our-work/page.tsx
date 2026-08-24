@@ -2,7 +2,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { socialImages } from "@/lib/metadata";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import OurWorkHero from "@/components/our-work-hero";
 import OurWorkStats from "@/components/our-work-stats";
 import OurWorkBrands from "@/components/our-work-brands";
 import OurWorkJourney from "@/components/our-work-journey";
@@ -45,7 +44,6 @@ export default async function OurWorkPage({
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
-      <OurWorkHero />
       <VideoBanner />
 
       <OurWorkJourney />
