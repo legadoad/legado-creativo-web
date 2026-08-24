@@ -99,7 +99,7 @@
       "Contenido con intención: cada pieza responde a un objetivo claro",
       "Acompañamiento real en cada etapa del crecimiento de tu marca"
     ],
-    "foundedBadge": "La creatividad guía la dirección",
+    "foundedBadge": "La IA nos ayuda a avanzar más rápido. La creatividad guía la dirección",
     "learnMore": "Descubre cómo construir una marca que dure →",
     "valuesTitle": "Nuestros valores",
     "values": {
@@ -167,9 +167,9 @@
   },
   "instagramFeed": {
     "label": "INSTAGRAM",
-    "title": "Síguenos en nuestro proceso creativo",
-    "highlightWord": "creativo",
-    "subtitle": "Trabajo reciente, detrás de cámaras e historias — directo desde nuestro feed",
+    "title": "Síguenos en nuestro",
+    "highlightWord": "proceso creativo",
+    "subtitle": "Trabajo reciente, detrás de cámaras e historias. Directo desde nuestro feed!",
     "followButton": "Síguenos",
     "viewOnInstagram": "Ver en Instagram",
     "loading": "Cargando publicaciones...",
@@ -723,13 +723,7 @@
     "submitting": "Enviando..",
     "successTitle": "¡Mensaje enviado!",
     "successMessage": "Gracias por escribirnos. Te responderemos dentro de 24 horas",
-    "sendAnother": "Enviar otro mensaje",
-    "errors": {
-      "required": "Este campo es obligatorio",
-      "invalidEmail": "Ingresa un correo electrónico válido",
-      "turnstile": "Completa la verificación",
-      "submitFailed": "Algo salió mal. Intenta de nuevo o escríbenos directamente."
-    }
+    "sendAnother": "Enviar otro mensaje"
   },
   "contactInfo": {
     "title": "Información de contacto",

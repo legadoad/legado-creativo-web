@@ -99,7 +99,7 @@
       "Intentional content: every piece responds to a clear goal",
       "Real partnership at every stage of your brand's growth"
     ],
-    "foundedBadge": "Creativity guides the direction",
+    "foundedBadge": "AI helps us move faster. Creativity guides the direction",
     "learnMore": "Discover how to build a brand that lasts →"
   },
   "homeVideoShowcase": {
@@ -148,9 +148,9 @@
   },
   "instagramFeed": {
     "label": "INSTAGRAM",
-    "title": "Follow our creative journey",
-    "highlightWord": "journey",
-    "subtitle": "Fresh work, behind-the-scenes, and stories — straight from our feed",
+    "title": "Follow our",
+    "highlightWord": "creative journey",
+    "subtitle": "Fresh work, behind-the-scenes, and stories. Straight from our feed!",
     "followButton": "Follow us",
     "viewOnInstagram": "View on Instagram",
     "loading": "Loading posts...",
@@ -698,13 +698,7 @@
     "submitting": "Sending..",
     "successTitle": "Message sent!",
     "successMessage": "Thanks for reaching out. We'll get back to you within 24 hours",
-    "sendAnother": "Send another message",
-    "errors": {
-      "required": "This field is required",
-      "invalidEmail": "Please enter a valid email address",
-      "turnstile": "Please complete the verification",
-      "submitFailed": "Something went wrong. Please try again or email us directly."
-    }
+    "sendAnother": "Send another message"
   },
   "contactInfo": {
     "title": "Contact information",

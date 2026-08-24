@@ -111,7 +111,7 @@ export default function ContactInfo() {
                 target={social.href.startsWith("http") ? "_blank" : undefined}
                 rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={social.label}
-                className="w-12 h-12 bg-accent/10 rounded-[4px] flex items-center justify-center hover:bg-accent/20 transition"
+                className="w-12 h-12 bg-accent/10 rounded-[4px] flex items-center justify-center hover:bg-secondary-lime transition"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.6 + i * 0.1, type: "spring", stiffness: 200 }}

@@ -5,6 +5,9 @@ import { CheckCircle2 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { TypingAnimation } from "@/components/ui/typing-animation";
+import { Link } from "@/i18n/navigation";
+
+const MotionLink = motion.create(Link);
 
 export default function About() {
   const t = useTranslations("homeAbout");
@@ -122,7 +125,7 @@ export default function About() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
-                  className="flex items-center gap-4 text-foreground/80"
+                  className="flex items-center gap-4 text-foreground/60"
                 >
                   <span className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-accent" />
@@ -132,10 +135,11 @@ export default function About() {
               ))}
             </ul>
 
-            <motion.button
+            <MotionLink
+              href="/services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-full overflow-hidden cursor-pointer"
+              className="group relative inline-block px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-full overflow-hidden cursor-pointer"
             >
               <span className="relative z-10">{t("learnMore")}</span>
               <motion.div
@@ -144,7 +148,7 @@ export default function About() {
                 whileHover={{ y: 0 }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.button>
+            </MotionLink>
           </motion.div>
         </div>
       </div>
