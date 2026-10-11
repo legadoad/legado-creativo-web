@@ -88,6 +88,26 @@ export default function VideoBanner() {
               />
             </div>
 
+            {/* Scroll indicator */}
+            <motion.div
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
+            >
+              <motion.div
+                className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center pt-2"
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+              >
+                <motion.div
+                  className="w-1.5 h-3 bg-accent rounded-full"
+                  animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
+                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                />
+              </motion.div>
+            </motion.div>
+
             {/* Floating Text Overlay */}
             <div className="hidden sm:block absolute sm:bottom-8 sm:left-8">
               <motion.div

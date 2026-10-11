@@ -194,9 +194,9 @@
   },
   "aboutHero": {
     "badge": "OUR STORY",
-    "titleLine1": "The strategy behind",
-    "titleLine2": " your brand",
-    "subtitle": "We are Legado Creativo, a multicultural brand strategy agency for businesses ready to build something that lasts",
+    "titleLine1": "Who we are:",
+    "titleLine2": "Legado Creativo",
+    "subtitle": "We're a multicultural creative agency: we understand the Latino and American markets from the inside. We tell brand stories with strategy first, for clients ranging from retail and health to media and events",
     "stats": [
       { "value": "2 markets", "label": "Latino and American" },
       { "value": "Full service", "label": "From strategy to execution" },
@@ -316,12 +316,6 @@
     "title": "How can we help you build your brand?",
     "highlightWord": "brand?",
     "buttonText": "Connect with us"
-  },
-  "ourWorkHero": {
-    "badge": "OUR WORK",
-    "titleLine1": "Who we are: ",
-    "titleLine2": "Legado Creativo",
-    "subtitle": "We're a multicultural creative agency: we understand the Latino and American markets from the inside. We tell brand stories with strategy first, for clients ranging from retail and health to media and events"
   },
   "ourWorkStats": {
     "quote": "Strategy before aesthetics: no decision without purpose",

@@ -213,9 +213,9 @@
   },
   "aboutHero": {
     "badge": "NUESTRA HISTORIA",
-    "titleLine1": "La estrategia detrás",
-    "titleLine2": " de tu marca",
-    "subtitle": "Somos Legado Creativo, una agencia multicultural de estrategia de marca para negocios que quieren construir algo que dure",
+    "titleLine1": "Quiénes somos:",
+    "titleLine2": "Legado Creativo",
+    "subtitle": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos",
     "stats": [
       { "value": "2 mercados", "label": "Latino y americano" },
       {
@@ -341,12 +341,6 @@
     "title": "¿Cómo podemos ayudarte a construir tu marca?",
     "highlightWord": "marca?",
     "buttonText": "Conéctate con Nosotros"
-  },
-  "ourWorkHero": {
-    "badge": "NUESTRO TRABAJO",
-    "titleLine1": "Quiénes somos: ",
-    "titleLine2": "Legado Creativo",
-    "subtitle": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos"
   },
   "ourWorkStats": {
     "quote": "Estrategia antes que estética: ninguna decisión sin propósito",
