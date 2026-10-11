@@ -50,7 +50,12 @@
   --section-sand: oklch(86.6% 0.0139 78.25); /* #d8d2c9 */
 
   /* Heading/body dark text color, used across headings site-wide */
-  --heading: #3f3f46;
+  --heading: oklch(37.03% 0.0119 285.81); /* #3f3f46 */
+
+  /* Brand extras, also mirrored as hex in lib/brand-colors.ts for emails / OG image */
+  --brand-navy: oklch(22.97% 0.0741 263.9); /* #0a1a3f */
+  --brand-blue-deep: oklch(49% 0.216 264.23); /* #1d4fd8 */
+  --muted-soft: oklch(50.06% 0.025 259.18); /* #5b6472 */
 }
 
 .dark {
@@ -126,6 +131,9 @@
   --color-section-cream: var(--section-cream);
   --color-section-sand: var(--section-sand);
   --color-heading: var(--heading);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-blue-deep: var(--brand-blue-deep);
+  --color-muted-soft: var(--muted-soft);
   --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
   @keyframes blink-cursor {
   0%, 49% {

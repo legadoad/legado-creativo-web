@@ -12,16 +12,12 @@ import {
   Text,
 } from "@react-email/components";
 
-// Exact brand hex, converted from the oklch values in app/globals.css
-// (--secondary-lime / --secondary-blue / --secondary-magenta) — these are
-// the same pastel colors used on the site's CTA buttons and hero panels,
+import { BRAND } from "@/lib/brand-colors";
+
+// Hex mirror of the tokens in app/globals.css (see lib/brand-colors.ts) —
+// the pastel lime/blue/magenta used on the site's CTA buttons and hero panels,
 // not the vivid --accent blue used for things like nav underlines.
-const LIME = "#E0FEAE";
-const BLUE = "#7A95D8";
-const MAGENTA = "#EDB7FC";
-const HEADING = "#0a1a3f";
-const MUTED = "#5b6472";
-const BORDER = "#e5e7eb";
+const { lime: LIME, blue: BLUE, magenta: MAGENTA, navy: HEADING, mutedSoft: MUTED, border: BORDER } = BRAND;
 
 // Hosted image, not embedded — email clients are unreliable with inline/
 // base64 images, but reliably fetch a real HTTPS URL. Will 404 until
@@ -137,14 +133,14 @@ function Field({
 
 const styles: Record<string, React.CSSProperties> = {
   body: {
-    backgroundColor: "#f4f5f7",
+    backgroundColor: BRAND.card,
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     margin: 0,
     padding: "32px 16px",
   },
   container: {
-    backgroundColor: "#ffffff",
+    backgroundColor: BRAND.white,
     borderRadius: 8,
     overflow: "hidden",
     maxWidth: 560,
@@ -209,7 +205,7 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 0 8px",
   },
   messageBox: {
-    backgroundColor: "#f9fafb",
+    backgroundColor: BRAND.background,
     border: `1px solid ${BORDER}`,
     borderRadius: 6,
     padding: "14px 16px",

@@ -82,7 +82,7 @@ export default function VideoBanner() {
               <div
                 className="w-full h-full"
                 style={{
-                  backgroundImage: `linear-gradient(to right, hsl(var(--accent)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--accent)) 1px, transparent 1px)`,
+                  backgroundImage: `linear-gradient(to right, var(--accent) 1px, transparent 1px), linear-gradient(to bottom, var(--accent) 1px, transparent 1px)`,
                   backgroundSize: "60px 60px",
                 }}
               />
