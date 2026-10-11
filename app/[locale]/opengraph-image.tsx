@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { routing } from "@/i18n/routing";
+import { BRAND } from "@/lib/brand-colors";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -16,8 +17,8 @@ export function generateStaticParams() {
 // which is itself designed for a plain white background — reproducing that
 // here (rather than the lime/blue split) avoids the light half of the
 // wordmark blending into a same-toned background.
-const WORDMARK_DARK = "#1d4fd8";
-const WORDMARK_LIGHT = "#7a95d8";
+const WORDMARK_DARK = BRAND.blueDeep;
+const WORDMARK_LIGHT = BRAND.blue;
 
 export default function Image() {
   return new ImageResponse(
@@ -30,7 +31,7 @@ export default function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#ffffff",
+          background: BRAND.white,
         }}
       >
         <div style={{ display: "flex", alignItems: "baseline" }}>
@@ -71,7 +72,7 @@ export default function Image() {
             marginTop: 40,
             fontSize: 32,
             fontWeight: 600,
-            color: "#0a1a3f",
+            color: BRAND.navy,
             letterSpacing: 1,
           }}
         >

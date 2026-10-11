@@ -63,7 +63,7 @@ export default function Footer() {
               ].map((social, i) => {
                 const Icon = social.icon;
                 const className =
-                  "w-10 h-10 bg-card border border-border rounded-[4px] flex items-center justify-center text-foreground/60 hover:bg-accent/10 hover:border-accent/50 hover:text-accent transition";
+                  "w-10 h-10 bg-accent/10 border border-accent/50 rounded-[4px] flex items-center justify-center text-accent hover:bg-secondary-lime hover:border-secondary-lime hover:text-foreground transition";
 
                 if (social.external) {
                   return (

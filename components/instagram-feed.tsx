@@ -19,7 +19,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { strokes, type StrokeVariant } from "@/components/stroke-underline";
 import { cn } from "@/lib/utils";
 import type { InstagramPost } from "@/lib/instagram";
 
@@ -31,7 +30,6 @@ interface InstagramFeedProps {
   bg?: string;
   /** How many posts to request/display */
   postCount?: number;
-  strokeVariant?: StrokeVariant;
   className?: string;
 }
 
@@ -40,7 +38,6 @@ interface InstagramFeedProps {
 export default function InstagramFeed({
   bg = "bg-background",
   postCount = 8,
-  strokeVariant = "wide",
   className,
 }: InstagramFeedProps) {
   const t = useTranslations("instagramFeed");
@@ -111,7 +108,6 @@ export default function InstagramFeed({
   // Nothing to show and nothing loading — hide gracefully instead of a broken/empty section.
   if (!loading && posts.length === 0) return null;
 
-  const Stroke = strokes[strokeVariant];
   const title = t("title");
   const highlightWord = t("highlightWord");
   const parts = highlightWord ? title.split(highlightWord) : [title];
@@ -135,17 +131,25 @@ export default function InstagramFeed({
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <p className="inline-flex items-center gap-2 text-sm font-medium text-foreground/50 tracking-wide uppercase mb-3">
+            <p className="inline-flex items-center gap-2 text-sm font-medium text-accent tracking-wide uppercase mb-3">
               <Instagram size={16} strokeWidth={2} />
-              {username ? `@${username}` : t("label")}
+              {username ? (
+                <a
+                  href="https://www.instagram.com/legadoad/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  @{username}
+                </a>
+              ) : (
+                t("label")
+              )}
             </p>
             <h2 className="text-fluid-h2 font-bold text-heading tracking-tight max-w-2xl">
               {parts[0]?.trimEnd()}{" "}
               {highlightWord && (
-                <span className="relative inline-block">
-                  {highlightWord}
-                  {isInView && <Stroke />}
-                </span>
+                <span className="text-accent">{highlightWord}</span>
               )}
               {parts[1] && <>{" "}{parts[1].trimStart()}</>}
             </h2>
@@ -238,10 +242,6 @@ export default function InstagramFeed({
                     fill
                     sizes="(max-width: 768px) 40vw, 256px"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    // Instagram's media URLs come from rotating CDN subdomains we
-                    // can't whitelist in next.config's remotePatterns, so this one
-                    // image opts out of Next's optimizer instead of the whole site.
-                    unoptimized
                   />
 
                   {post.mediaType === "VIDEO" && (
@@ -323,7 +323,6 @@ export default function InstagramFeed({
                         fill
                         sizes="(max-width: 768px) 100vw, 58vw"
                         className="object-cover"
-                        unoptimized
                       />
                     )}
                   </motion.div>

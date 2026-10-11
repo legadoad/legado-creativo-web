@@ -99,7 +99,7 @@
       "Contenido con intención: cada pieza responde a un objetivo claro",
       "Acompañamiento real en cada etapa del crecimiento de tu marca"
     ],
-    "foundedBadge": "La creatividad guía la dirección",
+    "foundedBadge": "La IA nos ayuda a avanzar más rápido. La creatividad guía la dirección",
     "learnMore": "Descubre cómo construir una marca que dure →",
     "valuesTitle": "Nuestros valores",
     "values": {
@@ -167,9 +167,9 @@
   },
   "instagramFeed": {
     "label": "INSTAGRAM",
-    "title": "Síguenos en nuestro proceso creativo",
-    "highlightWord": "creativo",
-    "subtitle": "Trabajo reciente, detrás de cámaras e historias — directo desde nuestro feed",
+    "title": "Síguenos en nuestro",
+    "highlightWord": "proceso creativo",
+    "subtitle": "Trabajo reciente, detrás de cámaras e historias. Directo desde nuestro feed!",
     "followButton": "Síguenos",
     "viewOnInstagram": "Ver en Instagram",
     "loading": "Cargando publicaciones...",
@@ -213,9 +213,9 @@
   },
   "aboutHero": {
     "badge": "NUESTRA HISTORIA",
-    "titleLine1": "La estrategia detrás",
-    "titleLine2": " de tu marca",
-    "subtitle": "Somos Legado Creativo, una agencia multicultural de estrategia de marca para negocios que quieren construir algo que dure",
+    "titleLine1": "Quiénes somos:",
+    "titleLine2": "Legado Creativo",
+    "subtitle": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos",
     "stats": [
       { "value": "2 mercados", "label": "Latino y americano" },
       {
@@ -240,6 +240,11 @@
     "founded": "2018",
     "foundedLabel": "Fundada en Boston",
     "teamCount": "8+ miembros del equipo"
+  },
+  "aboutWhoWeAre": {
+    "badge": "QUIÉNES SOMOS",
+    "title": "Legado Creativo",
+    "subtitle": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos"
   },
   "aboutTimeline": {
     "title": "Lo que nos",
@@ -342,12 +347,6 @@
     "highlightWord": "marca?",
     "buttonText": "Conéctate con Nosotros"
   },
-  "ourWorkHero": {
-    "badge": "NUESTRO TRABAJO",
-    "titleLine1": "Quiénes somos: ",
-    "titleLine2": "Legado Creativo",
-    "subtitle": "Somos una agencia creativa multicultural: entendemos el mercado latino y el estadounidense desde adentro. Contamos historias de marca con estrategia primero, para clientes que van desde retail y salud hasta medios y eventos"
-  },
   "ourWorkStats": {
     "quote": "Estrategia antes que estética: ninguna decisión sin propósito",
     "stats": [
@@ -403,6 +402,12 @@
         "url": "cjbservice.com",
         "result": "Presencia corporativa escalable, con gestión de contenido sin esfuerzo.",
         "tags": ["SEO técnico", "Panel sin código", "Presencia corporativa"]
+      },
+      {
+        "name": "Presencia Consciente",
+        "url": "presenciaconsciente.com",
+        "result": "Un sitio WordPress a medida, liviano y fácil de actualizar por el propio equipo.",
+        "tags": ["WordPress a medida", "Optimización de velocidad", "Gestión de contenido"]
       }
     ]
   },
@@ -723,13 +728,7 @@
     "submitting": "Enviando..",
     "successTitle": "¡Mensaje enviado!",
     "successMessage": "Gracias por escribirnos. Te responderemos dentro de 24 horas",
-    "sendAnother": "Enviar otro mensaje",
-    "errors": {
-      "required": "Este campo es obligatorio",
-      "invalidEmail": "Ingresa un correo electrónico válido",
-      "turnstile": "Completa la verificación",
-      "submitFailed": "Algo salió mal. Intenta de nuevo o escríbenos directamente."
-    }
+    "sendAnother": "Enviar otro mensaje"
   },
   "contactInfo": {
     "title": "Información de contacto",

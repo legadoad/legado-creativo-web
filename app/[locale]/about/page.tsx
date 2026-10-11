@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AboutPageHero from "@/components/about-page-hero";
 import AboutStory from "@/components/about-story";
+import AboutWhoWeAre from "@/components/about-who-we-are";
 import AboutTimeline from "@/components/about-timeline";
 import AboutValues from "@/components/about-values";
 import CTA from "@/components/cta";
@@ -45,6 +46,7 @@ export default async function AboutPage({
       <Header />
       <AboutPageHero />
       <AboutStory />
+      <AboutWhoWeAre />
       <AboutTimeline />
       <AboutValues />
       <CTA

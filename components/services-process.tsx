@@ -25,6 +25,12 @@ export default function ServicesProcess() {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
+  const { scrollYProgress: timelineProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end center"],
+  });
+  const lineScale = useTransform(timelineProgress, [0, 1], [0, 1]);
+
   useLayoutEffect(() => {
     const updateLineBounds = () => {
       const container = timelineRef.current
@@ -90,7 +96,7 @@ export default function ServicesProcess() {
             {t("sectionLabel")}
           </motion.p>
           <h2 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
-            {t("title")} <span className="text-secondary-blue">{t("titleAccent")}</span>
+            {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             {t("subtitle")}
@@ -107,17 +113,11 @@ export default function ServicesProcess() {
             />
             <motion.div
               className="absolute left-6 w-0.5 bg-primary origin-top"
-              style={{ top: lineBounds.top, height: lineBounds.height }}
-              initial={{ scaleY: 0 }}
-              animate={
-                isInView
-                  ? {
-                      scaleY:
-                        activeStep === null ? 0 : activeStep / (STEP_COUNT - 1),
-                    }
-                  : {}
-              }
-              transition={{ duration: 0.7 }}
+              style={{
+                top: lineBounds.top,
+                height: lineBounds.height,
+                scaleY: lineScale,
+              }}
             />
 
             <div className="space-y-8">
@@ -131,6 +131,8 @@ export default function ServicesProcess() {
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5, delay: index * 0.15 }}
+                    viewport={{ margin: "-45% 0px -45% 0px", once: false }}
+                    onViewportEnter={() => setActiveStep(index)}
                     className="relative pl-16 cursor-pointer"
                     onClick={() => setActiveStep(index)}
                   >

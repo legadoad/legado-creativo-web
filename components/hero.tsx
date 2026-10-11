@@ -29,9 +29,19 @@ export default function Hero() {
       >
         <source 
         // src="/videos/Banner.mp4" 
-        src="/videos/Banner compress.mp4" 
+        src="/videos/Banner.mp4" 
         type="video/mp4" />
       </video>
+      {/* Logo video overlay */}
+      {/* <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 z-[5] w-full h-full object-contain pointer-events-none"
+      >
+        <source src="/videos/logotipo-banner.mp4" type="video/mp4" />
+      </video> */}
       {/* Content */}
       <motion.div
         style={{ y: textY, opacity }}

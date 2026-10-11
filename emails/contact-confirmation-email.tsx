@@ -12,14 +12,9 @@ import {
   Text,
 } from "@react-email/components";
 
-// Same exact brand hex as emails/contact-email.tsx — keep both in sync by
-// hand if the palette in app/globals.css ever changes.
-const LIME = "#E0FEAE";
-const BLUE = "#7A95D8";
-const MAGENTA = "#EDB7FC";
-const HEADING = "#0a1a3f";
-const MUTED = "#5b6472";
-const BORDER = "#e5e7eb";
+import { BRAND } from "@/lib/brand-colors";
+
+const { lime: LIME, blue: BLUE, magenta: MAGENTA, navy: HEADING, mutedSoft: MUTED, border: BORDER } = BRAND;
 
 // Hosted image, not embedded — email clients are unreliable with inline/
 // base64 images, but reliably fetch a real HTTPS URL. Will 404 until
@@ -106,14 +101,14 @@ export default function ContactConfirmationEmail({
 
 const styles: Record<string, React.CSSProperties> = {
   body: {
-    backgroundColor: "#f4f5f7",
+    backgroundColor: BRAND.card,
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     margin: 0,
     padding: "32px 16px",
   },
   container: {
-    backgroundColor: "#ffffff",
+    backgroundColor: BRAND.white,
     borderRadius: 8,
     overflow: "hidden",
     maxWidth: 560,

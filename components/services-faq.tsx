@@ -55,9 +55,9 @@ export default function ServicesFaq() {
               >
                 <motion.button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  whileHover={{ backgroundColor: "hsl(var(--accent) / 0.05)" }}
+                  whileHover={{ backgroundColor: "color-mix(in oklch, var(--accent) 5%, transparent)" }}
                   animate={{
-                    backgroundColor: isOpen ? "hsl(var(--accent) / 0.05)" : "hsl(var(--card))",
+                    backgroundColor: isOpen ? "color-mix(in oklch, var(--accent) 5%, transparent)" : "var(--card)",
                   }}
                   className="w-full p-6 flex items-center justify-between text-left transition-colors cursor-pointer"
                 >

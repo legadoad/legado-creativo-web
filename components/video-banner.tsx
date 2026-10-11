@@ -23,7 +23,7 @@ export default function VideoBanner() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
 
   return (
-    <section ref={sectionRef} className="relative py-16 overflow-hidden">
+    <section ref={sectionRef} className="relative pt-32 md:pt-40 pb-16 overflow-hidden">
       {/* Background Blur Effects */}
       <div className="absolute top-1/4 -left-32 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 md:w-96 md:h-96 bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
@@ -82,11 +82,31 @@ export default function VideoBanner() {
               <div
                 className="w-full h-full"
                 style={{
-                  backgroundImage: `linear-gradient(to right, hsl(var(--accent)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--accent)) 1px, transparent 1px)`,
+                  backgroundImage: `linear-gradient(to right, var(--accent) 1px, transparent 1px), linear-gradient(to bottom, var(--accent) 1px, transparent 1px)`,
                   backgroundSize: "60px 60px",
                 }}
               />
             </div>
+
+            {/* Scroll indicator */}
+            <motion.div
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
+            >
+              <motion.div
+                className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center pt-2"
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+              >
+                <motion.div
+                  className="w-1.5 h-3 bg-accent rounded-full"
+                  animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
+                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                />
+              </motion.div>
+            </motion.div>
 
             {/* Floating Text Overlay */}
             <div className="hidden sm:block absolute sm:bottom-8 sm:left-8">

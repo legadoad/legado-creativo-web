@@ -1,12 +1,10 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import {
   AnimatePresence,
   motion,
-  useInView,
   useMotionTemplate,
   useMotionValueEvent,
   useScroll,
@@ -17,7 +15,7 @@ import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const VIDEO_SOURCES = [
-  "/videos/Banner compress.mp4",
+  "/videos/Banner.mp4",
   "/videos/Legado Banner Web 1.mp4",
   "/videos/Legado Banner Web 2.mp4",
 ];
@@ -32,7 +30,6 @@ interface PanelProps {
   clipPath: MotionValue<string>;
   badgeBg: string;
   badgeText: string;
-  shouldLoadVideos: boolean;
 }
 
 function VideoPanel({
@@ -42,42 +39,37 @@ function VideoPanel({
   clipPath,
   badgeBg,
   badgeText,
-  shouldLoadVideos,
 }: PanelProps) {
   return (
     <div className={`relative h-full overflow-hidden ${bg}`}>
       {/* Video layers stay mounted and playing; only opacity crossfades.
-          Keeps fast scrolling smooth — no remount, no reload flicker.
-          Nothing downloads until the section scrolls near the viewport
-          (see shouldLoadVideos below) — until then the panel's own
-          background color shows through, so it never looks broken. */}
+          Keeps fast scrolling smooth — no remount, no reload flicker. */}
       <motion.div style={{ clipPath }} className="absolute inset-0">
-        {shouldLoadVideos &&
-          VIDEO_SOURCES.map((src, i) => (
-            <motion.div
-              key={src}
-              animate={{ opacity: i === videoIndex ? 1 : 0 }}
-              transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="absolute inset-0"
+        {VIDEO_SOURCES.map((src, i) => (
+          <motion.div
+            key={src}
+            animate={{ opacity: i === videoIndex ? 1 : 0 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="h-full w-full object-cover"
             >
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                className="h-full w-full object-cover"
-              >
-                <source src={src} type="video/mp4" />
-              </video>
-            </motion.div>
-          ))}
+              <source src={src} type="video/mp4" />
+            </video>
+          </motion.div>
+        ))}
         {/* subtle tint so the frosted label and centered logo always read */}
         <div className="absolute inset-0 bg-black/15" />
       </motion.div>
 
-      {/* Service label — sits low so the centered logo owns the middle */}
-      <div className="pointer-events-none absolute bottom-[14%] left-1/2 -translate-x-1/2">
+      {/* Service label — sits low, away from the centered CTA */}
+      <div className="pointer-events-none absolute bottom-[6%] left-1/2 -translate-x-1/2">
         <AnimatePresence mode="wait">
           <motion.div
             key={label}
@@ -85,10 +77,10 @@ function VideoPanel({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.45 }}
-            className={`whitespace-nowrap rounded-full px-8 py-4 backdrop-blur-xl ${badgeBg}`}
+            className={`whitespace-nowrap rounded-full px-6 py-3 backdrop-blur-xl ${badgeBg}`}
           >
             <span
-              className={`block text-2xl font-light tracking-tight sm:text-3xl md:text-4xl ${badgeText}`}
+              className={`block text-lg font-light tracking-tight sm:text-xl md:text-2xl ${badgeText}`}
             >
               {label}
             </span>
@@ -108,14 +100,6 @@ export default function ServicesShowcase() {
   const labels = services.map((item) => item.name);
   const offset = Math.floor(labels.length / 2);
 
-  // Don't spend the ~13MB of video on visitors who never scroll this far —
-  // start loading once the section is within one viewport height of view,
-  // not only once it's actually on screen.
-  const shouldLoadVideos = useInView(sectionRef, {
-    once: true,
-    margin: "0px 0px 100% 0px",
-  });
-
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
@@ -132,7 +116,6 @@ export default function ServicesShowcase() {
   const inset = useTransform(scrollYProgress, [0, REVEAL_END], [100, 0]);
   const leftClip = useMotionTemplate`inset(0% 0% 0% ${inset}%)`;
   const rightClip = useMotionTemplate`inset(0% ${inset}% 0% 0%)`;
-  const logoScale = useTransform(scrollYProgress, [0, REVEAL_END], [0.88, 1]);
 
   const rightIndex = (index + offset) % labels.length;
 
@@ -147,14 +130,12 @@ export default function ServicesShowcase() {
             clipPath={leftClip}
             badgeBg="bg-white/55"
             badgeText="text-foreground"
-            shouldLoadVideos={shouldLoadVideos}
           />
           <VideoPanel
             bg="bg-secondary-blue"
             label={labels[rightIndex]}
             videoIndex={rightIndex % VIDEO_SOURCES.length}
             clipPath={rightClip}
-            shouldLoadVideos={shouldLoadVideos}
             badgeBg="bg-black/45"
             badgeText="text-white"
           />
@@ -162,34 +143,6 @@ export default function ServicesShowcase() {
 
         {/* Centred stack: split duotone logo + CTA, straddling the divide */}
         <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center gap-10">
-          <motion.div
-            style={{ scale: logoScale }}
-            className="relative hidden h-[150px] w-[420px] md:block"
-          >
-            {/* Left half reads dark against the lime panel… */}
-            <Image
-              src="/Logos/LEGADO_Logotipo-06.png"
-              alt="Legado Creativo"
-              fill
-              priority={false}
-              className="object-contain drop-shadow-lg"
-              style={{ clipPath: "inset(0 50% 0 0)", filter: "brightness(0)" }}
-            />
-            {/* …right half reads light against the blue panel. */}
-            <Image
-              src="/Logos/LEGADO_Logotipo-06.png"
-              alt=""
-              aria-hidden
-              fill
-              priority={false}
-              className="object-contain drop-shadow-lg"
-              style={{
-                clipPath: "inset(0 0 0 50%)",
-                filter: "brightness(0) invert(1)",
-              }}
-            />
-          </motion.div>
-
           <Link
             href="/services"
             className="group pointer-events-auto inline-flex items-center rounded-full bg-gradient-to-r from-accent to-secondary-blue p-1 shadow-2xl transition-transform duration-200 hover:scale-105"
