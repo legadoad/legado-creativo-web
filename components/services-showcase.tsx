@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   AnimatePresence,
@@ -16,7 +15,7 @@ import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const VIDEO_SOURCES = [
-  "/videos/Banner compress.mp4",
+  "/videos/Banner.mp4",
   "/videos/Legado Banner Web 1.mp4",
   "/videos/Legado Banner Web 2.mp4",
 ];
@@ -69,8 +68,8 @@ function VideoPanel({
         <div className="absolute inset-0 bg-black/15" />
       </motion.div>
 
-      {/* Service label — sits low so the centered logo owns the middle */}
-      <div className="pointer-events-none absolute bottom-[14%] left-1/2 -translate-x-1/2">
+      {/* Service label — sits low, away from the centered CTA */}
+      <div className="pointer-events-none absolute bottom-[6%] left-1/2 -translate-x-1/2">
         <AnimatePresence mode="wait">
           <motion.div
             key={label}
@@ -117,7 +116,6 @@ export default function ServicesShowcase() {
   const inset = useTransform(scrollYProgress, [0, REVEAL_END], [100, 0]);
   const leftClip = useMotionTemplate`inset(0% 0% 0% ${inset}%)`;
   const rightClip = useMotionTemplate`inset(0% ${inset}% 0% 0%)`;
-  const logoScale = useTransform(scrollYProgress, [0, REVEAL_END], [0.88, 1]);
 
   const rightIndex = (index + offset) % labels.length;
 
@@ -145,34 +143,6 @@ export default function ServicesShowcase() {
 
         {/* Centred stack: split duotone logo + CTA, straddling the divide */}
         <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center gap-10">
-          <motion.div
-            style={{ scale: logoScale }}
-            className="relative hidden h-[150px] w-[420px] md:block"
-          >
-            {/* Left half reads dark against the lime panel… */}
-            <Image
-              src="/Logos/LEGADO_Logotipo-06.png"
-              alt="Legado Creativo"
-              fill
-              priority={false}
-              className="object-contain drop-shadow-lg"
-              style={{ clipPath: "inset(0 50% 0 0)", filter: "brightness(0)" }}
-            />
-            {/* …right half reads light against the blue panel. */}
-            <Image
-              src="/Logos/LEGADO_Logotipo-06.png"
-              alt=""
-              aria-hidden
-              fill
-              priority={false}
-              className="object-contain drop-shadow-lg"
-              style={{
-                clipPath: "inset(0 0 0 50%)",
-                filter: "brightness(0) invert(1)",
-              }}
-            />
-          </motion.div>
-
           <Link
             href="/services"
             className="group pointer-events-auto inline-flex items-center rounded-full bg-gradient-to-r from-accent to-secondary-blue p-1 shadow-2xl transition-transform duration-200 hover:scale-105"
