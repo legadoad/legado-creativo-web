@@ -133,7 +133,18 @@ export default function InstagramFeed({
           >
             <p className="inline-flex items-center gap-2 text-sm font-medium text-accent tracking-wide uppercase mb-3">
               <Instagram size={16} strokeWidth={2} />
-              {username ? `@${username}` : t("label")}
+              {username ? (
+                <a
+                  href="https://www.instagram.com/legadoad/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  @{username}
+                </a>
+              ) : (
+                t("label")
+              )}
             </p>
             <h2 className="text-fluid-h2 font-bold text-heading tracking-tight max-w-2xl">
               {parts[0]?.trimEnd()}{" "}
