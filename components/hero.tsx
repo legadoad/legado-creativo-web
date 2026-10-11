@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import VideoPauseToggle from "@/components/video-pause-toggle";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,13 +26,13 @@ export default function Hero() {
         muted
         loop
         playsInline
+        aria-hidden="true"
+        disablePictureInPicture
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source 
-        // src="/videos/Banner.mp4" 
-        src="/videos/Banner.mp4" 
-        type="video/mp4" />
+        <source src="/videos/Banner.mp4" type="video/mp4" />
       </video>
+      <VideoPauseToggle className="absolute bottom-8 left-6 z-20" />
       {/* Logo video overlay */}
       {/* <video
         autoPlay

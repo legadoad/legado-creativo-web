@@ -8,6 +8,7 @@ const STEP_COUNT = 4;
 
 export default function ServicesProcess() {
   const t = useTranslations("servicesProcess");
+  const tA = useTranslations("a11y");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
   const [activeStep, setActiveStep] = useState<number | null>(null);
@@ -161,7 +162,7 @@ export default function ServicesProcess() {
                       }`}
                     >
                       <h3
-                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue" : "text-heading"}`}
+                        className={`font-sans text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-secondary-blue-ink" : "text-heading"}`}
                       >
                         {t(`steps.${index}.title`)}
                       </h3>
@@ -193,7 +194,7 @@ export default function ServicesProcess() {
               />
 
               <div className="relative z-10">
-                <span className="text-4xl font-bold text-secondary-blue leading-none">
+                <span className="text-4xl font-bold text-secondary-blue-ink leading-none">
                   {String(displayStep + 1).padStart(2, "0")}
                 </span>
 
@@ -216,21 +217,26 @@ export default function ServicesProcess() {
                   {t(`steps.${displayStep}.details`)}
                 </motion.p>
 
-                {/* Progress dots */}
-                <div className="flex gap-2">
+                {/* Progress dots — 24px tap target around the visible bar (WCAG 2.5.8) */}
+                <div className="flex gap-1">
                   {Array.from({ length: STEP_COUNT }).map((_, i) => (
-                    <motion.button
+                    <button
                       key={i}
+                      type="button"
+                      aria-label={tA("goToStep", { number: i + 1 })}
+                      aria-current={i === displayStep ? "step" : undefined}
                       onClick={() => setActiveStep(i)}
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                      animate={{ width: i === displayStep ? 32 : 8 }}
-                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                        i === displayStep
-                          ? "bg-secondary-lime"
-                          : "bg-foreground/20"
-                      }`}
-                    />
+                      className="group flex h-6 items-center justify-center px-1 cursor-pointer"
+                    >
+                      <motion.span
+                        animate={{ width: i === displayStep ? 32 : 8 }}
+                        className={`block h-2 rounded-full transition-all duration-300 group-hover:scale-110 ${
+                          i === displayStep
+                            ? "bg-secondary-blue-ink"
+                            : "bg-foreground/30"
+                        }`}
+                      />
+                    </button>
                   ))}
                 </div>
               </div>

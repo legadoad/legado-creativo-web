@@ -28,7 +28,13 @@ export default function LogoMarquee() {
       <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-card/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-card/80 to-transparent z-10 pointer-events-none" />
 
-      <motion.div style={{ skewX }} className="flex animate-marquee whitespace-nowrap">
+      <ul className="sr-only">
+        {brands.map((brand) => (
+          <li key={brand}>{brand}</li>
+        ))}
+      </ul>
+
+      <motion.div style={{ skewX }} aria-hidden="true" className="flex animate-marquee whitespace-nowrap">
         {[...brands, ...brands, ...brands].map((brand, index) => (
           <motion.div key={index} className="flex items-center mx-12" whileHover={{ scale: 1.1 }}>
             <motion.span

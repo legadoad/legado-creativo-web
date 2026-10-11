@@ -50,6 +50,7 @@ function YearTick({
 
 export default function AboutStory() {
   const t = useTranslations("aboutStory");
+  const tA = useTranslations("a11y");
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -142,7 +143,7 @@ export default function AboutStory() {
           >
             <Image
               src="/images/home/since-2018.png"
-              alt="Legado Creativo workspace"
+              alt={tA("aboutIdeaAlt")}
               fill
               className="object-cover"
             />
@@ -202,7 +203,7 @@ export default function AboutStory() {
             </h2>
             <motion.div
               style={{ opacity: scrollHintOpacity }}
-              className="flex items-center gap-2 text-foreground/50 text-sm font-medium"
+              className="flex items-center gap-2 text-foreground/60 text-sm font-medium"
             >
               <motion.span
                 animate={{ x: [0, 8, 0] }}

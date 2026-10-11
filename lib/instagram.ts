@@ -5,6 +5,8 @@
 // what the "content management" Meta app template issues tokens for — no Facebook
 // Page/IG Business Account ID needed, just the Instagram user access token.
 
+import { getInstagramAccessToken } from "@/lib/instagram-token";
+
 export type InstagramMediaType = "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
 
 export interface InstagramPost {
@@ -133,7 +135,8 @@ function fallbackFeed(limit: number): InstagramFeed {
 }
 
 export async function getInstagramFeed(limit = 8): Promise<InstagramFeed> {
-  const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
+  // Env var, or the auto-renewed copy in Edge Config (see lib/instagram-token.ts).
+  const accessToken = await getInstagramAccessToken();
 
   if (!accessToken) {
     return fallbackFeed(limit);

@@ -59,7 +59,7 @@
     "work": "Our Work",
     "contact": "Contact",
     "connect": "Connect",
-    "copyright": "© 2025 Legado Creativo. All rights reserved",
+    "copyright": "© 2026 Legado Creativo. All rights reserved",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
     "poweredBy": "Designed by Legado Creativo"
@@ -701,6 +701,13 @@
     "messagePlaceholder": "Tell us about your project, goals, timeline..",
     "submit": "Send message",
     "submitting": "Sending..",
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "turnstile": "Please complete the security check to send your message",
+      "submitFailed": "We couldn't send your message. Please try again or email us directly"
+    },
+    "consent": "By sending this message you agree to our <terms>Terms of Service</terms> and acknowledge our <privacy>Privacy Policy</privacy>. We only use your details to respond to your inquiry",
     "successTitle": "Message sent!",
     "successMessage": "Thanks for reaching out. We'll get back to you within 24 hours",
     "sendAnother": "Send another message"
@@ -719,118 +726,487 @@
   "privacyPolicy": {
     "badge": "Legal",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: July 30, 2026",
+    "tocLabel": "Contents",
+    "lastUpdated": "Last updated: {effectiveDate}",
     "intro": [
-      "Legado Creativo (\"Legado Creativo,\" \"we,\" \"us,\" or \"our\") is a creative and brand strategy studio based in the United States that works with clients and collaborators around the world. This Privacy Policy explains what information we collect, how we use it, and the choices you have",
-      "By using our website or contacting us, you agree to the practices described in this policy. Because we work internationally, we aim to honor the privacy rights available to you under the laws of your country or region, including the laws of the United States, the European Union, the United Kingdom, and other jurisdictions where applicable"
+      "{legalName} (\"Legado Creativo,\" \"we,\" \"us,\" or \"our\") is a creative and brand strategy studio based in Boston, Massachusetts, in the United States. This Privacy Policy explains how we collect, use, share, and protect personal information when you visit {website} (the \"Site\"), contact us through our contact form, email, phone, or social media, receive our communications, or work with us as a client or collaborator (together, the \"Service\").",
+      "By using the Site, you acknowledge this Privacy Policy. If you do not agree with it, please do not use the Site or send us personal information. Residents of certain U.S. states, and visitors from outside the United States, will find additional information in the sections \"State privacy rights (United States)\" and \"Notice to visitors outside the United States.\""
     ],
     "sections": [
       {
-        "heading": "Who we are",
-        "body": [
-          "Legado Creativo is the data controller responsible for your personal information. If you have any questions about this policy or how your data is handled, you can reach us at vickyurbaneja@gmail.com"
+        "heading": "The short version",
+        "blocks": [
+          {
+            "p": "This summary is for convenience. The full policy below controls."
+          },
+          {
+            "list": [
+              "**What we collect:** the details you send through our contact form (name, email, company, service of interest, and your message) and basic technical data about your visit.",
+              "**Why:** to answer your inquiry, deliver our services, keep the Site secure, and understand how the Site is used.",
+              "**Who we share it with:** only service providers that help us run the Site and our business (such as hosting, email delivery, and bot protection), professional advisors, and authorities when the law requires it.",
+              "**What we do not do:** we do not sell your personal information, we do not share it for cross-context behavioral advertising, and we do not use advertising cookies or tracking pixels on the Site.",
+              "**Your control:** you can ask us to access, correct, or delete your information, or opt out of marketing emails, at any time by writing to {email}."
+            ]
+          }
         ]
       },
       {
-        "heading": "Information we collect",
-        "body": [
-          "We only collect information that helps us respond to you and deliver our services. This includes:"
-        ],
-        "list": [
-          "Information you provide directly, such as your name, email address, phone number, company name, and the details of any message or project inquiry you send us through our contact form or by email",
-          "Information collected automatically when you visit our website, such as your IP address, browser type, device information, pages viewed, and general location, gathered through cookies and similar technologies",
-          "Information related to a working relationship, such as billing details, project files, and communications, when you become a client or collaborator"
+        "heading": "Personal information we collect",
+        "blocks": [
+          {
+            "h": "Information you provide to us"
+          },
+          {
+            "p": "Personal information you may provide through the Site or otherwise includes:"
+          },
+          {
+            "list": [
+              "**Contact data**, such as your name, email address, and company name, and, if you choose to share them, your phone number, job title, and mailing address.",
+              "**Communications data**, such as the service you are interested in, the content of your message (for example, project goals, timelines, and budget), and our correspondence with you by form, email, phone, or social media.",
+              "**Client engagement data**, if you become a client or collaborator: billing and mailing addresses, project briefs, brand assets and files you share with us, approvals and feedback, and invoicing and transaction records. Payment card and bank details are collected by our payment providers, not through the Site.",
+              "**Marketing data**, such as your preferences for receiving communications from us."
+            ]
+          },
+          {
+            "p": "Our contact form asks only for your name, email address, company (optional), the service you are interested in, and your message. **Please do not include sensitive information** in the form or in your emails to us, such as Social Security or other government ID numbers, financial account or payment card numbers, health information, or passwords. We do not need it to respond to your inquiry."
+          },
+          {
+            "h": "Information collected automatically"
+          },
+          {
+            "p": "When you visit the Site, we and our service providers automatically log certain information about your device and your interaction with the Site, such as:"
+          },
+          {
+            "list": [
+              "**Device data**, such as your IP address, browser type and version, operating system, device type, screen size, language setting, and approximate location (city, region, or country) inferred from your IP address.",
+              "**Online activity data**, such as the pages you view, the website that referred you, and the date and time of your visit.",
+              "**Security data**, such as request logs and signals used to tell real visitors from bots (including by Cloudflare Turnstile) and to limit abusive traffic."
+            ]
+          },
+          {
+            "h": "Information from other sources"
+          },
+          {
+            "p": "We may receive information about you from social media platforms (for example, if you message or interact with us on Instagram or Facebook), from public sources such as your company's website or professional profiles, from referrals, and from service providers that support our business. We may combine it with the information you give us."
+          },
+          {
+            "h": "Information we do not collect"
+          },
+          {
+            "p": "The Site has no user accounts or passwords, does not process payments, and does not request your precise geolocation. We do not knowingly collect information from children (see \"Children's privacy\")."
+          }
         ]
       },
       {
-        "heading": "How we use your information",
-        "body": ["We use the information we collect to:"],
-        "list": [
-          "Respond to your inquiries and communicate with you about your project",
-          "Provide, deliver, and improve our creative and brand strategy services",
-          "Send administrative information such as proposals, invoices, and service updates",
-          "Operate, maintain, and improve our website and understand how it is used",
-          "Comply with legal obligations and protect our rights and those of our clients",
-          "With your consent, send occasional updates or marketing communications, which you can opt out of at any time"
+        "heading": "How we use your personal information",
+        "blocks": [
+          {
+            "p": "We use personal information for the following purposes, or as otherwise described when we collect it:"
+          },
+          {
+            "list": [
+              "**Respond to you and deliver our services:** to read and answer your inquiries, send an automatic confirmation that we received your message, prepare proposals, contracts, and invoices, and carry out client projects.",
+              "**Operate and secure the Site:** to host and maintain the Site, protect it with spam filtering, bot detection, and rate limiting, fix errors, and prevent fraud, abuse, and cyberattacks.",
+              "**Improve the Site and our services:** to understand which pages are visited, how visitors reach the Site, and how it performs, so we can improve content, design, and speed. We use Vercel Web Analytics for this, which measures aggregated traffic without cookies.",
+              "**Communicate with you:** to send service-related messages and, where permitted by law (and with your consent where required), occasional updates about our work. You can opt out of marketing messages at any time.",
+              "**Comply with the law and protect rights:** to meet legal obligations, respond to lawful requests, enforce our Terms of Service, and establish, exercise, or defend legal claims.",
+              "**Create aggregated or de-identified data:** data that no longer identifies you, which we may use for lawful business purposes. We will not try to re-identify it.",
+              "**Further uses:** for other purposes disclosed at the time of collection or compatible with the original purpose. If a new purpose is not compatible, we will ask for your consent first."
+            ]
+          },
+          {
+            "p": "We do not sell your personal information, and we do not use it for automated decisions that produce legal or similarly significant effects."
+          }
         ]
       },
       {
-        "heading": "Legal bases for processing",
-        "body": [
-          "Where required by law (for example, under the EU and UK General Data Protection Regulation), we process your personal data on the following legal bases: your consent; the performance of a contract with you; our legitimate interests in operating and promoting our business; and compliance with our legal obligations"
+        "heading": "Cookies and similar technologies",
+        "blocks": [
+          {
+            "p": "Cookies are small files placed on your device. Similar technologies include browser local storage and pixel tags. This section is our Cookie Notice for the Site."
+          },
+          {
+            "p": "The Site uses only a minimal set of these technologies. We do not use advertising or cross-site tracking cookies, social media tracking pixels, or session-replay tools."
+          },
+          {
+            "table": {
+              "headers": [
+                "Type",
+                "What it does",
+                "Provider",
+                "How to control it"
+              ],
+              "rows": [
+                [
+                  "Strictly necessary",
+                  "Remembers your language choice (English or Spanish) so the Site opens in the right language (cookie: NEXT_LOCALE).",
+                  "Legado Creativo (first party)",
+                  "Browser settings. If blocked, the language may reset on each visit."
+                ],
+                [
+                  "Security",
+                  "Helps tell real visitors from bots on the contact form. May use cookies or local storage strictly necessary for that purpose.",
+                  "Cloudflare Turnstile ([privacy policy](https://www.cloudflare.com/privacypolicy/))",
+                  "Needed to submit the form when enabled. Browser settings."
+                ],
+                [
+                  "Analytics (cookieless)",
+                  "Measures aggregated page views and visitor information (such as referrer, country, browser, and device type) without cookies and without tracking you across other websites.",
+                  "Vercel Web Analytics ([privacy policy](https://vercel.com/legal/privacy-policy))",
+                  "No cookies are set. You can block analytics requests with a browser privacy setting or content blocker."
+                ],
+                [
+                  "Advertising and social media",
+                  "None. Links to Instagram and Facebook take you to those services, which have their own cookies.",
+                  "Not applicable",
+                  "See their privacy policies."
+                ]
+              ]
+            }
+          },
+          {
+            "p": "**Emails.** We do not use tracking pixels in our emails to measure opens or clicks. Our email provider may record technical delivery events, such as whether a message was delivered or bounced."
+          },
+          {
+            "h": "Your choices"
+          },
+          {
+            "list": [
+              "**Browser controls.** Most browsers let you block or delete cookies and local storage in their settings. If you do, parts of the Site, such as the language memory and the contact form's security check, may not work as intended.",
+              "**Global Privacy Control and Do Not Track.** The Site does not track you across other websites or use your data for targeted advertising, so there is nothing for these signals to switch off. We treat a [Global Privacy Control](https://globalprivacycontrol.org) signal as a valid request to opt out of any sale or sharing of personal information.",
+              "**Blocking images.** You can configure your browser or device to prevent images from loading."
+            ]
+          },
+          {
+            "p": "If we add analytics, advertising, or other tracking technologies in the future, we will update this section and, where the law requires, ask for your consent first."
+          }
         ]
       },
       {
-        "heading": "Cookies and analytics",
-        "body": [
-          "Our website may use cookies and similar technologies to keep the site functioning, remember your preferences, and understand how visitors interact with our content. You can control or disable cookies through your browser settings. Some features of the site may not work properly if cookies are disabled"
+        "heading": "How we share your personal information",
+        "blocks": [
+          {
+            "p": "We do not sell your personal information. We share it only as described below, or as otherwise disclosed to you at the time of collection:"
+          },
+          {
+            "list": [
+              "**Service providers.** Companies that process personal information on our behalf to help run the Site and our business, under terms that limit how they may use it. The providers we currently use for the Site are listed below.",
+              "**Professional advisors**, such as lawyers, accountants, and insurers, in the course of the services they provide to us.",
+              "**Authorities and others,** when we believe in good faith that disclosure is required by law, subpoena, or legal process, or is necessary to protect our rights, property, or safety or those of others, or to detect and prevent fraud and security issues.",
+              "**Business transferees,** in connection with an actual or prospective merger, acquisition, financing, or sale of all or part of our business or assets.",
+              "**Third parties you direct us to,** or with your consent."
+            ]
+          },
+          {
+            "table": {
+              "headers": [
+                "Provider",
+                "What it does for us",
+                "Information involved",
+                "Privacy policy"
+              ],
+              "rows": [
+                [
+                  "Vercel Inc. (United States)",
+                  "Website hosting, content delivery, and Web Analytics",
+                  "Device data, online activity data, IP address, request logs",
+                  "[vercel.com/legal/privacy-policy](https://vercel.com/legal/privacy-policy)"
+                ],
+                [
+                  "Resend (United States)",
+                  "Sends the contact-form notification to us and the confirmation email to you",
+                  "Name, email address, company, service of interest, message, delivery events",
+                  "[resend.com/legal/privacy-policy](https://resend.com/legal/privacy-policy)"
+                ],
+                [
+                  "Google, Gmail (United States)",
+                  "Email service where we receive and store inquiries and correspondence",
+                  "Contact data, communications data",
+                  "[policies.google.com/privacy](https://policies.google.com/privacy)"
+                ],
+                [
+                  "Cloudflare, Inc. (United States)",
+                  "Turnstile bot protection on the contact form",
+                  "IP address, browser and device signals, interaction signals",
+                  "[cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)"
+                ],
+                [
+                  "Meta Platforms, Instagram (United States)",
+                  "Lets us display our own Instagram posts on the Site",
+                  "Our Instagram account content. Your IP address and device data when media loads from Meta's servers",
+                  "[privacycenter.instagram.com/policy](https://privacycenter.instagram.com/policy)"
+                ]
+              ]
+            }
+          },
+          {
+            "p": "If you become a client, we may also use invoicing, payment, file-sharing, and project-management tools. Their providers process information under their own privacy policies and our agreements with them."
+          }
         ]
       },
       {
-        "heading": "How we share your information",
-        "body": [
-          "We do not sell your personal information. We may share it only in the following circumstances:"
-        ],
-        "list": [
-          "With trusted service providers who help us operate our business, such as hosting, email, analytics, and payment processors, who are only permitted to use your data to provide services to us",
-          "When required by law, regulation, legal process, or a valid government request",
-          "To protect the rights, property, or safety of Legado Creativo, our clients, or others",
-          "In connection with a business transfer, merger, or acquisition, in which case we will notify you of any change in ownership or use of your information"
+        "heading": "Retention",
+        "blocks": [
+          {
+            "p": "We keep personal information for as long as needed to fulfill the purposes described in this policy, including answering inquiries, performing client work, and meeting legal, tax, accounting, and reporting requirements, resolving disputes, and enforcing our agreements. To decide how long, we consider the amount, nature, and sensitivity of the information, the risk of harm from unauthorized use or disclosure, the purposes for which we process it and whether we can achieve them another way, and applicable legal requirements."
+          },
+          {
+            "p": "When we no longer need personal information, we delete or anonymize it. If that is not possible right away (for example, because it sits in a backup), we securely store it and isolate it from further use until deletion is possible."
+          }
         ]
       },
       {
-        "heading": "International data transfers",
-        "body": [
-          "Legado Creativo operates from the United States, and our service providers may be located in the United States or other countries. If you access our services from outside the United States, your information may be transferred to, stored, and processed in the United States or other jurisdictions whose data protection laws may differ from those of your country",
-          "Where required, we take appropriate safeguards, such as standard contractual clauses, to protect your information when it is transferred internationally"
+        "heading": "Your choices and rights",
+        "blocks": [
+          {
+            "p": "Everyone can do the following, wherever they live:"
+          },
+          {
+            "list": [
+              "**Access, correct, or delete.** Ask us what personal information we hold about you, ask us to correct it, or ask us to delete it.",
+              "**Opt out of marketing.** Use the unsubscribe instructions in any marketing email, or contact us. You may still receive service-related messages, such as replies to your inquiry or project communications.",
+              "**Withdraw consent.** Where we rely on your consent, you can withdraw it at any time. This does not affect processing that happened before you withdrew it.",
+              "**Decline to provide information.** You can choose not to give us information, but we may then be unable to respond to your inquiry or provide a service. Our contact form needs your name, email address, service of interest, and message to work.",
+              "**Cookies and tracking.** See \"Cookies and similar technologies\" above."
+            ]
+          },
+          {
+            "p": "To exercise any of these choices, write to {email}. We may need to verify your identity before acting on a request. Residents of certain states and countries have additional rights, described below."
+          }
         ]
       },
       {
-        "heading": "Data retention",
-        "body": [
-          "We keep your personal information only for as long as necessary to fulfill the purposes described in this policy, to maintain our business relationship, and to comply with our legal, accounting, and reporting obligations. When it is no longer needed, we securely delete or anonymize it"
+        "heading": "State privacy rights (United States)",
+        "blocks": [
+          {
+            "p": "This section applies to residents of U.S. states whose comprehensive privacy laws apply to us, such as California, Colorado, Connecticut, Virginia, Texas, and Oregon (together, the \"State Privacy Laws\"). You may submit a request regardless of where you live in the United States, and we will handle it as required by the law that applies to you. Not every right is available in every state, and we may decline a request where the law permits."
+          },
+          {
+            "h": "Your rights"
+          },
+          {
+            "list": [
+              "**Know and access:** the categories of personal information we collected, the sources, our purposes, the categories of third parties we disclosed it to, and a copy of the personal information we hold about you.",
+              "**Correct** inaccurate personal information.",
+              "**Delete** the personal information we collected from you.",
+              "**Portability:** receive your personal information in a portable format where the law provides.",
+              "**Opt out** of the sale or sharing of personal information, targeted advertising, and profiling. See below: we do not engage in these activities.",
+              "**Limit the use of sensitive personal information.** See below: we do not intentionally collect it.",
+              "**Appeal** our decision on a request.",
+              "**Non-discrimination:** we will not deny you services, charge different prices, or provide a different quality of service for exercising these rights."
+            ]
+          },
+          {
+            "h": "Our practices"
+          },
+          {
+            "list": [
+              "**No sale or sharing.** In the 12 months before the date of this policy, we have not sold personal information or shared it for cross-context behavioral advertising. We have no actual knowledge that we sell or share the personal information of anyone under 16.",
+              "**No targeted advertising or profiling.** We do not process personal information for targeted advertising, or for profiling that produces legal or similarly significant effects.",
+              "**Sensitive personal information.** We do not intentionally collect it and do not use it to infer characteristics about you.",
+              "**De-identified data.** We do not attempt to re-identify de-identified information."
+            ]
+          },
+          {
+            "h": "How to submit a request"
+          },
+          {
+            "p": "Email {email} or call {phone}. Use the subject \"Privacy request,\" and tell us your state of residence and which right you want to exercise. We will confirm receipt within 10 business days and respond within 45 days. If we need more time, we may extend that period once by up to 45 more days and will tell you why."
+          },
+          {
+            "p": "To protect you, we verify requests by matching the information you give us (for example, the email address and details of your inquiry) against what we hold. We will not ask for government ID unless the law allows it and it is necessary. You may use an authorized agent to submit a request for you. We may ask for your signed written permission and to verify your identity directly."
+          },
+          {
+            "p": "If we deny your request, you may appeal by replying to our response with the subject \"Appeal.\" We will respond in writing within the period the law requires (generally 45 to 60 days). If you are not satisfied with the result, you may contact your state attorney general."
+          },
+          {
+            "h": "Personal information we collect, use, and disclose"
+          },
+          {
+            "p": "This chart covers the 12 months before the date of this policy and uses the categories in the California Consumer Privacy Act (Cal. Civ. Code § 1798.140). Information you type into free-form fields may contain other categories that you choose to share."
+          },
+          {
+            "table": {
+              "headers": [
+                "Personal information we collect",
+                "CCPA category",
+                "Purposes",
+                "Disclosed for a business purpose to",
+                "Sold or shared"
+              ],
+              "rows": [
+                [
+                  "Name, email address, phone number, mailing address, IP address",
+                  "Identifiers; customer records (Cal. Civ. Code § 1798.80(e))",
+                  "Respond to inquiries; deliver services; security; legal compliance",
+                  "Service providers (hosting, email delivery, bot protection); professional advisors",
+                  "No"
+                ],
+                [
+                  "Company name, job title",
+                  "Professional or employment-related information",
+                  "Respond to inquiries; deliver services",
+                  "Service providers; professional advisors",
+                  "No"
+                ],
+                [
+                  "Message contents, project briefs, files, correspondence, invoices, and transaction records",
+                  "Customer records; commercial information",
+                  "Deliver services; manage our relationship; comply with law",
+                  "Service providers; professional advisors; payment providers (clients only)",
+                  "No"
+                ],
+                [
+                  "Browser, device, and usage data (pages viewed, referrer, approximate location)",
+                  "Internet or other electronic network activity; geolocation (approximate only)",
+                  "Operate, secure, and improve the Site",
+                  "Service providers (hosting, analytics, bot protection)",
+                  "No"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "California"
+          },
+          {
+            "p": "**Shine the Light.** Under California Civil Code § 1798.83, California residents who have an established business relationship with us may ask for the names of third parties to which we disclosed certain personal information for their direct marketing purposes during the previous calendar year. We do not disclose personal information to third parties for their direct marketing purposes. To make a request, email {email} with \"Shine the Light Request\" in the subject line."
+          },
+          {
+            "h": "Nevada"
+          },
+          {
+            "p": "Nevada residents may opt out of the sale of certain covered information. We do not sell covered information as defined by Nevada law. To submit a request, email {email}."
+          }
         ]
       },
       {
-        "heading": "Your rights and choices",
-        "body": ["Depending on where you live, you may have the right to:"],
-        "list": [
-          "Access the personal information we hold about you and request a copy of it",
-          "Correct inaccurate or incomplete information",
-          "Request deletion of your personal information",
-          "Object to or restrict certain processing of your data",
-          "Withdraw consent at any time, where processing is based on consent",
-          "Request that we not sell or share your personal information (as recognized under laws such as the California Consumer Privacy Act)"
+        "heading": "Notice to visitors outside the United States",
+        "blocks": [
+          {
+            "p": "Legado Creativo is based in the United States and operates the Site from the United States. We work with clients and collaborators internationally. If you contact us from the European Economic Area (EEA), the United Kingdom, or another country with data protection laws, this section adds to the rest of this policy. References to \"personal information\" include \"personal data\" as defined in those laws."
+          },
+          {
+            "h": "Controller"
+          },
+          {
+            "p": "{legalName} is the controller of the personal data described in this policy. You can reach us using the details in \"Contact us.\""
+          },
+          {
+            "h": "Legal bases for processing"
+          },
+          {
+            "p": "Where the EU or UK General Data Protection Regulation applies, we rely on these legal bases:"
+          },
+          {
+            "table": {
+              "headers": [
+                "Purpose",
+                "Legal basis"
+              ],
+              "rows": [
+                [
+                  "Responding to inquiries and delivering services",
+                  "Contractual necessity (including steps taken at your request before entering a contract) and our legitimate interests in running our business"
+                ],
+                [
+                  "Operating, securing, and improving the Site",
+                  "Our legitimate interests in keeping the Site secure, preventing abuse, and understanding how it is used"
+                ],
+                [
+                  "Marketing communications",
+                  "Your consent, or our legitimate interests in promoting our business where the law allows. You can object or withdraw consent at any time"
+                ],
+                [
+                  "Legal compliance and protecting our rights",
+                  "Legal obligation and our legitimate interests in establishing, exercising, or defending legal claims"
+                ],
+                [
+                  "Strictly necessary storage (language choice, security check)",
+                  "Necessary to provide the service you request; no consent is required"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Your rights"
+          },
+          {
+            "p": "Depending on your location, you may have the right to:"
+          },
+          {
+            "list": [
+              "Access your personal data and receive a copy of it.",
+              "Correct inaccurate or incomplete data.",
+              "Delete your data where there is no good reason for us to keep processing it.",
+              "Restrict our processing, for example while we verify its accuracy.",
+              "Receive your data in a portable format or have it sent to another controller.",
+              "Object to processing based on our legitimate interests, and to direct marketing.",
+              "Withdraw consent at any time, where processing is based on consent."
+            ]
+          },
+          {
+            "p": "To exercise these rights, email {email}. We may ask for information to confirm your identity. If you are not satisfied with our response, you can lodge a complaint with your local data protection authority. In the EEA, find yours through the [European Data Protection Board](https://edpb.europa.eu/about-edpb/about-edpb/members_en). In the United Kingdom, contact the [Information Commissioner's Office](https://ico.org.uk/make-a-complaint/)."
+          },
+          {
+            "h": "Transfers outside Europe"
+          },
+          {
+            "p": "Because we are based in the United States, your personal data will be accessed and processed in the United States, which is not covered by a general European adequacy decision. Where the law requires, we rely on appropriate safeguards, such as the European Commission's standard contractual clauses (or the UK equivalent) or the [EU-U.S. Data Privacy Framework](https://www.dataprivacyframework.gov/) for recipients certified under it. In limited cases we rely on an exception, such as your explicit consent or the need to transfer data to perform a contract at your request. Contact us if you would like more information about the safeguards that apply."
+          },
+          {
+            "h": "Other countries"
+          },
+          {
+            "p": "If you live in another country, including in Latin America, your local law may give you additional rights. Tell us where you live and what you would like to do, and we will honor those rights as the law requires."
+          }
         ]
       },
       {
-        "heading": "Exercising your rights",
-        "body": [
-          "To exercise any of these rights, contact us at vickyurbaneja@gmail.com. We will respond within the timeframe required by applicable law. We will not discriminate against you for exercising any of your privacy rights"
+        "heading": "Third-party websites and content",
+        "blocks": [
+          {
+            "p": "The Site contains links to websites and services operated by others, including our Instagram and Facebook pages, and may display content from them, such as our Instagram posts. When media loads from Meta's servers, Meta may receive your IP address and device information. Links and embedded content are not an endorsement, and we do not control and are not responsible for the privacy practices of third parties. We encourage you to read their privacy policies."
+          }
         ]
       },
       {
-        "heading": "Data security",
-        "body": [
-          "We use reasonable technical and organizational measures to protect your personal information against loss, misuse, and unauthorized access. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security"
+        "heading": "Security",
+        "blocks": [
+          {
+            "p": "We use administrative, technical, and physical safeguards appropriate to the nature of the personal information we hold, including encrypted connections (HTTPS), access controls, and bot and abuse protection. However, no method of transmission or storage is completely secure, and we cannot guarantee the security of your information. If a data breach affects your personal information, we will notify you and regulators as required by law, including Massachusetts General Laws Chapter 93H."
+          }
         ]
       },
       {
         "heading": "Children's privacy",
-        "body": [
-          "Our website and services are not directed to children under the age of 16, and we do not knowingly collect personal information from them. If you believe a child has provided us with personal information, please contact us so we can delete it"
+        "blocks": [
+          {
+            "p": "The Site and our services are intended for adults and are not directed to anyone under 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe a child has given us personal information, please contact us. If we learn we have collected personal information from a child without the consent the law requires, we will delete it."
+          }
         ]
       },
       {
-        "heading": "Changes to this policy",
-        "body": [
-          "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we do, we will revise the \"Last updated\" date above. We encourage you to review this page periodically"
+        "heading": "Changes to this Privacy Policy",
+        "blocks": [
+          {
+            "p": "We may update this Privacy Policy from time to time. When we do, we will change the \"Last updated\" date at the top of this page. If the changes are material, we will also post a prominent notice on the Site or notify you by email where the law requires. Changes take effect when posted, unless we say otherwise. Your continued use of the Site after that means you acknowledge the updated policy."
+          }
         ]
       },
       {
         "heading": "Contact us",
-        "body": [
-          "If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us at vickyurbaneja@gmail.com"
+        "blocks": [
+          {
+            "p": "If you have questions about this policy or our privacy practices, or want to exercise a privacy right, contact us:"
+          },
+          {
+            "list": [
+              "**Email:** {email}",
+              "**Phone:** {phone}",
+              "**Mail:** {legalName}, {address}"
+            ]
+          }
         ]
       }
     ]
@@ -838,119 +1214,287 @@
   "termsOfService": {
     "badge": "Legal",
     "title": "Terms of Service",
-    "lastUpdated": "Last updated: July 30, 2026",
+    "tocLabel": "Contents",
+    "lastUpdated": "Last updated: {effectiveDate}",
     "intro": [
-      "Welcome to Legado Creativo. These Terms of Service (\"Terms\") govern your access to and use of our website and the creative and brand strategy services we provide (together, the \"Services\")",
-      "By accessing our website or engaging our Services, you agree to be bound by these Terms. If you do not agree, please do not use our website or Services. Legado Creativo operates from the United States and works with clients and collaborators worldwide"
+      "These Terms of Service (\"Terms\") govern your access to and use of the website at {website} (the \"Site\") and the creative and brand strategy services provided by {legalName} (\"Legado Creativo,\" \"Company,\" \"we,\" \"us,\" or \"our\"), a business based in Boston, Massachusetts, in the United States (together, the \"Services\"). Certain features of the Site may be subject to additional guidelines or rules posted on the Site, which are incorporated into these Terms by reference.",
+      "By accessing or using the Site, sending us a message, or engaging our Services, you agree to these Terms on behalf of yourself or the entity you represent, and you confirm that you have the authority to do so. You must be at least 18 years old to use the Site. If you do not agree to these Terms, please do not use the Site.",
+      "Please read the sections \"Limitation of liability\" and \"Governing law and dispute resolution\" carefully. They affect your legal rights."
     ],
     "sections": [
       {
-        "heading": "Acceptance of these terms",
-        "body": [
-          "By using this website or engaging Legado Creativo for any project, you confirm that you are at least 18 years old and that you have the authority to enter into these Terms, whether on your own behalf or on behalf of an organization you represent"
-        ]
-      },
-      {
         "heading": "Our services",
-        "body": [
-          "Legado Creativo provides brand strategy, graphic design, web design, and related creative services. The specific scope, deliverables, timeline, and fees for any project will be defined in a separate proposal, statement of work, or written agreement between you and Legado Creativo. In the event of a conflict, that project agreement takes precedence over these Terms for the work it covers"
+        "blocks": [
+          {
+            "p": "Legado Creativo provides brand strategy, graphic design, web design, and related creative services. The scope, deliverables, timeline, and fees for each project are set out in a separate proposal, statement of work, or written agreement between you and Legado Creativo (a \"Project Agreement\"). If a Project Agreement conflicts with these Terms, the Project Agreement controls for the work it covers."
+          },
+          {
+            "p": "Information on the Site, including our portfolio, service descriptions, and the contact form, is for general information and is not an offer. Sending a message through the Site does not create a client relationship or any obligation for either of us. An engagement begins only when you and Legado Creativo have both accepted a Project Agreement."
+          }
         ]
       },
       {
         "heading": "Proposals, fees, and payment",
-        "body": [
-          "Fees, payment schedules, and deposits are set out in each project proposal or agreement. Unless otherwise stated, invoices are due within the period specified in the applicable agreement. We may pause or suspend work on projects with overdue balances. Because we work with international clients, you are responsible for any taxes, currency conversion costs, or transfer fees that apply to your payments"
+        "blocks": [
+          {
+            "p": "Fees, payment schedules, and deposits are set out in each Project Agreement. Unless it says otherwise, invoices are due within the period stated in the applicable Project Agreement. We may pause or suspend work on projects with overdue balances. Because we work with international clients, you are responsible for any taxes, currency conversion costs, or transfer fees that apply to your payments."
+          }
         ]
       },
       {
         "heading": "Client responsibilities",
-        "body": ["To help us deliver our work on time, you agree to:"],
-        "list": [
-          "Provide accurate, complete information and any materials needed for the project",
-          "Review deliverables and give feedback within reasonable, agreed timeframes",
-          "Ensure you have the rights to any content, logos, images, or text you provide to us",
-          "Make payments according to the agreed schedule"
+        "blocks": [
+          {
+            "p": "To help us deliver our work on time, you agree to:"
+          },
+          {
+            "list": [
+              "Provide accurate and complete information and the materials needed for the project.",
+              "Review deliverables and give feedback within the agreed, reasonable timeframes.",
+              "Make sure you have the rights to any content, logos, images, or text you give us.",
+              "Make payments on the agreed schedule."
+            ]
+          }
         ]
       },
       {
         "heading": "Intellectual property",
-        "body": [
-          "Any pre-existing materials, tools, and know-how that Legado Creativo uses to create your project remain our property. Upon full payment, final deliverables created specifically for you are transferred or licensed to you as described in your project agreement",
-          "Unless agreed otherwise, Legado Creativo retains the right to display completed work in our portfolio and marketing materials as an example of our services. Drafts, concepts, and unused designs remain the property of Legado Creativo"
+        "blocks": [
+          {
+            "h": "The Site"
+          },
+          {
+            "p": "All intellectual property rights in the Site and its content, including copyrights, trademarks, and trade secrets, belong to Company or its licensors. These Terms do not transfer any ownership rights to you, and all rights not expressly granted are reserved."
+          },
+          {
+            "h": "Deliverables"
+          },
+          {
+            "p": "Pre-existing materials, tools, and know-how that Legado Creativo uses to create your project remain our property. Upon full payment, the final deliverables created specifically for you are assigned or licensed to you as described in your Project Agreement. Drafts, concepts, and unused designs remain our property."
+          },
+          {
+            "p": "Deliverables may include third-party materials, such as fonts, stock images, or software, that are licensed under their own terms. Where a separate license is needed, we will tell you, and you are responsible for complying with it."
+          },
+          {
+            "h": "Portfolio"
+          },
+          {
+            "p": "Unless we agree otherwise in writing, Legado Creativo may display completed work in our portfolio and marketing materials as an example of our services."
+          },
+          {
+            "h": "Feedback"
+          },
+          {
+            "p": "If you share feedback or suggestions about the Site or our services, you grant us a perpetual, irrevocable, worldwide, non-exclusive, royalty-free license to use them for any purpose without attribution or compensation. Please do not send feedback you consider proprietary or confidential."
+          }
         ]
       },
       {
-        "heading": "Website content and license",
-        "body": [
-          "All content on this website, including text, graphics, logos, images, and design, is owned by or licensed to Legado Creativo and is protected by intellectual property laws. You may view and use the website for your personal, non-commercial purposes only. You may not copy, reproduce, distribute, or create derivative works from our content without our prior written permission"
+        "heading": "Use of the Site",
+        "blocks": [
+          {
+            "p": "**License.** Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Site for your own personal or internal business-evaluation purposes."
+          },
+          {
+            "p": "**Restrictions.** You may not: (i) license, sell, rent, lease, transfer, distribute, or commercially exploit the Site or its content; (ii) modify, create derivative works from, disassemble, or reverse-engineer any part of the Site; (iii) access the Site to build a similar or competing product or service; or (iv) copy, reproduce, republish, download, display, or transmit any part of the Site except as these Terms allow. All copyright and proprietary notices must be kept intact on any copies you are permitted to make."
+          },
+          {
+            "p": "**Changes to the Site.** We may modify, suspend, or discontinue the Site, or any part of it, at any time with or without notice, and we are not liable for doing so. We have no obligation to provide support or maintenance for the Site."
+          }
         ]
       },
       {
         "heading": "Acceptable use",
-        "body": ["You agree not to use our website or Services to:"],
-        "list": [
-          "Violate any applicable law or regulation",
-          "Infringe the intellectual property or other rights of any third party",
-          "Upload or transmit malicious code, or interfere with the operation of the website",
-          "Attempt to gain unauthorized access to our systems or data",
-          "Use the site to send unsolicited communications or for any fraudulent purpose"
+        "blocks": [
+          {
+            "p": "You agree not to use the Site or our Services to:"
+          },
+          {
+            "list": [
+              "Violate any applicable law or regulation.",
+              "Infringe the intellectual property or other rights of any third party.",
+              "Upload or transmit malicious code, or interfere with the operation or security of the Site.",
+              "Attempt to gain unauthorized access to our systems or data.",
+              "Use bots, scrapers, or other automated means to access the Site or submit the contact form, or bypass its spam and bot protections.",
+              "Send unsolicited communications, submit false or misleading information, or use the Site for any fraudulent purpose."
+            ]
+          }
         ]
       },
       {
-        "heading": "Third-party links",
-        "body": [
-          "Our website may contain links to third-party websites or services that we do not own or control. We are not responsible for the content, policies, or practices of any third-party sites, and we encourage you to review their terms and privacy policies"
+        "heading": "Contact form and communications",
+        "blocks": [
+          {
+            "p": "When you contact us through the Site, you agree to provide accurate information and consent to our replying to you at the email address you give us. Please do not send sensitive information, such as government ID numbers, financial account or payment card numbers, health information, or passwords, through the form or by email."
+          },
+          {
+            "p": "Messages you send before we agree on a Project Agreement are not treated as confidential unless we have agreed otherwise in writing. By using the Site, you consent to receive communications from us electronically, such as by email or notices posted on the Site, and agree that these satisfy any legal requirement that such communications be in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Privacy and cookies",
+        "blocks": [
+          {
+            "p": "Your use of the Site is also governed by our [Privacy Policy](/privacy), which is incorporated into these Terms by reference. It describes the personal data we collect, how we use and share it, and how we use cookies and similar technologies. By using the Site, you acknowledge that you have read it. If these Terms conflict with the Privacy Policy on the handling of personal data, the Privacy Policy controls."
+          }
+        ]
+      },
+      {
+        "heading": "Third-party services and links",
+        "blocks": [
+          {
+            "p": "The Site may include links to, or content from, third-party websites and services, such as our social media pages (\"Third-Party Services\"). We do not control, endorse, or take responsibility for any Third-Party Service. You use them at your own risk, and the third party's own terms and privacy practices apply."
+          }
         ]
       },
       {
         "heading": "Confidentiality",
-        "body": [
-          "Both parties agree to keep confidential any non-public business, technical, or financial information shared during a project, and to use it only for the purpose of carrying out the work. This obligation continues after the project ends"
+        "blocks": [
+          {
+            "p": "Once a Project Agreement is in place, both parties agree to keep confidential any non-public business, technical, or financial information shared during the project, and to use it only to carry out the work. This obligation continues after the project ends, subject to any legal requirement to disclose."
+          }
         ]
       },
       {
         "heading": "Disclaimers",
-        "body": [
-          "Our website and Services are provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. While we strive for excellence in every project, we do not guarantee specific business results, rankings, revenue, or outcomes from our creative work. To the fullest extent permitted by law, we disclaim all implied warranties, including merchantability and fitness for a particular purpose"
+        "blocks": [
+          {
+            "p": "THE SITE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE.\" TO THE FULLEST EXTENT PERMITTED BY LAW, COMPANY AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR OTHER HARMFUL CODE."
+          },
+          {
+            "p": "We strive for excellence in every project, but we do not guarantee specific business results, search rankings, revenue, or outcomes from our creative work, except as stated in a Project Agreement."
+          }
         ]
       },
       {
         "heading": "Limitation of liability",
-        "body": [
-          "To the fullest extent permitted by law, Legado Creativo and its founder will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of profits, data, or business, arising from your use of our website or Services. Our total liability for any claim relating to a project will not exceed the amount you paid to us for that specific project"
+        "blocks": [
+          {
+            "p": "TO THE MAXIMUM EXTENT PERMITTED BY LAW: (A) COMPANY AND ITS SUPPLIERS WILL NOT BE LIABLE FOR ANY LOST PROFITS, LOST DATA, OR LOST BUSINESS, OR FOR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING FROM OR RELATED TO THESE TERMS, THE SITE, OR THE SERVICES; AND (B) OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM ARISING UNDER THESE TERMS IS LIMITED TO THE AMOUNT YOU PAID US FOR THE PROJECT GIVING RISE TO THE CLAIM IN THE SIX MONTHS BEFORE THE CLAIM AROSE OR, FOR CLAIMS RELATED ONLY TO YOUR USE OF THE SITE, US$50. THE EXISTENCE OF MULTIPLE CLAIMS DOES NOT INCREASE THIS LIMIT."
+          },
+          {
+            "p": "Some jurisdictions do not allow certain disclaimers or limitations of liability, so some of the above may not apply to you. Nothing in these Terms limits liability that cannot be limited under applicable law."
+          }
         ]
       },
       {
         "heading": "Indemnification",
-        "body": [
-          "You agree to indemnify and hold harmless Legado Creativo, its founder, and its collaborators from any claims, damages, or expenses arising from your breach of these Terms, your misuse of the Services, or your violation of any law or third-party right, including in relation to content or materials you provide to us"
+        "blocks": [
+          {
+            "p": "You agree to defend, indemnify, and hold harmless Company, its founder, employees, collaborators, and agents from any claims and reasonable costs or attorneys' fees arising out of (i) your use of the Site, (ii) your violation of these Terms, (iii) your violation of any law, or (iv) content or materials you give us that infringe a third party's rights. We may assume control of the defense of any such claim at your expense, and you agree to cooperate. You agree not to settle any such claim without our prior written consent. We will make reasonable efforts to notify you promptly of any claim we become aware of."
+          }
         ]
       },
       {
-        "heading": "Termination",
-        "body": [
-          "Either party may end a working relationship as described in the applicable project agreement. We may also suspend or terminate your access to our website at any time if you violate these Terms. Upon termination, any fees earned for work completed remain payable, and the sections of these Terms that by their nature should survive will continue to apply"
+        "heading": "Term and termination",
+        "blocks": [
+          {
+            "p": "These Terms remain in effect while you use the Site. Either party may end a working relationship as described in the applicable Project Agreement. We may suspend or terminate your access to the Site at any time and for any reason, including if we believe you have violated these Terms, and we are not liable to you for doing so. After termination, fees earned for work completed remain payable, and the provisions that by their nature should survive, including those on intellectual property, confidentiality, disclaimers, limitation of liability, indemnification, and governing law, will continue to apply."
+          }
         ]
       },
       {
-        "heading": "Governing law",
-        "body": [
-          "These Terms are governed by the laws of the Commonwealth of Massachusetts and the United States, without regard to conflict-of-law principles. Any dispute arising from these Terms or our Services will be subject to the exclusive jurisdiction of the state and federal courts located in Boston, Massachusetts, unless otherwise required by applicable law in your country of residence"
+        "heading": "State-specific notices",
+        "blocks": [
+          {
+            "p": "These notices apply to users to the extent they are subject to the laws of the states named below. If one conflicts with another provision of these Terms, the state-specific notice controls for those users."
+          },
+          {
+            "p": "**California.** Under California Civil Code § 1789.3, California users are entitled to the following notice: the provider of the Site is {legalName}, {address}. To file a complaint about the Site or to receive more information, write to that address or email {email}. You may also contact the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs at 1625 N. Market Blvd., Suite N112, Sacramento, CA 95834, or by phone at (800) 952-5210. California residents may have additional rights under the California Consumer Privacy Act, described in our [Privacy Policy](/privacy)."
+          },
+          {
+            "p": "**Nevada.** Under Nevada Revised Statutes Chapter 603A, Nevada residents may direct us not to sell certain information we collect about them. We do not sell such information. To make a request, email {email}."
+          },
+          {
+            "p": "**Other states.** Residents of Colorado, Connecticut, Virginia, Texas, Oregon, and other states with consumer privacy laws may have rights to access, correct, delete, and obtain a copy of their personal data and to opt out of certain processing. See the \"State privacy rights\" section of our [Privacy Policy](/privacy)."
+          }
         ]
       },
       {
-        "heading": "Changes to these terms",
-        "body": [
-          "We may update these Terms from time to time. When we do, we will update the \"Last updated\" date above. Your continued use of our website or Services after changes take effect means you accept the revised Terms"
+        "heading": "Governing law and dispute resolution",
+        "blocks": [
+          {
+            "p": "**Governing law.** These Terms, and any dispute arising out of or related to them, the Site, or the Services, are governed by the laws of the Commonwealth of Massachusetts and applicable federal law of the United States, without regard to conflict-of-law principles."
+          },
+          {
+            "p": "**Try to resolve it first.** Before filing a claim, you and Company agree to try to resolve the dispute informally. The party raising the dispute must send written notice describing it to the other party (to Company, at {email}). Within 45 days after the notice is received, the parties will meet by phone or video in good faith to try to resolve it. If the dispute is not resolved within 60 days after the notice, either party may bring a claim."
+          },
+          {
+            "p": "**Courts.** Subject to the next paragraph, you and Company irrevocably consent to the exclusive jurisdiction and venue of the state and federal courts located in Boston, Suffolk County, Massachusetts, for any dispute arising out of or related to these Terms, the Site, or the Services."
+          },
+          {
+            "p": "**Exceptions.** Either party may (a) bring an action in any court of competent jurisdiction for injunctive or other equitable relief to protect its intellectual property rights, and (b) bring an individual action in small claims court for claims within that court's limits. If you live outside the United States, nothing in these Terms removes any mandatory consumer protection rights you have under the laws of your country of residence."
+          }
+        ]
+      },
+      {
+        "heading": "Accessibility",
+        "blocks": [
+          {
+            "p": "Company is committed to making the Site accessible to everyone, including people with disabilities, and works toward conformance with the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. If you have trouble accessing or using any part of the Site, or have suggestions for improving accessibility, contact us at {email} or {phone}, and we will make reasonable efforts to address your concern promptly."
+          }
+        ]
+      },
+      {
+        "heading": "Languages",
+        "blocks": [
+          {
+            "p": "We provide the Site and these Terms in English and Spanish for your convenience. If there is any inconsistency between the versions, the English version controls to the extent permitted by applicable law."
+          }
+        ]
+      },
+      {
+        "heading": "General",
+        "blocks": [
+          {
+            "p": "**Changes to these Terms.** We may update these Terms from time to time. When we do, we will update the \"Last updated\" date above. If the changes are material, we may also notify you by email (at the address on file) or by a prominent notice on the Site. Your continued use of the Site or Services after the changes take effect means you accept the updated Terms."
+          },
+          {
+            "p": "**Entire agreement.** These Terms, together with the Privacy Policy, any other policies referenced here, and any Project Agreement, are the entire agreement between you and Company about the Site and the Services. If any provision is found invalid or unenforceable, it will be modified to the minimum extent necessary and the rest will remain in effect. Our failure to enforce a provision is not a waiver of it. \"Including\" means \"including without limitation.\" You may not assign these Terms without our prior written consent; we may assign them freely. These Terms bind any permitted assignees."
+          },
+          {
+            "p": "**Export.** You agree not to export, re-export, or transfer any technical data or products obtained from the Site in violation of U.S. export control laws or the applicable regulations of other countries."
+          },
+          {
+            "p": "**Copyright and trademarks.** Copyright © 2026 {legalName}. All rights reserved. All trademarks, logos, and service marks displayed on the Site are owned by Company or third parties. You may not use them without the prior written consent of the owner."
+          }
         ]
       },
       {
         "heading": "Contact us",
-        "body": [
-          "If you have any questions about these Terms of Service, please contact us at vickyurbaneja@gmail.com"
+        "blocks": [
+          {
+            "p": "If you have questions about these Terms, contact us:"
+          },
+          {
+            "list": [
+              "**Email:** {email}",
+              "**Phone:** {phone}",
+              "**Mail:** {legalName}, {address}"
+            ]
+          }
         ]
       }
     ]
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "logoAlt": "Legado Creativo",
+    "mainNavigation": "Main navigation",
+    "footerNavigation": "Footer navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "switch language to Spanish",
+    "pauseVideo": "Pause background video",
+    "playVideo": "Play background video",
+    "scrollLeft": "Scroll left",
+    "scrollRight": "Scroll right",
+    "goToStep": "Go to step {number}",
+    "aboutHandsAlt": "Illustration of a human hand reaching toward a robotic hand, with a speech bubble between them",
+    "aboutIdeaAlt": "Illustration of a smiling woman with a laptop sitting on a giant light bulb beside a ladder",
+    "proofAlt": "Screenshot of the {name} website",
+    "instagramPost": "Instagram post"
   },
   "notFound": {
     "badge": "404",

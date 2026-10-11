@@ -11,6 +11,7 @@ const MotionLink = motion.create(Link);
 
 export default function About() {
   const t = useTranslations("homeAbout");
+  const tA = useTranslations("a11y");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -53,11 +54,11 @@ export default function About() {
           </motion.p>
           <motion.h2
             variants={itemVariants}
-            className="text-fluid-h1 font-bold text-secondary-blue tracking-tight mb-8"
+            className="text-fluid-h1 font-bold text-secondary-blue-ink tracking-tight mb-8"
           >
             <TypingAnimation
               as="span"
-              className="text-secondary-blue"
+              className="text-secondary-blue-ink"
               duration={60}
               showCursor={false}
             >
@@ -91,12 +92,12 @@ export default function About() {
             <div className="relative aspect-[4/3] rounded-[4px] overflow-hidden border border-border">
               <img
                 src="/images/home/since-2018-opt2.jpg"
-                alt="Our workspace"
+                alt={tA("aboutHandsAlt")}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gradient-overlay/60 to-transparent" />
             </div>
-            <p className="mt-4 text-sm text-foreground/50 tracking-wide">
+            <p className="mt-4 text-sm text-foreground/60 tracking-wide">
               {t("foundedBadge")}
             </p>
           </motion.div>
@@ -139,7 +140,7 @@ export default function About() {
               href="/services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative inline-block px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-full overflow-hidden cursor-pointer"
+              className="group relative inline-block px-8 py-4 bg-secondary-lime text-secondary-blue-ink font-semibold rounded-full overflow-hidden cursor-pointer"
             >
               <span className="relative z-10">{t("learnMore")}</span>
               <motion.div

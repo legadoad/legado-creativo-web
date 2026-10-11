@@ -38,7 +38,7 @@ export default async function TermsPage({
   setRequestLocale(locale);
 
   return (
-    <main className="min-h-screen bg-background">
+    <main id="main-content" tabIndex={-1} className="focus:outline-none min-h-screen bg-background">
       <Header />
       <LegalContent namespace="termsOfService" />
       <Footer />

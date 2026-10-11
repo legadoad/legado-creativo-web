@@ -15,6 +15,7 @@ export default function Header() {
   const nextRouter = useNextRouter();
   const locale = useLocale();
   const t = useTranslations("header");
+  const tA = useTranslations("a11y");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,15 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [mobileMenuOpen]);
 
   const switchLocale = (newLocale: string) => {
     const newPath = `/${newLocale}${pathname === "/" ? "" : pathname}`;
@@ -50,11 +60,11 @@ export default function Header() {
           : "bg-white shadow-sm border-b border-gray-100"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <nav aria-label={tA("mainNavigation")} className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <Image
             src="/Logos/LEGADO_Logotipo-06.png"
-            alt="Legado Logo"
+            alt={tA("logoAlt")}
             width={220}
             height={80}
             className="h-auto w-auto max-h-16 group-hover:scale-105 transition-transform duration-300"
@@ -68,11 +78,12 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              aria-current={pathname === link.href ? "page" : undefined}
               className={`text-sm font-medium transition-colors ${
                 pathname === link.href
-                  ? "text-accent"
+                  ? `underline underline-offset-8 decoration-2 ${isTransparent ? "text-white" : "text-accent"}`
                   : isTransparent
-                  ? "text-white/80 hover:text-white"
+                  ? "text-white hover:underline underline-offset-8"
                   : "text-gray-600 hover:text-accent"
               }`}
             >
@@ -85,10 +96,11 @@ export default function Header() {
             onClick={() => switchLocale(locale === "en" ? "es" : "en")}
             className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium uppercase transition rounded-md cursor-pointer ${
               isTransparent
-                ? "text-white/80 hover:text-white hover:bg-white/10"
+                ? "text-white hover:bg-white/10"
                 : "text-gray-600 hover:text-accent hover:bg-accent/10"
             }`}
-            title={locale === "en" ? "Cambiar a Español" : "Switch to English"}
+            lang={locale === "en" ? "en" : "es"}
+            aria-label={`${locale.toUpperCase()}: ${tA("switchLanguage")}`}
           >
             <Globe size={16} />
             <span>{locale}</span>
@@ -96,7 +108,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="px-6 py-2 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition cursor-pointer"
+            className="px-6 py-2 bg-secondary-lime text-secondary-blue-ink font-medium rounded-full hover:bg-secondary-lime/90 transition cursor-pointer"
           >
             {t("cta")}
           </Link>
@@ -107,8 +119,10 @@ export default function Header() {
           <button
             onClick={() => switchLocale(locale === "en" ? "es" : "en")}
             className={`flex items-center gap-1 px-2 py-1.5 text-xs font-medium uppercase transition cursor-pointer ${
-              isTransparent ? "text-white/80" : "text-gray-600"
+              isTransparent ? "text-white" : "text-gray-600"
             }`}
+            lang={locale === "en" ? "en" : "es"}
+            aria-label={`${locale.toUpperCase()}: ${tA("switchLanguage")}`}
           >
             <Globe size={16} />
             <span>{locale}</span>
@@ -116,6 +130,9 @@ export default function Header() {
           <button
             className={`cursor-pointer ${isTransparent ? "text-white" : "text-gray-800"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? tA("closeMenu") : tA("openMenu")}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -126,6 +143,7 @@ export default function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -140,6 +158,7 @@ export default function Header() {
               >
                 <Link
                   href={link.href}
+                  aria-current={pathname === link.href ? "page" : undefined}
                   className={`block py-2 transition text-sm font-medium ${
                     pathname === link.href
                       ? "text-accent"
@@ -158,7 +177,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="block px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition text-center cursor-pointer"
+                className="block px-6 py-3 bg-secondary-lime text-secondary-blue-ink font-medium rounded-full hover:bg-secondary-lime/90 transition text-center cursor-pointer"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t("cta")}

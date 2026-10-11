@@ -42,7 +42,7 @@ export default async function OurWorkPage({
   const t = await getTranslations("cta");
 
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden">
+    <main id="main-content" tabIndex={-1} className="focus:outline-none min-h-screen bg-background overflow-x-hidden">
       <Header />
       <VideoBanner />
 

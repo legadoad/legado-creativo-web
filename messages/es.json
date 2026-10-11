@@ -59,7 +59,7 @@
     "work": "Nuestro Trabajo",
     "contact": "Contacto",
     "connect": "Conectar",
-    "copyright": "© 2025 Legado Creativo. Todos los derechos reservados",
+    "copyright": "© 2026 Legado Creativo. Todos los derechos reservados",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
     "poweredBy": "Diseñado por Legado Creativo"
@@ -726,6 +726,13 @@
     "messagePlaceholder": "Cuéntanos sobre tu proyecto, objetivos, plazos..",
     "submit": "Enviar mensaje",
     "submitting": "Enviando..",
+    "errors": {
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Ingresa un correo electrónico válido",
+      "turnstile": "Completa la verificación de seguridad para enviar tu mensaje",
+      "submitFailed": "No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos directamente por correo"
+    },
+    "consent": "Al enviar este mensaje aceptas nuestros <terms>Términos de Servicio</terms> y reconoces nuestra <privacy>Política de Privacidad</privacy>. Solo usamos tus datos para responder a tu consulta",
     "successTitle": "¡Mensaje enviado!",
     "successMessage": "Gracias por escribirnos. Te responderemos dentro de 24 horas",
     "sendAnother": "Enviar otro mensaje"
@@ -744,118 +751,487 @@
   "privacyPolicy": {
     "badge": "Legal",
     "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: 30 de julio de 2026",
+    "tocLabel": "Contenido",
+    "lastUpdated": "Última actualización: {effectiveDate}",
     "intro": [
-      "Legado Creativo (\"Legado Creativo\", \"nosotros\" o \"nuestro\") es un estudio de estrategia de marca y creatividad con sede en Estados Unidos que trabaja con clientes y colaboradores de todo el mundo. Esta Política de Privacidad explica qué información recopilamos, cómo la usamos y las opciones que tienes",
-      "Al usar nuestro sitio web o contactarnos, aceptas las prácticas descritas en esta política. Como trabajamos a nivel internacional, buscamos respetar los derechos de privacidad que te correspondan según las leyes de tu país o región, incluidas las leyes de Estados Unidos, la Unión Europea, el Reino Unido y otras jurisdicciones cuando corresponda"
+      "{legalName} (\"Legado Creativo\", \"nosotros\" o \"nuestro\") es un estudio de estrategia de marca y creatividad con sede en Boston, Massachusetts, Estados Unidos. Esta Política de Privacidad explica cómo recopilamos, usamos, compartimos y protegemos la información personal cuando visitas {website} (el \"Sitio\"), nos contactas mediante el formulario, correo electrónico, teléfono o redes sociales, recibes nuestras comunicaciones o trabajas con nosotros como cliente o colaborador (en conjunto, el \"Servicio\").",
+      "Al usar el Sitio, reconoces esta Política de Privacidad. Si no estás de acuerdo con ella, por favor no uses el Sitio ni nos envíes información personal. Los residentes de ciertos estados de EE. UU. y los visitantes de fuera de Estados Unidos encontrarán información adicional en las secciones \"Derechos de privacidad estatales (Estados Unidos)\" y \"Aviso para visitantes fuera de Estados Unidos\"."
     ],
     "sections": [
       {
-        "heading": "Quiénes somos",
-        "body": [
-          "Legado Creativo es el responsable del tratamiento de tu información personal. Si tienes preguntas sobre esta política o sobre cómo se manejan tus datos, puedes escribirnos a vickyurbaneja@gmail.com"
+        "heading": "La versión corta",
+        "blocks": [
+          {
+            "p": "Este resumen es solo para tu comodidad. Prevalece la política completa que aparece a continuación."
+          },
+          {
+            "list": [
+              "**Qué recopilamos:** los datos que envías por el formulario de contacto (nombre, correo electrónico, empresa, servicio de interés y tu mensaje) y datos técnicos básicos de tu visita.",
+              "**Para qué:** para responder tu consulta, prestar nuestros servicios, mantener el Sitio seguro y entender cómo se usa.",
+              "**Con quién lo compartimos:** solo con proveedores de servicios que nos ayudan a operar el Sitio y nuestro negocio (como alojamiento, envío de correo y protección contra bots), asesores profesionales y autoridades cuando la ley lo exige.",
+              "**Lo que no hacemos:** no vendemos tu información personal, no la compartimos para publicidad conductual entre contextos y no usamos cookies publicitarias ni píxeles de rastreo en el Sitio.",
+              "**Tu control:** puedes pedirnos acceder a tu información, corregirla o eliminarla, o dejar de recibir correos de marketing, en cualquier momento escribiendo a {email}."
+            ]
+          }
         ]
       },
       {
-        "heading": "Información que recopilamos",
-        "body": [
-          "Solo recopilamos la información que nos ayuda a responderte y a prestar nuestros servicios. Esto incluye:"
-        ],
-        "list": [
-          "Información que nos proporcionas directamente, como tu nombre, correo electrónico, teléfono, nombre de tu empresa y los detalles de cualquier mensaje o solicitud de proyecto que nos envíes a través del formulario de contacto o por correo",
-          "Información recopilada automáticamente cuando visitas nuestro sitio web, como tu dirección IP, tipo de navegador, información del dispositivo, páginas visitadas y ubicación general, obtenida mediante cookies y tecnologías similares",
-          "Información relacionada con una relación de trabajo, como datos de facturación, archivos de proyectos y comunicaciones, cuando te conviertes en cliente o colaborador"
+        "heading": "Información personal que recopilamos",
+        "blocks": [
+          {
+            "h": "Información que nos proporcionas"
+          },
+          {
+            "p": "La información personal que puedes proporcionarnos a través del Sitio o por otros medios incluye:"
+          },
+          {
+            "list": [
+              "**Datos de contacto**, como tu nombre, correo electrónico y nombre de empresa, y, si decides compartirlos, tu número de teléfono, cargo y dirección postal.",
+              "**Datos de comunicaciones**, como el servicio que te interesa, el contenido de tu mensaje (por ejemplo, objetivos del proyecto, plazos y presupuesto) y nuestra correspondencia contigo por formulario, correo, teléfono o redes sociales.",
+              "**Datos de la relación con el cliente**, si te conviertes en cliente o colaborador: direcciones de facturación y postales, briefs de proyecto, activos de marca y archivos que compartes con nosotros, aprobaciones y comentarios, y registros de facturación y transacciones. Los datos de tarjetas de pago y cuentas bancarias los recopilan nuestros proveedores de pago, no el Sitio.",
+              "**Datos de marketing**, como tus preferencias para recibir comunicaciones nuestras."
+            ]
+          },
+          {
+            "p": "Nuestro formulario de contacto solo solicita tu nombre, correo electrónico, empresa (opcional), el servicio que te interesa y tu mensaje. **Por favor no incluyas información sensible** en el formulario ni en tus correos, como números de Seguro Social u otros documentos de identidad oficiales, números de cuentas financieras o tarjetas de pago, información de salud o contraseñas. No la necesitamos para responder tu consulta."
+          },
+          {
+            "h": "Información que se recopila automáticamente"
+          },
+          {
+            "p": "Cuando visitas el Sitio, nosotros y nuestros proveedores registramos automáticamente cierta información sobre tu dispositivo y tu interacción con el Sitio, como:"
+          },
+          {
+            "list": [
+              "**Datos del dispositivo**, como tu dirección IP, tipo y versión de navegador, sistema operativo, tipo de dispositivo, tamaño de pantalla, idioma y ubicación aproximada (ciudad, región o país) inferida de tu dirección IP.",
+              "**Datos de actividad en línea**, como las páginas que consultas, el sitio web desde el que llegaste y la fecha y hora de tu visita.",
+              "**Datos de seguridad**, como registros de solicitudes y señales usadas para distinguir a los visitantes reales de los bots (incluso mediante Cloudflare Turnstile) y limitar el tráfico abusivo."
+            ]
+          },
+          {
+            "h": "Información de otras fuentes"
+          },
+          {
+            "p": "Podemos recibir información sobre ti de plataformas de redes sociales (por ejemplo, si nos escribes o interactúas con nosotros en Instagram o Facebook), de fuentes públicas como el sitio web de tu empresa o perfiles profesionales, de referencias y de proveedores que apoyan nuestro negocio. Podemos combinarla con la información que nos das."
+          },
+          {
+            "h": "Información que no recopilamos"
+          },
+          {
+            "p": "El Sitio no tiene cuentas de usuario ni contraseñas, no procesa pagos y no solicita tu geolocalización precisa. No recopilamos a sabiendas información de menores (consulta \"Privacidad de menores\")."
+          }
         ]
       },
       {
-        "heading": "Cómo usamos tu información",
-        "body": ["Usamos la información que recopilamos para:"],
-        "list": [
-          "Responder a tus consultas y comunicarnos contigo sobre tu proyecto",
-          "Prestar, entregar y mejorar nuestros servicios creativos y de estrategia de marca",
-          "Enviar información administrativa como propuestas, facturas y actualizaciones de servicio",
-          "Operar, mantener y mejorar nuestro sitio web y entender cómo se utiliza",
-          "Cumplir con obligaciones legales y proteger nuestros derechos y los de nuestros clientes",
-          "Con tu consentimiento, enviarte actualizaciones ocasionales o comunicaciones de marketing, de las que puedes darte de baja en cualquier momento"
+        "heading": "Cómo usamos tu información personal",
+        "blocks": [
+          {
+            "p": "Usamos la información personal para los siguientes fines, o como se describa al momento de recopilarla:"
+          },
+          {
+            "list": [
+              "**Responderte y prestar nuestros servicios:** para leer y responder tus consultas, enviarte una confirmación automática de que recibimos tu mensaje, preparar propuestas, contratos y facturas, y ejecutar proyectos de clientes.",
+              "**Operar y proteger el Sitio:** para alojar y mantener el Sitio, protegerlo con filtros de spam, detección de bots y límites de solicitudes, corregir errores y prevenir fraudes, abusos y ciberataques.",
+              "**Mejorar el Sitio y nuestros servicios:** para entender qué páginas se visitan, cómo llegan los visitantes y cómo funciona el Sitio, y así mejorar el contenido, el diseño y la velocidad. Para ello usamos Vercel Web Analytics, que mide tráfico agregado sin cookies.",
+              "**Comunicarnos contigo:** para enviarte mensajes relacionados con el servicio y, cuando la ley lo permita (y con tu consentimiento cuando se requiera), novedades ocasionales sobre nuestro trabajo. Puedes dejar de recibir mensajes de marketing en cualquier momento.",
+              "**Cumplir la ley y proteger derechos:** para cumplir obligaciones legales, responder solicitudes legítimas, hacer cumplir nuestros Términos de Servicio y establecer, ejercer o defender reclamaciones legales.",
+              "**Crear datos agregados o desidentificados:** datos que ya no te identifican y que podemos usar para fines comerciales legítimos. No intentaremos reidentificarlos.",
+              "**Usos posteriores:** para otros fines informados al momento de la recopilación o compatibles con el fin original. Si un nuevo fin no es compatible, primero te pediremos tu consentimiento."
+            ]
+          },
+          {
+            "p": "No vendemos tu información personal ni la usamos para decisiones automatizadas que produzcan efectos legales o similarmente significativos."
+          }
         ]
       },
       {
-        "heading": "Bases legales para el tratamiento",
-        "body": [
-          "Cuando la ley lo exige (por ejemplo, bajo el Reglamento General de Protección de Datos de la UE y el Reino Unido), tratamos tus datos personales sobre las siguientes bases legales: tu consentimiento; la ejecución de un contrato contigo; nuestros intereses legítimos para operar y promover nuestro negocio; y el cumplimiento de nuestras obligaciones legales"
+        "heading": "Cookies y tecnologías similares",
+        "blocks": [
+          {
+            "p": "Las cookies son pequeños archivos que se guardan en tu dispositivo. Las tecnologías similares incluyen el almacenamiento local del navegador y las etiquetas de píxel. Esta sección es nuestro Aviso de Cookies para el Sitio."
+          },
+          {
+            "p": "El Sitio usa solo un conjunto mínimo de estas tecnologías. No usamos cookies publicitarias ni de rastreo entre sitios, píxeles de rastreo de redes sociales ni herramientas de grabación de sesiones."
+          },
+          {
+            "table": {
+              "headers": [
+                "Tipo",
+                "Qué hace",
+                "Proveedor",
+                "Cómo controlarla"
+              ],
+              "rows": [
+                [
+                  "Estrictamente necesaria",
+                  "Recuerda tu elección de idioma (inglés o español) para que el Sitio se abra en el idioma correcto (cookie: NEXT_LOCALE).",
+                  "Legado Creativo (propia)",
+                  "Configuración del navegador. Si la bloqueas, el idioma puede reiniciarse en cada visita."
+                ],
+                [
+                  "Seguridad",
+                  "Ayuda a distinguir a los visitantes reales de los bots en el formulario de contacto. Puede usar cookies o almacenamiento local estrictamente necesarios para ese fin.",
+                  "Cloudflare Turnstile ([política de privacidad](https://www.cloudflare.com/privacypolicy/))",
+                  "Necesaria para enviar el formulario cuando está activada. Configuración del navegador."
+                ],
+                [
+                  "Analítica (sin cookies)",
+                  "Mide visitas agregadas a las páginas e información del visitante (como sitio de origen, país, navegador y tipo de dispositivo) sin cookies y sin rastrearte en otros sitios web.",
+                  "Vercel Web Analytics ([política de privacidad](https://vercel.com/legal/privacy-policy))",
+                  "No se instalan cookies. Puedes bloquear las solicitudes de analítica con una configuración de privacidad o un bloqueador de contenido."
+                ],
+                [
+                  "Publicidad y redes sociales",
+                  "Ninguna. Los enlaces a Instagram y Facebook te llevan a esos servicios, que tienen sus propias cookies.",
+                  "No aplica",
+                  "Consulta sus políticas de privacidad."
+                ]
+              ]
+            }
+          },
+          {
+            "p": "**Correos electrónicos.** No usamos píxeles de rastreo en nuestros correos para medir aperturas o clics. Nuestro proveedor de correo puede registrar eventos técnicos de entrega, como si un mensaje fue entregado o rebotó."
+          },
+          {
+            "h": "Tus opciones"
+          },
+          {
+            "list": [
+              "**Controles del navegador.** La mayoría de los navegadores permite bloquear o eliminar cookies y almacenamiento local en su configuración. Si lo haces, partes del Sitio, como la memoria de idioma y la verificación de seguridad del formulario, podrían no funcionar como se espera.",
+              "**Global Privacy Control y No Rastrear.** El Sitio no te rastrea en otros sitios web ni usa tus datos para publicidad dirigida, por lo que estas señales no tienen nada que desactivar. Tratamos una señal de [Global Privacy Control](https://globalprivacycontrol.org) como una solicitud válida de exclusión de la venta o el uso compartido de información personal.",
+              "**Bloqueo de imágenes.** Puedes configurar tu navegador o dispositivo para impedir la carga de imágenes."
+            ]
+          },
+          {
+            "p": "Si en el futuro agregamos analítica, publicidad u otras tecnologías de rastreo, actualizaremos esta sección y, cuando la ley lo exija, te pediremos tu consentimiento antes."
+          }
         ]
       },
       {
-        "heading": "Cookies y analítica",
-        "body": [
-          "Nuestro sitio web puede usar cookies y tecnologías similares para mantener el sitio en funcionamiento, recordar tus preferencias y entender cómo interactúan los visitantes con nuestro contenido. Puedes controlar o desactivar las cookies desde la configuración de tu navegador. Algunas funciones del sitio podrían no funcionar correctamente si desactivas las cookies"
+        "heading": "Cómo compartimos tu información personal",
+        "blocks": [
+          {
+            "p": "No vendemos tu información personal. La compartimos solo como se describe a continuación, o como te informemos al momento de recopilarla:"
+          },
+          {
+            "list": [
+              "**Proveedores de servicios.** Empresas que procesan información personal en nuestro nombre para ayudar a operar el Sitio y nuestro negocio, bajo términos que limitan cómo pueden usarla. Los proveedores que usamos actualmente para el Sitio aparecen a continuación.",
+              "**Asesores profesionales**, como abogados, contadores y aseguradoras, en el marco de los servicios que nos prestan.",
+              "**Autoridades y otros,** cuando consideramos de buena fe que la divulgación es exigida por la ley, una citación o un proceso legal, o es necesaria para proteger nuestros derechos, propiedad o seguridad, o los de otros, o para detectar y prevenir fraudes y problemas de seguridad.",
+              "**Receptores en transacciones comerciales,** en relación con una fusión, adquisición, financiamiento o venta, real o prospectiva, de todo o parte de nuestro negocio o activos.",
+              "**Terceros que tú indiques,** o con tu consentimiento."
+            ]
+          },
+          {
+            "table": {
+              "headers": [
+                "Proveedor",
+                "Qué hace por nosotros",
+                "Información involucrada",
+                "Política de privacidad"
+              ],
+              "rows": [
+                [
+                  "Vercel Inc. (Estados Unidos)",
+                  "Alojamiento del sitio web, entrega de contenido y Web Analytics",
+                  "Datos del dispositivo, datos de actividad en línea, dirección IP, registros de solicitudes",
+                  "[vercel.com/legal/privacy-policy](https://vercel.com/legal/privacy-policy)"
+                ],
+                [
+                  "Resend (Estados Unidos)",
+                  "Envía la notificación del formulario de contacto a nosotros y el correo de confirmación a ti",
+                  "Nombre, correo electrónico, empresa, servicio de interés, mensaje, eventos de entrega",
+                  "[resend.com/legal/privacy-policy](https://resend.com/legal/privacy-policy)"
+                ],
+                [
+                  "Google, Gmail (Estados Unidos)",
+                  "Servicio de correo donde recibimos y guardamos consultas y correspondencia",
+                  "Datos de contacto, datos de comunicaciones",
+                  "[policies.google.com/privacy](https://policies.google.com/privacy)"
+                ],
+                [
+                  "Cloudflare, Inc. (Estados Unidos)",
+                  "Protección contra bots Turnstile en el formulario de contacto",
+                  "Dirección IP, señales del navegador y del dispositivo, señales de interacción",
+                  "[cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)"
+                ],
+                [
+                  "Meta Platforms, Instagram (Estados Unidos)",
+                  "Nos permite mostrar nuestras propias publicaciones de Instagram en el Sitio",
+                  "Contenido de nuestra cuenta de Instagram. Tu dirección IP y datos del dispositivo cuando el contenido se carga desde los servidores de Meta",
+                  "[privacycenter.instagram.com/policy](https://privacycenter.instagram.com/policy)"
+                ]
+              ]
+            }
+          },
+          {
+            "p": "Si te conviertes en cliente, también podemos usar herramientas de facturación, pago, intercambio de archivos y gestión de proyectos. Sus proveedores procesan la información conforme a sus propias políticas de privacidad y a nuestros acuerdos con ellos."
+          }
         ]
       },
       {
-        "heading": "Cómo compartimos tu información",
-        "body": [
-          "No vendemos tu información personal. Solo podemos compartirla en las siguientes circunstancias:"
-        ],
-        "list": [
-          "Con proveedores de servicios de confianza que nos ayudan a operar nuestro negocio, como alojamiento, correo, analítica y procesadores de pago, quienes solo pueden usar tus datos para prestarnos sus servicios",
-          "Cuando lo exija la ley, un reglamento, un proceso legal o una solicitud gubernamental válida",
-          "Para proteger los derechos, la propiedad o la seguridad de Legado Creativo, nuestros clientes u otras personas",
-          "En relación con una transferencia de negocio, fusión o adquisición, en cuyo caso te notificaremos cualquier cambio en la propiedad o el uso de tu información"
+        "heading": "Conservación",
+        "blocks": [
+          {
+            "p": "Conservamos la información personal durante el tiempo necesario para cumplir los fines descritos en esta política, incluido responder consultas, realizar trabajos para clientes y cumplir requisitos legales, fiscales, contables y de reporte, resolver disputas y hacer cumplir nuestros acuerdos. Para decidir cuánto tiempo, consideramos la cantidad, naturaleza y sensibilidad de la información, el riesgo de daño por uso o divulgación no autorizados, los fines para los que la procesamos y si podemos lograrlos de otra manera, y los requisitos legales aplicables."
+          },
+          {
+            "p": "Cuando ya no necesitamos la información personal, la eliminamos o anonimizamos. Si no es posible hacerlo de inmediato (por ejemplo, porque está en una copia de seguridad), la almacenamos de forma segura y la aislamos de cualquier uso adicional hasta que pueda eliminarse."
+          }
         ]
       },
       {
-        "heading": "Transferencias internacionales de datos",
-        "body": [
-          "Legado Creativo opera desde Estados Unidos, y nuestros proveedores de servicios pueden estar ubicados en Estados Unidos u otros países. Si accedes a nuestros servicios desde fuera de Estados Unidos, tu información puede transferirse, almacenarse y procesarse en Estados Unidos u otras jurisdicciones cuyas leyes de protección de datos pueden diferir de las de tu país",
-          "Cuando corresponde, adoptamos las salvaguardas adecuadas, como cláusulas contractuales estándar, para proteger tu información cuando se transfiere internacionalmente"
+        "heading": "Tus opciones y derechos",
+        "blocks": [
+          {
+            "p": "Todas las personas pueden hacer lo siguiente, sin importar dónde vivan:"
+          },
+          {
+            "list": [
+              "**Acceder, corregir o eliminar.** Pedirnos qué información personal tuya conservamos, que la corrijamos o que la eliminemos.",
+              "**Dejar de recibir marketing.** Usa las instrucciones para cancelar la suscripción en cualquier correo de marketing, o contáctanos. Es posible que sigas recibiendo mensajes relacionados con el servicio, como respuestas a tu consulta o comunicaciones de proyecto.",
+              "**Retirar tu consentimiento.** Cuando nos basamos en tu consentimiento, puedes retirarlo en cualquier momento. Esto no afecta el tratamiento realizado antes de retirarlo.",
+              "**No proporcionar información.** Puedes decidir no darnos información, pero entonces podríamos no poder responder tu consulta o prestarte un servicio. Nuestro formulario necesita tu nombre, correo electrónico, servicio de interés y mensaje para funcionar.",
+              "**Cookies y rastreo.** Consulta \"Cookies y tecnologías similares\" más arriba."
+            ]
+          },
+          {
+            "p": "Para ejercer cualquiera de estas opciones, escribe a {email}. Podemos necesitar verificar tu identidad antes de atender una solicitud. Los residentes de ciertos estados y países tienen derechos adicionales, descritos a continuación."
+          }
         ]
       },
       {
-        "heading": "Conservación de datos",
-        "body": [
-          "Conservamos tu información personal únicamente durante el tiempo necesario para cumplir los fines descritos en esta política, mantener nuestra relación comercial y cumplir con nuestras obligaciones legales, contables y de reporte. Cuando ya no es necesaria, la eliminamos o anonimizamos de forma segura"
+        "heading": "Derechos de privacidad estatales (Estados Unidos)",
+        "blocks": [
+          {
+            "p": "Esta sección se aplica a residentes de estados de EE. UU. cuyas leyes integrales de privacidad nos sean aplicables, como California, Colorado, Connecticut, Virginia, Texas y Oregón (en conjunto, las \"Leyes de Privacidad Estatales\"). Puedes enviar una solicitud sin importar en qué lugar de Estados Unidos vivas, y la atenderemos según lo exija la ley que te aplique. No todos los derechos están disponibles en todos los estados, y podemos rechazar una solicitud cuando la ley lo permita."
+          },
+          {
+            "h": "Tus derechos"
+          },
+          {
+            "list": [
+              "**Conocer y acceder:** las categorías de información personal que recopilamos, las fuentes, nuestros fines, las categorías de terceros a quienes la divulgamos y una copia de la información personal que conservamos sobre ti.",
+              "**Corregir** información personal inexacta.",
+              "**Eliminar** la información personal que recopilamos de ti.",
+              "**Portabilidad:** recibir tu información personal en un formato portátil cuando la ley lo prevea.",
+              "**Excluirte** de la venta o el uso compartido de información personal, la publicidad dirigida y la elaboración de perfiles. Ver abajo: no realizamos estas actividades.",
+              "**Limitar el uso de información personal sensible.** Ver abajo: no la recopilamos intencionalmente.",
+              "**Apelar** nuestra decisión sobre una solicitud.",
+              "**No discriminación:** no te negaremos servicios, cobraremos precios distintos ni ofreceremos una calidad de servicio diferente por ejercer estos derechos."
+            ]
+          },
+          {
+            "h": "Nuestras prácticas"
+          },
+          {
+            "list": [
+              "**Sin venta ni uso compartido.** En los 12 meses anteriores a la fecha de esta política, no hemos vendido información personal ni la hemos compartido para publicidad conductual entre contextos. No tenemos conocimiento real de que vendamos o compartamos información personal de menores de 16 años.",
+              "**Sin publicidad dirigida ni elaboración de perfiles.** No procesamos información personal para publicidad dirigida ni para elaboración de perfiles que produzca efectos legales o similarmente significativos.",
+              "**Información personal sensible.** No la recopilamos intencionalmente ni la usamos para inferir características sobre ti.",
+              "**Datos desidentificados.** No intentamos reidentificar información desidentificada."
+            ]
+          },
+          {
+            "h": "Cómo enviar una solicitud"
+          },
+          {
+            "p": "Escribe a {email} o llama al {phone}. Usa el asunto \"Solicitud de privacidad\" e indícanos tu estado de residencia y qué derecho quieres ejercer. Confirmaremos la recepción en un plazo de 10 días hábiles y responderemos en un plazo de 45 días. Si necesitamos más tiempo, podemos extender ese plazo una vez hasta 45 días más y te explicaremos por qué."
+          },
+          {
+            "p": "Para protegerte, verificamos las solicitudes comparando la información que nos das (por ejemplo, el correo electrónico y los detalles de tu consulta) con la que conservamos. No pediremos un documento de identidad oficial salvo que la ley lo permita y sea necesario. Puedes usar un agente autorizado para enviar una solicitud en tu nombre. Podemos pedir tu autorización escrita y firmada y verificar tu identidad directamente."
+          },
+          {
+            "p": "Si rechazamos tu solicitud, puedes apelar respondiendo a nuestra respuesta con el asunto \"Apelación\". Responderemos por escrito dentro del plazo que exija la ley (generalmente de 45 a 60 días). Si no estás conforme con el resultado, puedes contactar a la fiscalía general (attorney general) de tu estado."
+          },
+          {
+            "h": "Información personal que recopilamos, usamos y divulgamos"
+          },
+          {
+            "p": "Esta tabla abarca los 12 meses anteriores a la fecha de esta política y usa las categorías de la Ley de Privacidad del Consumidor de California (CCPA) (Cal. Civ. Code § 1798.140). La información que escribas en campos de texto libre puede contener otras categorías que decidas compartir."
+          },
+          {
+            "table": {
+              "headers": [
+                "Información personal que recopilamos",
+                "Categoría CCPA",
+                "Fines",
+                "Divulgada con fines comerciales a",
+                "Vendida o compartida"
+              ],
+              "rows": [
+                [
+                  "Nombre, correo electrónico, teléfono, dirección postal, dirección IP",
+                  "Identificadores; registros de clientes (Cal. Civ. Code § 1798.80(e))",
+                  "Responder consultas; prestar servicios; seguridad; cumplimiento legal",
+                  "Proveedores de servicios (alojamiento, envío de correo, protección contra bots); asesores profesionales",
+                  "No"
+                ],
+                [
+                  "Nombre de la empresa, cargo",
+                  "Información profesional o relacionada con el empleo",
+                  "Responder consultas; prestar servicios",
+                  "Proveedores de servicios; asesores profesionales",
+                  "No"
+                ],
+                [
+                  "Contenido de mensajes, briefs de proyecto, archivos, correspondencia, facturas y registros de transacciones",
+                  "Registros de clientes; información comercial",
+                  "Prestar servicios; gestionar nuestra relación; cumplir la ley",
+                  "Proveedores de servicios; asesores profesionales; proveedores de pago (solo clientes)",
+                  "No"
+                ],
+                [
+                  "Datos del navegador, del dispositivo y de uso (páginas vistas, sitio de origen, ubicación aproximada)",
+                  "Actividad en internet u otra red electrónica; geolocalización (solo aproximada)",
+                  "Operar, proteger y mejorar el Sitio",
+                  "Proveedores de servicios (alojamiento, analítica, protección contra bots)",
+                  "No"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "California"
+          },
+          {
+            "p": "**Shine the Light.** Conforme al Código Civil de California § 1798.83, los residentes de California que tengan una relación comercial establecida con nosotros pueden solicitar los nombres de los terceros a quienes divulgamos cierta información personal para sus propios fines de marketing directo durante el año calendario anterior. No divulgamos información personal a terceros para sus fines de marketing directo. Para hacer una solicitud, escribe a {email} con \"Shine the Light Request\" en el asunto."
+          },
+          {
+            "h": "Nevada"
+          },
+          {
+            "p": "Los residentes de Nevada pueden excluirse de la venta de cierta información cubierta. No vendemos información cubierta según la ley de Nevada. Para enviar una solicitud, escribe a {email}."
+          }
         ]
       },
       {
-        "heading": "Tus derechos y opciones",
-        "body": ["Según el lugar donde vivas, puedes tener derecho a:"],
-        "list": [
-          "Acceder a la información personal que tenemos sobre ti y solicitar una copia",
-          "Corregir información inexacta o incompleta",
-          "Solicitar la eliminación de tu información personal",
-          "Oponerte o restringir ciertos tratamientos de tus datos",
-          "Retirar tu consentimiento en cualquier momento, cuando el tratamiento se base en el consentimiento",
-          "Solicitar que no vendamos ni compartamos tu información personal (como reconoce la Ley de Privacidad del Consumidor de California)"
+        "heading": "Aviso para visitantes fuera de Estados Unidos",
+        "blocks": [
+          {
+            "p": "Legado Creativo tiene su sede en Estados Unidos y opera el Sitio desde allí. Trabajamos con clientes y colaboradores a nivel internacional. Si nos contactas desde el Espacio Económico Europeo (EEE), el Reino Unido u otro país con leyes de protección de datos, esta sección complementa el resto de la política. Las referencias a \"información personal\" incluyen los \"datos personales\" según esas leyes."
+          },
+          {
+            "h": "Responsable del tratamiento"
+          },
+          {
+            "p": "{legalName} es el responsable del tratamiento de los datos personales descritos en esta política. Puedes contactarnos con los datos de \"Contáctanos\"."
+          },
+          {
+            "h": "Bases legales del tratamiento"
+          },
+          {
+            "p": "Cuando se aplica el Reglamento General de Protección de Datos de la UE o del Reino Unido, nos basamos en las siguientes bases legales:"
+          },
+          {
+            "table": {
+              "headers": [
+                "Finalidad",
+                "Base legal"
+              ],
+              "rows": [
+                [
+                  "Responder consultas y prestar servicios",
+                  "Necesidad contractual (incluidas las medidas adoptadas a petición tuya antes de celebrar un contrato) y nuestros intereses legítimos en operar nuestro negocio"
+                ],
+                [
+                  "Operar, proteger y mejorar el Sitio",
+                  "Nuestros intereses legítimos en mantener el Sitio seguro, prevenir abusos y entender cómo se usa"
+                ],
+                [
+                  "Comunicaciones de marketing",
+                  "Tu consentimiento, o nuestros intereses legítimos en promover nuestro negocio cuando la ley lo permita. Puedes oponerte o retirar tu consentimiento en cualquier momento"
+                ],
+                [
+                  "Cumplimiento legal y protección de nuestros derechos",
+                  "Obligación legal y nuestros intereses legítimos en establecer, ejercer o defender reclamaciones legales"
+                ],
+                [
+                  "Almacenamiento estrictamente necesario (idioma, verificación de seguridad)",
+                  "Necesario para prestar el servicio que solicitas; no se requiere consentimiento"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Tus derechos"
+          },
+          {
+            "p": "Según dónde te encuentres, puedes tener derecho a:"
+          },
+          {
+            "list": [
+              "Acceder a tus datos personales y recibir una copia.",
+              "Rectificar datos inexactos o incompletos.",
+              "Suprimir tus datos cuando no haya un motivo válido para que sigamos tratándolos.",
+              "Limitar nuestro tratamiento, por ejemplo mientras verificamos su exactitud.",
+              "Recibir tus datos en un formato portátil o que se envíen a otro responsable.",
+              "Oponerte al tratamiento basado en nuestros intereses legítimos y al marketing directo.",
+              "Retirar tu consentimiento en cualquier momento, cuando el tratamiento se base en él."
+            ]
+          },
+          {
+            "p": "Para ejercer estos derechos, escribe a {email}. Podemos pedirte información para confirmar tu identidad. Si no estás conforme con nuestra respuesta, puedes presentar una reclamación ante tu autoridad local de protección de datos. En el EEE, encuentra la tuya en el [Comité Europeo de Protección de Datos](https://edpb.europa.eu/about-edpb/about-edpb/members_en). En el Reino Unido, contacta a la [Information Commissioner's Office](https://ico.org.uk/make-a-complaint/)."
+          },
+          {
+            "h": "Transferencias fuera de Europa"
+          },
+          {
+            "p": "Como tenemos sede en Estados Unidos, tus datos personales serán consultados y tratados en Estados Unidos, país que no cuenta con una decisión general de adecuación europea. Cuando la ley lo exige, nos apoyamos en garantías adecuadas, como las cláusulas contractuales tipo de la Comisión Europea (o su equivalente del Reino Unido) o el [Marco de Privacidad de Datos UE-EE. UU.](https://www.dataprivacyframework.gov/) para los destinatarios certificados. En casos limitados nos apoyamos en una excepción, como tu consentimiento explícito o la necesidad de transferir datos para ejecutar un contrato a petición tuya. Contáctanos si quieres más información sobre las garantías aplicables."
+          },
+          {
+            "h": "Otros países"
+          },
+          {
+            "p": "Si vives en otro país, incluidos los de América Latina, tu legislación local puede darte derechos adicionales. Indícanos dónde vives y qué quieres hacer, y respetaremos esos derechos según lo exija la ley."
+          }
         ]
       },
       {
-        "heading": "Cómo ejercer tus derechos",
-        "body": [
-          "Para ejercer cualquiera de estos derechos, escríbenos a vickyurbaneja@gmail.com. Responderemos dentro del plazo que exija la ley aplicable. No te discriminaremos por ejercer tus derechos de privacidad"
+        "heading": "Sitios web y contenido de terceros",
+        "blocks": [
+          {
+            "p": "El Sitio contiene enlaces a sitios web y servicios operados por terceros, incluidas nuestras páginas de Instagram y Facebook, y puede mostrar contenido de ellos, como nuestras publicaciones de Instagram. Cuando el contenido se carga desde los servidores de Meta, Meta puede recibir tu dirección IP e información de tu dispositivo. Los enlaces y el contenido integrado no implican un respaldo, y no controlamos ni somos responsables de las prácticas de privacidad de terceros. Te recomendamos leer sus políticas de privacidad."
+          }
         ]
       },
       {
-        "heading": "Seguridad de los datos",
-        "body": [
-          "Aplicamos medidas técnicas y organizativas razonables para proteger tu información personal contra pérdida, uso indebido y acceso no autorizado. Sin embargo, ningún método de transmisión por internet es completamente seguro, por lo que no podemos garantizar una seguridad absoluta"
+        "heading": "Seguridad",
+        "blocks": [
+          {
+            "p": "Usamos medidas administrativas, técnicas y físicas adecuadas a la naturaleza de la información personal que conservamos, incluidas conexiones cifradas (HTTPS), controles de acceso y protección contra bots y abusos. Sin embargo, ningún método de transmisión o almacenamiento es completamente seguro y no podemos garantizar la seguridad de tu información. Si una brecha de seguridad afecta tu información personal, te notificaremos a ti y a los reguladores según exija la ley, incluido el Capítulo 93H de las Leyes Generales de Massachusetts."
+          }
         ]
       },
       {
         "heading": "Privacidad de menores",
-        "body": [
-          "Nuestro sitio web y servicios no están dirigidos a menores de 16 años, y no recopilamos conscientemente su información personal. Si crees que un menor nos ha proporcionado información personal, contáctanos para que podamos eliminarla"
+        "blocks": [
+          {
+            "p": "El Sitio y nuestros servicios están dirigidos a adultos y no a menores de 18 años. No recopilamos a sabiendas información personal de menores. Si eres madre, padre o tutor y crees que un menor nos ha dado información personal, por favor contáctanos. Si descubrimos que hemos recopilado información personal de un menor sin el consentimiento que exige la ley, la eliminaremos."
+          }
         ]
       },
       {
-        "heading": "Cambios en esta política",
-        "body": [
-          "Podemos actualizar esta Política de Privacidad de vez en cuando para reflejar cambios en nuestras prácticas o requisitos legales. Cuando lo hagamos, actualizaremos la fecha de \"Última actualización\" que aparece arriba. Te recomendamos revisar esta página periódicamente"
+        "heading": "Cambios a esta Política de Privacidad",
+        "blocks": [
+          {
+            "p": "Podemos actualizar esta Política de Privacidad de vez en cuando. Cuando lo hagamos, cambiaremos la fecha de \"Última actualización\" al inicio de esta página. Si los cambios son importantes, también publicaremos un aviso destacado en el Sitio o te notificaremos por correo electrónico cuando la ley lo exija. Los cambios entran en vigor al publicarse, salvo que indiquemos otra cosa. Si sigues usando el Sitio después, reconoces la política actualizada."
+          }
         ]
       },
       {
         "heading": "Contáctanos",
-        "body": [
-          "Si tienes preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o tu información personal, escríbenos a vickyurbaneja@gmail.com"
+        "blocks": [
+          {
+            "p": "Si tienes preguntas sobre esta política o nuestras prácticas de privacidad, o quieres ejercer un derecho de privacidad, contáctanos:"
+          },
+          {
+            "list": [
+              "**Correo electrónico:** {email}",
+              "**Teléfono:** {phone}",
+              "**Correo postal:** {legalName}, {address}"
+            ]
+          }
         ]
       }
     ]
@@ -863,123 +1239,287 @@
   "termsOfService": {
     "badge": "Legal",
     "title": "Términos de Servicio",
-    "lastUpdated": "Última actualización: 30 de julio de 2026",
+    "tocLabel": "Contenido",
+    "lastUpdated": "Última actualización: {effectiveDate}",
     "intro": [
-      "Bienvenido a Legado Creativo. Estos Términos de Servicio (\"Términos\") rigen tu acceso y uso de nuestro sitio web y de los servicios creativos y de estrategia de marca que prestamos (en conjunto, los \"Servicios\")",
-      "Al acceder a nuestro sitio web o contratar nuestros Servicios, aceptas quedar obligado por estos Términos. Si no estás de acuerdo, por favor no uses nuestro sitio web ni nuestros Servicios. Legado Creativo opera desde Estados Unidos y trabaja con clientes y colaboradores de todo el mundo"
+      "Estos Términos de Servicio (\"Términos\") rigen tu acceso y uso del sitio web {website} (el \"Sitio\") y de los servicios creativos y de estrategia de marca que presta {legalName} (\"Legado Creativo\", la \"Empresa\", \"nosotros\" o \"nuestro\"), un negocio con sede en Boston, Massachusetts, Estados Unidos (en conjunto, los \"Servicios\"). Ciertas funciones del Sitio pueden estar sujetas a pautas o reglas adicionales publicadas en el Sitio, que se incorporan a estos Términos por referencia.",
+      "Al acceder o usar el Sitio, enviarnos un mensaje o contratar nuestros Servicios, aceptas estos Términos en tu propio nombre o en nombre de la entidad que representas, y confirmas que tienes autoridad para hacerlo. Debes tener al menos 18 años para usar el Sitio. Si no estás de acuerdo con estos Términos, por favor no uses el Sitio.",
+      "Por favor lee con atención las secciones \"Limitación de responsabilidad\" y \"Ley aplicable y resolución de disputas\". Afectan tus derechos legales."
     ],
     "sections": [
       {
-        "heading": "Aceptación de estos términos",
-        "body": [
-          "Al usar este sitio web o contratar a Legado Creativo para cualquier proyecto, confirmas que tienes al menos 18 años y que cuentas con la autoridad para aceptar estos Términos, ya sea en tu propio nombre o en nombre de una organización que representes"
-        ]
-      },
-      {
         "heading": "Nuestros servicios",
-        "body": [
-          "Legado Creativo ofrece estrategia de marca, diseño gráfico, diseño web y servicios creativos relacionados. El alcance específico, los entregables, los plazos y las tarifas de cada proyecto se definirán en una propuesta, orden de trabajo o acuerdo escrito entre tú y Legado Creativo. En caso de conflicto, ese acuerdo de proyecto prevalecerá sobre estos Términos respecto del trabajo que cubra"
+        "blocks": [
+          {
+            "p": "Legado Creativo ofrece estrategia de marca, diseño gráfico, diseño web y servicios creativos relacionados. El alcance, los entregables, los plazos y las tarifas de cada proyecto se establecen en una propuesta, orden de trabajo o acuerdo escrito aparte entre tú y Legado Creativo (un \"Acuerdo de Proyecto\"). Si un Acuerdo de Proyecto contradice estos Términos, prevalece el Acuerdo de Proyecto respecto del trabajo que cubra."
+          },
+          {
+            "p": "La información del Sitio, incluidos nuestro portafolio, las descripciones de servicios y el formulario de contacto, es de carácter general y no constituye una oferta. Enviar un mensaje a través del Sitio no crea una relación de cliente ni obligación alguna para ninguno de los dos. Una contratación comienza solo cuando tú y Legado Creativo han aceptado un Acuerdo de Proyecto."
+          }
         ]
       },
       {
         "heading": "Propuestas, tarifas y pagos",
-        "body": [
-          "Las tarifas, los calendarios de pago y los anticipos se establecen en cada propuesta o acuerdo de proyecto. Salvo que se indique lo contrario, las facturas vencen dentro del plazo especificado en el acuerdo aplicable. Podemos pausar o suspender el trabajo en proyectos con saldos vencidos. Como trabajamos con clientes internacionales, eres responsable de cualquier impuesto, costo de conversión de divisa o comisión de transferencia que aplique a tus pagos"
+        "blocks": [
+          {
+            "p": "Las tarifas, los calendarios de pago y los anticipos se establecen en cada Acuerdo de Proyecto. Salvo que este disponga otra cosa, las facturas vencen dentro del plazo indicado en el Acuerdo de Proyecto aplicable. Podemos pausar o suspender el trabajo en proyectos con saldos vencidos. Como trabajamos con clientes internacionales, eres responsable de cualquier impuesto, costo de conversión de divisa o comisión de transferencia que aplique a tus pagos."
+          }
         ]
       },
       {
         "heading": "Responsabilidades del cliente",
-        "body": [
-          "Para ayudarnos a entregar nuestro trabajo a tiempo, aceptas:"
-        ],
-        "list": [
-          "Proporcionar información precisa y completa, así como los materiales necesarios para el proyecto",
-          "Revisar los entregables y dar comentarios dentro de los plazos razonables acordados",
-          "Asegurarte de que tienes los derechos sobre cualquier contenido, logotipo, imagen o texto que nos proporciones",
-          "Realizar los pagos conforme al calendario acordado"
+        "blocks": [
+          {
+            "p": "Para ayudarnos a entregar nuestro trabajo a tiempo, aceptas:"
+          },
+          {
+            "list": [
+              "Proporcionar información precisa y completa y los materiales necesarios para el proyecto.",
+              "Revisar los entregables y dar comentarios dentro de los plazos razonables acordados.",
+              "Asegurarte de tener los derechos sobre cualquier contenido, logotipo, imagen o texto que nos entregues.",
+              "Realizar los pagos conforme al calendario acordado."
+            ]
+          }
         ]
       },
       {
         "heading": "Propiedad intelectual",
-        "body": [
-          "Cualquier material, herramienta y conocimiento preexistente que Legado Creativo utilice para crear tu proyecto sigue siendo de nuestra propiedad. Una vez recibido el pago completo, los entregables finales creados específicamente para ti se transfieren o licencian a tu favor según lo descrito en tu acuerdo de proyecto",
-          "Salvo acuerdo en contrario, Legado Creativo conserva el derecho de mostrar el trabajo terminado en su portafolio y materiales de marketing como ejemplo de sus servicios. Los borradores, conceptos y diseños no utilizados siguen siendo propiedad de Legado Creativo"
+        "blocks": [
+          {
+            "h": "El Sitio"
+          },
+          {
+            "p": "Todos los derechos de propiedad intelectual sobre el Sitio y su contenido, incluidos derechos de autor, marcas y secretos comerciales, pertenecen a la Empresa o a sus licenciantes. Estos Términos no te transfieren ningún derecho de propiedad, y se reservan todos los derechos no otorgados expresamente."
+          },
+          {
+            "h": "Entregables"
+          },
+          {
+            "p": "Los materiales, herramientas y conocimientos preexistentes que Legado Creativo utilice para crear tu proyecto siguen siendo de nuestra propiedad. Una vez recibido el pago completo, los entregables finales creados específicamente para ti se ceden o licencian a tu favor según lo descrito en tu Acuerdo de Proyecto. Los borradores, conceptos y diseños no utilizados siguen siendo de nuestra propiedad."
+          },
+          {
+            "p": "Los entregables pueden incluir materiales de terceros, como tipografías, imágenes de archivo o software, licenciados bajo sus propios términos. Cuando se necesite una licencia aparte, te lo indicaremos y serás responsable de cumplirla."
+          },
+          {
+            "h": "Portafolio"
+          },
+          {
+            "p": "Salvo que acordemos otra cosa por escrito, Legado Creativo puede mostrar el trabajo terminado en su portafolio y materiales de marketing como ejemplo de sus servicios."
+          },
+          {
+            "h": "Comentarios"
+          },
+          {
+            "p": "Si compartes comentarios o sugerencias sobre el Sitio o nuestros servicios, nos otorgas una licencia perpetua, irrevocable, mundial, no exclusiva y libre de regalías para usarlos con cualquier fin, sin atribución ni compensación. Por favor no envíes comentarios que consideres propietarios o confidenciales."
+          }
         ]
       },
       {
-        "heading": "Contenido del sitio web y licencia",
-        "body": [
-          "Todo el contenido de este sitio web, incluidos textos, gráficos, logotipos, imágenes y diseño, es propiedad de Legado Creativo o está licenciado a su favor y está protegido por leyes de propiedad intelectual. Puedes ver y usar el sitio web únicamente para fines personales y no comerciales. No puedes copiar, reproducir, distribuir ni crear obras derivadas de nuestro contenido sin nuestro permiso previo por escrito"
+        "heading": "Uso del Sitio",
+        "blocks": [
+          {
+            "p": "**Licencia.** Sujeto a estos Términos, te otorgamos una licencia limitada, no exclusiva, intransferible y revocable para acceder y usar el Sitio para tus fines personales o de evaluación comercial interna."
+          },
+          {
+            "p": "**Restricciones.** No puedes: (i) licenciar, vender, alquilar, arrendar, transferir, distribuir ni explotar comercialmente el Sitio o su contenido; (ii) modificar, crear obras derivadas, desensamblar ni aplicar ingeniería inversa a ninguna parte del Sitio; (iii) acceder al Sitio para crear un producto o servicio similar o competidor; ni (iv) copiar, reproducir, republicar, descargar, mostrar o transmitir ninguna parte del Sitio salvo lo que estos Términos permitan. Debes conservar todos los avisos de derechos de autor y propiedad en las copias que se te permita hacer."
+          },
+          {
+            "p": "**Cambios en el Sitio.** Podemos modificar, suspender o discontinuar el Sitio, o cualquier parte de él, en cualquier momento, con o sin aviso, y no somos responsables por hacerlo. No tenemos obligación de prestar soporte ni mantenimiento del Sitio."
+          }
         ]
       },
       {
         "heading": "Uso aceptable",
-        "body": [
-          "Aceptas no usar nuestro sitio web ni nuestros Servicios para:"
-        ],
-        "list": [
-          "Infringir cualquier ley o reglamento aplicable",
-          "Vulnerar la propiedad intelectual u otros derechos de terceros",
-          "Cargar o transmitir código malicioso, o interferir con el funcionamiento del sitio web",
-          "Intentar obtener acceso no autorizado a nuestros sistemas o datos",
-          "Enviar comunicaciones no solicitadas o usar el sitio con fines fraudulentos"
+        "blocks": [
+          {
+            "p": "Aceptas no usar el Sitio ni nuestros Servicios para:"
+          },
+          {
+            "list": [
+              "Infringir cualquier ley o reglamento aplicable.",
+              "Vulnerar la propiedad intelectual u otros derechos de terceros.",
+              "Cargar o transmitir código malicioso, o interferir con el funcionamiento o la seguridad del Sitio.",
+              "Intentar obtener acceso no autorizado a nuestros sistemas o datos.",
+              "Usar bots, programas de extracción de datos u otros medios automatizados para acceder al Sitio o enviar el formulario de contacto, o eludir sus protecciones contra spam y bots.",
+              "Enviar comunicaciones no solicitadas, proporcionar información falsa o engañosa, o usar el Sitio con fines fraudulentos."
+            ]
+          }
         ]
       },
       {
-        "heading": "Enlaces a terceros",
-        "body": [
-          "Nuestro sitio web puede contener enlaces a sitios o servicios de terceros que no poseemos ni controlamos. No somos responsables del contenido, las políticas ni las prácticas de esos sitios, y te recomendamos revisar sus términos y políticas de privacidad"
+        "heading": "Formulario de contacto y comunicaciones",
+        "blocks": [
+          {
+            "p": "Cuando nos contactas a través del Sitio, aceptas proporcionar información precisa y consientes que te respondamos al correo electrónico que nos des. Por favor no envíes información sensible, como números de identificación oficial, números de cuentas financieras o tarjetas de pago, información de salud o contraseñas, a través del formulario ni por correo."
+          },
+          {
+            "p": "Los mensajes que nos envíes antes de que acordemos un Acuerdo de Proyecto no se consideran confidenciales, salvo que hayamos acordado lo contrario por escrito. Al usar el Sitio, consientes recibir comunicaciones nuestras por medios electrónicos, como correo electrónico o avisos publicados en el Sitio, y aceptas que estas cumplen cualquier requisito legal de que tales comunicaciones sean por escrito."
+          }
+        ]
+      },
+      {
+        "heading": "Privacidad y cookies",
+        "blocks": [
+          {
+            "p": "El uso del Sitio también se rige por nuestra [Política de Privacidad](/privacy), que se incorpora a estos Términos por referencia. En ella se describen los datos personales que recopilamos, cómo los usamos y compartimos, y cómo usamos cookies y tecnologías similares. Al usar el Sitio, reconoces que la has leído. Si estos Términos contradicen la Política de Privacidad en cuanto al manejo de datos personales, prevalece la Política de Privacidad."
+          }
+        ]
+      },
+      {
+        "heading": "Servicios y enlaces de terceros",
+        "blocks": [
+          {
+            "p": "El Sitio puede incluir enlaces a, o contenido de, sitios web y servicios de terceros, como nuestras páginas de redes sociales (\"Servicios de Terceros\"). No controlamos, respaldamos ni asumimos responsabilidad por ningún Servicio de Terceros. Los usas bajo tu propio riesgo, y se aplican los términos y prácticas de privacidad del propio tercero."
+          }
         ]
       },
       {
         "heading": "Confidencialidad",
-        "body": [
-          "Ambas partes acuerdan mantener confidencial cualquier información comercial, técnica o financiera no pública compartida durante un proyecto, y usarla únicamente para llevar a cabo el trabajo. Esta obligación continúa después de finalizado el proyecto"
+        "blocks": [
+          {
+            "p": "Una vez vigente un Acuerdo de Proyecto, ambas partes acuerdan mantener confidencial cualquier información comercial, técnica o financiera no pública compartida durante el proyecto, y usarla únicamente para llevar a cabo el trabajo. Esta obligación continúa después de finalizado el proyecto, salvo que exista un requisito legal de divulgación."
+          }
         ]
       },
       {
         "heading": "Renuncia de garantías",
-        "body": [
-          "Nuestro sitio web y Servicios se proporcionan \"tal cual\" y \"según disponibilidad\", sin garantías de ningún tipo, ya sean expresas o implícitas. Aunque nos esforzamos por la excelencia en cada proyecto, no garantizamos resultados de negocio específicos, posicionamiento, ingresos ni resultados derivados de nuestro trabajo creativo. En la máxima medida permitida por la ley, renunciamos a todas las garantías implícitas, incluidas las de comerciabilidad e idoneidad para un fin determinado"
+        "blocks": [
+          {
+            "p": "EL SITIO SE PROPORCIONA \"TAL CUAL\" Y \"SEGÚN DISPONIBILIDAD\". EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY, LA EMPRESA Y SUS PROVEEDORES RENUNCIAN A TODAS LAS GARANTÍAS, EXPRESAS O IMPLÍCITAS, INCLUIDAS LAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN DETERMINADO, TÍTULO Y NO INFRACCIÓN. NO GARANTIZAMOS QUE EL SITIO FUNCIONE SIN INTERRUPCIONES, SIN ERRORES, DE FORMA SEGURA O LIBRE DE VIRUS U OTRO CÓDIGO DAÑINO."
+          },
+          {
+            "p": "Nos esforzamos por la excelencia en cada proyecto, pero no garantizamos resultados de negocio específicos, posicionamiento en buscadores, ingresos ni resultados derivados de nuestro trabajo creativo, salvo lo establecido en un Acuerdo de Proyecto."
+          }
         ]
       },
       {
         "heading": "Limitación de responsabilidad",
-        "body": [
-          "En la máxima medida permitida por la ley, Legado Creativo y su fundadora no serán responsables por daños indirectos, incidentales, especiales o consecuentes, ni por pérdida de ganancias, datos o negocio, derivados del uso de nuestro sitio web o Servicios. Nuestra responsabilidad total por cualquier reclamación relacionada con un proyecto no excederá el monto que nos hayas pagado por ese proyecto en particular"
+        "blocks": [
+          {
+            "p": "EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY: (A) LA EMPRESA Y SUS PROVEEDORES NO SERÁN RESPONSABLES POR PÉRDIDA DE GANANCIAS, DATOS O NEGOCIO, NI POR DAÑOS INDIRECTOS, CONSECUENTES, INCIDENTALES, ESPECIALES, EJEMPLARES O PUNITIVOS DERIVADOS DE O RELACIONADOS CON ESTOS TÉRMINOS, EL SITIO O LOS SERVICIOS; Y (B) NUESTRA RESPONSABILIDAD TOTAL HACIA TI POR CUALQUIER RECLAMACIÓN DERIVADA DE ESTOS TÉRMINOS SE LIMITA AL MONTO QUE NOS HAYAS PAGADO POR EL PROYECTO QUE ORIGINE LA RECLAMACIÓN EN LOS SEIS MESES ANTERIORES A QUE SURJA, O, PARA RECLAMACIONES RELACIONADAS ÚNICAMENTE CON EL USO DEL SITIO, US$50. LA EXISTENCIA DE VARIAS RECLAMACIONES NO AUMENTA ESTE LÍMITE."
+          },
+          {
+            "p": "Algunas jurisdicciones no permiten ciertas renuncias o limitaciones de responsabilidad, por lo que parte de lo anterior podría no aplicarte. Nada en estos Términos limita una responsabilidad que no pueda limitarse conforme a la ley aplicable."
+          }
         ]
       },
       {
         "heading": "Indemnización",
-        "body": [
-          "Aceptas indemnizar y eximir de responsabilidad a Legado Creativo, su fundadora y sus colaboradores frente a cualquier reclamación, daño o gasto derivado del incumplimiento de estos Términos, del uso indebido de los Servicios o de la violación de cualquier ley o derecho de terceros, incluido lo relacionado con el contenido o los materiales que nos proporciones"
+        "blocks": [
+          {
+            "p": "Aceptas defender, indemnizar y eximir de responsabilidad a la Empresa, su fundadora, empleados, colaboradores y agentes frente a cualquier reclamación y costos razonables u honorarios de abogados derivados de (i) tu uso del Sitio, (ii) tu incumplimiento de estos Términos, (iii) tu violación de cualquier ley, o (iv) contenido o materiales que nos entregues que infrinjan derechos de terceros. Podemos asumir la defensa de cualquiera de esas reclamaciones a tu cargo, y aceptas cooperar. Aceptas no transigir en ninguna de esas reclamaciones sin nuestro consentimiento previo por escrito. Haremos esfuerzos razonables para notificarte con prontitud de cualquier reclamación de la que tengamos conocimiento."
+          }
         ]
       },
       {
-        "heading": "Terminación",
-        "body": [
-          "Cualquiera de las partes puede finalizar una relación de trabajo según lo descrito en el acuerdo de proyecto aplicable. También podemos suspender o cancelar tu acceso a nuestro sitio web en cualquier momento si incumples estos Términos. Tras la terminación, las tarifas devengadas por el trabajo realizado siguen siendo exigibles, y las secciones de estos Términos que por su naturaleza deban subsistir seguirán vigentes"
+        "heading": "Vigencia y terminación",
+        "blocks": [
+          {
+            "p": "Estos Términos permanecen vigentes mientras uses el Sitio. Cualquiera de las partes puede finalizar una relación de trabajo según lo descrito en el Acuerdo de Proyecto aplicable. Podemos suspender o cancelar tu acceso al Sitio en cualquier momento y por cualquier motivo, incluso si creemos que incumpliste estos Términos, y no somos responsables ante ti por hacerlo. Tras la terminación, las tarifas devengadas por el trabajo realizado siguen siendo exigibles, y las disposiciones que por su naturaleza deban subsistir, incluidas las de propiedad intelectual, confidencialidad, renuncia de garantías, limitación de responsabilidad, indemnización y ley aplicable, seguirán vigentes."
+          }
         ]
       },
       {
-        "heading": "Ley aplicable",
-        "body": [
-          "Estos Términos se rigen por las leyes del Estado de Massachusetts y de Estados Unidos, sin considerar sus principios sobre conflicto de leyes. Cualquier disputa derivada de estos Términos o de nuestros Servicios estará sujeta a la jurisdicción exclusiva de los tribunales estatales y federales ubicados en Boston, Massachusetts, salvo que la ley aplicable en tu país de residencia disponga lo contrario"
+        "heading": "Avisos específicos por estado",
+        "blocks": [
+          {
+            "p": "Estos avisos se aplican a los usuarios en la medida en que estén sujetos a las leyes de los estados indicados a continuación. Si alguno contradice otra disposición de estos Términos, el aviso estatal prevalece para esos usuarios."
+          },
+          {
+            "p": "**California.** Conforme al Código Civil de California § 1789.3, los usuarios de California tienen derecho al siguiente aviso: el proveedor del Sitio es {legalName}, {address}. Para presentar una queja sobre el Sitio o recibir más información, escribe a esa dirección o a {email}. También puedes contactar a la Unidad de Asistencia de Quejas de la División de Servicios al Consumidor del Departamento de Asuntos del Consumidor de California en 1625 N. Market Blvd., Suite N112, Sacramento, CA 95834, o por teléfono al (800) 952-5210. Los residentes de California pueden tener derechos adicionales conforme a la Ley de Privacidad del Consumidor de California, descritos en nuestra [Política de Privacidad](/privacy)."
+          },
+          {
+            "p": "**Nevada.** Conforme al Capítulo 603A de los Estatutos Revisados de Nevada, los residentes de Nevada pueden indicarnos que no vendamos cierta información que recopilamos sobre ellos. No vendemos esa información. Para hacer una solicitud, escribe a {email}."
+          },
+          {
+            "p": "**Otros estados.** Los residentes de Colorado, Connecticut, Virginia, Texas, Oregón y otros estados con leyes de privacidad del consumidor pueden tener derecho a acceder, corregir y eliminar sus datos personales, a obtener una copia y a excluirse de ciertos tratamientos. Consulta la sección \"Derechos de privacidad estatales\" de nuestra [Política de Privacidad](/privacy)."
+          }
         ]
       },
       {
-        "heading": "Cambios en estos términos",
-        "body": [
-          "Podemos actualizar estos Términos de vez en cuando. Cuando lo hagamos, actualizaremos la fecha de \"Última actualización\" que aparece arriba. El uso continuado de nuestro sitio web o Servicios después de que los cambios entren en vigor significa que aceptas los Términos revisados"
+        "heading": "Ley aplicable y resolución de disputas",
+        "blocks": [
+          {
+            "p": "**Ley aplicable.** Estos Términos, y cualquier disputa derivada de ellos o relacionada con ellos, con el Sitio o con los Servicios, se rigen por las leyes del Estado Libre Asociado de Massachusetts y la ley federal aplicable de Estados Unidos, sin tener en cuenta sus normas sobre conflicto de leyes."
+          },
+          {
+            "p": "**Intenta resolverlo primero.** Antes de presentar una reclamación, tú y la Empresa aceptan intentar resolver la disputa de manera informal. La parte que plantee la disputa debe enviar a la otra un aviso escrito que la describa (a la Empresa, a {email}). Dentro de los 45 días siguientes a la recepción del aviso, las partes se reunirán de buena fe por teléfono o videollamada para intentar resolverla. Si la disputa no se resuelve dentro de los 60 días siguientes al aviso, cualquiera de las partes puede presentar una reclamación."
+          },
+          {
+            "p": "**Tribunales.** Sujeto al siguiente párrafo, tú y la Empresa consienten irrevocablemente la jurisdicción y sede exclusivas de los tribunales estatales y federales ubicados en Boston, condado de Suffolk, Massachusetts, para cualquier disputa derivada de estos Términos, del Sitio o de los Servicios, o relacionada con ellos."
+          },
+          {
+            "p": "**Excepciones.** Cualquiera de las partes puede (a) presentar una acción ante cualquier tribunal competente para obtener medidas cautelares u otras medidas de equidad que protejan sus derechos de propiedad intelectual, y (b) presentar una acción individual ante un tribunal de reclamos menores por reclamaciones dentro de sus límites. Si vives fuera de Estados Unidos, nada en estos Términos elimina los derechos obligatorios de protección al consumidor que tengas conforme a las leyes de tu país de residencia."
+          }
+        ]
+      },
+      {
+        "heading": "Accesibilidad",
+        "blocks": [
+          {
+            "p": "La Empresa se compromete a que el Sitio sea accesible para todas las personas, incluidas las personas con discapacidad, y trabaja para cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, nivel AA. Si tienes dificultades para acceder a cualquier parte del Sitio o usarla, o tienes sugerencias para mejorar la accesibilidad, contáctanos en {email} o {phone} y haremos esfuerzos razonables para atender tu inquietud con prontitud."
+          }
+        ]
+      },
+      {
+        "heading": "Idiomas",
+        "blocks": [
+          {
+            "p": "Ofrecemos el Sitio y estos Términos en inglés y español para tu comodidad. Si existe alguna inconsistencia entre las versiones, prevalece la versión en inglés en la medida permitida por la ley aplicable."
+          }
+        ]
+      },
+      {
+        "heading": "Disposiciones generales",
+        "blocks": [
+          {
+            "p": "**Cambios en estos Términos.** Podemos actualizar estos Términos de vez en cuando. Cuando lo hagamos, actualizaremos la fecha de \"Última actualización\" que aparece arriba. Si los cambios son importantes, también podemos notificarte por correo electrónico (a la dirección que tengamos registrada) o mediante un aviso destacado en el Sitio. Si sigues usando el Sitio o los Servicios después de que los cambios entren en vigor, aceptas los Términos actualizados."
+          },
+          {
+            "p": "**Acuerdo completo.** Estos Términos, junto con la Política de Privacidad, cualquier otra política mencionada aquí y cualquier Acuerdo de Proyecto, constituyen el acuerdo completo entre tú y la Empresa sobre el Sitio y los Servicios. Si alguna disposición se considera inválida o inaplicable, se modificará en la medida mínima necesaria y el resto seguirá vigente. Que no hagamos cumplir una disposición no implica una renuncia a ella. \"Incluido\" significa \"incluido, sin limitación\". No puedes ceder estos Términos sin nuestro consentimiento previo por escrito; nosotros podemos cederlos libremente. Estos Términos obligan a los cesionarios permitidos."
+          },
+          {
+            "p": "**Exportación.** Aceptas no exportar, reexportar ni transferir datos técnicos o productos obtenidos del Sitio en violación de las leyes de control de exportaciones de EE. UU. o de las normas aplicables de otros países."
+          },
+          {
+            "p": "**Derechos de autor y marcas.** Copyright © 2026 {legalName}. Todos los derechos reservados. Todas las marcas, logotipos y marcas de servicio que aparecen en el Sitio son propiedad de la Empresa o de terceros. No puedes usarlos sin el consentimiento previo por escrito de su titular."
+          }
         ]
       },
       {
         "heading": "Contáctanos",
-        "body": [
-          "Si tienes preguntas sobre estos Términos de Servicio, escríbenos a vickyurbaneja@gmail.com"
+        "blocks": [
+          {
+            "p": "Si tienes preguntas sobre estos Términos, contáctanos:"
+          },
+          {
+            "list": [
+              "**Correo electrónico:** {email}",
+              "**Teléfono:** {phone}",
+              "**Correo postal:** {legalName}, {address}"
+            ]
+          }
         ]
       }
     ]
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido principal",
+    "logoAlt": "Legado Creativo",
+    "mainNavigation": "Navegación principal",
+    "footerNavigation": "Navegación del pie de página",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "switchLanguage": "cambiar idioma a inglés",
+    "pauseVideo": "Pausar video de fondo",
+    "playVideo": "Reproducir video de fondo",
+    "scrollLeft": "Desplazar a la izquierda",
+    "scrollRight": "Desplazar a la derecha",
+    "goToStep": "Ir al paso {number}",
+    "aboutHandsAlt": "Ilustración de una mano humana que se acerca a una mano robótica, con un globo de diálogo entre ellas",
+    "aboutIdeaAlt": "Ilustración de una mujer sonriente con una laptop sentada sobre un foco gigante junto a una escalera",
+    "proofAlt": "Captura del sitio web de {name}",
+    "instagramPost": "Publicación de Instagram"
   },
   "notFound": {
     "badge": "404",

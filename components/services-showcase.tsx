@@ -13,6 +13,7 @@ import {
 } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import VideoPauseToggle from "@/components/video-pause-toggle";
 
 const VIDEO_SOURCES = [
   "/videos/Banner.mp4",
@@ -58,6 +59,8 @@ function VideoPanel({
               loop
               playsInline
               preload="auto"
+              aria-hidden="true"
+              disablePictureInPicture
               className="h-full w-full object-cover"
             >
               <source src={src} type="video/mp4" />
@@ -141,11 +144,13 @@ export default function ServicesShowcase() {
           />
         </div>
 
+        <VideoPauseToggle className="absolute bottom-4 left-4 z-30" />
+
         {/* Centred stack: split duotone logo + CTA, straddling the divide */}
         <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center gap-10">
           <Link
             href="/services"
-            className="group pointer-events-auto inline-flex items-center rounded-full bg-gradient-to-r from-accent to-secondary-blue p-1 shadow-2xl transition-transform duration-200 hover:scale-105"
+            className="group pointer-events-auto inline-flex items-center rounded-full bg-gradient-to-r from-accent to-secondary-blue-ink p-1 shadow-2xl transition-transform duration-200 hover:scale-105"
           >
             <span className="rounded-full px-6 py-3.5 text-sm font-medium text-accent-foreground">
               {t("ctaButton")}

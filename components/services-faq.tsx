@@ -54,6 +54,10 @@ export default function ServicesFaq() {
                 className="rounded-[4px] border border-border overflow-hidden"
               >
                 <motion.button
+                  type="button"
+                  id={`faq-button-${index}`}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${index}`}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   whileHover={{ backgroundColor: "color-mix(in oklch, var(--accent) 5%, transparent)" }}
                   animate={{
@@ -67,13 +71,16 @@ export default function ServicesFaq() {
                     {t(`items.${index}.question`)}
                   </span>
                   <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                    <ChevronDown className="w-5 h-5 text-accent" />
+                    <ChevronDown aria-hidden="true" className="w-5 h-5 text-accent" />
                   </motion.div>
                 </motion.button>
 
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div
+                      id={`faq-panel-${index}`}
+                      role="region"
+                      aria-labelledby={`faq-button-${index}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

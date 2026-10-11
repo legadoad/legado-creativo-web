@@ -18,6 +18,7 @@ const SCREEN_HEIGHT = "clamp(220px, 24vw, 320px)";
 
 export default function OurWorkProof() {
   const t = useTranslations("ourWorkProof");
+  const tA = useTranslations("a11y");
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -42,7 +43,7 @@ export default function OurWorkProof() {
           </p>
           <h2 className="text-fluid-h2 font-bold text-accent tracking-tight">
             {t("title")}{" "}
-            <span className="text-secondary-blue">{t("titleAccent")}</span>
+            <span className="text-secondary-blue-ink">{t("titleAccent")}</span>
           </h2>
         </motion.div>
 
@@ -62,7 +63,7 @@ export default function OurWorkProof() {
                   <span className="w-2 h-2 rounded-full bg-border" />
                   <span className="w-2 h-2 rounded-full bg-border" />
                 </div>
-                <div className="flex-1 flex items-center gap-1.5 h-6 px-3 rounded-full bg-background border border-border text-[11px] text-foreground/50 truncate">
+                <div className="flex-1 flex items-center gap-1.5 h-6 px-3 rounded-full bg-background border border-border text-[11px] text-foreground/60 truncate">
                   <Lock className="w-2.5 h-2.5 flex-shrink-0" />
                   {c.url}
                 </div>
@@ -84,7 +85,7 @@ export default function OurWorkProof() {
                 >
                   <Image
                     src={CASES[i].img}
-                    alt={`Sitio de ${c.name}`}
+                    alt={tA("proofAlt", { name: c.name })}
                     fill
                     sizes="(max-width: 768px) 92vw, 30vw"
                     className="object-cover object-top"
@@ -102,7 +103,7 @@ export default function OurWorkProof() {
                     href={`https://${c.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-foreground/50 whitespace-nowrap transition-colors group-hover:text-accent"
+                    className="inline-flex items-center gap-1 text-xs text-foreground/60 whitespace-nowrap transition-colors group-hover:text-accent"
                   >
                     {t("viewProject")}
                     <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

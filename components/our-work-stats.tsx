@@ -39,7 +39,7 @@ export default function OurWorkStats() {
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent tabular-nums">
                 {stat.value}
               </div>
-              <div className="mt-1 text-xs sm:text-sm text-foreground/50 tracking-wide">
+              <div className="mt-1 text-xs sm:text-sm text-foreground/60 tracking-wide">
                 {stat.label}
               </div>
             </motion.div>

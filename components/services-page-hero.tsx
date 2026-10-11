@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import VideoPauseToggle from "@/components/video-pause-toggle";
 
 function StrokeOval() {
   return (
@@ -52,6 +53,8 @@ export default function ServicesPageHero() {
         muted
         loop
         playsInline
+        aria-hidden="true"
+        disablePictureInPicture
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/videos/services.mp4" type="video/mp4" />
@@ -60,6 +63,8 @@ export default function ServicesPageHero() {
           type="video/mp4"
         />
       </video>
+
+      <VideoPauseToggle className="absolute bottom-8 left-6 z-20" />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />

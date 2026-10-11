@@ -13,7 +13,7 @@ export default async function LocaleNotFound() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-6 pt-32 pb-24 text-center">
+      <main id="main-content" tabIndex={-1} className="focus:outline-none flex min-h-screen flex-col items-center justify-center gap-6 px-6 pt-32 pb-24 text-center">
         <span className="text-sm font-semibold tracking-widest text-accent">
           {t("badge")}
         </span>
@@ -24,7 +24,7 @@ export default async function LocaleNotFound() {
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/"
-            className="rounded-full bg-secondary-lime px-6 py-3 text-sm font-medium text-secondary-blue transition hover:bg-secondary-lime/90"
+            className="rounded-full bg-secondary-lime px-6 py-3 text-sm font-medium text-secondary-blue-ink transition hover:bg-secondary-lime/90"
           >
             {t("homeButton")}
           </Link>

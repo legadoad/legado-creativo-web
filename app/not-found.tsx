@@ -27,7 +27,7 @@ export default function RootNotFound() {
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <a
             href="/en"
-            className="rounded-full bg-secondary-lime px-6 py-3 text-sm font-medium text-secondary-blue transition hover:bg-secondary-lime/90"
+            className="rounded-full bg-secondary-lime px-6 py-3 text-sm font-medium text-secondary-blue-ink transition hover:bg-secondary-lime/90"
           >
             English
           </a>

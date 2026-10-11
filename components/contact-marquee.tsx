@@ -23,12 +23,18 @@ export default function ContactMarquee() {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
-      className="py-16 border-y border-border/50 overflow-hidden bg-secondary-blue relative"
+      className="py-16 border-y border-border/50 overflow-hidden bg-secondary-blue-ink relative"
     >
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary-blue to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary-blue to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary-blue-ink to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary-blue-ink to-transparent z-10 pointer-events-none" />
 
-      <motion.div style={{ skewX }} className="flex animate-marquee whitespace-nowrap">
+      <ul className="sr-only">
+        {phrases.map((phrase) => (
+          <li key={phrase}>{phrase}</li>
+        ))}
+      </ul>
+
+      <motion.div style={{ skewX }} aria-hidden="true" className="flex animate-marquee whitespace-nowrap">
         {[...phrases, ...phrases, ...phrases].map((phrase, index) => (
           <motion.div key={index} className="flex items-center mx-12" whileHover={{ scale: 1.1 }}>
             <span className="text-2xl md:text-3xl font-bold text-secondary-lime hover:text-secondary-magenta transition-colors duration-300 cursor-default">

@@ -16,7 +16,7 @@ export default function HomeContent() {
   // overflow-x-clip (not -hidden): `hidden` forces overflow-y:auto, which makes
   // <main> a scroll container and breaks the pinned ServicesShowcase section.
   return (
-    <main className="bg-background overflow-x-clip">
+    <main id="main-content" tabIndex={-1} className="focus:outline-none bg-background overflow-x-clip">
       <Header />
       <Hero />
       <LogoMarquee />
@@ -29,9 +29,9 @@ export default function HomeContent() {
         title={t("title")}
         highlightWord={t("highlightWord")}
         buttonText={t("buttonText")}
-        textColor="text-secondary-blue"
+        textColor="text-secondary-blue-ink"
         buttonTextColor="text-secondary-lime"
-        buttonBg="bg-secondary-blue"
+        buttonBg="bg-secondary-blue-ink"
       />
       <InstagramFeed />
       <Footer />

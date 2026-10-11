@@ -5,7 +5,8 @@ import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import MotionProvider from "@/components/motion-provider";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
@@ -104,14 +105,21 @@ export default async function RootLayout({
 
   // Get messages for the current locale
   const messages = await getMessages();
+  const tA = await getTranslations("a11y");
 
   return (
     <html lang={locale}>
       <body
         className={`${montserrat.variable} ${lemonMilk.variable} ${geistMono.variable} font-sans antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-secondary-blue-ink focus:px-6 focus:py-3 focus:text-sm focus:font-medium focus:text-white"
+        >
+          {tA("skipToContent")}
+        </a>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>

@@ -42,7 +42,7 @@ export default async function ServicesPage({
   const t = await getTranslations("servicesCta");
 
   return (
-    <main className="min-h-screen bg-background">
+    <main id="main-content" tabIndex={-1} className="focus:outline-none min-h-screen bg-background">
       <Header />
       <ServicesPageHero />
       <ServicesGrid />
@@ -50,7 +50,7 @@ export default async function ServicesPage({
       <ServicesProcess />
       <ServicesFaq />
       <CTA
-        bg="bg-[var(--secondary-blue)]"
+        bg="bg-[var(--secondary-blue-ink)]"
         label={t("label")}
         title={t("title")}
         highlightWord={t("highlightWord")}
@@ -59,7 +59,7 @@ export default async function ServicesPage({
         href="/contact"
         textColor="text-[var(--secondary-lime)]"
         buttonBg="bg-[var(--secondary-lime)]"
-        buttonTextColor="text-[var(--secondary-blue)]"
+        buttonTextColor="text-[var(--secondary-blue-ink)]"
       />
       <Footer />
     </main>

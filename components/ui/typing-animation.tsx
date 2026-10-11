@@ -227,14 +227,19 @@ export function TypingAnimation({
       )}
       {...props}
     >
-      {displayedText}
-      {shouldShowCursor && (
-        <span
-          className={cn("inline-block", blinkCursor && "animate-blink-cursor")}
-        >
-          {getCursorChar()}
-        </span>
-      )}
+      {/* Screen readers get the finished text up front; the character-by-
+          character copy below is hidden from them so it isn't announced piecemeal. */}
+      <span className="sr-only">{wordsToAnimate.join(" ")} </span>
+      <span aria-hidden="true">
+        {displayedText}
+        {shouldShowCursor && (
+          <span
+            className={cn("inline-block", blinkCursor && "animate-blink-cursor")}
+          >
+            {getCursorChar()}
+          </span>
+        )}
+      </span>
     </MotionComponent>
   )
 }

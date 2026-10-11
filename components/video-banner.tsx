@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Sparkles, Clapperboard, Video, Share2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { strokes } from "@/components/stroke-underline";
+import VideoPauseToggle from "@/components/video-pause-toggle";
 
 const featureIcons = [Sparkles, Clapperboard, Video, Share2];
 
@@ -39,14 +40,14 @@ export default function VideoBanner() {
           <p className="text-accent text-sm font-semibold tracking-widest mb-4">
             {t("sectionLabel")}
           </p>
-          <h2 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
+          <h1 className="text-fluid-h2 font-bold text-heading mb-6 tracking-tight">
             {t("titleLine1")}
             <span className="text-accent relative inline-block">
               {t("titleHighlight")}
               {isInView && <strokes.oval />}
             </span>
             {t("titleLine2")}
-          </h2>
+          </h1>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             {t("subtitle")}
           </p>
@@ -66,6 +67,8 @@ export default function VideoBanner() {
               muted
               loop
               playsInline
+              aria-hidden="true"
+              disablePictureInPicture
               poster="/creative-agency-showreel-dark-cinematic.jpg"
               className="w-full h-full object-cover"
             >
@@ -73,6 +76,8 @@ export default function VideoBanner() {
               src="/videos/Legado Banner Web 1.mp4" 
               type="video/mp4" />
             </video>
+
+            <VideoPauseToggle className="absolute top-4 right-4 z-20" />
 
             {/* Video Overlay with Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-gradient-overlay/80 via-transparent to-background/30" />
@@ -118,9 +123,9 @@ export default function VideoBanner() {
                 <p className="text-foreground/60 text-xs sm:text-sm uppercase text-secondary-lime tracking-widest mb-1 sm:mb-2">
                   {t("showreelLabel")}
                 </p>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-heading text-secondary-lime">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-heading text-secondary-lime">
                   {t("showreelTitle")}
-                </h3>
+                </h2>
               </motion.div>
             </div>
           </motion.div>
@@ -180,10 +185,10 @@ export default function VideoBanner() {
                   className="w-6 h-6 text-accent mb-3 transition-transform duration-300 group-hover:-translate-y-1"
                   strokeWidth={1.5}
                 />
-                <h4 className="text-base md:text-lg font-semibold text-heading mb-1.5">
+                <h3 className="text-base md:text-lg font-semibold text-heading mb-1.5">
                   {t(`features.${i}.label`)}
-                </h4>
-                <p className="text-sm text-foreground/50 leading-snug">
+                </h3>
+                <p className="text-sm text-foreground/60 leading-snug">
                   {t(`features.${i}.desc`)}
                 </p>
               </motion.div>

@@ -22,10 +22,10 @@ export default function OurWorkBrands() {
         <p className="text-accent text-sm font-semibold tracking-widest mb-4">
           {t("sectionLabel")}
         </p>
-        <h2 className="text-fluid-h2 font-bold text-secondary-blue tracking-tight mb-6">
+        <h2 className="text-fluid-h2 font-bold text-secondary-blue-ink tracking-tight mb-6">
           <TypingAnimation
             as="span"
-            className="text-secondary-blue"
+            className="text-secondary-blue-ink"
             duration={60}
             showCursor={false}
           >

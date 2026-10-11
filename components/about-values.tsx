@@ -18,7 +18,7 @@ const valueIconBg = [
 const valueIconColor = [
   "text-accent",
   "text-primary",
-  "text-secondary-blue",
+  "text-secondary-blue-ink",
   "text-primary",
   "text-secondary-magenta",
   "text-accent",

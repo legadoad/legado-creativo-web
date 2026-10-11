@@ -7,6 +7,7 @@ import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
+  const tA = useTranslations("a11y");
 
   return (
     <footer className="border-t border-border bg-gradient-to-b from-transparent to-primary/5 pt-8 pb-4 px-6">
@@ -16,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-3 group">
               <Image
                 src="/Logos/LEGADO_Logotipo-06.png"
-                alt="Legado Logo"
+                alt={tA("logoAlt")}
                 width={180}
                 height={60}
                 className="h-auto w-auto max-h-12 group-hover:scale-105 transition-transform duration-300"
@@ -29,10 +30,10 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-semibold text-heading mb-3">
+            <h2 className="font-semibold text-heading mb-3">
               {t("company")}
-            </h4>
-            <div className="flex flex-col items-center md:items-start gap-2">
+            </h2>
+            <nav aria-label={tA("footerNavigation")} className="flex flex-col items-center md:items-start gap-2">
               {[
                 { href: "/", label: t("home") },
                 { href: "/services", label: t("services") },
@@ -48,13 +49,13 @@ export default function Footer() {
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </nav>
           </div>
 
           <div className="flex flex-col justify-center items-center md:items-end">
-            <h4 className="font-semibold text-heading mb-3">
+            <h2 className="font-semibold text-heading mb-3">
               {t("connect")}
-            </h4>
+            </h2>
             <div className="flex gap-4">
               {[
                 { icon: Instagram, href: "https://www.instagram.com/legadoad/", label: "Instagram", external: true },
@@ -97,26 +98,26 @@ export default function Footer() {
 
         <div className="border-t border-border pt-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-            <p className="text-foreground/40 text-sm text-center">
+            <p className="text-foreground/60 text-sm text-center">
               {t("copyright")}
             </p>
             <div className="flex gap-6">
               <Link
                 href="/privacy"
-                className="text-foreground/40 hover:text-accent text-sm transition"
+                className="text-foreground/60 hover:text-accent text-sm transition"
               >
                 {t("privacy")}
               </Link>
               <Link
                 href="/terms"
-                className="text-foreground/40 hover:text-accent text-sm transition"
+                className="text-foreground/60 hover:text-accent text-sm transition"
               >
                 {t("terms")}
               </Link>
             </div>
           </div>
           <div className="mt-1 text-center">
-            <p className="text-foreground/25 text-xs">
+            <p className="text-foreground/60 text-xs">
               {t("poweredBy")}
             </p>
           </div>

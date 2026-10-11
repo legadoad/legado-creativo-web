@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Turnstile } from "@marsidev/react-turnstile";
+import { Link } from "@/i18n/navigation";
 import { contactFormSchema, type ContactFormValues } from "@/lib/contact-schema";
 
 // Public by design — Cloudflare's site keys are meant to be visible
@@ -90,6 +91,7 @@ export default function ContactForm() {
     return (
       <motion.div
         ref={sectionRef}
+        role="status"
         className="bg-card border border-border rounded-[4px] p-12 text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -226,14 +228,17 @@ export default function ContactForm() {
               <input
                 type="text"
                 id="name"
+                autoComplete="name"
+                aria-required="true"
                 aria-invalid={!!errors.name}
-                className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
+                aria-describedby={errors.name ? "name-error" : undefined}
+                className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/60 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
                 placeholder={t("namePlaceholder")}
                 {...withFocusTracking("name")}
               />
             </motion.div>
             {errors.name && (
-              <p className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
+              <p id="name-error" role="alert" className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
             )}
           </div>
           <div className="relative">
@@ -255,14 +260,17 @@ export default function ContactForm() {
               <input
                 type="email"
                 id="email"
+                autoComplete="email"
+                aria-required="true"
                 aria-invalid={!!errors.email}
-                className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
+                aria-describedby={errors.email ? "email-error" : undefined}
+                className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/60 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
                 placeholder={t("emailPlaceholder")}
                 {...withFocusTracking("email")}
               />
             </motion.div>
             {errors.email && (
-              <p className="mt-1.5 text-xs text-destructive">
+              <p id="email-error" role="alert" className="mt-1.5 text-xs text-destructive">
                 {errors.email.type === "invalid_string" || errors.email.type === "invalid_format"
                   ? t("errors.invalidEmail")
                   : t("errors.required")}
@@ -276,12 +284,13 @@ export default function ContactForm() {
             htmlFor="company"
             className="block text-sm font-medium text-foreground mb-2"
           >
-            {t("companyLabel")} <span className="text-foreground/40">{t("companyOptional")}</span>
+            {t("companyLabel")} <span className="text-foreground/60">{t("companyOptional")}</span>
           </label>
           <input
             type="text"
             id="company"
-            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
+            autoComplete="organization"
+            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/60 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition"
             placeholder={t("companyPlaceholder")}
             {...withFocusTracking("company")}
           />
@@ -296,7 +305,9 @@ export default function ContactForm() {
           </label>
           <select
             id="service"
+            aria-required="true"
             aria-invalid={!!errors.service}
+            aria-describedby={errors.service ? "service-error" : undefined}
             className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground focus:border-accent focus:ring-1 focus:ring-accent outline-none transition appearance-none cursor-pointer"
             defaultValue=""
             {...register("service")}
@@ -326,7 +337,7 @@ export default function ContactForm() {
             <option value="other">{t("serviceOptions.other")}</option>
           </select>
           {errors.service && (
-            <p className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
+            <p id="service-error" role="alert" className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
           )}
         </motion.div>
 
@@ -340,13 +351,15 @@ export default function ContactForm() {
           <textarea
             id="message"
             rows={5}
+            aria-required="true"
             aria-invalid={!!errors.message}
-            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/40 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition resize-none"
+            aria-describedby={errors.message ? "message-error" : undefined}
+            className="w-full px-4 py-3 bg-card border border-border rounded-[4px] text-foreground placeholder:text-foreground/60 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition resize-none"
             placeholder={t("messagePlaceholder")}
             {...withFocusTracking("message")}
           />
           {errors.message && (
-            <p className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
+            <p id="message-error" role="alert" className="mt-1.5 text-xs text-destructive">{t("errors.required")}</p>
           )}
         </motion.div>
 
@@ -364,7 +377,7 @@ export default function ContactForm() {
               options={{ theme: "light", appearance: "interaction-only" }}
             />
             {errors.turnstileToken && (
-              <p className="mt-1.5 text-xs text-destructive">{t("errors.turnstile")}</p>
+              <p role="alert" className="mt-1.5 text-xs text-destructive">{t("errors.turnstile")}</p>
             )}
           </motion.div>
         )}
@@ -373,6 +386,7 @@ export default function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
+            role="alert"
             className="flex items-center gap-2 rounded-[4px] border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
           >
             <AlertCircle className="w-4 h-4 shrink-0" />
@@ -384,7 +398,7 @@ export default function ContactForm() {
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-secondary-lime text-secondary-blue font-semibold rounded-full hover:bg-secondary-lime/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
+            className="w-full px-8 py-4 bg-secondary-lime text-secondary-blue-ink font-semibold rounded-full hover:bg-secondary-lime/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -415,6 +429,25 @@ export default function ContactForm() {
             </AnimatePresence>
           </motion.button>
         </motion.div>
+
+        <motion.p
+          variants={fieldVariants}
+          className="text-xs text-foreground/60 leading-relaxed text-center"
+        >
+          {t.rich("consent", {
+            terms: (chunks) => (
+              <Link href="/terms" className="underline underline-offset-2 hover:text-accent transition-colors">
+                {chunks}
+              </Link>
+            ),
+            privacy: (chunks) => (
+              <Link href="/privacy" className="underline underline-offset-2 hover:text-accent transition-colors">
+                {chunks}
+              </Link>
+            ),
+          })}
+          .
+        </motion.p>
       </motion.form>
     </motion.div>
   );

@@ -48,7 +48,13 @@ export default function OurWorkLogoMarquee() {
       <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-      <div className="flex animate-marquee whitespace-nowrap">
+      <ul className="sr-only">
+        {CLIENT_LOGOS.map((logo) => (
+          <li key={logo.src}>{logo.alt}</li>
+        ))}
+      </ul>
+
+      <div aria-hidden="true" className="flex animate-marquee whitespace-nowrap">
         {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map(
           (logo, index) => (
             <div
@@ -57,7 +63,7 @@ export default function OurWorkLogoMarquee() {
             >
               <Image
                 src={logo.src}
-                alt={logo.alt}
+                alt=""
                 width={220}
                 height={100}
                 className="h-20 md:h-24 w-auto max-w-[190px] md:max-w-[240px] object-contain opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"

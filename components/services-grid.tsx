@@ -156,6 +156,8 @@ export default function ServicesGrid() {
               <div
                 role="button"
                 tabIndex={0}
+                aria-expanded={isExpanded}
+                aria-controls={`services-panel-${index}`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => {
@@ -173,6 +175,7 @@ export default function ServicesGrid() {
               >
                 {/* Infinite image filmstrip */}
                 <div
+                  aria-hidden="true"
                   className={`absolute top-0 left-0 h-full flex ${category.direction} transition-[filter] duration-500 ${
                     isActive ? "blur-none" : "blur-md"
                   }`}
@@ -185,7 +188,7 @@ export default function ServicesGrid() {
                     >
                       <img
                         src={src}
-                        alt={category.items[i % category.items.length]}
+                        alt=""
                         className="w-full h-full object-cover"
                       />
                       <div
@@ -226,6 +229,7 @@ export default function ServicesGrid() {
               <AnimatePresence>
                 {isExpanded && (
                   <motion.div
+                    id={`services-panel-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -253,7 +257,7 @@ export default function ServicesGrid() {
                       <div className="mt-8 flex justify-start">
                         <Link
                           href="/contact"
-                          className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue font-medium rounded-full hover:bg-secondary-lime/90 transition"
+                          className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-secondary-lime text-secondary-blue-ink font-medium rounded-full hover:bg-secondary-lime/90 transition"
                         >
                           {t("ctaLabel")}
                           <ArrowRight className="w-4 h-4" />

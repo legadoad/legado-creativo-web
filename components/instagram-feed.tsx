@@ -41,6 +41,7 @@ export default function InstagramFeed({
   className,
 }: InstagramFeedProps) {
   const t = useTranslations("instagramFeed");
+  const tA = useTranslations("a11y");
   const locale = useLocale();
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -187,7 +188,7 @@ export default function InstagramFeed({
               <button
                 type="button"
                 onClick={() => scrollRow("left")}
-                aria-label="Scroll left"
+                aria-label={tA("scrollLeft")}
                 className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-heading text-background items-center justify-center shadow-md hover:opacity-80 transition-opacity cursor-pointer"
               >
                 <ChevronLeft size={18} />
@@ -195,7 +196,7 @@ export default function InstagramFeed({
               <button
                 type="button"
                 onClick={() => scrollRow("right")}
-                aria-label="Scroll right"
+                aria-label={tA("scrollRight")}
                 className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-heading text-background items-center justify-center shadow-md hover:opacity-80 transition-opacity cursor-pointer"
               >
                 <ChevronRight size={18} />
@@ -238,7 +239,7 @@ export default function InstagramFeed({
                 >
                   <Image
                     src={post.imageUrl}
-                    alt={post.caption ? post.caption.slice(0, 100) : "Instagram post"}
+                    alt={post.caption ? post.caption.slice(0, 100) : tA("instagramPost")}
                     fill
                     sizes="(max-width: 768px) 40vw, 256px"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -319,7 +320,7 @@ export default function InstagramFeed({
                     ) : (
                       <Image
                         src={selected.imageUrl}
-                        alt={selected.caption ? selected.caption.slice(0, 100) : "Instagram post"}
+                        alt={selected.caption ? selected.caption.slice(0, 100) : tA("instagramPost")}
                         fill
                         sizes="(max-width: 768px) 100vw, 58vw"
                         className="object-cover"

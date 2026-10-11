@@ -80,11 +80,11 @@ export default function ContactInfo() {
                 className="w-12 h-12 bg-secondary-lime rounded-[4px] flex items-center justify-center shrink-0 transition"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
-                <Icon className="w-5 h-5 text-secondary-blue" />
+                <Icon className="w-5 h-5 text-secondary-blue-ink" />
               </motion.div>
               <div>
                 <div className="text-sm text-foreground/60 mb-1">{t(labelKeys[i])}</div>
-                <div className="text-foreground font-medium group-hover:text-secondary-blue transition">{value}</div>
+                <div className="text-foreground font-medium group-hover:text-secondary-blue-ink transition">{value}</div>
               </div>
             </motion.div>
           )
@@ -102,7 +102,7 @@ export default function ContactInfo() {
       <motion.div variants={itemVariants}>
         <h3 className="text-lg font-semibold text-heading mb-4">{t("followUs")}</h3>
         <div className="flex gap-4">
-          {socials.map((social, i) => {
+          {socials.filter((social) => social.href !== "#").map((social, i) => {
             const Icon = social.icon
             return (
               <motion.a
