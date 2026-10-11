@@ -216,6 +216,11 @@
     "foundedLabel": "Founded in Boston",
     "teamCount": "8+ Team Members"
   },
+  "aboutWhoWeAre": {
+    "badge": "WHO WE ARE",
+    "title": "Legado Creativo",
+    "subtitle": "We're a multicultural creative agency: we understand the Latino and American markets from the inside. We tell brand stories with strategy first, for clients ranging from retail and health to media and events"
+  },
   "aboutTimeline": {
     "title": "What defines",
     "titleAccent": " us",
@@ -372,6 +377,12 @@
         "url": "cjbservice.com",
         "result": "A scalable corporate presence, easy to manage without a developer.",
         "tags": ["Technical SEO", "No-code content", "Corporate presence"]
+      },
+      {
+        "name": "Presencia Consciente",
+        "url": "presenciaconsciente.com",
+        "result": "A custom WordPress build, lightweight and easy for the team to update on their own.",
+        "tags": ["Custom WordPress", "Speed optimization", "Content management"]
       }
     ]
   },

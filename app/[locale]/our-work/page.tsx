@@ -44,9 +44,7 @@ export default async function OurWorkPage({
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
-      <div className="pt-24 md:pt-32">
-        <VideoBanner />
-      </div>
+      <VideoBanner />
 
       <OurWorkJourney />
       <OurWorkProof />
