@@ -3,10 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
+  AnimatePresence,
   motion,
   useScroll,
   useTransform,
   useInView,
+  useReducedMotion,
   type MotionValue,
 } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -45,6 +47,129 @@ function YearTick({
     >
       {label}
     </motion.span>
+  );
+}
+
+const CLOCKS = [1, 2, 3, 4, 5, 6, 7].map((n) => `/reloj/clock-${n}.webp`);
+const CLOCK_INTERVAL_MS = 3200;
+const TICKS = Array.from({ length: 60 }, (_, i) => i);
+
+function ClockSlideshow({ alt }: { alt: string }) {
+  const reduceMotion = useReducedMotion();
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    CLOCKS.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, []);
+
+  useEffect(() => {
+    const id = window.setInterval(
+      () => setIndex((i) => (i + 1) % CLOCKS.length),
+      CLOCK_INTERVAL_MS,
+    );
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 bg-card">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-accent/15" />
+      {/* Soft glow behind the object */}
+      <motion.div
+        className="absolute left-1/2 top-[46%] h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/15 blur-2xl"
+        animate={reduceMotion ? undefined : { scale: [1, 1.12, 1], opacity: [0.7, 1, 0.7] }}
+        transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+      />
+
+      {/* Tick ring that steps forward one notch per slide, like a clock */}
+      <motion.svg
+        viewBox="-100 -100 200 200"
+        className="absolute left-1/2 top-[46%] h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 text-accent"
+        animate={{ rotate: index * (360 / CLOCKS.length) }}
+        transition={{ type: "spring", stiffness: 60, damping: 14 }}
+        aria-hidden="true"
+      >
+        {TICKS.map((i) => (
+          <line
+            key={i}
+            x1="0"
+            y1={i % 5 === 0 ? -92 : -94}
+            x2="0"
+            y2="-98"
+            stroke="currentColor"
+            strokeWidth={i % 5 === 0 ? 1.4 : 0.7}
+            strokeLinecap="round"
+            opacity={i % 5 === 0 ? 0.55 : 0.28}
+            transform={`rotate(${i * 6})`}
+          />
+        ))}
+      </motion.svg>
+
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={index}
+          className="absolute inset-0"
+          initial={
+            reduceMotion
+              ? { opacity: 0 }
+              : { opacity: 0, scale: 0.7, rotate: -12, y: 40, filter: "blur(10px)" }
+          }
+          animate={{ opacity: 1, scale: 1, rotate: 0, y: 0, filter: "blur(0px)" }}
+          exit={
+            reduceMotion
+              ? { opacity: 0 }
+              : { opacity: 0, scale: 1.15, rotate: 10, y: -30, filter: "blur(8px)" }
+          }
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 16,
+            opacity: { duration: 0.35 },
+            filter: { duration: 0.4 },
+          }}
+        >
+          <motion.div
+            className="absolute inset-0"
+            animate={reduceMotion ? undefined : { y: [0, -8, 0], rotate: [-1.2, 1.2, -1.2] }}
+            transition={{ duration: 4.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          >
+            <Image
+              src={CLOCKS[index]}
+              alt={alt}
+              fill
+              unoptimized
+              sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, 230px"
+              className="object-contain drop-shadow-[0_18px_22px_rgba(15,23,42,0.22)]"
+              priority={index === 0}
+            />
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Slide indicator: the active dot fills over the interval */}
+      <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1.5">
+        {CLOCKS.map((src, i) => (
+          <span
+            key={src}
+            className={`relative h-1 overflow-hidden rounded-full bg-accent/25 transition-all duration-500 ${
+              i === index ? "w-6" : "w-1.5"
+            }`}
+          >
+            {i === index && (
+              <motion.span
+                key={index}
+                className="absolute inset-0 origin-left rounded-full bg-accent"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: CLOCK_INTERVAL_MS / 1000, ease: "linear" }}
+              />
+            )}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -141,13 +266,7 @@ export default function AboutStory() {
             }}
             whileHover={{ scale: 1.03 }}
           >
-            <Image
-              src="/images/home/since-2018.png"
-              alt={tA("aboutIdeaAlt")}
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gradient-overlay/80 via-transparent to-transparent" />
+            <ClockSlideshow alt={tA("aboutIdeaAlt")} />
           </motion.div>
 
           <motion.div
