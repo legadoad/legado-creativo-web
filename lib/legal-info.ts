@@ -15,7 +15,7 @@
 
 export const LEGAL_INFO = {
   legalName: "Legado Creativo",
-  email: "vickyurbaneja@gmail.com",
+  email: "info@legadocreativo.com",
   phone: { display: "+1 (617) 515-5000", tel: "+16175155000" },
   address: "Boston, Massachusetts, United States",
   website: "https://legadocreativo.com",

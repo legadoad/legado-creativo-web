@@ -12,7 +12,7 @@ function getResendClient() {
   return new Resend(process.env.RESEND_API_KEY);
 }
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "vickyurbaneja@gmail.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@legadocreativo.com";
 const FROM_EMAIL =
   process.env.CONTACT_FROM_EMAIL || "Legado Creativo <contact@legadocreativo.com>";
 

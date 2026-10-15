@@ -51,7 +51,7 @@ function YearTick({
 }
 
 const CLOCKS = [1, 2, 3, 4, 5, 6, 7].map((n) => `/reloj/clock-${n}.webp`);
-const CLOCK_INTERVAL_MS = 2000;
+const CLOCK_INTERVAL_MS = 1300;
 const TICKS = Array.from({ length: 60 }, (_, i) => i);
 
 function ClockSlideshow({ alt }: { alt: string }) {
@@ -88,7 +88,7 @@ function ClockSlideshow({ alt }: { alt: string }) {
         viewBox="-100 -100 200 200"
         className="absolute left-1/2 top-[46%] h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 text-accent"
         animate={{ rotate: index * (360 / CLOCKS.length) }}
-        transition={{ type: "spring", stiffness: 110, damping: 15 }}
+        transition={{ type: "spring", stiffness: 160, damping: 16 }}
         aria-hidden="true"
       >
         {TICKS.map((i) => (
@@ -124,10 +124,10 @@ function ClockSlideshow({ alt }: { alt: string }) {
           }
           transition={{
             type: "spring",
-            stiffness: 190,
+            stiffness: 260,
             damping: 17,
-            opacity: { duration: 0.25 },
-            filter: { duration: 0.3 },
+            opacity: { duration: 0.2 },
+            filter: { duration: 0.22 },
           }}
         >
           <motion.div
