@@ -67,17 +67,8 @@ export default function AboutPageHero() {
           >
             <TypingAnimation
               as="span"
-              className="text-heading leading-[0.95] mr-[0.25em]"
-              duration={60}
-              showCursor={false}
-            >
-              {t("titleLine1")}
-            </TypingAnimation>
-            <TypingAnimation
-              as="span"
               className="text-accent leading-[0.95]"
               duration={60}
-              delay={t("titleLine1").length * 60}
             >
               {t("titleLine2")}
             </TypingAnimation>
