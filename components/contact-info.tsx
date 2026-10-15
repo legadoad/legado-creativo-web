@@ -2,17 +2,17 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Mail, Phone, Clock, Linkedin, Instagram, Twitter, Dribbble } from "lucide-react"
+import { Mail, Phone, Clock, Linkedin, Instagram, Facebook, Twitter, Dribbble } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 const contactIcons = [Mail, Phone, Clock]
 const contactHrefs = [
-  "mailto:vickyurbaneja@gmail.com",
+  "mailto:info@legadocreativo.com",
   "tel:+16175155000",
   null,
 ]
 const contactValues = [
-  "vickyurbaneja@gmail.com",
+  "info@legadocreativo.com",
   "+1 (617) 515-5000",
   null, // Will use translation for hours value
 ]
@@ -20,6 +20,7 @@ const contactValues = [
 const socials = [
   { icon: Linkedin, label: "LinkedIn", href: "#" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/legadoad/" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/legadoad" },
   { icon: Twitter, label: "Twitter", href: "#" },
   { icon: Dribbble, label: "Dribbble", href: "#" },
 ]

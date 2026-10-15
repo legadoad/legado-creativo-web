@@ -12,7 +12,7 @@ import {
 // which also keeps anyone else from triggering this endpoint.
 export const dynamic = "force-dynamic";
 
-const ALERT_TO = process.env.CONTACT_TO_EMAIL || "vickyurbaneja@gmail.com";
+const ALERT_TO = process.env.CONTACT_TO_EMAIL || "info@legadocreativo.com";
 const ALERT_FROM =
   process.env.CONTACT_FROM_EMAIL || "Legado Creativo <contact@legadocreativo.com>";
 
