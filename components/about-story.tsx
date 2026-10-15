@@ -78,7 +78,7 @@ function ClockSlideshow({ alt }: { alt: string }) {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-accent/15" />
       {/* Soft glow behind the object */}
       <motion.div
-        className="absolute left-1/2 top-[46%] h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/15 blur-2xl"
+        className="absolute left-1/2 top-[47%] h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/15 blur-2xl"
         animate={reduceMotion ? undefined : { scale: [1, 1.12, 1], opacity: [0.7, 1, 0.7] }}
         transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
@@ -86,7 +86,7 @@ function ClockSlideshow({ alt }: { alt: string }) {
       {/* Tick ring that steps forward one notch per slide, like a clock */}
       <motion.svg
         viewBox="-100 -100 200 200"
-        className="absolute left-1/2 top-[46%] h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 text-accent"
+        className="absolute left-1/2 top-[47%] h-[98%] w-[98%] -translate-x-1/2 -translate-y-1/2 text-accent"
         animate={{ rotate: index * (360 / CLOCKS.length) }}
         transition={{ type: "spring", stiffness: 160, damping: 16 }}
         aria-hidden="true"
