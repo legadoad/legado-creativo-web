@@ -99,7 +99,7 @@
       "Intentional content: every piece responds to a clear goal",
       "Real partnership at every stage of your brand's growth"
     ],
-    "foundedBadge": "AI helps us move faster. Creativity guides the direction",
+    "foundedBadge": "Artificial Intelligence helps us move faster. Creativity guides the direction",
     "learnMore": "Discover how to build a brand that lasts →"
   },
   "homeVideoShowcase": {
@@ -1099,10 +1099,7 @@
           },
           {
             "table": {
-              "headers": [
-                "Purpose",
-                "Legal basis"
-              ],
+              "headers": ["Purpose", "Legal basis"],
               "rows": [
                 [
                   "Responding to inquiries and delivering services",
