@@ -50,7 +50,7 @@ export default async function ServicesPage({
       <ServicesProcess />
       <ServicesFaq />
       <CTA
-        bg="bg-[var(--secondary-blue-ink)]"
+        bg="bg-[var(--secondary-blue)]"
         label={t("label")}
         title={t("title")}
         highlightWord={t("highlightWord")}
@@ -59,7 +59,7 @@ export default async function ServicesPage({
         href="/contact"
         textColor="text-[var(--secondary-lime)]"
         buttonBg="bg-[var(--secondary-lime)]"
-        buttonTextColor="text-[var(--secondary-blue-ink)]"
+        buttonTextColor="text-[var(--secondary-blue)]"
       />
       <Footer />
     </main>

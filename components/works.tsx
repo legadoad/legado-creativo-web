@@ -9,7 +9,7 @@ const solutionImages = [
   "/images/home/brand-positioning.png",
   "/images/home/content-story.png",
   "/images/home/creativity-production.png",
-  "/images/home/digital-growth.png",
+  "/images/home/digital-growth.jpg",
 ];
 
 export default function Works() {
@@ -56,7 +56,7 @@ export default function Works() {
                 }`}
               >
                 {/* Number behind card */}
-                <div className="absolute -top-16 right-2 z-0 text-[72px] md:text-[90px] leading-none font-bold text-secondary-lime pointer-events-none select-none">
+                <div className="absolute -top-16 right-2 z-0 text-[72px] md:text-[90px] leading-none font-bold text-secondary-blue pointer-events-none select-none">
                   {" "}
                   {t(`cards.${index}.number`)}
                 </div>

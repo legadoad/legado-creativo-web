@@ -36,7 +36,6 @@
   /* Secondary brand colors */
   --secondary-lime: oklch(95.67% 0.1072 125.08); /* #e0feae */
   --secondary-blue: oklch(67.64% 0.104 266.86); /* #7a95d8 — decorative fills only: 2.66:1 vs lime, 2.9:1 vs white */
-  --secondary-blue-ink: #3b5bb5; /* same hue, WCAG AA text/fill: 5.7:1 on lime, 6.3:1 on white; lime text on it 5.7:1 */
   --secondary-magenta: oklch(85% 0.11 318.42); /* paled rgba(212, 0, 255, 0.6) */
 
   /* Channel-triplet colors, for use as rgb(var(--x-rgb) / <alpha>) where alpha varies by call site */
@@ -126,7 +125,7 @@
   --color-gradient-overlay: var(--gradient-overlay);
   --color-secondary-lime: var(--secondary-lime);
   --color-secondary-blue: var(--secondary-blue);
-  --color-secondary-blue-ink: var(--secondary-blue-ink);
+  --color-secondary-blue-ink: var(--secondary-blue);
   --color-secondary-magenta: var(--secondary-magenta);
   --color-section-lavender: var(--section-lavender);
   --color-section-mint: var(--section-mint);
@@ -169,7 +168,7 @@ html {
   /* Visible keyboard focus everywhere (WCAG 2.4.7 / 2.4.11). Mouse clicks
      don't trigger it, so the design is unchanged for pointer users. */
   :focus-visible {
-    outline: 2px solid var(--secondary-blue-ink);
+    outline: 2px solid var(--secondary-blue);
     outline-offset: 3px;
     border-radius: 2px;
   }

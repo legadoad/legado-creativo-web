@@ -55,7 +55,7 @@ export default function ServicesStatement() {
           wordClassNames={[
             "text-accent",
             "text-[var(--secondary-magenta)]",
-            "text-[var(--secondary-blue-ink)]",
+            "text-[var(--secondary-blue)]",
           ]}
           loop
           duration={45}
