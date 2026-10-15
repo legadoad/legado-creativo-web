@@ -34,21 +34,23 @@ export default function Hero() {
       </video>
       <VideoPauseToggle className="absolute bottom-8 left-6 z-20" />
       {/* Logo video overlay */}
-      {/* <video
+      <video
         autoPlay
         muted
         loop
         playsInline
+        aria-hidden="true"
+        disablePictureInPicture
         className="absolute inset-0 z-[5] w-full h-full object-contain pointer-events-none"
       >
-        <source src="/videos/logotipo-banner.mp4" type="video/mp4" />
-      </video> */}
+        {/* VP9 WebM keeps the alpha channel; the original .mov (QuickTime Animation) can't play in browsers */}
+        <source src="/videos/LOGOTIPOLEGADO.webm" type='video/webm; codecs="vp09.00.10.08"' />
+      </video>
       {/* Content */}
       <motion.div
         style={{ y: textY, opacity }}
         className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 gap-8"
-      >
-      </motion.div>
+      ></motion.div>
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
@@ -59,12 +61,20 @@ export default function Hero() {
         <motion.div
           className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center pt-2"
           animate={{ y: [0, 5, 0] }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          transition={{
+            duration: 2,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
         >
           <motion.div
             className="w-1.5 h-3 bg-accent rounded-full"
             animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            transition={{
+              duration: 1.5,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
           />
         </motion.div>
       </motion.div>

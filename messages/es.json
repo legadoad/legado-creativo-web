@@ -99,7 +99,7 @@
       "Contenido con intención: cada pieza responde a un objetivo claro",
       "Acompañamiento real en cada etapa del crecimiento de tu marca"
     ],
-    "foundedBadge": "La IA nos ayuda a avanzar más rápido. La creatividad guía la dirección",
+    "foundedBadge": "La Inteligencia Artificial nos ayuda a avanzar más rápido. La creatividad guía la dirección",
     "learnMore": "Descubre cómo construir una marca que dure →",
     "valuesTitle": "Nuestros valores",
     "values": {
@@ -406,7 +406,11 @@
         "name": "Presencia Consciente",
         "url": "presenciaconsciente.com",
         "result": "Un sitio WordPress a medida, liviano y fácil de actualizar por el propio equipo.",
-        "tags": ["WordPress a medida", "Optimización de velocidad", "Gestión de contenido"]
+        "tags": [
+          "WordPress a medida",
+          "Optimización de velocidad",
+          "Gestión de contenido"
+        ]
       }
     ]
   },
@@ -854,12 +858,7 @@
           },
           {
             "table": {
-              "headers": [
-                "Tipo",
-                "Qué hace",
-                "Proveedor",
-                "Cómo controlarla"
-              ],
+              "headers": ["Tipo", "Qué hace", "Proveedor", "Cómo controlarla"],
               "rows": [
                 [
                   "Estrictamente necesaria",
@@ -1124,10 +1123,7 @@
           },
           {
             "table": {
-              "headers": [
-                "Finalidad",
-                "Base legal"
-              ],
+              "headers": ["Finalidad", "Base legal"],
               "rows": [
                 [
                   "Responder consultas y prestar servicios",
