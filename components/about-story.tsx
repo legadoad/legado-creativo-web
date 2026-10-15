@@ -12,10 +12,10 @@ import {
   type MotionValue,
 } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ArrowRight, Rocket, Sparkles, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, MapPin, Rocket, Sparkles, TrendingUp, Users } from "lucide-react";
 
-const YEARS = ["2018", "2019", "2020"];
-const YEAR_ICONS = [Rocket, TrendingUp, Sparkles];
+const YEARS = ["2018", "2019", "2021", "2023–2025", "2026"];
+const YEAR_ICONS = [Rocket, TrendingUp, MapPin, Users, Sparkles];
 
 function YearTick({
   label,
@@ -361,8 +361,11 @@ export default function AboutStory() {
                     </div>
                     <div className="text-3xl font-bold text-accent">{year}</div>
                   </div>
-                  <p className="text-foreground/70 text-lg leading-relaxed">
-                    {t(`paragraphs.${i}`)}
+                  <h3 className="text-xl font-bold text-heading mb-3">
+                    {t(`milestones.${i}.title`)}
+                  </h3>
+                  <p className="text-foreground/70 text-base lg:text-lg leading-relaxed">
+                    {t(`milestones.${i}.text`)}
                   </p>
                 </motion.div>
               </div>

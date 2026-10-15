@@ -231,10 +231,32 @@
   "aboutStory": {
     "titleLine1": "La historia detrás de",
     "titleLine2": " Legado",
-    "paragraphs": [
-      "Legado nació de una convicción: las marcas en Estados Unidos, y especialmente las latinas, merecen el mismo nivel estratégico que las grandes agencias globales le entregan a las Fortune 500s, pero con alguien que de verdad las entiende. Alguien que conoce los dos mundos, los dos idiomas y los dos mercados",
-      "Victoria Urbaneja fundó Legado Creativo para llenar ese vacío. No como una agencia más de diseño, sino como una socia estratégica que combina visión de negocio con ejecución creativa, y que acompaña a sus clientes desde la primera conversación hasta el impacto real",
-      "Creemos que una marca no se construye desde el diseño; se construye desde la claridad. Cuando sabes exactamente quién eres, a quién le hablas y qué quieres que sientan cuando te descubren, el diseño deja de ser decoración y se convierte en comunicación. Eso es lo que hacemos: ayudarte a encontrar esa claridad y convertirla en algo que se ve, se siente y se recuerda"
+    "milestones": [
+      {
+        "year": "2018",
+        "title": "Donde todo comenzó",
+        "text": "VU Creative Studio nació en Miami de un sueño de libertad creativa e independencia. Quería construir algo propio, dedicarme a lo que siempre había amado y tener la flexibilidad de estar presente para mi hijo. Un pequeño comienzo con un propósito mucho más grande."
+      },
+      {
+        "year": "2019",
+        "title": "De la pasión al propósito",
+        "text": "Lo que comenzó como un estudio creativo independiente empezó a convertirse en algo más grande. Mi experiencia en periodismo, publicidad y storytelling me permitió unir estrategia y creatividad para conectar marcas con personas. Cada proyecto reforzaba una convicción: las marcas memorables se construyen contando historias que importan."
+      },
+      {
+        "year": "2021",
+        "title": "Una nueva ciudad, una visión más grande",
+        "text": "Me mudé a Boston con mi hijo, llevando conmigo mis sueños y mi visión creativa. VU Creative continuó expandiéndose, abriendo puertas a nuevos clientes, industrias y oportunidades. Lo que había comenzado en Miami evolucionaba hacia una agencia capaz de conectar marcas, personas y culturas a través de la creatividad."
+      },
+      {
+        "year": "2023–2025",
+        "title": "Creciendo más allá de mí",
+        "text": "A medida que crecían nuestros clientes, también crecía nuestra visión. VU Creative Agency evolucionó hacia un negocio creativo colaborativo, integrando estrategia, contenido y producción. Ampliamos nuestras capacidades sin perder nuestra esencia: relaciones cercanas, creatividad con intención y un compromiso genuino con cada marca."
+      },
+      {
+        "year": "2026",
+        "title": "Un nuevo nombre, un significado más profundo",
+        "text": "Cumplir 40 años marcó el comienzo de una nueva etapa. VU Creative Agency se convirtió en Legado Creativo, un nombre que representa todo lo construido y aquello en lo que creo. Más que una agencia, Legado es una extensión de mi historia, mi pasión y mi propósito: crear marcas que dejen huella."
+      }
     ],
     "founded": "2018",
     "foundedLabel": "Fundada en Boston",

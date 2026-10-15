@@ -206,10 +206,32 @@
   "aboutStory": {
     "titleLine1": "The story behind",
     "titleLine2": " Legado",
-    "paragraphs": [
-      "Legado was built on a conviction: brands in the United States, and especially Latino-owned ones, deserve the same strategic depth that global agencies deliver to Fortune 500s, but from someone who truly understands them. Someone who knows both worlds, both languages, and both markets",
-      "Victoria Urbaneja founded Legado Creativo to fill that gap. Not as another design shop, but as a strategic partner who combines business vision with creative execution, and walks alongside clients from the first conversation to real impact",
-      "We believe a brand isn't built from design, it's built from clarity. When you know exactly who you are, who you're speaking to, and what you want people to feel when they discover you, design stops being decoration and becomes communication. That's what we do: help you find that clarity, then turn it into something that looks right, feels right, and is remembered"
+    "milestones": [
+      {
+        "year": "2018",
+        "title": "Where It All Began",
+        "text": "VU Creative Studio was born in Miami from a dream of creative freedom and independence. I wanted to build something of my own, doing what I had always loved, while having the flexibility to be present for my son. A small beginning with a much bigger purpose."
+      },
+      {
+        "year": "2019",
+        "title": "Turning Passion Into Purpose",
+        "text": "What began as an independent creative studio started becoming something bigger. With a background in journalism, advertising, and storytelling, I brought together strategy and creativity to help businesses connect with their audiences. Every project reinforced one belief: meaningful brands are built through meaningful stories."
+      },
+      {
+        "year": "2021",
+        "title": "A New City, A Bigger Vision",
+        "text": "I moved to Boston with my son, bringing my dreams and creative vision along with me. VU Creative continued expanding, opening doors to new clients, industries, and opportunities. What started in Miami was becoming a growing agency connecting brands, people, and cultures through creativity."
+      },
+      {
+        "year": "2023–2025",
+        "title": "Growing Beyond Myself",
+        "text": "As our client relationships grew, so did our vision. VU Creative Agency evolved into a collaborative creative business, bringing together strategy, content, and production. We expanded our capabilities while staying true to what made us different: personal relationships, thoughtful creativity, and a genuine commitment to every brand."
+      },
+      {
+        "year": "2026",
+        "title": "A New Name, A Deeper Meaning",
+        "text": "Turning 40 inspired a new chapter. VU Creative Agency became Legado Creativo, a name that reflects everything I've built and everything I believe in. More than an agency, Legado is an extension of my story, my passion, and my purpose: creating brands that leave something meaningful behind."
+      }
     ],
     "founded": "2018",
     "foundedLabel": "Founded in Boston",
