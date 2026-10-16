@@ -44,7 +44,7 @@ export default function About() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="max-w-4xl"
+          className="max-w-4xl mb-12 lg:mb-16"
         >
           <motion.p
             variants={itemVariants}

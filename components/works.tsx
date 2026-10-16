@@ -30,7 +30,7 @@ export default function Works() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="mb-16 md:mb-20"
+          className="mb-24 md:mb-20"
         >
           <h2 className="text-fluid-h2 font-bold text-heading tracking-tight max-w-4xl">
             {t("title")}
@@ -41,7 +41,7 @@ export default function Works() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-6 md:gap-x-10 xl:gap-x-8 gap-y-28 sm:gap-y-32 xl:gap-y-12">
           {cards.map((index) => {
             const isLowerCard = index === 1 || index === 3;
 

@@ -45,8 +45,9 @@ export default function ContactHero() {
       <HeroParticles />
 
       <motion.div
-        className="relative z-10 max-w-4xl mx-auto w-full"
-        style={{ opacity, y }}      >
+        className="relative z-10 max-w-4xl mx-auto w-full px-6 sm:px-8 md:px-10"
+        style={{ opacity, y }}
+      >
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.p
             variants={itemVariants}

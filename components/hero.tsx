@@ -45,6 +45,7 @@ export default function Hero() {
       >
         {/* VP9 WebM keeps the alpha channel; the original .mov (QuickTime Animation) can't play in browsers */}
         <source src="/videos/LOGOTIPOLEGADO.webm" type='video/webm; codecs="vp09.00.10.08"' />
+        <source src="/videos/LOGOTIPOLEGADO.mov" type="video/quicktime" />
       </video>
       {/* Content */}
       <motion.div
