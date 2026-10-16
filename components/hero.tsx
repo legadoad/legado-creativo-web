@@ -1,11 +1,23 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import VideoPauseToggle from "@/components/video-pause-toggle";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showLogo, setShowLogo] = useState(false);
+
+  // Safari (and every iOS browser, all WebKit) renders the WebM alpha as black, so skip the logo overlay there
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    const isIOS =
+      /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const isDesktopSafari =
+      /Safari/.test(ua) && !/Chrome|Chromium|Android|Edg|OPR|Firefox/.test(ua);
+    setShowLogo(!isIOS && !isDesktopSafari);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -34,19 +46,19 @@ export default function Hero() {
       </video>
       <VideoPauseToggle className="absolute bottom-8 left-6 z-20" />
       {/* Logo video overlay */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden="true"
-        disablePictureInPicture
-        className="absolute inset-0 z-[5] w-full h-full object-contain pointer-events-none"
-      >
-        {/* VP9 WebM keeps the alpha channel; the original .mov (QuickTime Animation) can't play in browsers */}
-        <source src="/videos/LOGOTIPOLEGADO.webm" type='video/webm; codecs="vp09.00.10.08"' />
-        <source src="/videos/LOGOTIPOLEGADO.mov" type="video/quicktime" />
-      </video>
+      {showLogo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+          disablePictureInPicture
+          className="absolute inset-0 z-[5] w-full h-full object-contain pointer-events-none"
+        >
+          <source src="/videos/LOGOTIPOLEGADO.webm" type='video/webm; codecs="vp09.00.10.08"' />
+        </video>
+      )}
       {/* Content */}
       <motion.div
         style={{ y: textY, opacity }}
