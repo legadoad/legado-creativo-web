@@ -76,7 +76,7 @@ export default function Image() {
             letterSpacing: 1,
           }}
         >
-          Web &amp; Graphic Design Agency
+          Digital &amp; Marketing Agency
         </div>
       </div>
     ),
