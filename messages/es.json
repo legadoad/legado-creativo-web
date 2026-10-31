@@ -425,14 +425,10 @@
         "tags": ["SEO técnico", "Panel sin código", "Presencia corporativa"]
       },
       {
-        "name": "Presencia Consciente",
-        "url": "presenciaconsciente.com",
-        "result": "Un sitio WordPress a medida, liviano y fácil de actualizar por el propio equipo.",
-        "tags": [
-          "WordPress a medida",
-          "Optimización de velocidad",
-          "Gestión de contenido"
-        ]
+        "name": "Legado Creativo",
+        "url": "legadocreativo.com",
+        "result": "Nuestro propio sitio: rápido, bilingüe y diseñado a medida para mostrar lo que hacemos.",
+        "tags": ["Next.js a medida", "Bilingüe ES/EN", "Diseño de marca"]
       }
     ]
   },

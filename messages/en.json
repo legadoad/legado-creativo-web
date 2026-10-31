@@ -400,10 +400,10 @@
         "tags": ["Technical SEO", "No-code content", "Corporate presence"]
       },
       {
-        "name": "Presencia Consciente",
-        "url": "presenciaconsciente.com",
-        "result": "A custom WordPress build, lightweight and easy for the team to update on their own.",
-        "tags": ["Custom WordPress", "Speed optimization", "Content management"]
+        "name": "Legado Creativo",
+        "url": "legadocreativo.com",
+        "result": "Our own site: fast, bilingual and custom-designed to showcase what we do.",
+        "tags": ["Custom Next.js", "Bilingual ES/EN", "Brand design"]
       }
     ]
   },

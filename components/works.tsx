@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const solutionImages = [
   "/images/home/brand-positioning.png",
@@ -55,31 +56,37 @@ export default function Works() {
                   isLowerCard ? "xl:mt-12" : "xl:mt-0"
                 }`}
               >
-                {/* Number behind card */}
-                <div className="absolute -top-14 md:-top-16 right-2 z-0 text-[72px] md:text-[90px] leading-none font-bold text-secondary-blue pointer-events-none select-none">
-                  {" "}
-                  {t(`cards.${index}.number`)}
-                </div>
+                <Link
+                  href="/services"
+                  className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-blue rounded-[4px]"
+                >
+                  {/* Number behind card */}
+                  <div className="absolute -top-14 md:-top-16 right-2 z-0 text-[72px] md:text-[90px] leading-none font-bold text-secondary-blue pointer-events-none select-none">
+                    {" "}
+                    {t(`cards.${index}.number`)}
+                  </div>
 
-                {/* Card image */}
-                <div className="relative z-10 aspect-[0.82/1] overflow-hidden rounded-[4px] bg-section-sand">
-                  <Image
-                    src={solutionImages[index]}
-                    alt={t(`cards.${index}.title`)}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+                  {/* Card image */}
+                  <div className="relative z-10 aspect-[0.82/1] overflow-hidden rounded-[4px] bg-section-sand">
+                    <Image
+                      src={solutionImages[index]}
+                      alt={t(`cards.${index}.title`)}
+                      fill
+                      sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-                {/* Text */}
-                <div className="pt-4 relative z-10">
-                  <h3 className="text-xl md:text-2xl font-bold text-heading leading-tight">
-                    {t(`cards.${index}.title`)}
-                  </h3>
-                  <p className="mt-3 text-[15px] md:text-base text-foreground/60 leading-relaxed max-w-sm">
-                    {t(`cards.${index}.description`)}
-                  </p>
-                </div>
+                  {/* Text */}
+                  <div className="pt-4 relative z-10">
+                    <h3 className="text-xl md:text-2xl font-bold text-heading leading-tight">
+                      {t(`cards.${index}.title`)}
+                    </h3>
+                    <p className="mt-3 text-[15px] md:text-base text-foreground/60 leading-relaxed max-w-sm">
+                      {t(`cards.${index}.description`)}
+                    </p>
+                  </div>
+                </Link>
               </motion.article>
             );
           })}

@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { routing } from "@/i18n/routing";
 import { BRAND } from "@/lib/brand-colors";
@@ -13,14 +15,14 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-// Two-tone wordmark colors, matching public/Logos/LEGADO_Logotipo-06.png,
-// which is itself designed for a plain white background — reproducing that
-// here (rather than the lime/blue split) avoids the light half of the
-// wordmark blending into a same-toned background.
-const WORDMARK_DARK = BRAND.blueDeep;
-const WORDMARK_LIGHT = BRAND.blue;
+export default async function Image() {
+  // Same logo file used in the navbar (components/header.tsx), embedded as a
+  // data URI since ImageResponse can't resolve relative public/ paths.
+  const logo = await readFile(
+    join(process.cwd(), "public", "Logos", "LEGADO_Logotipo-06.png"),
+  );
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
-export default function Image() {
   return new ImageResponse(
     (
       <div
@@ -34,39 +36,8 @@ export default function Image() {
           background: BRAND.white,
         }}
       >
-        <div style={{ display: "flex", alignItems: "baseline" }}>
-          <span
-            style={{
-              fontSize: 108,
-              fontWeight: 800,
-              letterSpacing: 2,
-              color: WORDMARK_DARK,
-            }}
-          >
-            LEGA
-          </span>
-          <span
-            style={{
-              fontSize: 108,
-              fontWeight: 800,
-              letterSpacing: 2,
-              color: WORDMARK_LIGHT,
-            }}
-          >
-            DO
-          </span>
-        </div>
-        <span
-          style={{
-            marginTop: 4,
-            fontSize: 28,
-            fontWeight: 600,
-            letterSpacing: 10,
-            color: WORDMARK_LIGHT,
-          }}
-        >
-          CREATIVO
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logoSrc} width={760} height={176} alt="" />
         <div
           style={{
             marginTop: 40,

@@ -93,7 +93,7 @@ const FALLBACK_FEED: InstagramFeed = {
       id: "mock-6",
       caption: "Scaling a brand with strategy, content, and measurable performance.",
       mediaType: "IMAGE",
-      imageUrl: "/images/home/digital-growth.png",
+      imageUrl: "/images/home/digital-growth.jpg",
       permalink: "https://www.instagram.com/legadoad/",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 130).toISOString(),
       likeCount: 176,

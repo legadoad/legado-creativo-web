@@ -11,7 +11,7 @@ import { ArrowUpRight, Lock } from "lucide-react";
 const CASES = [
   { img: "/portafolio/porterparts.webp", ratio: 1801 / 5228 },
   { img: "/portafolio/cjbservice.webp", ratio: 1801 / 6236 },
-  { img: "/portafolio/presenciaconsciente.webp", ratio: 2560 / 7041 },
+  { img: "/portafolio/legadocreativo.webp", ratio: 1801 / 6781 },
 ];
 
 const SCREEN_HEIGHT = "clamp(220px, 24vw, 320px)";
